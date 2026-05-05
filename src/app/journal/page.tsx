@@ -9,6 +9,7 @@ import { BreadcrumbJsonLd } from '@/components/breadcrumb-jsonld';
 import { useSite } from '@/contexts/site-context';
 import { en } from '@/content/en';
 import { pt } from '@/content/pt';
+import { subscribeNewsletter } from '@/lib/supabase';
 
 const POST_IMGS = [
   '/images/stock/port-cranes.jpg',
@@ -24,10 +25,34 @@ export default function JournalPage() {
   const p = lang === 'pt' ? pt.pages.journal : en.pages.journal;
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) setSubscribed(true);
+    if (!email || submitting) return;
+
+    setSubmitting(true);
+    setError(null);
+
+    const { error: subscribeError } = await subscribeNewsletter({
+      email,
+      locale: lang === 'pt' ? 'pt' : 'en',
+      source: 'journal',
+    });
+
+    setSubmitting(false);
+
+    if (subscribeError) {
+      setError(
+        lang === 'pt'
+          ? 'Não foi possível subscrever. Tente novamente.'
+          : 'Could not subscribe. Please try again.',
+      );
+      return;
+    }
+
+    setSubscribed(true);
   };
 
   return (
@@ -257,45 +282,66 @@ export default function JournalPage() {
                 ✦ {lang === 'pt' ? 'Subscrito. Até breve.' : 'Subscribed. See you next quarter.'}
               </div>
             ) : (
-              <form
-                onSubmit={handleSubscribe}
-                style={{ display: 'flex', gap: 12, maxWidth: 480, margin: '0 auto' }}
-              >
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder={lang === 'pt' ? 'o.seu@email' : 'your@email'}
-                  required
-                  aria-label="Email address"
-                  style={{
-                    flex: 1,
-                    padding: '16px 20px',
-                    border: '1px solid var(--line-2)',
-                    background: 'var(--surface)',
-                    color: 'var(--ink)',
-                    fontSize: 14,
-                    fontFamily: 'inherit',
-                    outline: 'none',
-                  }}
-                />
-                <button
-                  type="submit"
-                  className="kds-sans"
-                  style={{
-                    padding: '16px 24px',
-                    background: 'var(--ink)',
-                    color: 'var(--bg)',
-                    border: 'none',
-                    fontSize: 14,
-                    fontWeight: 500,
-                    cursor: 'pointer',
-                    whiteSpace: 'nowrap',
-                  }}
+              <>
+                <form
+                  onSubmit={handleSubscribe}
+                  style={{ display: 'flex', gap: 12, maxWidth: 480, margin: '0 auto' }}
                 >
-                  {lang === 'pt' ? 'Subscrever →' : 'Subscribe →'}
-                </button>
-              </form>
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder={lang === 'pt' ? 'o.seu@email' : 'your@email'}
+                    required
+                    disabled={submitting}
+                    aria-label="Email address"
+                    style={{
+                      flex: 1,
+                      padding: '16px 20px',
+                      border: '1px solid var(--line-2)',
+                      background: 'var(--surface)',
+                      color: 'var(--ink)',
+                      fontSize: 14,
+                      fontFamily: 'inherit',
+                      outline: 'none',
+                    }}
+                  />
+                  <button
+                    type="submit"
+                    disabled={submitting}
+                    className="kds-sans"
+                    style={{
+                      padding: '16px 24px',
+                      background: 'var(--ink)',
+                      color: 'var(--bg)',
+                      border: 'none',
+                      fontSize: 14,
+                      fontWeight: 500,
+                      cursor: submitting ? 'wait' : 'pointer',
+                      opacity: submitting ? 0.7 : 1,
+                      whiteSpace: 'nowrap',
+                    }}
+                  >
+                    {submitting
+                      ? lang === 'pt' ? 'A subscrever…' : 'Subscribing…'
+                      : lang === 'pt' ? 'Subscrever →' : 'Subscribe →'}
+                  </button>
+                </form>
+                {error && (
+                  <div
+                    role="alert"
+                    className="kds-mono"
+                    style={{
+                      marginTop: 16,
+                      fontSize: 12,
+                      color: 'var(--ink-dim)',
+                      letterSpacing: '0.12em',
+                    }}
+                  >
+                    {error}
+                  </div>
+                )}
+              </>
             )}
           </Reveal>
         </div>

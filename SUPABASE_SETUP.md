@@ -98,6 +98,77 @@ revoke all on function public.submit_contact(text, text, text, text, text, text,
 grant execute on function public.submit_contact(text, text, text, text, text, text, text, text, boolean) to anon, authenticated;
 ```
 
+## Newsletter schema
+
+```sql
+-- 1) Table
+create table public.newsletter_subscribers (
+  id           uuid primary key default gen_random_uuid(),
+  email        text not null,
+  locale       text,
+  source       text,
+  created_at   timestamptz not null default now(),
+  constraint newsletter_subscribers_email_format
+    check (email ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$'
+           and char_length(email) <= 200),
+  constraint newsletter_subscribers_locale_chk
+    check (locale is null or locale in ('en','pt')),
+  constraint newsletter_subscribers_source_len
+    check (source is null or char_length(source) <= 80),
+  constraint newsletter_subscribers_email_unique
+    unique (email)
+);
+
+create index newsletter_subscribers_created_at_idx
+  on public.newsletter_subscribers (created_at desc);
+
+-- 2) Lock the table down. Same write-only RLS pattern as
+-- contact_submissions: RLS enabled, no policies, only service_role
+-- (Supabase dashboard) can read.
+alter table public.newsletter_subscribers enable row level security;
+
+-- 3) Public RPC. Idempotent — re-subscribing with the same email is a no-op.
+create or replace function public.subscribe_newsletter(
+  p_email  text,
+  p_locale text default null,
+  p_source text default null
+) returns uuid
+  language plpgsql
+  security definer
+  set search_path = public, pg_temp
+as $$
+declare
+  new_id uuid;
+  norm_email text;
+  norm_locale text;
+  norm_source text;
+begin
+  norm_email := lower(trim(coalesce(p_email, '')));
+  if norm_email = ''
+     or norm_email !~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$' then
+    raise exception 'a valid email is required' using errcode = '22023';
+  end if;
+
+  norm_locale := nullif(trim(coalesce(p_locale, '')), '');
+  if norm_locale is not null and norm_locale not in ('en','pt') then
+    raise exception 'invalid locale' using errcode = '22023';
+  end if;
+
+  norm_source := nullif(trim(coalesce(p_source, '')), '');
+
+  insert into public.newsletter_subscribers (email, locale, source)
+  values (norm_email, norm_locale, norm_source)
+  on conflict (email) do update
+    set email = excluded.email
+  returning id into new_id;
+
+  return new_id;
+end $$;
+
+revoke all on function public.subscribe_newsletter(text, text, text) from public;
+grant execute on function public.subscribe_newsletter(text, text, text) to anon, authenticated;
+```
+
 ## Environment
 
 Already configured in `.env.local`:

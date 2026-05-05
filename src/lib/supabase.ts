@@ -45,3 +45,32 @@ export async function submitContact(data: ContactSubmission): Promise<{ error: s
 
   return { error: null };
 }
+
+export type NewsletterSubscription = {
+  email: string;
+  locale?: 'en' | 'pt';
+  source?: string;
+};
+
+export async function subscribeNewsletter(
+  data: NewsletterSubscription,
+): Promise<{ error: string | null }> {
+  if (!supabase) {
+    console.warn(
+      'Supabase not configured. Set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY.',
+    );
+    return { error: null };
+  }
+
+  const { error } = await supabase.rpc('subscribe_newsletter', {
+    p_email: data.email,
+    p_locale: data.locale ?? null,
+    p_source: data.source ?? null,
+  });
+
+  if (error) {
+    return { error: error.message };
+  }
+
+  return { error: null };
+}
