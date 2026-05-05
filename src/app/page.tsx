@@ -10,7 +10,7 @@ import { en } from '@/content/en';
 import { pt } from '@/content/pt';
 
 const IMG = {
-  port: 'https://images.unsplash.com/photo-1577563908411-5077b6dc7624?auto=format&fit=crop&w=1600&q=80',
+  port: '/images/stock/port-aerial.jpg',
 };
 
 export default function HomePage() {
@@ -49,11 +49,12 @@ export default function HomePage() {
           <Reveal delay={0.15}>
             <h1
               className="kds-display"
+              aria-label={`${t.hero.title1} ${t.hero.title2} ${t.hero.title3}`}
               style={{ fontSize: 'clamp(72px, 9.5vw, 168px)', margin: 0, fontWeight: 300 }}
             >
-              {t.hero.title1}
+              {t.hero.title1}{' '}
               <br />
-              <span style={{ paddingLeft: '12%' }}>{t.hero.title2}</span>
+              <span style={{ paddingLeft: '12%' }}>{t.hero.title2} </span>
               <br />
               <span style={{ fontStyle: 'italic', color: 'var(--accent)', fontWeight: 300 }}>
                 {t.hero.title3}

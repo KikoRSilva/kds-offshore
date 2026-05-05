@@ -3,17 +3,89 @@
 import { PageHero } from '@/components/page-hero';
 import { KDSImage } from '@/components/kds-image';
 import { Reveal } from '@/components/reveal';
+import { BreadcrumbJsonLd } from '@/components/breadcrumb-jsonld';
 import { useSite } from '@/contexts/site-context';
 import { en } from '@/content/en';
 import { pt } from '@/content/pt';
 
+const SITE_URL = 'https://kdsoffshore.pt';
+
+const FOUNDER_PERSON_JSONLD = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': `${SITE_URL}/about/#sergio-ribeiro-e-silva`,
+  name: 'Sérgio Ribeiro e Silva',
+  givenName: 'Sérgio',
+  familyName: 'Ribeiro e Silva',
+  honorificPrefix: 'Dr.',
+  honorificSuffix: 'PhD',
+  jobTitle: 'CEO & Founder · Principal Naval Architect',
+  description:
+    'Founder of KDS Offshore. Naval architect, hydrodynamicist, and author of the Ship@Sea time-domain simulation code.',
+  alumniOf: [
+    {
+      '@type': 'CollegeOrUniversity',
+      name: 'Instituto Superior Técnico, University of Lisbon',
+      url: 'https://tecnico.ulisboa.pt/',
+    },
+    {
+      '@type': 'CollegeOrUniversity',
+      name: 'University College London',
+      url: 'https://www.ucl.ac.uk/',
+    },
+  ],
+  hasCredential: [
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'degree',
+      educationalLevel: 'Doctorate (PhD)',
+      recognizedBy: { '@type': 'CollegeOrUniversity', name: 'Instituto Superior Técnico, University of Lisbon' },
+    },
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'degree',
+      educationalLevel: 'MSc Naval Architecture',
+      recognizedBy: { '@type': 'CollegeOrUniversity', name: 'University College London' },
+    },
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'degree',
+      educationalLevel: 'MSc Mechanical Engineering',
+      recognizedBy: { '@type': 'CollegeOrUniversity', name: 'Instituto Superior Técnico, University of Lisbon' },
+    },
+  ],
+  worksFor: { '@id': `${SITE_URL}/#organization` },
+  knowsAbout: [
+    'Naval architecture',
+    'Offshore engineering',
+    'Hydrodynamics',
+    'Computational fluid dynamics',
+    'Ship manoeuvrability prediction',
+    'Mooring system design',
+    'Parametric rolling',
+    'Time-domain seakeeping simulation',
+    'Maritime decarbonisation',
+  ],
+  knowsLanguage: ['en', 'pt'],
+  nationality: { '@type': 'Country', name: 'Portugal' },
+  workLocation: {
+    '@type': 'Place',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Rua Ernesto Veiga de Oliveira',
+      addressLocality: 'Oeiras',
+      addressCountry: 'PT',
+    },
+  },
+};
+
 const PORTRAITS = [
-  'https://kdsoffshore.pt/wp-content/uploads/2024/04/WhatsApp-Image-2024-03-30-at-23.13.14-jpeg-e1712096005962.webp',
-  'https://kdsoffshore.pt/wp-content/uploads/2024/04/DALL%C2%B7E-2024-04-18-18.28.35-An-engineering-design-studio-with-a-team-of-naval-architects-and-offshore-engineers-working-on-computer-aided-design-systems.-The-office-is-equipped-w.webp',
-  'https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=800&q=80',
-  'https://images.unsplash.com/photo-1495556650867-99590cea3657?auto=format&fit=crop&w=800&q=80',
-  'https://kdsoffshore.pt/wp-content/uploads/2024/04/DALL%C2%B7E-2024-04-18-18.28.39-A-high-tech-research-and-development-facility-focused-on-marine-technology-featuring-advanced-computational-tools-and-experimental-setups.-The-lab-is.webp',
-  'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80',
+  '/images/kds/portrait-sergio.webp',
+  '/images/kds/studio-engineering-team.webp',
+  '/images/stock/vessel-ocean.jpg',
+  '/images/stock/port-cranes.jpg',
+  '/images/kds/studio-rd-lab.webp',
+  '/images/stock/team-collab.jpg',
 ];
 
 export default function AboutPage() {
@@ -22,6 +94,16 @@ export default function AboutPage() {
 
   return (
     <>
+      <BreadcrumbJsonLd
+        crumbs={[
+          { name: 'Home', path: '/' },
+          { name: 'About', path: '/about/' },
+        ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(FOUNDER_PERSON_JSONLD) }}
+      />
       <PageHero
         eyebrow={p.eyebrow}
         lines={[
@@ -36,7 +118,7 @@ export default function AboutPage() {
         <div style={{ maxWidth: 1440, margin: '0 auto' }}>
           <Reveal>
             <KDSImage
-              src="https://kdsoffshore.pt/wp-content/uploads/2024/04/DALL%C2%B7E-2024-04-18-18.28.18-A-modern-corporate-office-with-a-focus-on-environmental-sustainability-featuring-eco-friendly-designs-and-technologies.-The-setting-includes-green-pl.webp"
+              src="/images/kds/studio-eco-office.webp"
               aspect="21/9"
               alt="KDS Offshore studio"
               style={{ borderRadius: 4 }}

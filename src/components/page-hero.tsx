@@ -16,6 +16,8 @@ interface PageHeroProps {
 }
 
 export function PageHero({ eyebrow, lines, lede }: PageHeroProps) {
+  const ariaLabel = lines.map((l) => l.text).join(' ');
+
   return (
     <section
       className="sonar-bg"
@@ -40,6 +42,7 @@ export function PageHero({ eyebrow, lines, lede }: PageHeroProps) {
         <Reveal delay={0.15}>
           <h1
             className="kds-display"
+            aria-label={ariaLabel}
             style={{
               fontSize: 'clamp(64px, 8vw, 144px)',
               margin: 0,
@@ -47,24 +50,32 @@ export function PageHero({ eyebrow, lines, lede }: PageHeroProps) {
               lineHeight: 0.95,
             }}
           >
-            {lines.map((line, i) => (
-              <span key={i}>
-                {line.italic ? (
-                  <span
-                    style={{
-                      fontStyle: 'italic',
-                      color: line.accent ? 'var(--accent)' : 'inherit',
-                      paddingLeft: line.indent ? '10%' : 0,
-                    }}
-                  >
-                    {line.text}
-                  </span>
-                ) : (
-                  <span style={{ paddingLeft: line.indent ? '10%' : 0 }}>{line.text}</span>
-                )}
-                {i < lines.length - 1 && <br />}
-              </span>
-            ))}
+            {lines.map((line, i) => {
+              const isLast = i === lines.length - 1;
+              const trailing = isLast ? '' : ' ';
+              return (
+                <span key={i}>
+                  {line.italic ? (
+                    <span
+                      style={{
+                        fontStyle: 'italic',
+                        color: line.accent ? 'var(--accent)' : 'inherit',
+                        paddingLeft: line.indent ? '10%' : 0,
+                      }}
+                    >
+                      {line.text}
+                      {trailing}
+                    </span>
+                  ) : (
+                    <span style={{ paddingLeft: line.indent ? '10%' : 0 }}>
+                      {line.text}
+                      {trailing}
+                    </span>
+                  )}
+                  {!isLast && <br />}
+                </span>
+              );
+            })}
           </h1>
         </Reveal>
 

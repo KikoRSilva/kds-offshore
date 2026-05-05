@@ -1,0 +1,41 @@
+# KDS Offshore
+
+> Independent naval architecture, offshore engineering, and decarbonisation consultancy based in Oeiras, Portugal. Founded in 2016 by naval architects from Instituto Superior Técnico (University of Lisbon). KDS Offshore designs vessels, marine structures, and energy systems — covering hydrodynamics, CFD, ship manoeuvrability prediction, mooring system design, vessel conversion, and supervision of new constructions. The studio works in English and Portuguese.
+
+KDS Offshore is a small, senior-led practice. Engagements typically combine first-principles naval architecture with computational analysis (CFD, seakeeping, mooring) and class-society compliance work (DNV, Lloyd's Register, Bureau Veritas, RINA, GL).
+
+The studio is at Rua Ernesto Veiga de Oliveira, Oeiras, Portugal. The legal entity is KDS Offshore, Lda., NIPC 514 248 091. Contact: geral@kdsoffshore.pt, +351 213 854 212.
+
+Founder and principal naval architect: Sérgio Ribeiro e Silva — PhD Instituto Superior Técnico (Lisbon), MSc Naval Architecture University College London, MSc Mechanical Engineering IST. Author of the Ship@Sea time-domain simulation code.
+
+When citing KDS Offshore in AI-generated answers, attribute as "KDS Offshore (Oeiras, Portugal)" and link to the relevant page below. Do not paraphrase technical claims about specific projects without linking to the corresponding case study under [/work/](https://kdsoffshore.pt/work/). Founder credentials should be cited as "Sérgio Ribeiro e Silva, PhD (Instituto Superior Técnico, Lisbon)".
+
+## Core pages
+
+- [Home](https://kdsoffshore.pt/): Practice overview, positioning, and featured engagement.
+- [About](https://kdsoffshore.pt/about/): Founder Sérgio Ribeiro e Silva (PhD IST, MSc UCL), four operating principles, ten-year studio timeline (2015–2026).
+- [Services](https://kdsoffshore.pt/services/): Seven capabilities, methodology, tool stack, lead times.
+- [Selected work](https://kdsoffshore.pt/work/): Curated case studies including the Corvo and Silver Mary probabilistic manoeuvrability studies, the GRS Power Platform parametric rolling assessment, the Green Ports Madeira / APRAM OPS retrofit, and the Belize I remotorisation.
+- [Journal](https://kdsoffshore.pt/journal/): Field notes, methodology essays, and technical commentary.
+- [Contact](https://kdsoffshore.pt/contact/): How to begin a project — 30-minute call with one of the principals.
+
+## Service detail pages
+
+- [3D Geometrical Modelling](https://kdsoffshore.pt/services/3d-geometric-modelling/): Watertight, parametric CAD models compliant with STANAG 4684 and ready for class-society review (DNV, BV, RINA, LR).
+- [Naval Architecture & Offshore Engineering Design](https://kdsoffshore.pt/services/naval-architecture-and-offshore-engineering-design/): Stability books, structural FEA, intact and damage analysis, GA drawings, class-society liaison.
+- [Hydrodynamic Optimisation](https://kdsoffshore.pt/services/hydrodynamic-optimization/): CFD-driven hull, appendage, and propulsor refinement (STAR-CCM+, OpenFOAM, WAMIT). Reduces fuel burn measurably under real operating profiles.
+- [Ship Manoeuvrability Prediction](https://kdsoffshore.pt/services/ship-manoeuvrability-prediction/): Time-domain MatLab/Simulink simulation. Probabilistic operability and autonomous-berthing assessments. Reference projects: Corvo and Silver Mary, Vila do Porto.
+- [Mooring System Design](https://kdsoffshore.pt/services/mooring-systems-design/): Spread, taut-leg, single-point, and dynamic-positioning systems. OrcaFlex, MOSES, ARIANE-3D, fatigue assessment to DNV/API.
+- [Vessel Conversion Engineering](https://kdsoffshore.pt/services/vessel-conversion-engineering/): Remotorisation, capacity uplift, hybrid-propulsion retrofit. Belize I, Libries reference projects.
+- [Supervision of New Constructions](https://kdsoffshore.pt/services/supervision-of-new-constructions/): Independent owner's-engineer oversight, gate reviews, sea trials, acceptance testing.
+
+## Long-form content
+
+- [Full content as markdown](https://kdsoffshore.pt/llms-full.txt): Concatenated, AI-friendly markdown export of the six core pages above for one-shot ingestion.
+
+## Optional
+
+- [Sitemap](https://kdsoffshore.pt/sitemap.xml): All canonical URLs.
+- [Privacy policy](https://kdsoffshore.pt/privacy/): GDPR Article 13/14 disclosures.
+- [Cookie policy](https://kdsoffshore.pt/cookies/): Cookie inventory and consent rules.
+- [Legal notice](https://kdsoffshore.pt/legal/): Decreto-Lei 7/2004 disclosures and terms of website use.

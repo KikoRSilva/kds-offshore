@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { PageHero } from '@/components/page-hero';
 import { Reveal } from '@/components/reveal';
+import { BreadcrumbJsonLd } from '@/components/breadcrumb-jsonld';
 import { useSite } from '@/contexts/site-context';
 import { en } from '@/content/en';
 import { pt } from '@/content/pt';
@@ -152,6 +153,12 @@ export default function ContactPage() {
 
   return (
     <>
+      <BreadcrumbJsonLd
+        crumbs={[
+          { name: 'Home', path: '/' },
+          { name: 'Contact', path: '/contact/' },
+        ]}
+      />
       <PageHero
         eyebrow={p.eyebrow}
         lines={[
@@ -396,7 +403,7 @@ export default function ContactPage() {
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?auto=format&fit=crop&w=600&q=80"
+                  src="/images/stock/engineering-detail.jpg"
                   alt="Oeiras, Portugal"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}

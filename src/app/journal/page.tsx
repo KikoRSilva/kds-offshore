@@ -4,17 +4,18 @@ import { useState } from 'react';
 import { PageHero } from '@/components/page-hero';
 import { KDSImage } from '@/components/kds-image';
 import { Reveal } from '@/components/reveal';
+import { BreadcrumbJsonLd } from '@/components/breadcrumb-jsonld';
 import { useSite } from '@/contexts/site-context';
 import { en } from '@/content/en';
 import { pt } from '@/content/pt';
 
 const POST_IMGS = [
-  'https://images.unsplash.com/photo-1495556650867-99590cea3657?auto=format&fit=crop&w=800&q=80',
-  'https://images.unsplash.com/photo-1595503240812-7286dafaddc1?auto=format&fit=crop&w=800&q=80',
-  'https://images.unsplash.com/photo-1599580546666-c8f5cccd2cb1?auto=format&fit=crop&w=800&q=80',
-  'https://images.unsplash.com/photo-1500627964684-141351970a7f?auto=format&fit=crop&w=800&q=80',
-  'https://images.unsplash.com/photo-1530563885674-66db50a1af19?auto=format&fit=crop&w=800&q=80',
-  'https://images.unsplash.com/photo-1605281317010-fe5ffe798166?auto=format&fit=crop&w=800&q=80',
+  '/images/stock/port-cranes.jpg',
+  '/images/stock/harbor-night.jpg',
+  '/images/stock/sea-wave.jpg', // substituted (original 404)
+  '/images/stock/ocean-horizon.jpg',
+  '/images/stock/engineer-laptop.jpg',
+  '/images/stock/maritime-equipment.jpg',
 ];
 
 export default function JournalPage() {
@@ -30,6 +31,12 @@ export default function JournalPage() {
 
   return (
     <>
+      <BreadcrumbJsonLd
+        crumbs={[
+          { name: 'Home', path: '/' },
+          { name: 'Journal', path: '/journal/' },
+        ]}
+      />
       <PageHero
         eyebrow={p.eyebrow}
         lines={[
@@ -61,7 +68,7 @@ export default function JournalPage() {
               }}
             >
               <KDSImage
-                src="https://kdsoffshore.pt/wp-content/uploads/2024/05/maneuvrability.webp"
+                src="/images/kds/services-manoeuvrability.webp"
                 aspect="16/10"
                 alt={p.featured.t}
                 style={{ borderRadius: 4 }}

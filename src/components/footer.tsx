@@ -112,9 +112,9 @@ export function Footer() {
         </FootCol>
 
         <FootCol title="Legal">
-          <FootItem>Privacy</FootItem>
-          <FootItem>Cookies</FootItem>
-          <FootItem>GDPR · LGPD</FootItem>
+          <FootItem href="/privacy/">Privacy</FootItem>
+          <FootItem href="/cookies/">Cookies</FootItem>
+          <FootItem href="/legal/">Legal notice</FootItem>
         </FootCol>
       </div>
 

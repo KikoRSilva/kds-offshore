@@ -26,13 +26,18 @@ const interTight = Inter_Tight({
   display: 'swap',
 });
 
+const SITE_URL = 'https://kdsoffshore.pt';
+const SITE_TITLE = 'KDS Offshore — Naval Architecture & Offshore Engineering';
+const SITE_DESCRIPTION =
+  'KDS Offshore designs vessels, structures, and energy systems. Naval architecture, hydrodynamics, mooring, and decarbonisation consultancy from Oeiras, Portugal.';
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     template: '%s · KDS Offshore',
-    default: 'KDS Offshore — Naval Architecture & Offshore Engineering',
+    default: SITE_TITLE,
   },
-  description:
-    'KDS Offshore designs vessels, structures, and energy systems. Naval architecture, hydrodynamics, mooring, and decarbonisation consultancy from Oeiras, Portugal.',
+  description: SITE_DESCRIPTION,
   keywords: [
     'naval architecture',
     'offshore engineering',
@@ -46,12 +51,186 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'KDS Offshore' }],
   creator: 'KDS Offshore',
+  publisher: 'KDS Offshore, Lda.',
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-GB': '/',
+      'x-default': '/',
+    },
+  },
   openGraph: {
     type: 'website',
     locale: 'en_GB',
     alternateLocale: 'pt_PT',
     siteName: 'KDS Offshore',
+    url: SITE_URL,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: [
+      {
+        url: '/logo.png',
+        width: 512,
+        height: 512,
+        alt: 'KDS Offshore',
+      },
+    ],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: ['/logo.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
+
+const ORGANIZATION_JSONLD = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': ['Organization', 'ProfessionalService'],
+      '@id': `${SITE_URL}/#organization`,
+      name: 'KDS Offshore',
+      legalName: 'KDS Offshore, Lda.',
+      url: `${SITE_URL}/`,
+      logo: {
+        '@type': 'ImageObject',
+        '@id': `${SITE_URL}/#logo`,
+        url: `${SITE_URL}/logo.png`,
+        contentUrl: `${SITE_URL}/logo.png`,
+        width: 512,
+        height: 512,
+        caption: 'KDS Offshore',
+      },
+      image: { '@id': `${SITE_URL}/#logo` },
+      description: SITE_DESCRIPTION,
+      slogan: 'Engineering the working ocean.',
+      foundingDate: '2016',
+      foundingLocation: {
+        '@type': 'Place',
+        name: 'Oeiras, Portugal',
+      },
+      founder: {
+        '@type': 'Person',
+        '@id': `${SITE_URL}/about/#sergio-ribeiro-e-silva`,
+        name: 'Sérgio Ribeiro e Silva',
+        jobTitle: 'Principal Naval Architect',
+        alumniOf: [
+          {
+            '@type': 'CollegeOrUniversity',
+            name: 'Instituto Superior Técnico',
+            url: 'https://tecnico.ulisboa.pt/',
+          },
+          {
+            '@type': 'CollegeOrUniversity',
+            name: 'University College London',
+            url: 'https://www.ucl.ac.uk/',
+          },
+        ],
+        knowsAbout: [
+          'Naval architecture',
+          'Offshore engineering',
+          'Hydrodynamics',
+          'CFD',
+          'Ship manoeuvrability',
+          'Mooring system design',
+          'Maritime decarbonisation',
+        ],
+      },
+      taxID: '514248091',
+      vatID: 'PT514248091',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Rua Ernesto Veiga de Oliveira',
+        addressLocality: 'Oeiras',
+        addressRegion: 'Lisboa',
+        addressCountry: 'PT',
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 38.6979,
+        longitude: -9.3088,
+      },
+      areaServed: [
+        { '@type': 'Country', name: 'Portugal' },
+        { '@type': 'Country', name: 'Spain' },
+        { '@type': 'Country', name: 'Ireland' },
+        { '@type': 'Country', name: 'United Kingdom' },
+        { '@type': 'Place', name: 'Atlantic façade' },
+      ],
+      telephone: '+351-21-385-4212',
+      email: 'geral@kdsoffshore.pt',
+      openingHoursSpecification: [
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+          opens: '09:00',
+          closes: '17:00',
+        },
+      ],
+      contactPoint: [
+        {
+          '@type': 'ContactPoint',
+          contactType: 'customer service',
+          telephone: '+351-21-385-4212',
+          email: 'geral@kdsoffshore.pt',
+          areaServed: ['PT', 'ES', 'IE', 'GB'],
+          availableLanguage: ['en', 'pt'],
+        },
+      ],
+      sameAs: ['https://www.linkedin.com/company/kds-offshore'],
+      knowsAbout: [
+        'Naval architecture',
+        'Offshore engineering',
+        'Hydrodynamic optimisation',
+        'Ship manoeuvrability prediction',
+        'Mooring system design',
+        'Vessel conversion engineering',
+        'Maritime decarbonisation',
+        'CFD',
+        '3D geometrical modelling',
+        'Supervision of new constructions',
+      ],
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Engineering services',
+        itemListElement: [
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '3D Geometrical Modelling' } },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Naval Architecture & Offshore Engineering Design',
+            },
+          },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Hydrodynamic Optimisation' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Ship Manoeuvrability Prediction' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mooring System Design' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Vessel Conversion Engineering' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Supervision of New Constructions' } },
+        ],
+      },
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${SITE_URL}/#website`,
+      url: `${SITE_URL}/`,
+      name: 'KDS Offshore',
+      description: SITE_DESCRIPTION,
+      publisher: { '@id': `${SITE_URL}/#organization` },
+      inLanguage: ['en-GB', 'pt-PT'],
+    },
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -61,6 +240,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       data-theme="dark"
       className={`${spectral.variable} ${jetbrainsMono.variable} ${interTight.variable}`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(ORGANIZATION_JSONLD) }}
+        />
+      </head>
       <body>
         <SiteProvider>
           <Nav />

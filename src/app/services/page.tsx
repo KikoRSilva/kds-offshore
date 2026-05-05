@@ -1,21 +1,40 @@
 'use client';
 
+import Link from 'next/link';
 import { PageHero } from '@/components/page-hero';
 import { ServiceCTA } from '@/components/service-cta';
 import { KDSImage } from '@/components/kds-image';
 import { Reveal } from '@/components/reveal';
+import { BreadcrumbJsonLd } from '@/components/breadcrumb-jsonld';
 import { useSite } from '@/contexts/site-context';
 import { en } from '@/content/en';
 import { pt } from '@/content/pt';
+import { SERVICES, SERVICE_SLUGS } from '@/content/services-detail';
+
+const SITE_URL = 'https://kdsoffshore.pt';
+
+const SERVICES_ITEMLIST_JSONLD = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  '@id': `${SITE_URL}/services/#list`,
+  name: 'KDS Offshore — capabilities',
+  numberOfItems: SERVICES.length,
+  itemListElement: SERVICES.map((s, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    url: `${SITE_URL}/services/${s.slug}/`,
+    name: s.name,
+  })),
+};
 
 const IMG_MAP = [
-  'https://kdsoffshore.pt/wp-content/uploads/2024/04/6bd13929-f7b6-4daa-b526-6905edaa1283.webp',
-  'https://kdsoffshore.pt/wp-content/uploads/2024/04/DALL%C2%B7E-2024-04-18-18.28.35-An-engineering-design-studio-with-a-team-of-naval-architects-and-offshore-engineers-working-on-computer-aided-design-systems.-The-office-is-equipped-w.webp',
-  'https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=1200&q=80',
-  'https://kdsoffshore.pt/wp-content/uploads/2024/05/maneuvrability.webp',
-  'https://kdsoffshore.pt/wp-content/uploads/2024/05/mooring.webp',
-  'https://kdsoffshore.pt/wp-content/uploads/2024/05/convertion.webp',
-  'https://kdsoffshore.pt/wp-content/uploads/2024/05/Supervision.webp',
+  '/images/kds/services-3d-modelling.webp',
+  '/images/kds/studio-engineering-team.webp',
+  '/images/stock/vessel-ocean.jpg',
+  '/images/kds/services-manoeuvrability.webp',
+  '/images/kds/services-mooring.webp',
+  '/images/kds/services-conversion.webp',
+  '/images/kds/services-supervision.webp',
 ];
 
 export default function ServicesPage() {
@@ -25,6 +44,16 @@ export default function ServicesPage() {
 
   return (
     <>
+      <BreadcrumbJsonLd
+        crumbs={[
+          { name: 'Home', path: '/' },
+          { name: 'Services', path: '/services/' },
+        ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICES_ITEMLIST_JSONLD) }}
+      />
       <PageHero
         eyebrow={p.eyebrow}
         lines={[
@@ -109,8 +138,22 @@ export default function ServicesPage() {
                       </li>
                     ))}
                   </ul>
-                  <div style={{ marginTop: 28, display: 'flex', alignItems: 'center', gap: 16 }}>
-                    <a
+                  <div style={{ marginTop: 28, display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
+                    <Link
+                      href={`/services/${SERVICE_SLUGS[i]}/`}
+                      className="kds-sans"
+                      style={{
+                        padding: '12px 20px',
+                        background: 'var(--ink)',
+                        color: 'var(--bg)',
+                        borderRadius: 999,
+                        fontSize: 13,
+                        fontWeight: 500,
+                      }}
+                    >
+                      {lang === 'pt' ? 'Ler briefing' : 'Read brief'} →
+                    </Link>
+                    <Link
                       href="/contact/"
                       className="kds-sans"
                       style={{
@@ -122,7 +165,7 @@ export default function ServicesPage() {
                       }}
                     >
                       {lang === 'pt' ? 'Solicitar proposta' : 'Brief this service'} →
-                    </a>
+                    </Link>
                     <span
                       className="kds-mono"
                       style={{ fontSize: 11, color: 'var(--ink-faint)', letterSpacing: '0.18em', textTransform: 'uppercase' }}

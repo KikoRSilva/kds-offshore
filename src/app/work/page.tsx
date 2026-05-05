@@ -5,18 +5,19 @@ import { PageHero } from '@/components/page-hero';
 import { ServiceCTA } from '@/components/service-cta';
 import { KDSImage } from '@/components/kds-image';
 import { Reveal } from '@/components/reveal';
+import { BreadcrumbJsonLd } from '@/components/breadcrumb-jsonld';
 import { useSite } from '@/contexts/site-context';
 import { en } from '@/content/en';
 import { pt } from '@/content/pt';
 
 const CASE_IMGS = [
-  'https://images.unsplash.com/photo-1494412651409-8963ce7935a7?auto=format&fit=crop&w=1600&q=80',
-  'https://images.unsplash.com/photo-1495556650867-99590cea3657?auto=format&fit=crop&w=1600&q=80',
-  'https://images.unsplash.com/photo-1595503240812-7286dafaddc1?auto=format&fit=crop&w=1600&q=80',
-  'https://images.unsplash.com/photo-1599580546666-c8f5cccd2cb1?auto=format&fit=crop&w=1600&q=80',
-  'https://images.unsplash.com/photo-1500627964684-141351970a7f?auto=format&fit=crop&w=1600&q=80',
-  'https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?auto=format&fit=crop&w=1600&q=80',
-  'https://images.unsplash.com/photo-1569163139394-de4798aa62b6?auto=format&fit=crop&w=1600&q=80',
+  '/images/stock/cargo-vessel.jpg',
+  '/images/stock/port-cranes.jpg',
+  '/images/stock/harbor-night.jpg',
+  '/images/stock/sea-wave.jpg', // substituted: original Unsplash photo (catamaran) was 404 on the live site
+  '/images/stock/ocean-horizon.jpg',
+  '/images/stock/maritime-equipment.jpg',
+  '/images/stock/engineering-detail.jpg', // substituted: original Unsplash photo (pilot boat) was 404 on the live site
 ];
 
 export default function WorkPage() {
@@ -37,6 +38,12 @@ export default function WorkPage() {
 
   return (
     <>
+      <BreadcrumbJsonLd
+        crumbs={[
+          { name: 'Home', path: '/' },
+          { name: 'Work', path: '/work/' },
+        ]}
+      />
       <PageHero
         eyebrow={pp.eyebrow}
         lines={[
