@@ -1,0 +1,304 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ====================================================
+   KDS Offshore — Deep Current design system
+   ==================================================== */
+
+/* Dark theme (default) */
+:root,
+[data-theme="dark"] {
+  --bg: #07090c;
+  --bg-2: #0d1218;
+  --surface: #11171f;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-2: rgba(255, 255, 255, 0.14);
+  --ink: #f4f6f8;
+  --ink-dim: #98a3b1;
+  --ink-faint: #5a6573;
+  --accent: #b8d4ff;
+  --accent-deep: #4a7dbf;
+  --signal: #ffb400;
+}
+
+[data-theme="light"] {
+  --bg: #f4f1ec;
+  --bg-2: #ebe6dd;
+  --surface: #ffffff;
+  --line: rgba(10, 15, 25, 0.12);
+  --line-2: rgba(10, 15, 25, 0.22);
+  --ink: #0a0f19;
+  --ink-dim: #4a5462;
+  --ink-faint: #8a92a0;
+  --accent: #1b3a6b;
+  --accent-deep: #0a1f3d;
+  --signal: #c25a3d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---- Typography helpers ---- */
+.kds-display {
+  font-family: var(--font-spectral), Georgia, serif;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+}
+
+.kds-mono {
+  font-family: var(--font-jetbrains), monospace;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.kds-sans {
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+/* ---- Placeholder imagery ---- */
+.ph {
+  position: relative;
+  overflow: hidden;
+  background: repeating-linear-gradient(
+    135deg,
+    rgba(120, 140, 160, 0.08) 0 14px,
+    rgba(120, 140, 160, 0.18) 14px 15px
+  );
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-dim);
+}
+
+/* ---- CFD plot ---- */
+.cfd-plot {
+  background: radial-gradient(ellipse 60% 40% at 50% 50%, rgba(255, 180, 0, 0.5), transparent 50%),
+    radial-gradient(ellipse 80% 55% at 50% 50%, rgba(255, 90, 30, 0.4), transparent 60%),
+    radial-gradient(ellipse 100% 70% at 50% 50%, rgba(180, 80, 200, 0.3), transparent 70%),
+    radial-gradient(ellipse 130% 90% at 50% 50%, rgba(60, 120, 200, 0.35), transparent 75%),
+    radial-gradient(ellipse 160% 110% at 50% 50%, rgba(20, 40, 80, 0.6), transparent 80%), #050a14;
+  position: relative;
+}
+
+.cfd-plot::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.04) 0 1px,
+      transparent 1px 24px
+    ),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 24px);
+  pointer-events: none;
+}
+
+/* ---- Sonar hero backdrop ---- */
+.sonar-bg {
+  background: radial-gradient(ellipse 100% 60% at 50% 100%, rgba(74, 125, 191, 0.28), transparent 70%),
+    radial-gradient(ellipse 80% 50% at 80% 0%, rgba(184, 212, 255, 0.1), transparent 60%),
+    linear-gradient(180deg, #050810 0%, #0a1220 60%, #0d1828 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme="light"] .sonar-bg {
+  background: radial-gradient(ellipse 100% 60% at 50% 100%, rgba(27, 58, 107, 0.1), transparent 70%),
+    radial-gradient(ellipse 80% 50% at 80% 0%, rgba(27, 58, 107, 0.06), transparent 60%),
+    linear-gradient(180deg, #f4f1ec 0%, #ebe6dd 60%, #e3dccf 100%);
+}
+
+.sonar-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+      0deg,
+      rgba(184, 212, 255, 0.06) 0 1px,
+      transparent 1px 80px
+    ),
+    repeating-linear-gradient(90deg, rgba(184, 212, 255, 0.06) 0 1px, transparent 1px 80px);
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent 80%);
+  pointer-events: none;
+}
+
+[data-theme="light"] .sonar-bg::before {
+  background-image: repeating-linear-gradient(
+      0deg,
+      rgba(10, 31, 61, 0.07) 0 1px,
+      transparent 1px 80px
+    ),
+    repeating-linear-gradient(90deg, rgba(10, 31, 61, 0.07) 0 1px, transparent 1px 80px);
+}
+
+.sonar-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      circle at 70% 70%,
+      transparent 0,
+      transparent 200px,
+      rgba(184, 212, 255, 0.04) 200px,
+      rgba(184, 212, 255, 0.04) 201px,
+      transparent 201px
+    ),
+    radial-gradient(
+      circle at 70% 70%,
+      transparent 0,
+      transparent 360px,
+      rgba(184, 212, 255, 0.04) 360px,
+      rgba(184, 212, 255, 0.04) 361px,
+      transparent 361px
+    ),
+    radial-gradient(
+      circle at 70% 70%,
+      transparent 0,
+      transparent 540px,
+      rgba(184, 212, 255, 0.04) 540px,
+      rgba(184, 212, 255, 0.04) 541px,
+      transparent 541px
+    );
+  pointer-events: none;
+}
+
+[data-theme="light"] .sonar-bg::after {
+  background: radial-gradient(
+      circle at 70% 70%,
+      transparent 0,
+      transparent 200px,
+      rgba(10, 31, 61, 0.06) 200px,
+      rgba(10, 31, 61, 0.06) 201px,
+      transparent 201px
+    ),
+    radial-gradient(
+      circle at 70% 70%,
+      transparent 0,
+      transparent 360px,
+      rgba(10, 31, 61, 0.06) 360px,
+      rgba(10, 31, 61, 0.06) 361px,
+      transparent 361px
+    ),
+    radial-gradient(
+      circle at 70% 70%,
+      transparent 0,
+      transparent 540px,
+      rgba(10, 31, 61, 0.06) 540px,
+      rgba(10, 31, 61, 0.06) 541px,
+      transparent 541px
+    );
+}
+
+/* ---- Radar ping ---- */
+@keyframes ping-ring {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+.ping-dot {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.ping-dot::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1.5px solid var(--accent);
+  animation: ping-ring 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* ---- Marquee ---- */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  animation: marquee 40s linear infinite;
+}
+
+/* ---- Status dot ---- */
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3acc6a;
+  box-shadow: 0 0 12px #3acc6a;
+}
+
+/* ---- Form resets ---- */
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-2);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line-2);
+  border-radius: 3px;
+}
+
+/* ---- Focus visible ---- */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
