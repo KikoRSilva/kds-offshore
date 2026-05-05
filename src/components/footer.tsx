@@ -79,8 +79,8 @@ export function Footer() {
         }}
       >
         <div>
-          <Link href="/" aria-label="KDS Offshore – home">
-            <KDSMark color="var(--ink)" />
+          <Link href="/" aria-label="KDS Offshore – home" style={{ display: 'inline-block' }}>
+            <KDSMark size={56} />
           </Link>
           <p
             className="kds-sans"

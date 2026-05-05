@@ -58,21 +58,10 @@ export function Nav() {
       >
         <Link
           href="/"
-          style={{ display: 'flex', alignItems: 'center', gap: 14, flexShrink: 0 }}
+          style={{ display: 'flex', alignItems: 'center', gap: 12, flexShrink: 0 }}
           aria-label="KDS Offshore – home"
         >
-          <KDSMark color="var(--ink)" />
-          <span
-            className="kds-mono"
-            style={{
-              fontSize: 11,
-              color: 'var(--ink-dim)',
-              letterSpacing: '0.18em',
-              textTransform: 'uppercase',
-            }}
-          >
-            KDS · Offshore
-          </span>
+          <KDSMark size={40} />
         </Link>
 
         <nav aria-label="Main navigation">
