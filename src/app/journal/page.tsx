@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { PageHero } from '@/components/page-hero';
 import { KDSImage } from '@/components/kds-image';
 import { Reveal } from '@/components/reveal';
@@ -58,8 +59,8 @@ export default function JournalPage() {
           </Reveal>
 
           <Reveal delay={0.1}>
-            <a
-              href="#"
+            <Link
+              href={p.featured.published ? `/journal/${p.featured.slug}/` : '#'}
               style={{
                 display: 'grid',
                 gridTemplateColumns: '7fr 5fr',
@@ -113,11 +114,11 @@ export default function JournalPage() {
                     className="kds-mono"
                     style={{ fontSize: 11, color: 'var(--ink-faint)', letterSpacing: '0.18em', textTransform: 'uppercase' }}
                   >
-                    {p.featured.date} · {p.featured.read}
+                    <time dateTime={p.featured.datePublished}>{p.featured.date}</time> · {p.featured.read}
                   </span>
                 </div>
               </div>
-            </a>
+            </Link>
           </Reveal>
         </div>
       </section>
@@ -156,8 +157,9 @@ export default function JournalPage() {
           >
             {p.posts.map((post, i) => (
               <Reveal key={i} delay={i * 0.07}>
-                <a
-                  href="#"
+                <Link
+                  href={post.published ? `/journal/${post.slug}/` : '#'}
+                  aria-disabled={!post.published}
                   style={{
                     display: 'flex',
                     flexDirection: 'column',
@@ -166,6 +168,8 @@ export default function JournalPage() {
                     borderRight: (i + 1) % 3 !== 0 ? '1px solid var(--line)' : 'none',
                     borderBottom: '1px solid var(--line)',
                     minHeight: 320,
+                    opacity: post.published ? 1 : 0.65,
+                    cursor: post.published ? 'pointer' : 'default',
                   }}
                 >
                   <div>
@@ -180,6 +184,9 @@ export default function JournalPage() {
                         style={{ fontSize: 10, color: 'var(--accent)', letterSpacing: '0.22em', textTransform: 'uppercase', marginBottom: 16 }}
                       >
                         {post.tag}
+                        {!post.published && (
+                          <span style={{ marginLeft: 12, color: 'var(--ink-faint)' }}>· Coming soon</span>
+                        )}
                       </div>
                       <h4
                         className="kds-display"
@@ -203,10 +210,10 @@ export default function JournalPage() {
                       className="kds-mono"
                       style={{ fontSize: 11, color: 'var(--ink-faint)', letterSpacing: '0.16em', textTransform: 'uppercase' }}
                     >
-                      {post.date} · {post.read}
+                      <time dateTime={post.datePublished}>{post.date}</time> · {post.read}
                     </span>
                   </div>
-                </a>
+                </Link>
               </Reveal>
             ))}
           </div>

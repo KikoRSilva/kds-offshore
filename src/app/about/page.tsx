@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { PageHero } from '@/components/page-hero';
 import { KDSImage } from '@/components/kds-image';
 import { Reveal } from '@/components/reveal';
@@ -77,6 +78,12 @@ const FOUNDER_PERSON_JSONLD = {
       addressCountry: 'PT',
     },
   },
+  sameAs: [
+    'https://www.linkedin.com/in/sergio-ribeiro-e-silva-39110322/',
+    'https://scholar.google.pt/citations?user=K6-RZXQAAAAJ&hl=en',
+    'http://www.maretec.org/en/about-us/team/SergioSilva',
+  ],
+  url: `${SITE_URL}/team/sergio-ribeiro-e-silva/`,
 };
 
 const PORTRAITS = [
@@ -311,42 +318,61 @@ export default function AboutPage() {
               borderTop: '1px solid var(--line)',
             }}
           >
-            {p.team.map((m, i) => (
-              <Reveal key={i} delay={i * 0.07}>
-                <div
-                  style={{
-                    padding: '32px 28px 40px',
-                    borderRight: (i + 1) % 3 !== 0 ? '1px solid var(--line)' : 'none',
-                    borderBottom: '1px solid var(--line)',
-                  }}
-                >
-                  <KDSImage
-                    src={PORTRAITS[i]}
-                    aspect="4/5"
-                    alt={m.name}
-                    style={{ marginBottom: 24, borderRadius: 4 }}
-                  />
+            {p.team.map((m, i) => {
+              const isFounder = i === 0;
+              return (
+                <Reveal key={i} delay={i * 0.07}>
                   <div
-                    className="kds-mono"
-                    style={{ fontSize: 10, color: 'var(--accent)', letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: 8 }}
+                    style={{
+                      padding: '32px 28px 40px',
+                      borderRight: (i + 1) % 3 !== 0 ? '1px solid var(--line)' : 'none',
+                      borderBottom: '1px solid var(--line)',
+                    }}
                   >
-                    {m.role}
+                    <KDSImage
+                      src={PORTRAITS[i]}
+                      aspect="4/5"
+                      alt={m.name}
+                      style={{ marginBottom: 24, borderRadius: 4 }}
+                    />
+                    <div
+                      className="kds-mono"
+                      style={{ fontSize: 10, color: 'var(--accent)', letterSpacing: '0.18em', textTransform: 'uppercase', marginBottom: 8 }}
+                    >
+                      {m.role}
+                    </div>
+                    <h4
+                      className="kds-display"
+                      style={{ fontSize: 22, fontWeight: 400, margin: '0 0 12px', letterSpacing: '-0.01em' }}
+                    >
+                      {m.name}
+                    </h4>
+                    <p
+                      className="kds-sans"
+                      style={{ fontSize: 13, color: 'var(--ink-dim)', lineHeight: 1.6, margin: 0 }}
+                    >
+                      {m.bio}
+                    </p>
+                    {isFounder && (
+                      <Link
+                        href="/team/sergio-ribeiro-e-silva/"
+                        className="kds-mono"
+                        style={{
+                          display: 'inline-block',
+                          marginTop: 20,
+                          fontSize: 10,
+                          letterSpacing: '0.22em',
+                          textTransform: 'uppercase',
+                          color: 'var(--accent)',
+                        }}
+                      >
+                        Read full profile →
+                      </Link>
+                    )}
                   </div>
-                  <h4
-                    className="kds-display"
-                    style={{ fontSize: 22, fontWeight: 400, margin: '0 0 12px', letterSpacing: '-0.01em' }}
-                  >
-                    {m.name}
-                  </h4>
-                  <p
-                    className="kds-sans"
-                    style={{ fontSize: 13, color: 'var(--ink-dim)', lineHeight: 1.6, margin: 0 }}
-                  >
-                    {m.bio}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </section>

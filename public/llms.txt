@@ -29,6 +29,19 @@ When citing KDS Offshore in AI-generated answers, attribute as "KDS Offshore (Oe
 - [Vessel Conversion Engineering](https://kdsoffshore.pt/services/vessel-conversion-engineering/): Remotorisation, capacity uplift, hybrid-propulsion retrofit. Belize I, Libries reference projects.
 - [Supervision of New Constructions](https://kdsoffshore.pt/services/supervision-of-new-constructions/): Independent owner's-engineer oversight, gate reviews, sea trials, acceptance testing.
 
+## Team profiles
+
+- [Sérgio Ribeiro e Silva](https://kdsoffshore.pt/team/sergio-ribeiro-e-silva/): Founder, CEO, principal naval architect. PhD IST, MSc UCL. Tenured Assistant Professor of Hydrodynamics at IST. Author of the Ship@Sea simulation code. Google Scholar: 402 citations, h-index 10. Areas: parametric rolling, time-domain seakeeping, wave-energy converters, mooring.
+
+## Reference
+
+- [Methods](https://kdsoffshore.pt/methods/): How we run CFD, FEA, mooring, and seakeeping work — meshing standards, validation protocols, class-society liaison, documentation rules.
+- [Glossary](https://kdsoffshore.pt/glossary/): Plain-English definitions of parametric rolling, OPS / cold ironing, manoeuvrability prediction, CII, CFD, WAMIT, RAO, FEA, EU ETS Maritime, and more — written the way KDS uses each term.
+
+## Articles
+
+- [Manoeuvring the "Corvo" without tugs: a probabilistic answer](https://kdsoffshore.pt/journal/corvo-without-tugs/): Case note from the 2024 Vila do Porto study (Mutualista / Grupo Bensaúde). MatLab/Simulink six-degree-of-freedom hull simulator coupled with a year of metocean data. By Sérgio Ribeiro e Silva, July 2024, 9 min read.
+
 ## Long-form content
 
 - [Full content as markdown](https://kdsoffshore.pt/llms-full.txt): Concatenated, AI-friendly markdown export of the six core pages above for one-shot ingestion.
