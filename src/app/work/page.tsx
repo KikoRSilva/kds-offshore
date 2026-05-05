@@ -102,13 +102,18 @@ export default function WorkPage() {
               const titleSize = c.span === 'wide' ? 32 : 24;
 
               return (
-                <Reveal key={i} delay={i * 0.06}>
+                <Reveal
+                  key={i}
+                  delay={i * 0.06}
+                  style={{
+                    gridColumn: `span ${colSpan}`,
+                    marginTop: i === 2 ? 56 : 0,
+                  }}
+                >
                   <a
                     href="#"
                     style={{
-                      gridColumn: `span ${colSpan}`,
                       display: 'block',
-                      marginTop: i === 2 ? 56 : 0,
                     }}
                   >
                     <KDSImage
