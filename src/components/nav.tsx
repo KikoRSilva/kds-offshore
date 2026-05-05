@@ -50,21 +50,21 @@ export function Nav() {
           maxWidth: 1440,
           margin: '0 auto',
           padding: '18px 48px',
-          display: 'flex',
+          display: 'grid',
+          gridTemplateColumns: '1fr auto 1fr',
           alignItems: 'center',
-          justifyContent: 'space-between',
           gap: 24,
         }}
       >
         <Link
           href="/"
-          style={{ display: 'flex', alignItems: 'center', gap: 12, flexShrink: 0 }}
+          style={{ display: 'flex', alignItems: 'center', gap: 12, justifySelf: 'start' }}
           aria-label="KDS Offshore – home"
         >
           <KDSMark size={40} />
         </Link>
 
-        <nav aria-label="Main navigation">
+        <nav aria-label="Main navigation" style={{ justifySelf: 'center' }}>
           <ul
             style={{
               display: 'flex',
@@ -113,7 +113,7 @@ export function Nav() {
           </ul>
         </nav>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexShrink: 0 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 12, justifySelf: 'end' }}>
           <button
             onClick={toggleLang}
             className="kds-mono"
