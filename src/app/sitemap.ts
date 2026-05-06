@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next';
 import { SERVICE_SLUGS } from '@/content/services-detail';
 import { TEAM_SLUGS } from '@/content/team-detail';
 import { ARTICLES } from '@/content/journal-detail';
+import { CASE_SLUGS } from '@/content/cases-detail';
 
 export const dynamic = 'force-static';
 
@@ -39,11 +40,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  const caseRoutes: Entry[] = CASE_SLUGS.map((slug) => ({
+    path: `/work/${slug}`,
+    changeFrequency: 'monthly',
+    priority: 0.85,
+  }));
+
   const routes: Entry[] = [
     { path: '', changeFrequency: 'weekly', priority: 1.0 },
     { path: '/services', changeFrequency: 'monthly', priority: 0.9 },
     ...serviceRoutes,
     { path: '/work', changeFrequency: 'monthly', priority: 0.9 },
+    ...caseRoutes,
     { path: '/about', changeFrequency: 'monthly', priority: 0.8 },
     ...teamRoutes,
     { path: '/journal', changeFrequency: 'weekly', priority: 0.8 },

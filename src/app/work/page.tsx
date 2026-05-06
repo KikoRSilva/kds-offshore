@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { PageHero } from '@/components/page-hero';
 import { ServiceCTA } from '@/components/service-cta';
 import { KDSImage } from '@/components/kds-image';
@@ -9,6 +10,7 @@ import { BreadcrumbJsonLd } from '@/components/breadcrumb-jsonld';
 import { useSite } from '@/contexts/site-context';
 import { en } from '@/content/en';
 import { pt } from '@/content/pt';
+import { CASE_SLUGS } from '@/content/cases-detail';
 
 const SITE_URL = 'https://kdsoffshore.pt';
 
@@ -148,7 +150,10 @@ export default function WorkPage() {
                     marginTop: i === 2 ? 56 : 0,
                   }}
                 >
-                  <article
+                  <article>
+                  <Link
+                    href={`/work/${CASE_SLUGS[i]}/`}
+                    className="kds-card"
                     style={{
                       display: 'block',
                     }}
@@ -229,6 +234,7 @@ export default function WorkPage() {
                         {c.year}
                       </span>
                     </div>
+                  </Link>
                   </article>
                 </Reveal>
               );
