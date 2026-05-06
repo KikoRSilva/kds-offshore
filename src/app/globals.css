@@ -337,33 +337,6 @@ textarea {
   transform: translateY(-3px);
 }
 
-/* Scroll-driven parallax on featured imagery.
-   Apply .kds-parallax on the same wrapper as .kds-zoom.
-   The img is oversized so the translation never exposes wrapper edges. */
-.kds-parallax > img {
-  height: 120%;
-  width: 100%;
-  object-fit: cover;
-  transform: translateY(-10%);
-}
-
-@supports (animation-timeline: view()) {
-  @keyframes kds-parallax-y {
-    from {
-      transform: translateY(-10%);
-    }
-    to {
-      transform: translateY(10%);
-    }
-  }
-
-  .kds-parallax > img {
-    animation: kds-parallax-y linear both;
-    animation-timeline: view();
-    animation-range: cover 0% cover 100%;
-  }
-}
-
 /* Top-of-page scroll progress bar (thin accent rule under the nav).
    Drawn by an absolutely-positioned span inside the sticky header. */
 .kds-scroll-progress {
@@ -398,13 +371,9 @@ textarea {
   .kds-zoom:hover > img,
   .kds-card,
   .kds-card:hover,
-  .kds-parallax > img,
   .kds-scroll-progress {
     transition: none;
     animation: none;
     transform: none;
-  }
-  .kds-parallax > img {
-    height: 100%;
   }
 }

@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 interface KDSImageProps {
   src: string;
@@ -12,6 +13,7 @@ interface KDSImageProps {
   overlay?: React.ReactNode;
   zoom?: boolean;
   parallax?: boolean;
+  parallaxStrength?: number;
 }
 
 export function KDSImage({
@@ -24,8 +26,19 @@ export function KDSImage({
   overlay,
   zoom = true,
   parallax = false,
+  parallaxStrength = 18,
 }: KDSImageProps) {
   const [err, setErr] = useState(false);
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: wrapperRef,
+    offset: ['start end', 'end start'],
+  });
+  const y = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [`-${parallaxStrength}%`, `${parallaxStrength}%`],
+  );
 
   if (err || !src) {
     return (
@@ -53,23 +66,13 @@ export function KDSImage({
     );
   }
 
-  const motionClasses = [
-    zoom ? 'kds-zoom' : '',
-    parallax ? 'kds-parallax' : '',
-    className,
-  ]
+  const motionClasses = [zoom ? 'kds-zoom' : '', className]
     .filter(Boolean)
     .join(' ');
 
-  // .kds-parallax controls the <img> sizing (height: 120%) so it can translate
-  // without exposing the wrapper edges; in that mode we omit width/height inline
-  // styles and let the class drive them.
-  const imgStyle: React.CSSProperties = parallax
-    ? { objectFit: 'cover', display: 'block' }
-    : { width: '100%', height: '100%', objectFit: 'cover', display: 'block' };
-
   return (
     <div
+      ref={wrapperRef}
       className={motionClasses}
       style={{
         position: 'relative',
@@ -79,8 +82,30 @@ export function KDSImage({
         ...style,
       }}
     >
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={src} alt={alt} onError={() => setErr(true)} style={imgStyle} />
+      {parallax ? (
+        // eslint-disable-next-line jsx-a11y/alt-text
+        <motion.img
+          src={src}
+          alt={alt}
+          onError={() => setErr(true)}
+          style={{
+            width: '100%',
+            height: `${100 + parallaxStrength * 2 + 4}%`,
+            objectFit: 'cover',
+            display: 'block',
+            y,
+            willChange: 'transform',
+          }}
+        />
+      ) : (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={src}
+          alt={alt}
+          onError={() => setErr(true)}
+          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+        />
+      )}
       {overlay}
     </div>
   );
