@@ -15,6 +15,14 @@ export const metadata: Metadata = {
       'How we run CFD, FEA, mooring, and seakeeping work. Meshing standards, validation protocols, documentation rules.',
     url: `${SITE_URL}/methods/`,
     type: 'article',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'KDS Offshore — Engineering the working ocean.',
+      },
+    ],
   },
 };
 

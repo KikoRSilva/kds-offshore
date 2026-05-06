@@ -34,12 +34,22 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       publishedTime: a.datePublished,
       modifiedTime: a.dateModified,
       authors: [a.author],
-      images: a.hero ? [{ url: a.hero.src, alt: a.hero.alt }] : undefined,
+      images: a.hero
+        ? [{ url: a.hero.src, alt: a.hero.alt }]
+        : [
+            {
+              url: '/og-image.png',
+              width: 1200,
+              height: 630,
+              alt: 'KDS Offshore — Engineering the working ocean.',
+            },
+          ],
     },
     twitter: {
       card: 'summary_large_image',
       title: a.title,
       description: a.subtitle,
+      images: [a.hero ? a.hero.src : '/og-image.png'],
     },
   };
 }

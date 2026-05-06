@@ -36,6 +36,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       card: 'summary_large_image',
       title: `${m.name} — KDS Offshore`,
       description: m.shortBio,
+      images: ['/og-image.png'],
     },
   };
 }

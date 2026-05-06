@@ -31,11 +31,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description,
       url: `${SITE_URL}/services/${slug}/`,
       type: 'article',
+      images: [
+        {
+          url: '/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: 'KDS Offshore — Engineering the working ocean.',
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: `${service.name} — KDS Offshore`,
       description,
+      images: ['/og-image.png'],
     },
   };
 }

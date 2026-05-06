@@ -69,10 +69,10 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     images: [
       {
-        url: '/logo.png',
-        width: 512,
-        height: 512,
-        alt: 'KDS Offshore',
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'KDS Offshore — Engineering the working ocean.',
       },
     ],
   },
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    images: ['/logo.png'],
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,

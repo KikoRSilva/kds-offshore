@@ -15,6 +15,14 @@ export const metadata: Metadata = {
       'Naval architecture, hydrodynamics, manoeuvrability, mooring, and decarbonisation terms — defined the way we use them.',
     url: `${SITE_URL}/glossary/`,
     type: 'article',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'KDS Offshore — Engineering the working ocean.',
+      },
+    ],
   },
 };
 
