@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { TEAM, TEAM_BY_SLUG, TEAM_SLUGS } from '@/content/team-detail';
 import { BreadcrumbJsonLd } from '@/components/breadcrumb-jsonld';
+import { ParallaxImageFrame } from '@/components/parallax-image-frame';
 
 const SITE_URL = 'https://kdsoffshore.pt';
 
@@ -153,14 +154,9 @@ export default async function TeamMemberPage({ params }: PageProps) {
               alignItems: 'start',
             }}
           >
-            <div
-              style={{
-                aspectRatio: '4/5',
-                position: 'relative',
-                borderRadius: 4,
-                overflow: 'hidden',
-                background: 'var(--bg-2)',
-              }}
+            <ParallaxImageFrame
+              aspect="4/5"
+              style={{ borderRadius: 4, background: 'var(--bg-2)' }}
             >
               <Image
                 src={m.photoSrc}
@@ -170,7 +166,7 @@ export default async function TeamMemberPage({ params }: PageProps) {
                 sizes="320px"
                 style={{ objectFit: 'cover' }}
               />
-            </div>
+            </ParallaxImageFrame>
             <div>
               <div className="kds-mono" style={SECTION_LABEL}>
                 Team · Founder

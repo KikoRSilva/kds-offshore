@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { ARTICLES, ARTICLES_BY_SLUG, ARTICLE_SLUGS } from '@/content/journal-detail';
 import { TEAM_BY_SLUG } from '@/content/team-detail';
 import { BreadcrumbJsonLd } from '@/components/breadcrumb-jsonld';
+import { ParallaxImageFrame } from '@/components/parallax-image-frame';
 
 const SITE_URL = 'https://kdsoffshore.pt';
 
@@ -227,24 +228,17 @@ export default async function JournalArticlePage({ params }: PageProps) {
 
         {a.hero && (
           <div style={{ padding: '0 48px', marginTop: 0 }}>
-            <div
-              style={{
-                maxWidth: 1100,
-                margin: '0 auto',
-                aspectRatio: '21/9',
-                position: 'relative',
-                borderRadius: 4,
-                overflow: 'hidden',
-              }}
-            >
-              <Image
-                src={a.hero.src}
-                alt={a.hero.alt}
-                fill
-                priority
-                sizes="(max-width: 1100px) 100vw, 1100px"
-                style={{ objectFit: 'cover' }}
-              />
+            <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+              <ParallaxImageFrame aspect="21/9" style={{ borderRadius: 4 }}>
+                <Image
+                  src={a.hero.src}
+                  alt={a.hero.alt}
+                  fill
+                  priority
+                  sizes="(max-width: 1100px) 100vw, 1100px"
+                  style={{ objectFit: 'cover' }}
+                />
+              </ParallaxImageFrame>
             </div>
           </div>
         )}
@@ -464,6 +458,7 @@ export default async function JournalArticlePage({ params }: PageProps) {
             <div style={{ maxWidth: 900, margin: '0 auto' }}>
               <Link
                 href={`/team/${author.slug}/`}
+                className="kds-card"
                 style={{
                   display: 'grid',
                   gridTemplateColumns: '120px 1fr',

@@ -128,6 +128,7 @@ export default function AboutPage() {
               src="/images/kds/studio-eco-office.webp"
               aspect="21/9"
               alt="KDS Offshore studio"
+              parallax
               style={{ borderRadius: 4 }}
             />
             <div
