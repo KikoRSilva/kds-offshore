@@ -112,6 +112,7 @@ export default function WorkPage() {
                 >
                   <a
                     href="#"
+                    className="kds-card"
                     style={{
                       display: 'block',
                     }}

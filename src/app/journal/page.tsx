@@ -86,6 +86,7 @@ export default function JournalPage() {
           <Reveal delay={0.1}>
             <Link
               href={p.featured.published ? `/journal/${p.featured.slug}/` : '#'}
+              className="kds-card"
               style={{
                 display: 'grid',
                 gridTemplateColumns: '7fr 5fr',
@@ -97,6 +98,7 @@ export default function JournalPage() {
                 src="/images/kds/services-manoeuvrability.webp"
                 aspect="16/10"
                 alt={p.featured.t}
+                parallax
                 style={{ borderRadius: 4 }}
               />
               <div>
@@ -185,6 +187,7 @@ export default function JournalPage() {
                 <Link
                   href={post.published ? `/journal/${post.slug}/` : '#'}
                   aria-disabled={!post.published}
+                  className={post.published ? 'kds-card' : ''}
                   style={{
                     display: 'flex',
                     flexDirection: 'column',

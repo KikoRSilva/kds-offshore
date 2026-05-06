@@ -45,6 +45,7 @@ export function Nav() {
         borderBottom: '1px solid var(--line)',
       }}
     >
+      <span className="kds-scroll-progress" aria-hidden />
       <div
         style={{
           maxWidth: 1440,

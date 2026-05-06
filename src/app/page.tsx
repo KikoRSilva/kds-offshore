@@ -213,6 +213,7 @@ export default function HomePage() {
                   src={IMG.port}
                   aspect="5/3"
                   alt="Vessel photograph"
+                  parallax
                   style={{ borderRadius: 4 }}
                 />
                 <div

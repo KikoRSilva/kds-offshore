@@ -302,3 +302,109 @@ textarea {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
+
+/* ====================================================
+   Motion layer — May 2026 standards
+   - GPU-accelerated transforms only (no main-thread)
+   - CSS scroll-driven animations where supported
+   - All effects degrade safely under prefers-reduced-motion
+   ==================================================== */
+
+/* Editorial image hover zoom. Apply .kds-zoom on the image wrapper.
+   Triggers on the wrapper itself OR on a parent .kds-card. */
+.kds-zoom {
+  overflow: hidden;
+}
+
+.kds-zoom > img {
+  transition: transform 900ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  will-change: transform;
+}
+
+.kds-zoom:hover > img,
+.kds-card:hover .kds-zoom > img {
+  transform: scale(1.04);
+}
+
+/* Subtle card lift on hover. Apply .kds-card to any clickable card. */
+.kds-card {
+  transition: transform 360ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    border-color 360ms ease, box-shadow 360ms ease;
+  will-change: transform;
+}
+
+.kds-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Scroll-driven parallax on featured imagery.
+   Apply .kds-parallax on the same wrapper as .kds-zoom.
+   The img is oversized so the translation never exposes wrapper edges. */
+.kds-parallax > img {
+  height: 120%;
+  width: 100%;
+  object-fit: cover;
+  transform: translateY(-10%);
+}
+
+@supports (animation-timeline: view()) {
+  @keyframes kds-parallax-y {
+    from {
+      transform: translateY(-10%);
+    }
+    to {
+      transform: translateY(10%);
+    }
+  }
+
+  .kds-parallax > img {
+    animation: kds-parallax-y linear both;
+    animation-timeline: view();
+    animation-range: cover 0% cover 100%;
+  }
+}
+
+/* Top-of-page scroll progress bar (thin accent rule under the nav).
+   Drawn by an absolutely-positioned span inside the sticky header. */
+.kds-scroll-progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 1px;
+  background: var(--accent);
+  transform-origin: left center;
+  transform: scaleX(0);
+  pointer-events: none;
+}
+
+@supports (animation-timeline: scroll()) {
+  @keyframes kds-scroll-grow {
+    to {
+      transform: scaleX(1);
+    }
+  }
+
+  .kds-scroll-progress {
+    animation: kds-scroll-grow linear both;
+    animation-timeline: scroll(root);
+  }
+}
+
+/* Universal reduced-motion guard. Disables zoom, lift, parallax and
+   the scroll progress bar — keeping only the static end states. */
+@media (prefers-reduced-motion: reduce) {
+  .kds-zoom > img,
+  .kds-zoom:hover > img,
+  .kds-card,
+  .kds-card:hover,
+  .kds-parallax > img,
+  .kds-scroll-progress {
+    transition: none;
+    animation: none;
+    transform: none;
+  }
+  .kds-parallax > img {
+    height: 100%;
+  }
+}

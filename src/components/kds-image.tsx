@@ -10,6 +10,8 @@ interface KDSImageProps {
   className?: string;
   style?: React.CSSProperties;
   overlay?: React.ReactNode;
+  zoom?: boolean;
+  parallax?: boolean;
 }
 
 export function KDSImage({
@@ -20,6 +22,8 @@ export function KDSImage({
   className = '',
   style = {},
   overlay,
+  zoom = true,
+  parallax = false,
 }: KDSImageProps) {
   const [err, setErr] = useState(false);
 
@@ -49,9 +53,24 @@ export function KDSImage({
     );
   }
 
+  const motionClasses = [
+    zoom ? 'kds-zoom' : '',
+    parallax ? 'kds-parallax' : '',
+    className,
+  ]
+    .filter(Boolean)
+    .join(' ');
+
+  // .kds-parallax controls the <img> sizing (height: 120%) so it can translate
+  // without exposing the wrapper edges; in that mode we omit width/height inline
+  // styles and let the class drive them.
+  const imgStyle: React.CSSProperties = parallax
+    ? { objectFit: 'cover', display: 'block' }
+    : { width: '100%', height: '100%', objectFit: 'cover', display: 'block' };
+
   return (
     <div
-      className={className}
+      className={motionClasses}
       style={{
         position: 'relative',
         aspectRatio: aspect,
@@ -61,12 +80,7 @@ export function KDSImage({
       }}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={src}
-        alt={alt}
-        onError={() => setErr(true)}
-        style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-      />
+      <img src={src} alt={alt} onError={() => setErr(true)} style={imgStyle} />
       {overlay}
     </div>
   );
