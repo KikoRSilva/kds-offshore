@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef, useState } from 'react';
+import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 interface KDSImageProps {
@@ -14,7 +15,12 @@ interface KDSImageProps {
   zoom?: boolean;
   parallax?: boolean;
   parallaxStrength?: number;
+  priority?: boolean;
+  sizes?: string;
 }
+
+const DEFAULT_SIZES =
+  '(max-width: 768px) 100vw, (max-width: 1440px) 50vw, 720px';
 
 export function KDSImage({
   src,
@@ -24,9 +30,11 @@ export function KDSImage({
   className = '',
   style = {},
   overlay,
-  zoom = true,
+  zoom,
   parallax = false,
   parallaxStrength = 18,
+  priority = false,
+  sizes = DEFAULT_SIZES,
 }: KDSImageProps) {
   const [err, setErr] = useState(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -66,14 +74,27 @@ export function KDSImage({
     );
   }
 
-  const motionClasses = [zoom ? 'kds-zoom' : '', className]
+  // Default: zoom on hover unless parallax is active (avoids stacking
+  // two transform effects on the same image).
+  const useZoom = zoom ?? !parallax;
+  const wrapperClasses = [useZoom ? 'kds-zoom' : '', className]
     .filter(Boolean)
     .join(' ');
+
+  const sharedImageProps = {
+    src,
+    alt,
+    fill: true as const,
+    sizes,
+    priority,
+    onError: () => setErr(true),
+    style: { objectFit: 'cover' as const },
+  };
 
   return (
     <div
       ref={wrapperRef}
-      className={motionClasses}
+      className={wrapperClasses}
       style={{
         position: 'relative',
         aspectRatio: aspect,
@@ -83,28 +104,21 @@ export function KDSImage({
       }}
     >
       {parallax ? (
-        // eslint-disable-next-line jsx-a11y/alt-text
-        <motion.img
-          src={src}
-          alt={alt}
-          onError={() => setErr(true)}
+        <motion.div
           style={{
-            width: '100%',
+            position: 'absolute',
+            left: 0,
+            right: 0,
+            top: 0,
             height: `${100 + parallaxStrength * 2 + 4}%`,
-            objectFit: 'cover',
-            display: 'block',
             y,
             willChange: 'transform',
           }}
-        />
+        >
+          <Image {...sharedImageProps} />
+        </motion.div>
       ) : (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={src}
-          alt={alt}
-          onError={() => setErr(true)}
-          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-        />
+        <Image {...sharedImageProps} />
       )}
       {overlay}
     </div>
