@@ -3,6 +3,11 @@
 import { useRef, useState } from 'react';
 import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import {
+  buildSrcSet,
+  getManifestEntry,
+  variantsByFormat,
+} from '@/lib/image-manifest';
 
 interface KDSImageProps {
   src: string;
@@ -91,6 +96,26 @@ export function KDSImage({
     style: { objectFit: 'cover' as const },
   };
 
+  const manifestEntry = getManifestEntry(src);
+  const renderImage = () => {
+    if (!manifestEntry) {
+      return <Image {...sharedImageProps} />;
+    }
+    const avif = variantsByFormat(manifestEntry, 'avif');
+    const webp = variantsByFormat(manifestEntry, 'webp');
+    return (
+      <picture>
+        {avif.length > 0 && (
+          <source type="image/avif" sizes={sizes} srcSet={buildSrcSet(avif)} />
+        )}
+        {webp.length > 0 && (
+          <source type="image/webp" sizes={sizes} srcSet={buildSrcSet(webp)} />
+        )}
+        <Image {...sharedImageProps} />
+      </picture>
+    );
+  };
+
   return (
     <div
       ref={wrapperRef}
@@ -115,10 +140,10 @@ export function KDSImage({
             willChange: 'transform',
           }}
         >
-          <Image {...sharedImageProps} />
+          {renderImage()}
         </motion.div>
       ) : (
-        <Image {...sharedImageProps} />
+        renderImage()
       )}
       {overlay}
     </div>
