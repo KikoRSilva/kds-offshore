@@ -10,6 +10,40 @@ import { useSite } from '@/contexts/site-context';
 import { en } from '@/content/en';
 import { pt } from '@/content/pt';
 
+const SITE_URL = 'https://kdsoffshore.pt';
+
+const WORK_ITEMLIST_JSONLD = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  '@id': `${SITE_URL}/work/#collection`,
+  url: `${SITE_URL}/work/`,
+  name: 'Selected work — KDS Offshore',
+  description:
+    'A curated selection of naval architecture, hydrodynamics, mooring, and decarbonisation engagements that KDS Offshore clients have agreed to make public.',
+  isPartOf: { '@id': `${SITE_URL}/#website` },
+  about: { '@id': `${SITE_URL}/#organization` },
+  mainEntity: {
+    '@type': 'ItemList',
+    itemListOrder: 'https://schema.org/ItemListOrderDescending',
+    numberOfItems: en.pages.cases.items.length,
+    itemListElement: en.pages.cases.items.map((c, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'CreativeWork',
+        name: c.t,
+        description: c.detail,
+        dateCreated: c.year,
+        keywords: c.tag,
+        about: c.category,
+        sourceOrganization: { '@id': `${SITE_URL}/#organization` },
+        locationCreated: { '@type': 'Place', name: c.loc },
+        mentions: [{ '@type': 'Organization', name: c.client }],
+      },
+    })),
+  },
+};
+
 const CASE_IMGS = [
   '/images/stock/cargo-vessel.jpg',
   '/images/stock/port-cranes.jpg',
@@ -43,6 +77,10 @@ export default function WorkPage() {
           { name: 'Home', path: '/' },
           { name: 'Work', path: '/work/' },
         ]}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(WORK_ITEMLIST_JSONLD) }}
       />
       <PageHero
         eyebrow={pp.eyebrow}
@@ -110,9 +148,7 @@ export default function WorkPage() {
                     marginTop: i === 2 ? 56 : 0,
                   }}
                 >
-                  <a
-                    href="#"
-                    className="kds-card"
+                  <article
                     style={{
                       display: 'block',
                     }}
@@ -193,7 +229,7 @@ export default function WorkPage() {
                         {c.year}
                       </span>
                     </div>
-                  </a>
+                  </article>
                 </Reveal>
               );
             })}
