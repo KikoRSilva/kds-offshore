@@ -42,16 +42,6 @@ export function KDSImage({
   sizes = DEFAULT_SIZES,
 }: KDSImageProps) {
   const [err, setErr] = useState(false);
-  const wrapperRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: wrapperRef,
-    offset: ['start end', 'end start'],
-  });
-  const y = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [`-${parallaxStrength}%`, `${parallaxStrength}%`],
-  );
 
   if (err || !src) {
     return (
@@ -116,35 +106,70 @@ export function KDSImage({
     );
   };
 
+  const wrapperStyle: React.CSSProperties = {
+    position: 'relative',
+    aspectRatio: aspect,
+    overflow: 'hidden',
+    background: '#0a0f19',
+    ...style,
+  };
+
+  if (parallax) {
+    return (
+      <ParallaxWrapper
+        className={wrapperClasses}
+        style={wrapperStyle}
+        strength={parallaxStrength}
+        overlay={overlay}
+      >
+        {renderImage()}
+      </ParallaxWrapper>
+    );
+  }
+
   return (
-    <div
-      ref={wrapperRef}
-      className={wrapperClasses}
-      style={{
-        position: 'relative',
-        aspectRatio: aspect,
-        overflow: 'hidden',
-        background: '#0a0f19',
-        ...style,
-      }}
-    >
-      {parallax ? (
-        <motion.div
-          style={{
-            position: 'absolute',
-            left: 0,
-            right: 0,
-            top: 0,
-            height: `${100 + parallaxStrength * 2 + 4}%`,
-            y,
-            willChange: 'transform',
-          }}
-        >
-          {renderImage()}
-        </motion.div>
-      ) : (
-        renderImage()
-      )}
+    <div className={wrapperClasses} style={wrapperStyle}>
+      {renderImage()}
+      {overlay}
+    </div>
+  );
+}
+
+interface ParallaxWrapperProps {
+  className: string;
+  style: React.CSSProperties;
+  strength: number;
+  overlay?: React.ReactNode;
+  children: React.ReactNode;
+}
+
+function ParallaxWrapper({ className, style, strength, overlay, children }: ParallaxWrapperProps) {
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: wrapperRef,
+    offset: ['start end', 'end start'],
+  });
+  const y = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [`-${strength}%`, `${strength}%`],
+  );
+
+  return (
+    <div ref={wrapperRef} className={className} style={style}>
+      <motion.div
+        style={{
+          position: 'absolute',
+          left: 0,
+          right: 0,
+          top: 0,
+          height: `${100 + strength * 2 + 4}%`,
+          y,
+          willChange: 'transform',
+        }}
+      >
+        {children}
+      </motion.div>
       {overlay}
     </div>
   );
