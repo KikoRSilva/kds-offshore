@@ -71,8 +71,16 @@ export default async function TeamMemberPage({ params }: PageProps) {
   const m = TEAM_BY_SLUG[slug];
   if (!m) notFound();
 
-  const personJsonLd = {
-    '@context': 'https://schema.org',
+  // If the publication URL is a DOI link, surface the DOI as a structured
+  // identifier (PropertyValue propertyID: 'doi') so AI engines can resolve
+  // it against CrossRef / OpenAlex / Scopus.
+  const extractDoi = (url: string | undefined): string | undefined => {
+    if (!url) return undefined;
+    const match = url.match(/doi\.org\/(.+)$/);
+    return match ? match[1] : undefined;
+  };
+
+  const personEntity = {
     '@type': 'Person',
     '@id': `${SITE_URL}/team/${slug}/#person`,
     mainEntityOfPage: `${SITE_URL}/team/${slug}/`,
@@ -103,6 +111,38 @@ export default async function TeamMemberPage({ params }: PageProps) {
       credentialCategory: c.split(',')[0],
       name: c,
     })),
+    subjectOf: m.publications.map((_, i) => ({
+      '@id': `${SITE_URL}/team/${slug}/#publication-${i + 1}`,
+    })),
+  };
+
+  const articleEntities = m.publications.map((pub, i) => {
+    const doi = extractDoi(pub.url);
+    return {
+      '@type': 'ScholarlyArticle',
+      '@id': `${SITE_URL}/team/${slug}/#publication-${i + 1}`,
+      name: pub.title,
+      headline: pub.title,
+      datePublished: String(pub.year),
+      isPartOf: { '@type': 'CreativeWork', name: pub.venue },
+      author: { '@id': `${SITE_URL}/team/${slug}/#person` },
+      inLanguage: 'en',
+      ...(pub.url ? { url: pub.url } : {}),
+      ...(doi
+        ? {
+            identifier: {
+              '@type': 'PropertyValue',
+              propertyID: 'doi',
+              value: doi,
+            },
+          }
+        : {}),
+    };
+  });
+
+  const personJsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [personEntity, ...articleEntities],
   };
 
   return (
@@ -503,7 +543,29 @@ export default async function TeamMemberPage({ params }: PageProps) {
                   </span>
                   <div>
                     <div className="kds-display" style={{ fontSize: 17, fontWeight: 400, color: 'var(--ink)' }}>
-                      {pub.title}
+                      {pub.url ? (
+                        <a
+                          href={pub.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            color: 'inherit',
+                            textDecoration: 'none',
+                            borderBottom: '1px solid var(--line-2)',
+                            paddingBottom: 2,
+                          }}
+                        >
+                          {pub.title}{' '}
+                          <span
+                            className="kds-mono"
+                            style={{ color: 'var(--accent)', fontSize: 13 }}
+                          >
+                            ↗
+                          </span>
+                        </a>
+                      ) : (
+                        pub.title
+                      )}
                     </div>
                     <div
                       className="kds-sans"
