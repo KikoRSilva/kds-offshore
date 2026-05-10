@@ -1,1 +1,832 @@
-{}
+{
+  "/images/kds/portrait-sergio.webp": {
+    "naturalWidth": 1199,
+    "naturalHeight": 1221,
+    "variants": [
+      {
+        "url": "/images/_optimized/kds/portrait-sergio.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/kds/portrait-sergio.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/kds/portrait-sergio.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/kds/portrait-sergio.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/kds/portrait-sergio.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/kds/portrait-sergio.960.webp",
+        "format": "webp",
+        "width": 960
+      }
+    ]
+  },
+  "/images/kds/services-3d-modelling.webp": {
+    "naturalWidth": 1024,
+    "naturalHeight": 1024,
+    "variants": [
+      {
+        "url": "/images/_optimized/kds/services-3d-modelling.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/kds/services-3d-modelling.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/kds/services-3d-modelling.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/kds/services-3d-modelling.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/kds/services-3d-modelling.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/kds/services-3d-modelling.960.webp",
+        "format": "webp",
+        "width": 960
+      }
+    ]
+  },
+  "/images/kds/services-conversion.webp": {
+    "naturalWidth": 1024,
+    "naturalHeight": 1024,
+    "variants": [
+      {
+        "url": "/images/_optimized/kds/services-conversion.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/kds/services-conversion.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/kds/services-conversion.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/kds/services-conversion.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/kds/services-conversion.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/kds/services-conversion.960.webp",
+        "format": "webp",
+        "width": 960
+      }
+    ]
+  },
+  "/images/kds/services-manoeuvrability.webp": {
+    "naturalWidth": 1024,
+    "naturalHeight": 1024,
+    "variants": [
+      {
+        "url": "/images/_optimized/kds/services-manoeuvrability.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/kds/services-manoeuvrability.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/kds/services-manoeuvrability.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/kds/services-manoeuvrability.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/kds/services-manoeuvrability.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/kds/services-manoeuvrability.960.webp",
+        "format": "webp",
+        "width": 960
+      }
+    ]
+  },
+  "/images/kds/services-mooring.webp": {
+    "naturalWidth": 1024,
+    "naturalHeight": 1024,
+    "variants": [
+      {
+        "url": "/images/_optimized/kds/services-mooring.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/kds/services-mooring.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/kds/services-mooring.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/kds/services-mooring.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/kds/services-mooring.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/kds/services-mooring.960.webp",
+        "format": "webp",
+        "width": 960
+      }
+    ]
+  },
+  "/images/kds/services-supervision.webp": {
+    "naturalWidth": 1024,
+    "naturalHeight": 1024,
+    "variants": [
+      {
+        "url": "/images/_optimized/kds/services-supervision.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/kds/services-supervision.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/kds/services-supervision.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/kds/services-supervision.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/kds/services-supervision.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/kds/services-supervision.960.webp",
+        "format": "webp",
+        "width": 960
+      }
+    ]
+  },
+  "/images/kds/studio-eco-office.webp": {
+    "naturalWidth": 1024,
+    "naturalHeight": 1024,
+    "variants": [
+      {
+        "url": "/images/_optimized/kds/studio-eco-office.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/kds/studio-eco-office.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/kds/studio-eco-office.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/kds/studio-eco-office.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/kds/studio-eco-office.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/kds/studio-eco-office.960.webp",
+        "format": "webp",
+        "width": 960
+      }
+    ]
+  },
+  "/images/kds/studio-engineering-team.webp": {
+    "naturalWidth": 1024,
+    "naturalHeight": 1024,
+    "variants": [
+      {
+        "url": "/images/_optimized/kds/studio-engineering-team.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/kds/studio-engineering-team.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/kds/studio-engineering-team.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/kds/studio-engineering-team.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/kds/studio-engineering-team.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/kds/studio-engineering-team.960.webp",
+        "format": "webp",
+        "width": 960
+      }
+    ]
+  },
+  "/images/kds/studio-rd-lab.webp": {
+    "naturalWidth": 1024,
+    "naturalHeight": 1024,
+    "variants": [
+      {
+        "url": "/images/_optimized/kds/studio-rd-lab.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/kds/studio-rd-lab.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/kds/studio-rd-lab.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/kds/studio-rd-lab.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/kds/studio-rd-lab.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/kds/studio-rd-lab.960.webp",
+        "format": "webp",
+        "width": 960
+      }
+    ]
+  },
+  "/images/stock/cargo-vessel.jpg": {
+    "naturalWidth": 1600,
+    "naturalHeight": 1067,
+    "variants": [
+      {
+        "url": "/images/_optimized/stock/cargo-vessel.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/stock/cargo-vessel.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/stock/cargo-vessel.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/stock/cargo-vessel.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/stock/cargo-vessel.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/stock/cargo-vessel.960.webp",
+        "format": "webp",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/stock/cargo-vessel.1280.avif",
+        "format": "avif",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/stock/cargo-vessel.1280.webp",
+        "format": "webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/stock/engineer-laptop.jpg": {
+    "naturalWidth": 1600,
+    "naturalHeight": 1068,
+    "variants": [
+      {
+        "url": "/images/_optimized/stock/engineer-laptop.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/stock/engineer-laptop.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/stock/engineer-laptop.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/stock/engineer-laptop.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/stock/engineer-laptop.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/stock/engineer-laptop.960.webp",
+        "format": "webp",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/stock/engineer-laptop.1280.avif",
+        "format": "avif",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/stock/engineer-laptop.1280.webp",
+        "format": "webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/stock/engineering-detail.jpg": {
+    "naturalWidth": 1600,
+    "naturalHeight": 1067,
+    "variants": [
+      {
+        "url": "/images/_optimized/stock/engineering-detail.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/stock/engineering-detail.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/stock/engineering-detail.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/stock/engineering-detail.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/stock/engineering-detail.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/stock/engineering-detail.960.webp",
+        "format": "webp",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/stock/engineering-detail.1280.avif",
+        "format": "avif",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/stock/engineering-detail.1280.webp",
+        "format": "webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/stock/harbor-night.jpg": {
+    "naturalWidth": 1600,
+    "naturalHeight": 1032,
+    "variants": [
+      {
+        "url": "/images/_optimized/stock/harbor-night.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/stock/harbor-night.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/stock/harbor-night.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/stock/harbor-night.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/stock/harbor-night.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/stock/harbor-night.960.webp",
+        "format": "webp",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/stock/harbor-night.1280.avif",
+        "format": "avif",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/stock/harbor-night.1280.webp",
+        "format": "webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/stock/maritime-equipment.jpg": {
+    "naturalWidth": 1600,
+    "naturalHeight": 1100,
+    "variants": [
+      {
+        "url": "/images/_optimized/stock/maritime-equipment.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/stock/maritime-equipment.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/stock/maritime-equipment.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/stock/maritime-equipment.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/stock/maritime-equipment.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/stock/maritime-equipment.960.webp",
+        "format": "webp",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/stock/maritime-equipment.1280.avif",
+        "format": "avif",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/stock/maritime-equipment.1280.webp",
+        "format": "webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/stock/ocean-horizon.jpg": {
+    "naturalWidth": 1600,
+    "naturalHeight": 1067,
+    "variants": [
+      {
+        "url": "/images/_optimized/stock/ocean-horizon.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/stock/ocean-horizon.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/stock/ocean-horizon.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/stock/ocean-horizon.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/stock/ocean-horizon.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/stock/ocean-horizon.960.webp",
+        "format": "webp",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/stock/ocean-horizon.1280.avif",
+        "format": "avif",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/stock/ocean-horizon.1280.webp",
+        "format": "webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/stock/port-aerial.jpg": {
+    "naturalWidth": 1600,
+    "naturalHeight": 1067,
+    "variants": [
+      {
+        "url": "/images/_optimized/stock/port-aerial.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/stock/port-aerial.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/stock/port-aerial.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/stock/port-aerial.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/stock/port-aerial.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/stock/port-aerial.960.webp",
+        "format": "webp",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/stock/port-aerial.1280.avif",
+        "format": "avif",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/stock/port-aerial.1280.webp",
+        "format": "webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/stock/port-cranes.jpg": {
+    "naturalWidth": 1600,
+    "naturalHeight": 1067,
+    "variants": [
+      {
+        "url": "/images/_optimized/stock/port-cranes.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/stock/port-cranes.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/stock/port-cranes.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/stock/port-cranes.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/stock/port-cranes.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/stock/port-cranes.960.webp",
+        "format": "webp",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/stock/port-cranes.1280.avif",
+        "format": "avif",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/stock/port-cranes.1280.webp",
+        "format": "webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/stock/sea-wave.jpg": {
+    "naturalWidth": 1600,
+    "naturalHeight": 2397,
+    "variants": [
+      {
+        "url": "/images/_optimized/stock/sea-wave.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/stock/sea-wave.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/stock/sea-wave.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/stock/sea-wave.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/stock/sea-wave.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/stock/sea-wave.960.webp",
+        "format": "webp",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/stock/sea-wave.1280.avif",
+        "format": "avif",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/stock/sea-wave.1280.webp",
+        "format": "webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/stock/team-collab.jpg": {
+    "naturalWidth": 1600,
+    "naturalHeight": 1050,
+    "variants": [
+      {
+        "url": "/images/_optimized/stock/team-collab.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/stock/team-collab.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/stock/team-collab.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/stock/team-collab.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/stock/team-collab.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/stock/team-collab.960.webp",
+        "format": "webp",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/stock/team-collab.1280.avif",
+        "format": "avif",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/stock/team-collab.1280.webp",
+        "format": "webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/stock/vessel-ocean.jpg": {
+    "naturalWidth": 1600,
+    "naturalHeight": 1067,
+    "variants": [
+      {
+        "url": "/images/_optimized/stock/vessel-ocean.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/stock/vessel-ocean.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/stock/vessel-ocean.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/stock/vessel-ocean.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/stock/vessel-ocean.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/stock/vessel-ocean.960.webp",
+        "format": "webp",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/stock/vessel-ocean.1280.avif",
+        "format": "avif",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/stock/vessel-ocean.1280.webp",
+        "format": "webp",
+        "width": 1280
+      }
+    ]
+  }
+}
