@@ -58,6 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...articleRoutes,
     { path: '/methods', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/glossary', changeFrequency: 'monthly', priority: 0.7 },
+    { path: '/publications', changeFrequency: 'monthly', priority: 0.75 },
     { path: '/contact', changeFrequency: 'monthly', priority: 0.7 },
     { path: '/privacy', changeFrequency: 'yearly', priority: 0.3 },
     { path: '/cookies', changeFrequency: 'yearly', priority: 0.3 },

@@ -74,7 +74,7 @@ export function Footer() {
           maxWidth: 1440,
           margin: '0 auto',
           display: 'grid',
-          gridTemplateColumns: '2fr 1fr 1fr 1fr',
+          gridTemplateColumns: '2fr 1fr 1fr 1fr 1fr',
           gap: 48,
         }}
       >
@@ -101,6 +101,12 @@ export function Footer() {
           <FootItem>{t.foot.addr}</FootItem>
           <FootItem>{t.foot.city}</FootItem>
           <FootItem>{t.foot.hours}</FootItem>
+        </FootCol>
+
+        <FootCol title={lang === 'pt' ? 'Recursos' : 'Resources'}>
+          <FootItem href="/methods/">{lang === 'pt' ? 'Métodos' : 'Methods'}</FootItem>
+          <FootItem href="/glossary/">{lang === 'pt' ? 'Glossário' : 'Glossary'}</FootItem>
+          <FootItem href="/publications/">{lang === 'pt' ? 'Publicações' : 'Publications'}</FootItem>
         </FootCol>
 
         <FootCol title="Contact">

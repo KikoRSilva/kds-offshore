@@ -518,6 +518,26 @@ export default async function TeamMemberPage({ params }: PageProps) {
                 </div>
               )}
             </div>
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'flex-end',
+                marginBottom: 16,
+              }}
+            >
+              <Link
+                href="/publications/"
+                className="kds-mono"
+                style={{
+                  fontSize: 11,
+                  color: 'var(--accent)',
+                  letterSpacing: '0.22em',
+                  textTransform: 'uppercase',
+                }}
+              >
+                View all publications →
+              </Link>
+            </div>
             <ol style={{ listStyle: 'none', padding: 0, margin: 0 }}>
               {m.publications.map((pub, i) => (
                 <li
