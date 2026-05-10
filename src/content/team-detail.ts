@@ -53,6 +53,7 @@ export const TEAM: TeamMember[] = [
       'His research focuses on the analytical, numerical, and experimental study of the hydrodynamics of floating structures — with particular depth in parametric rolling, time-domain seakeeping, and the dynamics of wave-energy converters. He is the author of the Ship@Sea time-domain simulation code, a six-degree-of-freedom non-linear platform that has evolved continuously from his doctoral work and that underpins KDS Offshore\'s most demanding seakeeping and manoeuvrability assignments.',
       'He spent 21 years in the Portuguese Navy before transitioning fully to academia and consulting. Outside Portugal, his postdoctoral research and teaching at Newcastle University (UK) shaped the experimental rigour that characterises KDS\'s methodology — every numerical claim is benchmarked against a model test or sea trial wherever one exists.',
       'At KDS Offshore he leads the most demanding engagements personally — from the GRS Power Platform parametric-rolling assessment for WavEC at Belmullet (2015) to the Corvo and Silver Mary probabilistic manoeuvrability studies in Vila do Porto (2024). The pattern across his work is consistent: a hard hydrodynamics problem, a numerical model that admits non-linearity rather than linearising it away, and a result the operator can act on.',
+      'Recent work has extended the studio\'s practice into maritime decarbonisation. In 2024 he co-authored — with M. Bento Moreira at CENTEC, IST — two complementary papers on an integrated, real-time Ship Operation Optimisation System (SOOS) that combines voyage planning, weather routing and anti-rolling-tank measures to bring case-study vessels into compliance with the IMO\'s Carbon Intensity Indicator (CII): a methods paper at IMDC 2024 in Amsterdam and a fuller systems paper at ICCAS / RINA later the same year. In parallel he continues to lead the UGEN floating wave-energy converter programme; the most recent instalment — a Levelized-Cost-of-Energy assessment of the device along the Portuguese Atlantic façade (Porto, Nazaré, Sines), co-authored with Lourenço and Pinto — was presented at EWTEC 2025 in Funchal.',
     ],
     credentials: [
       'PhD, Naval Architecture and Marine Engineering — Instituto Superior Técnico, University of Lisbon',
@@ -98,6 +99,29 @@ export const TEAM: TeamMember[] = [
     ],
     // Selected, peer-reviewed publications. Full list and citation counts on Google Scholar.
     publications: [
+      {
+        title:
+          'Wave Energy Conversion Efficiency of the UGEN along the Western Portuguese Coast',
+        year: 2025,
+        venue:
+          '16th European Wave and Tidal Energy Conference (EWTEC 2025), Funchal',
+        url: 'https://doi.org/10.36688/ewtec-2025-1032',
+      },
+      {
+        title:
+          'An integrated real-time Ship Operation Optimisation System (SOOS) to reduce fuel consumption and emissions from shipping navigation and port calls',
+        year: 2024,
+        venue:
+          'International Conference on Computer Applications in Shipbuilding (ICCAS 2024) / RINA',
+      },
+      {
+        title:
+          'An optimisation-based approach to reduce fuel consumption and emissions from shipping navigation',
+        year: 2024,
+        venue:
+          '15th International Marine Design Conference (IMDC 2024), Amsterdam',
+        url: 'https://doi.org/10.59490/imdc.2024.832',
+      },
       {
         title: 'Parametrically excited roll in regular and irregular head seas',
         year: 2005,
@@ -168,6 +192,7 @@ export const TEAM: TeamMember[] = [
       i10Index: 10,
     },
     sameAs: [
+      'https://orcid.org/0000-0003-0977-0629',
       'https://www.linkedin.com/in/sergio-ribeiro-e-silva-39110322/',
       'https://scholar.google.pt/citations?user=K6-RZXQAAAAJ&hl=en',
       'http://www.maretec.org/en/about-us/team/SergioSilva',

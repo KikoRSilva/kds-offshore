@@ -212,6 +212,8 @@ export const en = {
         { slug: 'libries-week-aboard', tag: 'Field note', t: 'A week aboard the "Libries" before conversion', date: '2022', datePublished: '2022-06-20', dateModified: '2022-06-20', read: '4 min', author: 'KDS team', published: false },
         { slug: 'stability-book-90-days', tag: 'Methodology', t: 'Writing a stability book that survives the first 90 days at sea', date: 'Ongoing', datePublished: '2026-01-15', dateModified: '2026-04-01', read: '10 min', author: 'Sérgio Ribeiro e Silva', published: false },
         { slug: 'rudder-flap-vs-bow-thruster', tag: 'Manoeuvrability', t: 'Why the rudder-with-flap matters more than the bow thruster', date: '2024', datePublished: '2024-09-12', dateModified: '2024-09-12', read: '8 min', author: 'KDS team', published: false },
+        { slug: 'soos-voyage-optimisation', tag: 'Decarbonisation', t: 'Real-time voyage optimisation for CII compliance: notes from the SOOS programme', date: 'Aug 2024', datePublished: '2024-08-30', dateModified: '2024-08-30', read: '14 min', author: 'Sérgio Ribeiro e Silva', published: false },
+        { slug: 'ugen-western-coast', tag: 'Wave energy', t: 'UGEN along the Portuguese coast: LCOE from Porto to Sines', date: 'Sep 2025', datePublished: '2025-09-10', dateModified: '2025-09-10', read: '11 min', author: 'Sérgio Ribeiro e Silva', published: false },
       ],
     },
   },

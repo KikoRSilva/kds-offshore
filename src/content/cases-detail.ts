@@ -61,6 +61,16 @@ export const CASES: CaseDetail[] = [
     heroSrc: '/images/stock/cargo-vessel.jpg',
     heroAlt:
       'Container vessel similar to the "Corvo" alongside a quay — 610 TEU, 9,000 DWT class.',
+    references: [
+      {
+        label:
+          'Ribeiro e Silva, S. (2005). Parametrically excited roll in regular and irregular head seas. International Shipbuilding Progress, Vol. 52.',
+      },
+      {
+        label:
+          'Ribeiro e Silva, S. et al. (2013). Prediction of parametric rolling in waves with time domain non-linear strip theory. Ocean Engineering, Vol. 72.',
+      },
+    ],
   },
   {
     slug: 'grs-power-platform-parametric-rolling',
@@ -76,6 +86,29 @@ export const CASES: CaseDetail[] = [
     heroSrc: '/images/stock/port-cranes.jpg',
     heroAlt:
       'Offshore renewables platform construction — placeholder image for the GRS Power Platform engagement.',
+    references: [
+      {
+        label:
+          'Ribeiro e Silva, S. et al. (2011). Numerical modelling and assessment of the UGEN floating wave energy converter. International Journal of Marine Engineering, Vol. 153.',
+      },
+      {
+        label:
+          'Ribeiro e Silva, S. et al. (2016). Hydrodynamic optimization of the UGEN: Wave energy converter. International Journal of Marine Energy, Vol. 15.',
+      },
+      {
+        label:
+          'Ribeiro e Silva, S. et al. (2017). Experimental study on reduction of dynamic instability in oscillating water column spar buoy. 12th European Wave and Tidal Energy Conference.',
+      },
+      {
+        label:
+          'Ribeiro e Silva, S. et al. (2021). Model testing of floating wave energy converter with internal U-shaped oscillating water column. Energy Conversion and Management, Vol. 240.',
+      },
+      {
+        label:
+          'Lourenço, D., Ribeiro e Silva, S., Pinto, L. (2025). Wave Energy Conversion Efficiency of the UGEN along the Western Portuguese Coast. EWTEC 2025, Funchal.',
+        url: 'https://doi.org/10.36688/ewtec-2025-1032',
+      },
+    ],
   },
   {
     slug: 'green-ports-madeira-ops',
@@ -91,6 +124,17 @@ export const CASES: CaseDetail[] = [
     heroSrc: '/images/stock/harbor-night.jpg',
     heroAlt:
       'Port at night — placeholder image for the Green Ports Madeira / APRAM OPS engagement.',
+    references: [
+      {
+        label:
+          'Ribeiro e Silva, S., Bento Moreira, M. (2024). An optimisation-based approach to reduce fuel consumption and emissions from shipping navigation. 15th International Marine Design Conference (IMDC 2024), Amsterdam.',
+        url: 'https://doi.org/10.59490/imdc.2024.832',
+      },
+      {
+        label:
+          'Ribeiro e Silva, S., Bento Moreira, M. (2024). An integrated real-time Ship Operation Optimisation System (SOOS) to reduce fuel consumption and emissions from shipping navigation and port calls. ICCAS 2024 / RINA.',
+      },
+    ],
   },
   {
     slug: 'belize-i-remotorisation',

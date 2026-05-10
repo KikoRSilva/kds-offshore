@@ -37,3 +37,11 @@ next-env.d.ts
 # The manifest itself stays tracked (with {} as the committed default)
 # so imports resolve in CI before the optimizer runs.
 /public/images/_optimized/
+
+# Local reference material — peer-reviewed papers used as source for
+# /team and /work content. Not served publicly; kept off the repo to
+# avoid 7+ MB of binary churn.
+/papers/
+
+# Editor / tooling local data
+/.codegraph/
