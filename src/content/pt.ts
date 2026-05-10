@@ -203,7 +203,7 @@ export const pt = {
         { slug: 'libries-week-aboard', tag: 'Nota de campo', t: 'Uma semana a bordo do "Libries" antes da conversão', date: '2022', datePublished: '2022-06-20', dateModified: '2022-06-20', read: '4 min', author: 'Equipa KDS', published: false },
         { slug: 'stability-book-90-days', tag: 'Metodologia', t: 'Escrever um livro de estabilidade que sobrevive aos primeiros 90 dias no mar', date: 'Em curso', datePublished: '2026-01-15', dateModified: '2026-04-01', read: '10 min', author: 'Sérgio Ribeiro e Silva', published: false },
         { slug: 'rudder-flap-vs-bow-thruster', tag: 'Manobrabilidade', t: 'Porque o leme com flap é mais importante do que o propulsor de proa', date: '2024', datePublished: '2024-09-12', dateModified: '2024-09-12', read: '8 min', author: 'Equipa KDS', published: false },
-        { slug: 'soos-voyage-optimisation', tag: 'Descarbonização', t: 'Otimização de viagem em tempo real para conformidade CII: notas do programa SOOS', date: 'Ago 2024', datePublished: '2024-08-30', dateModified: '2024-08-30', read: '14 min', author: 'Sérgio Ribeiro e Silva', published: false },
+        { slug: 'soos-voyage-optimisation', tag: 'Descarbonização', t: 'Otimização de viagem em tempo real para conformidade CII: notas do programa SOOS', date: 'Ago 2024', datePublished: '2024-08-30', dateModified: '2024-08-30', read: '14 min', author: 'Sérgio Ribeiro e Silva', published: true },
         { slug: 'ugen-western-coast', tag: 'Energia das ondas', t: 'UGEN ao longo da costa portuguesa: LCOE do Porto a Sines', date: 'Set 2025', datePublished: '2025-09-10', dateModified: '2025-09-10', read: '11 min', author: 'Sérgio Ribeiro e Silva', published: false },
       ],
     },
