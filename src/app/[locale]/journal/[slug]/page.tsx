@@ -19,8 +19,9 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
-  return buildArticleMetadata(slug);
+  const { locale: raw, slug } = await params;
+  if (!hasLocale(routing.locales, raw)) notFound();
+  return buildArticleMetadata(slug, raw as Locale);
 }
 
 export default async function Page({
@@ -31,5 +32,5 @@ export default async function Page({
   const { locale: raw, slug } = await params;
   if (!hasLocale(routing.locales, raw)) notFound();
   setRequestLocale(raw as Locale);
-  return <JournalArticleView slug={slug} />;
+  return <JournalArticleView slug={slug} locale={raw as Locale} />;
 }

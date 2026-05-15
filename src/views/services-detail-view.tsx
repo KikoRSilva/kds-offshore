@@ -1,15 +1,21 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { SERVICES, SERVICES_BY_SLUG, SERVICE_SLUGS } from '@/content/services-detail';
+import {
+  SERVICES_BY_SLUG,
+  SERVICE_SLUGS,
+  getServicesByLocale,
+  getServiceBySlug,
+} from '@/content/services-detail';
 import { BreadcrumbJsonLd } from '@/components/breadcrumb-jsonld';
+import type { Locale } from '@/i18n/routing';
 
 const SITE_URL = 'https://kdsoffshore.pt';
 
 export { SERVICE_SLUGS };
 
-export async function buildServiceMetadata(slug: string): Promise<Metadata> {
-  const service = SERVICES_BY_SLUG[slug];
+export async function buildServiceMetadata(slug: string, locale: Locale): Promise<Metadata> {
+  const service = getServiceBySlug(slug, locale) ?? SERVICES_BY_SLUG[slug];
   if (!service) return {};
 
   const title = `${service.name}`;
@@ -74,9 +80,10 @@ const H3: React.CSSProperties = {
   color: 'var(--ink)',
 };
 
-export default function ServiceDetailView({ slug }: { slug: string }) {
-  const service = SERVICES_BY_SLUG[slug];
+export default function ServiceDetailView({ slug, locale }: { slug: string; locale: Locale }) {
+  const service = getServiceBySlug(slug, locale);
   if (!service) notFound();
+  const otherServices = getServicesByLocale(locale).filter((s) => s.slug !== slug);
 
   const serviceJsonLd = {
     '@context': 'https://schema.org',
@@ -122,8 +129,6 @@ export default function ServiceDetailView({ slug }: { slug: string }) {
       },
     })),
   };
-
-  const otherServices = SERVICES.filter((s) => s.slug !== slug);
 
   return (
     <>

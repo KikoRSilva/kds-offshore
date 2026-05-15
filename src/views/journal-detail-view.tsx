@@ -18,18 +18,25 @@ interface FaqEntry {
   };
 }
 
-export async function buildArticleMetadata(slug: string): Promise<Metadata> {
+export async function buildArticleMetadata(slug: string, locale: 'en' | 'pt'): Promise<Metadata> {
   const a = ARTICLES_BY_SLUG[slug];
   if (!a) return {};
 
+  const pt = a.i18n?.pt;
+  const usePt = locale === 'pt' && pt;
+  const title = usePt ? pt.title : a.title;
+  const subtitle = usePt ? pt.subtitle : a.subtitle;
+  const canonical = locale === 'pt' ? `/journal/${slug}/` : `/en/journal/${slug}/`;
+  const url = locale === 'pt' ? `${SITE_URL}/journal/${slug}/` : `${SITE_URL}/en/journal/${slug}/`;
+
   return {
-    title: a.title,
-    description: a.subtitle,
-    alternates: { canonical: `/journal/${slug}/` },
+    title,
+    description: subtitle,
+    alternates: { canonical },
     openGraph: {
-      title: `${a.title} — KDS Offshore Journal`,
-      description: a.subtitle,
-      url: `${SITE_URL}/journal/${slug}/`,
+      title: `${title} — KDS Offshore Journal`,
+      description: subtitle,
+      url,
       type: 'article',
       publishedTime: a.datePublished,
       modifiedTime: a.dateModified,
@@ -47,8 +54,8 @@ export async function buildArticleMetadata(slug: string): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
-      title: a.title,
-      description: a.subtitle,
+      title,
+      description: subtitle,
       images: [a.hero ? a.hero.src : '/og-image.png'],
     },
   };
@@ -79,22 +86,28 @@ function buildFaqEntries(sections: ArticleSection[]): FaqEntry[] {
   return entries;
 }
 
-export default function JournalArticleView({ slug }: { slug: string }) {
+export default function JournalArticleView({ slug, locale }: { slug: string; locale: 'en' | 'pt' }) {
   const a = ARTICLES_BY_SLUG[slug];
   if (!a) notFound();
 
   const author = a.authorSlug ? TEAM_BY_SLUG[a.authorSlug] : undefined;
+  const usePt = locale === 'pt' && a.i18n?.pt;
+  const headline = usePt ? a.i18n!.pt!.title : a.title;
+  const description = usePt ? a.i18n!.pt!.subtitle : a.subtitle;
+  const abstract = usePt ? a.i18n!.pt!.abstract : a.abstract;
+  const articleSection = usePt ? a.i18n!.pt!.tag : a.tag;
+  const articleUrl = locale === 'pt' ? `${SITE_URL}/journal/${slug}/` : `${SITE_URL}/en/journal/${slug}/`;
 
   const blogPostingJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
-    '@id': `${SITE_URL}/journal/${slug}/#article`,
-    mainEntityOfPage: `${SITE_URL}/journal/${slug}/`,
-    headline: a.title,
-    description: a.subtitle,
-    abstract: a.abstract,
-    articleSection: a.tag,
-    inLanguage: 'en-GB',
+    '@id': `${articleUrl}#article`,
+    mainEntityOfPage: articleUrl,
+    headline,
+    description,
+    abstract,
+    articleSection,
+    inLanguage: locale === 'pt' ? 'pt-PT' : 'en-GB',
     datePublished: a.datePublished,
     dateModified: a.dateModified,
     wordCount: a.sections
@@ -138,7 +151,7 @@ export default function JournalArticleView({ slug }: { slug: string }) {
         crumbs={[
           { name: 'Home', path: '/' },
           { name: 'Journal', path: '/journal/' },
-          { name: a.title, path: `/journal/${slug}/` },
+          { name: headline, path: `/journal/${slug}/` },
         ]}
       />
       <script

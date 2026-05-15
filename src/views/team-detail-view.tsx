@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { TEAM, TEAM_BY_SLUG, TEAM_SLUGS } from '@/content/team-detail';
+import { TEAM, TEAM_BY_SLUG, TEAM_SLUGS, pickTeamView } from '@/content/team-detail';
 import { BreadcrumbJsonLd } from '@/components/breadcrumb-jsonld';
 import { ParallaxImageFrame } from '@/components/parallax-image-frame';
 
@@ -10,18 +10,21 @@ const SITE_URL = 'https://kdsoffshore.pt';
 
 export { TEAM_SLUGS };
 
-export async function buildTeamMetadata(slug: string): Promise<Metadata> {
-  const m = TEAM_BY_SLUG[slug];
-  if (!m) return {};
+export async function buildTeamMetadata(slug: string, locale: 'en' | 'pt'): Promise<Metadata> {
+  const raw = TEAM_BY_SLUG[slug];
+  if (!raw) return {};
+  const m = pickTeamView(raw, locale);
+  const canonical = locale === 'pt' ? `/team/${slug}/` : `/en/team/${slug}/`;
+  const url = locale === 'pt' ? `${SITE_URL}/team/${slug}/` : `${SITE_URL}/en/team/${slug}/`;
 
   return {
     title: `${m.name} — ${m.jobTitle}`,
     description: m.shortBio,
-    alternates: { canonical: `/team/${slug}/` },
+    alternates: { canonical },
     openGraph: {
       title: `${m.name} — KDS Offshore`,
       description: m.shortBio,
-      url: `${SITE_URL}/team/${slug}/`,
+      url,
       type: 'profile',
       images: [{ url: m.photoSrc, alt: m.photoAlt }],
     },
@@ -59,9 +62,10 @@ const H2: React.CSSProperties = {
   lineHeight: 1.05,
 };
 
-export default function TeamMemberView({ slug }: { slug: string }) {
-  const m = TEAM_BY_SLUG[slug];
-  if (!m) notFound();
+export default function TeamMemberView({ slug, locale }: { slug: string; locale: 'en' | 'pt' }) {
+  const raw = TEAM_BY_SLUG[slug];
+  if (!raw) notFound();
+  const m = pickTeamView(raw, locale);
 
   // If the publication URL is a DOI link, surface the DOI as a structured
   // identifier (PropertyValue propertyID: 'doi') so AI engines can resolve

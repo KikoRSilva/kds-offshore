@@ -1,6 +1,6 @@
 // Detail data for /work/[slug]/ case-study pages.
 //
-// Each entry mirrors a row of `en.pages.cases.items` (which drives the /work
+// Each entry mirrors a row of `pages.cases.items` (which drives the /work
 // index grid) with the same `slug` order — the index uses CASE_SLUGS to build
 // links into these pages.
 //
@@ -9,10 +9,30 @@
 // When a field is undefined the detail page renders a visible "Pending" stub
 // for that section so the editorial gap is obvious — and so the page still
 // has stable structure across the seven cases.
+//
+// Localisation: each case carries an optional `i18n.pt` block with the
+// translatable text fields. Slugs, client names, years, locations, image
+// paths, and references stay locale-invariant. Use `pickCaseView(c, lang)`
+// from this module to read the locale-correct view.
 
 export interface CaseReference {
   label: string;
   url?: string;
+}
+
+export interface CaseI18n {
+  tag?: string;
+  category?: string;
+  title?: string;
+  description?: string;
+  heroAlt?: string;
+  subtitle?: string;
+  brief?: string;
+  constraints?: string[];
+  approach?: string[];
+  deliverables?: string[];
+  outcomes?: { headline: string; detail?: string }[];
+  lessons?: string;
 }
 
 export interface CaseDetail {
@@ -44,6 +64,9 @@ export interface CaseDetail {
   lessons?: string;
   team?: string[];
   references?: CaseReference[];
+
+  // Optional per-locale overrides (PT for now; extend with es/fr/etc.)
+  i18n?: { pt?: CaseI18n };
 }
 
 export const CASES: CaseDetail[] = [
@@ -71,6 +94,17 @@ export const CASES: CaseDetail[] = [
           'Ribeiro e Silva, S. et al. (2013). Prediction of parametric rolling in waves with time domain non-linear strip theory. Ocean Engineering, Vol. 72.',
       },
     ],
+    i18n: {
+      pt: {
+        tag: 'Manobrabilidade · Porta-contentores',
+        category: 'Manobrabilidade & CFD',
+        title: '"Corvo" — avaliação de manobra autónoma, Vila do Porto',
+        description:
+          'Estudo probabilístico de quantas vezes por ano o navio porta-contentores "Corvo" (IMO 9381275) pode manobrar autonomamente dentro do porto de Vila do Porto sem assistência de rebocador. Modelo numérico em MatLab acoplando casco, leme com flap, e propulsores de proa.',
+        heroAlt:
+          'Navio porta-contentores semelhante ao "Corvo" atracado a um cais — classe de 610 TEU, 9.000 DWT.',
+      },
+    },
   },
   {
     slug: 'grs-power-platform-parametric-rolling',
@@ -109,6 +143,17 @@ export const CASES: CaseDetail[] = [
         url: 'https://doi.org/10.36688/ewtec-2025-1032',
       },
     ],
+    i18n: {
+      pt: {
+        tag: 'Renováveis offshore',
+        category: 'Amarração & offshore',
+        title: 'GRS Power Platform — avaliação de rolamento paramétrico',
+        description:
+          'Análise de risco pré-implantação de um conceito híbrido eólico-ondas fixo no fundo (seis Colunas de Água Oscilante). Difração-radiação em WAMIT e simulação não-linear no domínio temporal em Ship@Sea.',
+        heroAlt:
+          'Construção de plataforma de renováveis offshore — imagem ilustrativa para o projeto GRS Power Platform.',
+      },
+    },
   },
   {
     slug: 'green-ports-madeira-ops',
@@ -135,6 +180,17 @@ export const CASES: CaseDetail[] = [
           'Ribeiro e Silva, S., Bento Moreira, M. (2024). An integrated real-time Ship Operation Optimisation System (SOOS) to reduce fuel consumption and emissions from shipping navigation and port calls. ICCAS 2024 / RINA.',
       },
     ],
+    i18n: {
+      pt: {
+        tag: 'Descarbonização',
+        category: 'Descarbonização',
+        title: 'Green Ports Madeira / projeto OPS APRAM',
+        description:
+          'Soluções de engenharia para a descarbonização do sector dos transportes marítimos: projeto de fornecimento de energia em terra (cold-ironing) e retrofit da frota da autoridade portuária APRAM.',
+        heroAlt:
+          'Porto à noite — imagem ilustrativa para o projeto Green Ports Madeira / APRAM OPS.',
+      },
+    },
   },
   {
     slug: 'belize-i-remotorisation',
@@ -150,6 +206,17 @@ export const CASES: CaseDetail[] = [
     heroSrc: '/images/stock/sea-wave.jpg',
     heroAlt:
       'Open sea — placeholder image for the "Belize I" remotorisation engagement.',
+    i18n: {
+      pt: {
+        tag: 'Retrofit · Catamarã',
+        category: 'Arquitetura naval',
+        title: '"Belize I" — remotorização e aumento de capacidade',
+        description:
+          'Projeto de engenharia naval para remotorização e aumento de capacidade de passageiros do catamarã "Belize I". Responsável técnico: Eng. Sérgio Ribeiro e Silva.',
+        heroAlt:
+          'Mar aberto — imagem ilustrativa para o projeto de remotorização do "Belize I".',
+      },
+    },
   },
   {
     slug: 'libries-scientific-tourism-conversion',
@@ -165,6 +232,17 @@ export const CASES: CaseDetail[] = [
     heroSrc: '/images/stock/ocean-horizon.jpg',
     heroAlt:
       'Open ocean horizon — placeholder image for the "Libries" conversion engagement.',
+    i18n: {
+      pt: {
+        tag: 'Conversão · Motor-veleiro',
+        category: 'Arquitetura naval',
+        title: '"Libries" — conversão para turismo científico',
+        description:
+          'Conversão do motor-veleiro "Libries" para operações de turismo científico. Pacote completo de engenharia naval entregue sob supervisão técnica.',
+        heroAlt:
+          'Horizonte oceânico — imagem ilustrativa para o projeto de conversão do "Libries".',
+      },
+    },
   },
   {
     slug: 'oneocean-cfd-package',
@@ -180,6 +258,17 @@ export const CASES: CaseDetail[] = [
     heroSrc: '/images/stock/maritime-equipment.jpg',
     heroAlt:
       'Maritime working equipment — placeholder image for the OneOcean CFD engagement.',
+    i18n: {
+      pt: {
+        tag: 'CFD · Barco de trabalho',
+        category: 'Manobrabilidade & CFD',
+        title: 'OneOcean — pacote preliminar de CFD',
+        description:
+          'Apoio CFD durante o projeto preliminar e a construção do barco de trabalho da OneOcean. As ferramentas numéricas fornecidas pela KDS permitiram ao cliente cumprir o programa de projeto naval dentro do prazo.',
+        heroAlt:
+          'Equipamento marítimo de trabalho — imagem ilustrativa para o projeto CFD da OneOcean.',
+      },
+    },
   },
   {
     slug: 'seapower-pilot-boat-optimisation',
@@ -195,6 +284,17 @@ export const CASES: CaseDetail[] = [
     heroSrc: '/images/stock/engineering-detail.jpg',
     heroAlt:
       'Maritime engineering detail — placeholder image for the SeaPower pilot boat engagement.',
+    i18n: {
+      pt: {
+        tag: 'CFD · Lancha-piloto',
+        category: 'Manobrabilidade & CFD',
+        title: 'SeaPower — otimização hidrodinâmica de lancha-piloto',
+        description:
+          'Programa de estabilização de balanço e otimização de trim para a lancha-piloto da SeaPower. Refinamento hidrodinâmico por CFD destinado a promover eficiência energética e descarbonização em operações portuárias.',
+        heroAlt:
+          'Pormenor de engenharia marítima — imagem ilustrativa para o projeto da lancha-piloto SeaPower.',
+      },
+    },
   },
 ];
 
@@ -203,3 +303,28 @@ export const CASES_BY_SLUG: Record<string, CaseDetail> = Object.fromEntries(
 );
 
 export const CASE_SLUGS: string[] = CASES.map((c) => c.slug);
+
+// Locale-aware accessor: returns a flat object with PT overrides applied
+// (falling back to EN for any missing field). Slugs and non-translatable
+// metadata (client, year, location, references, etc.) are preserved as-is.
+export interface LocalisedCase extends CaseDetail {}
+
+export function pickCaseView(c: CaseDetail, lang: 'en' | 'pt'): LocalisedCase {
+  if (lang !== 'pt' || !c.i18n?.pt) return c;
+  const pt = c.i18n.pt;
+  return {
+    ...c,
+    tag: pt.tag ?? c.tag,
+    category: pt.category ?? c.category,
+    title: pt.title ?? c.title,
+    description: pt.description ?? c.description,
+    heroAlt: pt.heroAlt ?? c.heroAlt,
+    subtitle: pt.subtitle ?? c.subtitle,
+    brief: pt.brief ?? c.brief,
+    constraints: pt.constraints ?? c.constraints,
+    approach: pt.approach ?? c.approach,
+    deliverables: pt.deliverables ?? c.deliverables,
+    outcomes: pt.outcomes ?? c.outcomes,
+    lessons: pt.lessons ?? c.lessons,
+  };
+}

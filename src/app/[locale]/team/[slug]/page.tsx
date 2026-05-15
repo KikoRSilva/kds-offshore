@@ -16,8 +16,9 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
-  return buildTeamMetadata(slug);
+  const { locale: raw, slug } = await params;
+  if (!hasLocale(routing.locales, raw)) notFound();
+  return buildTeamMetadata(slug, raw as Locale);
 }
 
 export default async function Page({
@@ -28,5 +29,5 @@ export default async function Page({
   const { locale: raw, slug } = await params;
   if (!hasLocale(routing.locales, raw)) notFound();
   setRequestLocale(raw as Locale);
-  return <TeamMemberView slug={slug} />;
+  return <TeamMemberView slug={slug} locale={raw as Locale} />;
 }

@@ -5,6 +5,7 @@ import {
   CASES,
   CASES_BY_SLUG,
   CASE_SLUGS,
+  pickCaseView,
   type CaseDetail,
 } from '@/content/cases-detail';
 import { BreadcrumbJsonLd } from '@/components/breadcrumb-jsonld';
@@ -15,21 +16,24 @@ const SITE_URL = 'https://kdsoffshore.pt';
 
 export { CASE_SLUGS };
 
-export async function buildCaseMetadata(slug: string): Promise<Metadata> {
-  const c = CASES_BY_SLUG[slug];
-  if (!c) return {};
+export async function buildCaseMetadata(slug: string, locale: 'en' | 'pt'): Promise<Metadata> {
+  const raw = CASES_BY_SLUG[slug];
+  if (!raw) return {};
+  const c = pickCaseView(raw, locale);
 
   const title = c.title;
   const description = c.description;
+  const canonical = locale === 'pt' ? `/work/${slug}/` : `/en/work/${slug}/`;
+  const url = locale === 'pt' ? `${SITE_URL}/work/${slug}/` : `${SITE_URL}/en/work/${slug}/`;
 
   return {
     title,
     description,
-    alternates: { canonical: `/work/${slug}/` },
+    alternates: { canonical },
     openGraph: {
-      title: `${c.title} — KDS Offshore`,
+      title: `${title} — KDS Offshore`,
       description,
-      url: `${SITE_URL}/work/${slug}/`,
+      url,
       type: 'article',
       images: [
         {
@@ -42,7 +46,7 @@ export async function buildCaseMetadata(slug: string): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${c.title} — KDS Offshore`,
+      title: `${title} — KDS Offshore`,
       description,
       images: ['/og-image.png'],
     },
@@ -113,15 +117,16 @@ function buildJsonLd(c: CaseDetail) {
   };
 }
 
-export default function WorkCaseView({ slug }: { slug: string }) {
-  const c = CASES_BY_SLUG[slug];
-  if (!c) notFound();
+export default function WorkCaseView({ slug, locale }: { slug: string; locale: 'en' | 'pt' }) {
+  const raw = CASES_BY_SLUG[slug];
+  if (!raw) notFound();
+  const c = pickCaseView(raw, locale);
 
   const jsonLd = buildJsonLd(c);
 
   // Build a "next case" suggestion (wraps to first when at the end).
   const idx = CASES.findIndex((x) => x.slug === slug);
-  const next = CASES[(idx + 1) % CASES.length];
+  const next = pickCaseView(CASES[(idx + 1) % CASES.length], locale);
 
   return (
     <>

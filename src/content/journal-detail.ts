@@ -158,6 +158,94 @@ export const ARTICLES: JournalArticle[] = [
       { slug: 'parametric-rolling-belmullet', title: 'Parametric rolling on hybrid OWC platforms: lessons from Belmullet' },
       { slug: 'rudder-flap-vs-bow-thruster', title: 'Why the rudder-with-flap matters more than the bow thruster' },
     ],
+    i18n: {
+      pt: {
+        title: 'Manobrar o "Corvo" sem rebocadores: uma resposta probabilística',
+        subtitle:
+          'Como acoplámos modelos de manobrabilidade em MatLab com um ano de dados meteoceanográficos para estimar, com intervalos de confiança, com que frequência o Corvo pode atracar autonomamente em Vila do Porto — e onde é que um segundo propulsor de popa mudaria a resposta.',
+        tag: 'Nota de caso · Manobrabilidade',
+        abstract:
+          'Em 2024, a Mutualista / Grupo Bensaúde encarregou a KDS Offshore de avaliar a operacionalidade do navio porta-contentores Corvo (IMO 9381275, 610 TEU) dentro do porto de Vila do Porto, Açores. A pergunta era simples de enunciar e difícil de responder: quantos dias por ano pode o navio atracar sem assistência de rebocador? A resposta é probabilística — e depende de uma decisão sobre um propulsor de popa que o operador estava prestes a tomar.',
+        keyTakeaways: [
+          'Uma análise de pior caso na atracação diz quando o navio não pode operar; uma análise probabilística diz quando pode. Os operadores pagam por esta última.',
+          'Acoplar um modelo de casco de seis graus de liberdade com um ano de dados meteoceanográficos hindcast permite cobrir todo o envelope operacional, e não apenas as condições de projeto.',
+          'Para o Corvo, a atracação autónoma era atingível em cerca de 88% dos dias — mas um segundo propulsor de popa elevou esse número para os altos noventa por cento, com custo modesto.',
+          'A precisão de todo o estudo depende do conjunto de coeficientes hidrodinâmicos e aerodinâmicos; tudo o resto é canalização.',
+        ],
+        sections: [
+          { type: 'h2', content: 'A pergunta' },
+          {
+            type: 'p',
+            content:
+              'Vila do Porto situa-se na costa sul de Santa Maria, a ilha mais a sudeste do arquipélago dos Açores. O seu porto é pequeno, exposto a ondulação proveniente de um arco amplo a sul, e serve como o único porto comercial da ilha. O Corvo (IMO 9381275, 610 TEU, 9.000 DWT, casco alongado em estilo pós-Panamax) é o cavalo-de-batalha que mantém a ilha abastecida. Quando a pergunta chegou da Mutualista — o braço de shipping do Grupo Bensaúde — vinha formulada em linguagem operacional, não de engenharia: "quantas vezes por ano podemos atracar sem rebocadores, e um segundo propulsor de popa pagar-se-ia a si próprio?"',
+          },
+          {
+            type: 'p',
+            content:
+              'Uma análise de pior caso teria respondido a uma pergunta diferente — a pergunta de se o navio alguma vez não consegue atracar. Essa pergunta também vale a pena responder, e respondemos, mas não é a pergunta que conduz uma decisão de aquisição de propulsor. Essa pergunta é a da operacionalidade, e a operacionalidade é uma quantidade probabilística.',
+          },
+
+          { type: 'h2', content: 'O modelo' },
+          {
+            type: 'p',
+            content:
+              'Construímos o simulador em MatLab/Simulink, sobre o chassis de um modelo de casco de seis graus de liberdade que temos vindo a evoluir desde 2005 [1, 2]. O modelo acopla o casco, o leme (do tipo flap, no caso do Corvo), a propulsão principal, e os propulsores de proa e popa. As forças induzidas pelas ondas vêm de um núcleo de comportamento no mar baseado em método de painéis 3D (WAMIT), pré-calculadas para as condições de calado e trim relevantes. As cargas de vento e corrente são aplicadas com coeficientes clássicos calibrados contra simulações CFD da forma real do casco.',
+          },
+          {
+            type: 'p',
+            content:
+              'A precisão de todo o estudo vive no conjunto de coeficientes. O simulador pode estar errado numa manobra em dez metros à proa simplesmente porque a derivada de guinada do casco estava errada em dez por cento — e dez por cento está bem dentro da incerteza das fórmulas de regressão genéricas para coeficientes derivados. Não usamos fórmulas genéricas em projetos desta dimensão: corremos CFD dedicado ou, quando existem dados de provas de mar, calibramos contra eles. Para o Corvo fizemos os dois.',
+          },
+
+          { type: 'h2', content: 'O lado meteoceanográfico' },
+          {
+            type: 'p',
+            content:
+              'Depois vem o envelope operacional. Extraímos um ano completo de dados de vento, onda e corrente em hindcast à entrada do porto — não no local offshore, mas na boca do porto — e organizámo-los na distribuição conjunta dos parâmetros que importam para a atracação: a ondulação de sul que entra na bacia, a direção do vento relativamente ao corredor de aproximação, e a corrente cruzada na bacia interior. A resposta probabilística é o integral do output do modelo sobre essa distribuição conjunta.',
+          },
+          {
+            type: 'pull',
+            content:
+              'Uma análise de pior caso diz quando o navio não pode operar. Uma análise probabilística diz quando pode. Os operadores pagam por esta última.',
+          },
+
+          { type: 'h2', content: 'A questão do propulsor' },
+          {
+            type: 'p',
+            content:
+              'Uma vez ligados o simulador e o envelope meteoceanográfico, a pergunta passa a ser paramétrica: para cada configuração do navio — apenas o propulsor de proa atual; o atual mais um segundo propulsor de popa; um leme melhorado; combinações — que fração do ano fecha o envelope de atracação autónoma? Corremos vários milhares de atracações simuladas por configuração, amostradas a partir da distribuição conjunta meteoceanográfica, e agregámos no único número que o operador queria: percentagem de dias atracáveis sem rebocadores.',
+          },
+          {
+            type: 'p',
+            content:
+              'O resultado-chefe, com intervalos de confiança apropriadamente largos: com a configuração de propulsores existente, o Corvo pode atracar autonomamente em cerca de 88% dos dias. Adicionar um propulsor de popa do tamanho que recomendámos eleva esse número para os altos noventa por cento. Os pontos percentuais restantes são dominados por uma única combinação — ondulação de sudeste em conjunto com uma forte corrente transversal à bacia — que nenhuma configuração plausível de propulsores consegue verdadeiramente domesticar, e que o operador já gere com rebocadores como prática corrente.',
+          },
+
+          { type: 'h2', content: 'O que não afirmámos' },
+          {
+            type: 'p',
+            content:
+              'Algumas coisas que vale a pena dizer sobre a incerteza. Primeiro, o número dos 88% é uma estimativa pontual; o intervalo credível, dada a incerteza do hindcast meteoceanográfico e a incerteza dos coeficientes, foi reportado no relatório de engenharia em cerca de ±3 pontos percentuais. Segundo, isto é operacionalidade sob pressões comerciais normais — o simulador não captura os fatores humanos que verdadeiramente conduzem as decisões de go/no-go em condições marginais, e dissemo-lo por escrito. Terceiro, o ano de dados meteoceanográficos é uma realização; a variabilidade interanual pode deslocar o número-chefe num ponto percentual em qualquer das direções.',
+          },
+          {
+            type: 'p',
+            content:
+              'Estas ressalvas importam porque a alternativa é um único número em que o operador confia em demasia. Preferimos apresentar uma banda calibrada à volta da qual o operador pode planear, do que um número afiado que não sobrevive à próxima reunião com o capitão do porto.',
+          },
+
+          { type: 'h2', content: 'Por que isto importa para além de Vila do Porto' },
+          {
+            type: 'p',
+            content:
+              'A avaliação probabilística de operacionalidade é uma ferramenta genérica. A combinação de um simulador de casco de seis graus de liberdade, coeficientes calibrados, e um registo meteoceanográfico longo pode responder a muitas perguntas da mesma forma: quantas vezes por ano um navio pode rebocar / içar / desembarcar / manter posição em segurança, dada uma escolha de configuração que é mais barata avaliar agora do que instalar e arrepender-se. Já corremos a mesma forma de análise desde então no Silver Mary no mesmo porto, e esperamos continuar a corrê-la. Se tem uma pergunta comparável, escreva-nos.',
+          },
+        ],
+        related: [
+          { slug: 'parametric-rolling-belmullet', title: 'Rolamento paramétrico em plataformas OWC híbridas: lições de Belmullet' },
+          { slug: 'rudder-flap-vs-bow-thruster', title: 'Porque o leme com flap importa mais do que o propulsor de proa' },
+        ],
+      },
+    },
   },
 
   {
