@@ -5,12 +5,14 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Reveal } from '@/components/reveal';
 import { KDSImage } from '@/components/kds-image';
+import { CountUp } from '@/components/count-up';
 import { useSite } from '@/contexts/site-context';
 import { en } from '@/content/en';
 import { pt } from '@/content/pt';
 
 const IMG = {
-  port: '/images/stock/port-aerial.jpg',
+  seapower: '/images/kds/PilotBoat_1500HDPE_02.png',
+  cfd: '/images/kds/Imagem1.png',
 };
 
 export default function HomePage() {
@@ -24,11 +26,11 @@ export default function HomePage() {
       {/* HERO */}
       <section
         className="sonar-bg"
-        style={{ position: 'relative', minHeight: 920, padding: '120px 48px 100px', overflow: 'hidden' }}
+        style={{ position: 'relative', padding: '72px 48px 56px', overflow: 'hidden' }}
       >
         <div style={{ maxWidth: 1440, margin: '0 auto', position: 'relative', zIndex: 2 }}>
           <Reveal delay={0.05}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 80 }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 48 }}>
               <div
                 className="kds-mono"
                 style={{ fontSize: 11, color: 'var(--ink-dim)', letterSpacing: '0.22em', textTransform: 'uppercase', maxWidth: 320, lineHeight: 1.6 }}
@@ -50,7 +52,7 @@ export default function HomePage() {
             <h1
               className="kds-display"
               aria-label={`${t.hero.title1} ${t.hero.title2} ${t.hero.title3}`}
-              style={{ fontSize: 'clamp(72px, 9.5vw, 168px)', margin: 0, fontWeight: 300 }}
+              style={{ fontSize: 'clamp(48px, 6vw, 92px)', margin: 0, fontWeight: 300, lineHeight: 1.05 }}
             >
               {t.hero.title1}{' '}
               <br />
@@ -68,7 +70,7 @@ export default function HomePage() {
                 display: 'grid',
                 gridTemplateColumns: '1fr 1fr',
                 gap: 80,
-                marginTop: 80,
+                marginTop: 48,
                 alignItems: 'end',
               }}
             >
@@ -119,8 +121,8 @@ export default function HomePage() {
           <Reveal delay={0.35}>
             <div
               style={{
-                marginTop: 100,
-                padding: '24px 0',
+                marginTop: 56,
+                padding: '20px 0',
                 borderTop: '1px solid var(--line)',
                 borderBottom: '1px solid var(--line)',
                 display: 'flex',
@@ -139,22 +141,23 @@ export default function HomePage() {
               </div>
               <div style={{ display: 'flex', gap: 48 }}>
                 {[
-                  { n: '120+', l: lang === 'pt' ? 'projetos' : 'projects' },
-                  { n: '14', l: lang === 'pt' ? 'ativos' : 'active' },
-                  { n: '09y', l: lang === 'pt' ? 'no estúdio' : 'in studio' },
-                ].map((s) => (
-                  <div key={s.l} style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
-                    <span
+                  { v: 56, s: '+', l: lang === 'pt' ? 'projetos' : 'projects' },
+                  { v: 3, s: '', l: lang === 'pt' ? 'ativos' : 'active' },
+                  { v: 10, s: '', l: lang === 'pt' ? 'anos no estúdio' : 'years in studio' },
+                ].map((stat) => (
+                  <div key={stat.l} style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
+                    <CountUp
+                      value={stat.v}
+                      suffix={stat.s}
+                      delay={1100}
                       className="kds-display"
                       style={{ fontSize: 28, fontVariantNumeric: 'tabular-nums' }}
-                    >
-                      {s.n}
-                    </span>
+                    />
                     <span
                       className="kds-mono"
                       style={{ fontSize: 10, color: 'var(--ink-faint)', letterSpacing: '0.2em', textTransform: 'uppercase' }}
                     >
-                      {s.l}
+                      {stat.l}
                     </span>
                   </div>
                 ))}
@@ -179,16 +182,16 @@ export default function HomePage() {
               >
                 ↓ {lang === 'pt' ? 'Projeto em destaque' : 'Featured engagement'}
                 <br />
-                <span style={{ color: 'var(--ink-faint)' }}>2024, 087 / SP</span>
+                <span style={{ color: 'var(--ink-faint)' }}>2025 · SEAPOWER 1500</span>
               </div>
               <h2
                 className="kds-display"
                 style={{ fontSize: 'clamp(40px, 4vw, 72px)', margin: 0, fontWeight: 300 }}
               >
                 {lang === 'pt' ? (
-                  <>Casco de lancha-piloto refinado até <span style={{ fontStyle: 'italic', color: 'var(--accent)' }}>0,6 nós</span> do ótimo teórico.</>
+                  <>Lancha-piloto <span style={{ fontStyle: 'italic', color: 'var(--accent)' }}>100% elétrica</span> de 15m, dimensionada por CFD.</>
                 ) : (
-                  <>Pilot boat hull, refined to within <span style={{ fontStyle: 'italic', color: 'var(--accent)' }}>0.6 knots</span> of theoretical optimum.</>
+                  <>Fully <span style={{ fontStyle: 'italic', color: 'var(--accent)' }}>electric</span> 15m pilot boat, sized by CFD.</>
                 )}
               </h2>
             </div>
@@ -197,22 +200,79 @@ export default function HomePage() {
           <Reveal delay={0.1}>
             <div style={{ display: 'grid', gridTemplateColumns: '7fr 5fr', gap: 32, alignItems: 'start' }}>
               <div
-                className="cfd-plot ph"
-                style={{ aspectRatio: '5/3', borderRadius: 4, position: 'relative' }}
-                role="img"
-                aria-label="CFD pressure field plot — SeaPower 12m pilot boat"
+                style={{
+                  aspectRatio: '5/3',
+                  borderRadius: 4,
+                  position: 'relative',
+                  overflow: 'hidden',
+                  background: 'var(--surface)',
+                  border: '1px solid var(--line)',
+                }}
               >
-                <div style={{ position: 'absolute', left: 16, bottom: 16, color: 'rgba(255,255,255,0.85)' }} className="kds-mono">
-                  <div style={{ fontSize: 10, letterSpacing: '0.2em', textTransform: 'uppercase' }}>CFD · pressure field</div>
-                  <div style={{ fontSize: 10, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)' }}>SeaPower / 12 m pilot · Fr 0.42</div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={IMG.cfd}
+                  alt={
+                    lang === 'pt'
+                      ? 'Visualização CFD (Simerics MP) do campo de pressão dinâmica em torno do casco da lancha-piloto SEAPOWER 1500 a 20 nós'
+                      : 'CFD (Simerics MP) dynamic-pressure field visualisation around the SEAPOWER 1500 pilot boat hull at 20 knots'
+                  }
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    display: 'block',
+                  }}
+                />
+                <div
+                  aria-hidden="true"
+                  style={{
+                    position: 'absolute',
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    height: '38%',
+                    background:
+                      'linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.45) 45%, rgba(0,0,0,0) 100%)',
+                    pointerEvents: 'none',
+                  }}
+                />
+                <div
+                  style={{
+                    position: 'absolute',
+                    left: 16,
+                    bottom: 16,
+                    color: '#ffffff',
+                    textShadow: '0 1px 3px rgba(0,0,0,0.85), 0 0 1px rgba(0,0,0,0.9)',
+                  }}
+                  className="kds-mono"
+                  aria-hidden="true"
+                >
+                  <div style={{ fontSize: 10, letterSpacing: '0.2em', textTransform: 'uppercase' }}>
+                    Simerics MP · pressure field
+                  </div>
+                  <div
+                    style={{
+                      fontSize: 10,
+                      letterSpacing: '0.2em',
+                      textTransform: 'uppercase',
+                      color: 'rgba(255,255,255,0.82)',
+                    }}
+                  >
+                    SEAPOWER 1500 / 15 m pilot · 2–22 kn
+                  </div>
                 </div>
               </div>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
                 <KDSImage
-                  src={IMG.port}
+                  src={IMG.seapower}
                   aspect="5/3"
-                  alt="Vessel photograph"
+                  alt={
+                    lang === 'pt'
+                      ? 'Render 3D da lancha-piloto SEAPOWER 1500 — 15 m, 100% elétrica, casco em HDPE'
+                      : '3D render of the SEAPOWER 1500 pilot boat — 15 m, fully electric, HDPE hull'
+                  }
                   parallax
                   style={{ borderRadius: 4 }}
                 />
@@ -232,10 +292,10 @@ export default function HomePage() {
                   </div>
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
                     {[
-                      { n: '−18%', l: lang === 'pt' ? 'consumo de comb.' : 'fuel burn at cruise' },
-                      { n: '+4°', l: lang === 'pt' ? 'margem de estab.' : 'roll stability margin' },
-                      { n: '0.6', l: lang === 'pt' ? 'nós do ótimo' : 'kn from optimum' },
-                      { n: 'DNV', l: 'class compliant' },
+                      { n: '100%', l: lang === 'pt' ? 'elétrica' : 'electric' },
+                      { n: '664 kWh', l: lang === 'pt' ? 'baterias lítio-ião' : 'lithium-ion batteries' },
+                      { n: '22 kn', l: lang === 'pt' ? 'velocidade máx.' : 'top speed analysed' },
+                      { n: 'ITTC', l: lang === 'pt' ? 'V&V conforme' : 'V&V compliant' },
                     ].map((s) => (
                       <div key={s.l}>
                         <div className="kds-display" style={{ fontSize: 32, fontWeight: 400 }}>{s.n}</div>
@@ -280,7 +340,7 @@ export default function HomePage() {
                 className="kds-mono"
                 style={{ fontSize: 11, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--ink-dim)' }}
               >
-                {t.services.label} / 07
+                {t.services.label} / {String(t.services.items.length).padStart(2, '0')}
               </div>
             </div>
           </Reveal>
@@ -294,7 +354,10 @@ export default function HomePage() {
           >
             {t.services.items.map((s, i) => (
               <Reveal key={s.n} delay={i * 0.05}>
-                <div
+                <Link
+                  href={s.slug ? `/services/${s.slug}/` : '/services/'}
+                  className="service-card"
+                  aria-label={`${s.t} — ${lang === 'pt' ? 'ver serviço' : 'read brief'}`}
                   style={{
                     padding: '40px 32px 64px',
                     borderBottom: '1px solid var(--line)',
@@ -304,7 +367,7 @@ export default function HomePage() {
                   }}
                 >
                   <div
-                    className="kds-mono"
+                    className="kds-mono service-card__num"
                     style={{ fontSize: 10, color: 'var(--ink-faint)', letterSpacing: '0.2em', marginBottom: 32 }}
                   >
                     {s.n} / {String(t.services.items.length).padStart(2, '0')}
@@ -322,6 +385,7 @@ export default function HomePage() {
                     {s.d}
                   </p>
                   <div
+                    aria-hidden="true"
                     style={{
                       position: 'absolute',
                       bottom: 28,
@@ -332,16 +396,15 @@ export default function HomePage() {
                       alignItems: 'center',
                     }}
                   >
-                    <Link
-                      href="/services/"
-                      className="kds-mono"
+                    <span
+                      className="kds-mono service-card__cta"
                       style={{ fontSize: 10, color: 'var(--ink-faint)', letterSpacing: '0.18em', textTransform: 'uppercase' }}
                     >
                       {lang === 'pt' ? 'ver serviço' : 'read brief'}
-                    </Link>
-                    <span style={{ color: 'var(--ink-dim)' }}>↗</span>
+                    </span>
+                    <span className="service-card__arrow" style={{ color: 'var(--ink-dim)' }}>↗</span>
                   </div>
-                </div>
+                </Link>
               </Reveal>
             ))}
           </div>

@@ -27,9 +27,10 @@ const interTight = Inter_Tight({
 });
 
 const SITE_URL = 'https://kdsoffshore.pt';
-const SITE_TITLE = 'KDS Offshore — Naval Architecture & Offshore Engineering';
+const SITE_TITLE =
+  'KDS Offshore — Naval Architecture & Offshore Engineering for Decarbonisation & Digitalisation';
 const SITE_DESCRIPTION =
-  'KDS Offshore designs vessels, structures, and energy systems. Naval architecture, hydrodynamics, mooring, and decarbonisation consultancy from Oeiras, Portugal.';
+  'KDS Offshore designs vessels, offshore structures, and energy systems, with a focus on maritime decarbonisation and digitalisation. Naval architecture, offshore engineering, hydrodynamics, mooring, and digital-twin consultancy from Lisbon, Portugal.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -41,11 +42,17 @@ export const metadata: Metadata = {
   keywords: [
     'naval architecture',
     'offshore engineering',
+    'maritime decarbonisation',
+    'maritime digitalisation',
+    'ship digitalisation',
+    'digital twin',
+    'smart shipping',
     'hydrodynamics',
     'CFD',
     'manoeuvrability',
     'mooring',
-    'decarbonisation',
+    'energy transition',
+    'blue economy',
     'Portugal',
     'Lisbon',
   ],
@@ -72,7 +79,7 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'KDS Offshore — Engineering the working ocean.',
+        alt: 'KDS Offshore — Naval architecture and offshore engineering for decarbonisation and digitalisation.',
       },
     ],
   },
@@ -114,11 +121,11 @@ const ORGANIZATION_JSONLD = {
       },
       image: { '@id': `${SITE_URL}/#logo` },
       description: SITE_DESCRIPTION,
-      slogan: 'Engineering the working ocean.',
+      slogan: 'Naval architecture and offshore engineering for decarbonisation and digitalisation.',
       foundingDate: '2016',
       foundingLocation: {
         '@type': 'Place',
-        name: 'Oeiras, Portugal',
+        name: 'Lisbon, Portugal',
       },
       founder: {
         '@type': 'Person',
@@ -140,11 +147,13 @@ const ORGANIZATION_JSONLD = {
         knowsAbout: [
           'Naval architecture',
           'Offshore engineering',
+          'Maritime decarbonisation',
+          'Maritime digitalisation',
+          'Digital twin',
           'Hydrodynamics',
           'CFD',
           'Ship manoeuvrability',
           'Mooring system design',
-          'Maritime decarbonisation',
         ],
       },
       taxID: '514248091',
@@ -192,11 +201,16 @@ const ORGANIZATION_JSONLD = {
       knowsAbout: [
         'Naval architecture',
         'Offshore engineering',
+        'Maritime decarbonisation',
+        'Maritime digitalisation',
+        'Ship digitalisation',
+        'Digital twin',
+        'Smart shipping',
+        'Energy transition',
         'Hydrodynamic optimisation',
         'Ship manoeuvrability prediction',
         'Mooring system design',
         'Vessel conversion engineering',
-        'Maritime decarbonisation',
         'CFD',
         '3D geometrical modelling',
         'Supervision of new constructions',
@@ -205,18 +219,39 @@ const ORGANIZATION_JSONLD = {
         '@type': 'OfferCatalog',
         name: 'Engineering services',
         itemListElement: [
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '3D Geometrical Modelling' } },
           {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
               name: 'Naval Architecture & Offshore Engineering Design',
+              serviceType: 'Naval architecture',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Maritime Decarbonisation Consultancy',
+              serviceType: 'Decarbonisation',
+              description:
+                'Pathways to GHG reduction for vessels and offshore assets, including alternative fuels, energy efficiency, and FuelEU Maritime/IMO compliance.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Maritime Digitalisation & Digital Twin',
+              serviceType: 'Digitalisation',
+              description:
+                'Digital-twin development, data-driven performance monitoring, and digitalisation strategy for vessels, fleets, and offshore operations.',
             },
           },
           { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Hydrodynamic Optimisation' } },
           { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Ship Manoeuvrability Prediction' } },
           { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mooring System Design' } },
           { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Vessel Conversion Engineering' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '3D Geometrical Modelling' } },
           { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Supervision of New Constructions' } },
         ],
       },
@@ -236,7 +271,7 @@ const ORGANIZATION_JSONLD = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
-      lang="en"
+      lang="en-GB"
       data-theme="dark"
       className={`${spectral.variable} ${jetbrainsMono.variable} ${interTight.variable}`}
     >

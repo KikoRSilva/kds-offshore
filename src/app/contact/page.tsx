@@ -404,7 +404,7 @@ export default function ContactPage() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/images/stock/engineering-detail.jpg"
-                  alt="Oeiras, Portugal"
+                  alt="KDS Offshore studio, Lisbon, Portugal"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                 />

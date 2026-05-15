@@ -154,7 +154,7 @@ export function Footer() {
             textTransform: 'uppercase',
           }}
         >
-          Designed in Oeiras · NIPC 514 248 091
+          Designed in Lisbon · NIPC 514 248 091
         </span>
       </div>
     </footer>

@@ -40,6 +40,7 @@ export function SiteProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (!mounted) return;
+    document.documentElement.lang = lang === 'pt' ? 'pt-PT' : 'en-GB';
     localStorage.setItem('kds-lang', lang);
   }, [lang, mounted]);
 

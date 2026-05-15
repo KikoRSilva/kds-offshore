@@ -523,6 +523,150 @@ export const SERVICES: ServiceDetail[] = [
     leadTime: 'Project span',
     serviceType: 'Project supervision',
   },
+  {
+    slug: 'maritime-decarbonisation',
+    number: '08',
+    name: 'Maritime Decarbonisation',
+    shortName: 'Decarbonisation',
+    tagline: 'Pathways from fuel-burn baseline to net zero.',
+    description:
+      'GHG-reduction pathways for vessels and offshore assets. Alternative fuels, energy efficiency, and FuelEU Maritime / IMO 2050 compliance.',
+    overview: [
+      'Maritime decarbonisation is no longer a strategic abstraction. FuelEU Maritime, the EU ETS extension to shipping, IMO 2050 targets, and the Poseidon Principles all impose concrete, dated obligations on operators. The question is not whether to decarbonise — it is which pathway, on what timeline, with which capital cost.',
+      'We work the technical side: emissions baselines, alternative-fuel feasibility (battery, hybrid, LNG, methanol, ammonia), energy-efficiency retrofits, and operational optimisation (trim, speed, routing). Every recommendation is grounded in CFD-quantified hydrodynamics and lifecycle GHG modelling, not in generic ESG narrative.',
+      'Reference work includes the SEAPOWER 1500 — a fully electric 15 m pilot boat sized by CFD before construction — the OPS shore-power study for APRAM in Madeira, and remotorisation work on the "Belize I" catamaran for Nautiber. Each engagement starts from a measured operational baseline and ends with a documented pathway the operator can defend to regulators and lenders.',
+    ],
+    whatWeDeliver: [
+      'Operational emissions baseline (well-to-wake)',
+      'Decarbonisation pathway comparison matrix',
+      'Alternative-fuel feasibility study',
+      'Electrification & hybrid powertrain sizing',
+      'Energy-efficiency retrofit specification',
+      'FuelEU Maritime / IMO 2050 / EU ETS compliance assessment',
+      'Lifecycle GHG model and CAPEX/OPEX envelope',
+    ],
+    methodology: [
+      {
+        t: 'Baseline & boundary',
+        d: 'Define the operational profile — voyages, port time, fuel mix, environmental conditions. Build the well-to-wake emissions baseline against IMO DCS / CII methodology.',
+      },
+      {
+        t: 'Pathway options',
+        d: 'Score battery, hybrid, methanol, ammonia, biofuel, and efficiency-retrofit options against CAPEX, OPEX, GHG reduction, technology readiness, and refuelling availability. Output is a defensible comparison matrix.',
+      },
+      {
+        t: 'Engineering sizing',
+        d: 'For the selected pathway, full engineering: powertrain, battery, fuel system, integration, structural fit, weight and stability impact. CFD where it changes the answer (hull, propulsion, appendages).',
+      },
+      {
+        t: 'Compliance & financing',
+        d: 'FuelEU Maritime, EU ETS, IMO 2050, Poseidon Principles. We prepare the technical submission for class and the technical annexes lenders ask for.',
+      },
+    ],
+    tools: [
+      'Simerics MP (CFD)',
+      'STAR-CCM+ / OpenFOAM (CFD)',
+      'Rhino + Grasshopper (parametric design)',
+      'Holtrop-Mennem method (empirical resistance)',
+      'FuelEU Maritime / IMO DCS / CII methodology',
+      'EU ETS maritime calculator',
+      'Lifecycle assessment frameworks',
+      'MATLAB / Simulink (powertrain sizing)',
+    ],
+    cases: [
+      { title: 'SEAPOWER 1500 — fully electric 15 m pilot boat', client: 'SeaPower', year: '2025' },
+      { title: 'Green Ports Madeira / OPS shore-power study', client: 'APRAM via Future Proman', year: '2023' },
+      { title: '"Belize I" — catamaran remotorisation & capacity uplift', client: 'Nautiber', year: '2023' },
+    ],
+    faq: [
+      {
+        q: 'Which fuel pathway is right for my fleet?',
+        a: "There is no universal answer. We start from your operational profile — voyage length, port time, refuelling availability, charter constraints, CAPEX envelope — and score battery, hybrid, methanol, ammonia, and biofuel options against your specifics. The output is a comparison matrix and a written recommendation, not a sales pitch.",
+      },
+      {
+        q: 'Are you certified for FuelEU Maritime reporting?',
+        a: 'We follow the published FuelEU Maritime methodology and DCS reporting framework, and we deliver assessments in the format flag-state administrations and recognised organisations expect. Final certification is issued by the RO (DNV, BV, RINA, LR); we prepare the technical submission and answer the queries.',
+      },
+      {
+        q: 'Can you retrofit existing vessels, or only design new builds?',
+        a: 'Both. For most operators retrofit is more economical than newbuild in the short term. We have remotorised pilot boats, converted catamarans, and specified hybrid retrofits. Each starts with a feasibility study covering structural fit, weight balance, range, and regulatory approval.',
+      },
+    ],
+    leadTime: '4–12 weeks',
+    serviceType: 'Decarbonisation',
+  },
+  {
+    slug: 'maritime-digitalisation-and-digital-twin',
+    number: '09',
+    name: 'Digitalisation & Digital Twin',
+    shortName: 'Digitalisation',
+    tagline: 'Physics-based twins from design to fleet operation.',
+    description:
+      'Digital-twin development, data-driven performance monitoring, and digitalisation strategy for fleets and offshore operations.',
+    overview: [
+      'Most maritime "digital twins" are dashboards on top of SCADA streams. Useful, but they cannot answer the question the operator actually has: "what if we change trim by one degree, or speed by half a knot?" Answering that needs a physics-based model — and that is the layer we build.',
+      'We couple CFD-derived hydrodynamic models with onboard sensor streams to produce a twin that lives next to the data, not in place of it. The same physics model that sized the vessel during design carries into operation as a calibrated predictor of resistance, fuel burn, and trim sensitivity. ISO/IEC 23247 digital-twin conventions guide the architecture.',
+      'Reference work includes the SEAPOWER 1500 — a fully electric pilot boat whose digital twin was built before steel was cut — and a real-time ship-operation optimisation system that reduces fuel consumption and emissions on navigation and port calls (published at IMDC 2024 and ICCAS 2024 in Genoa).',
+    ],
+    whatWeDeliver: [
+      'Physics-based digital twin (CFD-derived)',
+      'Real-time performance dashboard',
+      'Predictive trim, speed, and fuel-burn models',
+      'Sensor architecture & instrumentation spec',
+      'Fleet benchmarking framework',
+      'Operator decision-support tooling (trim advisor, route comparison)',
+      'Published-research-backed methodology',
+    ],
+    methodology: [
+      {
+        t: 'CFD-derived baseline',
+        d: 'Resistance & propulsion curves from CFD (Simerics MP, OpenFOAM, or STAR-CCM+) across the operational envelope. This is the twin\'s physics layer — calm-water, free-trim, free-sinkage, multiple loading conditions.',
+      },
+      {
+        t: 'Sensor architecture',
+        d: 'Specify the minimum viable sensor set — RPM, torque, GPS, fuel flow, IMU, environment — that drives a useful twin. We bias for simplicity; one extra sensor that adds nothing is one more failure mode.',
+      },
+      {
+        t: 'Twin integration & calibration',
+        d: 'Couple the CFD-derived model with live data streams. Calibration loop against onboard measurements, with documented residuals and uncertainty bounds.',
+      },
+      {
+        t: 'Decision-support layer',
+        d: 'Operator-facing outputs: trim advisor, speed-fuel curve, voyage comparison, retrofit-impact estimator. The model answers questions; the operator decides.',
+      },
+    ],
+    tools: [
+      'Simerics MP (CFD baseline)',
+      'OpenFOAM / STAR-CCM+ (CFD)',
+      'Rhino + Grasshopper / Orca3D (geometry)',
+      'Python / NumPy / SciPy / pandas (data processing)',
+      'MATLAB / Simulink (control & state-space models)',
+      'InfluxDB / Grafana (time-series & dashboards)',
+      'ISO/IEC 23247 digital-twin standards',
+      'IMDC 2024 / ICCAS 2024 published optimisation methodology',
+    ],
+    cases: [
+      { title: 'SEAPOWER 1500 — CFD-derived digital twin, pre-construction', client: 'SeaPower', year: '2025' },
+      { title: 'Real-time ship operation optimisation (IMDC / ICCAS publications)', client: 'KDS R&D', year: '2024' },
+      { title: '"Belize I" — performance monitoring framework', client: 'Nautiber', year: '2023' },
+    ],
+    faq: [
+      {
+        q: 'Is this just another SCADA dashboard?',
+        a: 'No. SCADA dashboards visualise what the sensors measure. A physics-based twin can answer "what if we change trim by one degree?" without onboard testing — because the CFD-derived model fills the gap the sensors cannot see. The model lives next to the data, not in place of it.',
+      },
+      {
+        q: 'How much sensor instrumentation do I need to install?',
+        a: 'Less than most vendors will tell you. A typical setup runs on GPS, IMU, fuel flow, shaft RPM, and a small environmental package. The CFD-derived model infers what the sensors cannot directly measure (resistance components, propulsive efficiency at off-design points).',
+      },
+      {
+        q: 'Can the twin run on existing vessels, or only new builds?',
+        a: 'Both. For new builds we couple design-stage CFD into the operational twin from day one. For existing vessels we run a one-off CFD baseline against the as-built hull and then attach the live data stream. The retrofit path takes weeks, not months.',
+      },
+    ],
+    leadTime: '6–16 weeks',
+    serviceType: 'Digitalisation',
+  },
 ];
 
 export const SERVICES_BY_SLUG = Object.fromEntries(SERVICES.map((s) => [s.slug, s]));
