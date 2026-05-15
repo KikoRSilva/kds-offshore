@@ -2,9 +2,7 @@
 
 import Link from 'next/link';
 import { KDSMark } from './kds-mark';
-import { useSite } from '@/contexts/site-context';
-import { en } from '@/content/en';
-import { pt } from '@/content/pt';
+import { useLocale, useMessages } from 'next-intl';
 
 function FootCol({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -58,8 +56,8 @@ function FootItem({
 }
 
 export function Footer() {
-  const { lang } = useSite();
-  const t = lang === 'pt' ? pt : en;
+  const lang = useLocale();
+  const t = useMessages();
 
   return (
     <footer

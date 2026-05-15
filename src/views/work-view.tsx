@@ -7,9 +7,8 @@ import { ServiceCTA } from '@/components/service-cta';
 import { KDSImage } from '@/components/kds-image';
 import { Reveal } from '@/components/reveal';
 import { BreadcrumbJsonLd } from '@/components/breadcrumb-jsonld';
-import { useSite } from '@/contexts/site-context';
-import { en } from '@/content/en';
-import { pt } from '@/content/pt';
+import { useLocale, useMessages } from 'next-intl';
+import enMessages from '@/messages/en.json';
 import { CASE_SLUGS } from '@/content/cases-detail';
 
 const SITE_URL = 'https://kdsoffshore.pt';
@@ -27,8 +26,8 @@ const WORK_ITEMLIST_JSONLD = {
   mainEntity: {
     '@type': 'ItemList',
     itemListOrder: 'https://schema.org/ItemListOrderDescending',
-    numberOfItems: en.pages.cases.items.length,
-    itemListElement: en.pages.cases.items.map((c, i) => ({
+    numberOfItems: enMessages.pages.cases.items.length,
+    itemListElement: enMessages.pages.cases.items.map((c, i) => ({
       '@type': 'ListItem',
       position: i + 1,
       item: {
@@ -57,9 +56,10 @@ const CASE_IMGS = [
 ];
 
 export default function WorkView() {
-  const { lang } = useSite();
-  const p = en.pages.cases;
-  const pp = lang === 'pt' ? pt.pages.cases : en.pages.cases;
+  const lang = useLocale();
+  const messages = useMessages();
+  const p = enMessages.pages.cases;
+  const pp = messages.pages.cases;
   const [filter, setFilter] = useState('All');
 
   const enFilters = p.filters;

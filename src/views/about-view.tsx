@@ -5,9 +5,7 @@ import { PageHero } from '@/components/page-hero';
 import { KDSImage } from '@/components/kds-image';
 import { Reveal } from '@/components/reveal';
 import { BreadcrumbJsonLd } from '@/components/breadcrumb-jsonld';
-import { useSite } from '@/contexts/site-context';
-import { en } from '@/content/en';
-import { pt } from '@/content/pt';
+import { useLocale, useMessages } from 'next-intl';
 
 const SITE_URL = 'https://kdsoffshore.pt';
 
@@ -96,8 +94,8 @@ const PORTRAITS = [
 ];
 
 export default function AboutView() {
-  const { lang } = useSite();
-  const p = lang === 'pt' ? pt.pages.about : en.pages.about;
+  const lang = useLocale();
+  const p = useMessages().pages.about;
 
   return (
     <>

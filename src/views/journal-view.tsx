@@ -6,9 +6,7 @@ import { PageHero } from '@/components/page-hero';
 import { KDSImage } from '@/components/kds-image';
 import { Reveal } from '@/components/reveal';
 import { BreadcrumbJsonLd } from '@/components/breadcrumb-jsonld';
-import { useSite } from '@/contexts/site-context';
-import { en } from '@/content/en';
-import { pt } from '@/content/pt';
+import { useLocale, useMessages } from 'next-intl';
 import { subscribeNewsletter } from '@/lib/supabase';
 
 const POST_IMGS = [
@@ -21,8 +19,8 @@ const POST_IMGS = [
 ];
 
 export default function JournalView() {
-  const { lang } = useSite();
-  const p = lang === 'pt' ? pt.pages.journal : en.pages.journal;
+  const lang = useLocale();
+  const p = useMessages().pages.journal;
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
   const [submitting, setSubmitting] = useState(false);

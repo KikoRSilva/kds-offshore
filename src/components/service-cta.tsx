@@ -1,13 +1,11 @@
 'use client';
 
 import Link from 'next/link';
-import { useSite } from '@/contexts/site-context';
-import { en } from '@/content/en';
-import { pt } from '@/content/pt';
+import { useLocale, useMessages } from 'next-intl';
 
 export function ServiceCTA() {
-  const { lang } = useSite();
-  const t = lang === 'pt' ? pt : en;
+  const lang = useLocale();
+  const t = useMessages();
 
   return (
     <section

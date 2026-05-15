@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import type { JournalArticle, ArticleI18n, ArticleSection, Reference } from '@/content/journal-detail';
-import { useSite } from '@/contexts/site-context';
+import { useLocale } from 'next-intl';
 import { ParallaxImageFrame } from '@/components/parallax-image-frame';
 
 interface AuthorCardProps {
@@ -101,7 +101,7 @@ function formatHumanDate(iso: string, lang: 'en' | 'pt'): string {
 }
 
 export function JournalArticleBody({ article, author }: JournalArticleBodyProps) {
-  const { lang } = useSite();
+  const lang = useLocale() as 'en' | 'pt';
   const view = pickView(article, lang);
 
   const labels = {

@@ -6,9 +6,7 @@ import { motion } from 'framer-motion';
 import { Reveal } from '@/components/reveal';
 import { KDSImage } from '@/components/kds-image';
 import { CountUp } from '@/components/count-up';
-import { useSite } from '@/contexts/site-context';
-import { en } from '@/content/en';
-import { pt } from '@/content/pt';
+import { useLocale, useMessages } from 'next-intl';
 
 const IMG = {
   seapower: '/images/kds/PilotBoat_1500HDPE_02.png',
@@ -16,8 +14,8 @@ const IMG = {
 };
 
 export default function HomeView() {
-  const { lang } = useSite();
-  const t = lang === 'pt' ? pt : en;
+  const lang = useLocale();
+  const t = useMessages();
   const [testimonialIdx, setTestimonialIdx] = useState(0);
   const testimonial = t.proof.testimonials[testimonialIdx];
 

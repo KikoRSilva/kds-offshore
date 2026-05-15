@@ -4,9 +4,7 @@ import { useState } from 'react';
 import { PageHero } from '@/components/page-hero';
 import { Reveal } from '@/components/reveal';
 import { BreadcrumbJsonLd } from '@/components/breadcrumb-jsonld';
-import { useSite } from '@/contexts/site-context';
-import { en } from '@/content/en';
-import { pt } from '@/content/pt';
+import { useLocale, useMessages } from 'next-intl';
 import { submitContact } from '@/lib/supabase';
 
 type FormState = {
@@ -114,9 +112,9 @@ function SelectField({
 }
 
 export default function ContactView() {
-  const { lang } = useSite();
-  const t = lang === 'pt' ? pt : en;
-  const p = lang === 'pt' ? pt.pages.contact : en.pages.contact;
+  const lang = useLocale();
+  const t = useMessages();
+  const p = t.pages.contact;
   const [form, setForm] = useState<FormState>(INITIAL);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);

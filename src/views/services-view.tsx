@@ -6,9 +6,7 @@ import { ServiceCTA } from '@/components/service-cta';
 import { KDSImage } from '@/components/kds-image';
 import { Reveal } from '@/components/reveal';
 import { BreadcrumbJsonLd } from '@/components/breadcrumb-jsonld';
-import { useSite } from '@/contexts/site-context';
-import { en } from '@/content/en';
-import { pt } from '@/content/pt';
+import { useLocale, useMessages } from 'next-intl';
 import { SERVICES, SERVICE_SLUGS } from '@/content/services-detail';
 
 const SITE_URL = 'https://kdsoffshore.pt';
@@ -38,9 +36,9 @@ const IMG_MAP = [
 ];
 
 export default function ServicesView() {
-  const { lang } = useSite();
-  const t = lang === 'pt' ? pt : en;
-  const p = lang === 'pt' ? pt.pages.services : en.pages.services;
+  const lang = useLocale();
+  const t = useMessages();
+  const p = t.pages.services;
 
   return (
     <>

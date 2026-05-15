@@ -6,5 +6,631 @@
       "description": "A KDS Offshore projeta navios, estruturas offshore e sistemas de energia, com foco em descarbonização e digitalização marítima. Arquitetura naval, engenharia offshore, hidrodinâmica, amarração e consultoria de gémeo digital, a partir de Lisboa, Portugal.",
       "slogan": "Arquitetura naval e engenharia offshore para descarbonização e digitalização."
     }
+  },
+  "nav": {
+    "home": "Início",
+    "services": "Serviços",
+    "work": "Projetos",
+    "about": "Sobre",
+    "journal": "Diário",
+    "contact": "Contacto",
+    "cta": "Iniciar projeto"
+  },
+  "hero": {
+    "eyebrow": "Arquitetura naval / engenharia offshore / descarbonização & digitalização / Lisboa",
+    "title1": "Arquitetura Naval",
+    "title2": "Engenharia Offshore",
+    "title3": "Descarbonização e Digitalização",
+    "lede": "A KDS Offshore projeta navios, estruturas offshore e sistemas de energia, com foco em descarbonização marítima e digitalização, de um estúdio em Lisboa para projetos por todo o Atlântico.",
+    "cta1": "Iniciar projeto",
+    "cta2": "Carta de capacidades (PDF)",
+    "established": "Fundada em 2016 · Lisboa, Portugal",
+    "status": "A aceitar projetos para Q3 2026"
+  },
+  "services": {
+    "label": "Capacidades",
+    "title": "No que somos bons.",
+    "items": [
+      {
+        "n": "01",
+        "slug": "3d-geometric-modelling",
+        "t": "Modelação Geométrica 3D",
+        "d": "Geometria CAD pronta para produção, para análises estruturais, hidrodinâmicas e visualização. Compatível com sociedades classificadoras."
+      },
+      {
+        "n": "02",
+        "slug": "naval-architecture-and-offshore-engineering-design",
+        "t": "Arquitetura Naval & Engenharia Offshore",
+        "d": "De uma lancha-piloto de 12 m a uma plataforma offshore amarrada. Análise estrutural, estabilidade intacta e em avaria."
+      },
+      {
+        "n": "03",
+        "slug": "hydrodynamic-optimization",
+        "t": "Otimização Hidrodinâmica",
+        "d": "Refinamento de casco, apêndices e propulsores via CFD. Reduções de consumo e emissões documentadas."
+      },
+      {
+        "n": "04",
+        "slug": "ship-manoeuvrability-prediction",
+        "t": "Previsão de Manobrabilidade",
+        "d": "Simulação em domínio temporal e modelos dinâmicos para prever o comportamento da embarcação e avaliar manobras autónomas em portos."
+      },
+      {
+        "n": "05",
+        "slug": "mooring-systems-design",
+        "t": "Projeto de Sistemas de Amarração",
+        "d": "Catenária, taut-leg e sistemas híbridos para renováveis, aquacultura e óleo & gás."
+      },
+      {
+        "n": "06",
+        "slug": "vessel-conversion-engineering",
+        "t": "Engenharia de Conversão de Navios",
+        "d": "Remotorização, reconversão e aumento de capacidade, de pequenas modificações a conversões completas."
+      },
+      {
+        "n": "07",
+        "slug": "supervision-of-new-constructions",
+        "t": "Supervisão de Novas Construções",
+        "d": "Fiscalização independente de estaleiros e empreiteiros. Controlo de qualidade, conformidade técnica e ensaios de aceitação."
+      },
+      {
+        "n": "08",
+        "slug": "maritime-decarbonisation",
+        "t": "Descarbonização Marítima",
+        "d": "Caminhos de redução de GEE para navios e ativos offshore. Combustíveis alternativos, eficiência energética e conformidade FuelEU Maritime / IMO 2050."
+      },
+      {
+        "n": "09",
+        "slug": "maritime-digitalisation-and-digital-twin",
+        "t": "Digitalização & Gémeo Digital",
+        "d": "Desenvolvimento de gémeos digitais, monitorização de desempenho data-driven e estratégia de digitalização para frotas e operações offshore."
+      }
+    ]
+  },
+  "proof": {
+    "label": "Provas",
+    "title": "Uma década de trabalho técnico de confiança.",
+    "stats": [
+      {
+        "n": "2016",
+        "l": "Fundada por arquitetos navais do IST"
+      },
+      {
+        "n": "11+",
+        "l": "Parceiros industriais e académicos"
+      },
+      {
+        "n": "GL · BV · DNV",
+        "l": "Ligação com sociedades classificadoras"
+      },
+      {
+        "n": "PT · IE · ES",
+        "l": "Projetos na fachada atlântica"
+      }
+    ],
+    "testimonials": [
+      {
+        "q": "A KDS Offshore executou o projeto de engenharia para a remotorização e aumento de capacidade do nosso catamarã \"Belize I\" com competência, profissionalismo e dedicação, cumprindo todos os prazos estabelecidos.",
+        "who": "Rui Roque",
+        "role": "CEO, Nautiber"
+      },
+      {
+        "q": "A experiência em ferramentas numéricas de projeto de navios que a KDS Offshore forneceu à OneOcean durante o projeto preliminar e construção do nosso barco de trabalho foi muito apreciada.",
+        "who": "José Cruz",
+        "role": "CEO, OneOcean"
+      },
+      {
+        "q": "A KDS Offshore foi responsável pelo projeto de engenharia naval para converter o nosso motor-veleiro \"Libries\" para turismo científico, executando o trabalho com grande competência, profissionalismo e dedicação.",
+        "who": "João Fonseca Ribeiro",
+        "role": "CEO, Blue Geo Lighthouse"
+      },
+      {
+        "q": "A consultoria em renováveis e soluções de engenharia para a descarbonização do setor dos transportes marítimos correu muito bem, tanto no projeto OPS como no retrofit da frota da APRAM.",
+        "who": "António Ressurreição",
+        "role": "Diretor de UN, Future Proman"
+      },
+      {
+        "q": "As soluções de estabilização de balanço e otimização de trim desenvolvidas pela KDS Offshore para o nosso barco-piloto deverão funcionar muito bem e ajudar-nos a promover eficiência energética e descarbonização.",
+        "who": "Nuno Alentejano",
+        "role": "I&D Marítima, SeaPower"
+      }
+    ]
+  },
+  "cases": {
+    "label": "Trabalhos selecionados",
+    "items": [
+      {
+        "tag": "Manobrabilidade",
+        "t": "\"Corvo\" — avaliação de manobra autónoma, Vila do Porto",
+        "client": "Mutualista, Grupo Bensaúde",
+        "year": "2024"
+      },
+      {
+        "tag": "Renováveis offshore",
+        "t": "GRS Power Platform, avaliação de rolamento paramétrico",
+        "client": "WavEC Offshore Renewables",
+        "year": "2015"
+      },
+      {
+        "tag": "Descarbonização",
+        "t": "Green Ports Madeira / projeto OPS APRAM",
+        "client": "Future Proman",
+        "year": "2023"
+      },
+      {
+        "tag": "Retrofit",
+        "t": "Belize I, remotorização e aumento de capacidade",
+        "client": "Nautiber",
+        "year": "2023"
+      }
+    ]
+  },
+  "cta": {
+    "label": "Colaborações",
+    "title": "Conte-nos sobre a embarcação.",
+    "sub": "Trinta minutos com um dos nossos sócios. Sem apresentação. Sem comercial. Apenas dois engenheiros e o seu problema.",
+    "btn": "Iniciar conversa",
+    "mail": "geral@kdsoffshore.pt",
+    "tel": "+351 213 854 212"
+  },
+  "foot": {
+    "addr": "Rua Ernesto Veiga de Oliveira",
+    "city": "Lisboa, Portugal",
+    "hours": "Seg–Sex · 09:00–17:00 WET"
+  },
+  "pages": {
+    "services": {
+      "eyebrow": "Capacidades · 07",
+      "title1": "Sete",
+      "title2": "disciplinas.",
+      "title3": "Um",
+      "title4": "estúdio.",
+      "lede": "Trabalhamos num conjunto criterioso de problemas que conhecemos bem: modelação 3D, arquitetura naval, hidrodinâmica, manobrabilidade, amarração, conversão de navios e supervisão de novas construções, com consultoria de descarbonização em tudo.",
+      "methodology": {
+        "label": "Metodologia",
+        "title": "Como trabalhamos.",
+        "steps": [
+          {
+            "n": "01",
+            "t": "Descoberta & definição de âmbito",
+            "d": "Uma chamada de 30 minutos para compreender o navio, o operador e o desafio que originou o projeto. Dizemos logo se somos o parceiro certo."
+          },
+          {
+            "n": "02",
+            "t": "Proposta técnica",
+            "d": "Uma proposta de honorários fixos e âmbito fixo com os principais responsáveis nomeados, entregáveis, percurso de classificação e riscos. Sem ambiguidade. Em cinco dias úteis."
+          },
+          {
+            "n": "03",
+            "t": "Engenharia",
+            "d": "Sessões de trabalho semanais com o operador. Análises CFD, FEA estrutural, livros de estabilidade e ligação com sociedades classificadoras entregues segundo um Gantt publicado."
+          },
+          {
+            "n": "04",
+            "t": "Entrega & apoio",
+            "d": "Relatório final, modelo documentado e 90 dias de suporte pós-entrega incluídos. A maioria dos clientes regressa para o próximo navio."
+          }
+        ]
+      },
+      "tools": {
+        "label": "Ferramentas & classificação",
+        "items": [
+          "STAR-CCM+ · CFD",
+          "OpenFOAM · CFD",
+          "Maxsurf · estabilidade",
+          "Ansys Aqwa · comportamento no mar",
+          "Orcaflex · amarração",
+          "Rhino + Grasshopper",
+          "DNV · ligação de classe",
+          "Lloyd's Register · classe",
+          "Bureau Veritas · classe",
+          "RINA · classe"
+        ]
+      },
+      "deliverables": [
+        [
+          "CAD de grau de produção",
+          "Modelo de superfície estanque",
+          "Exportação de frames e secções",
+          "Ficheiros para classificadora",
+          "Renders de visualização"
+        ],
+        [
+          "Livro de estabilidade",
+          "Relatório FEA estrutural",
+          "Análise de estabilidade em avaria",
+          "Desenhos GA e perfil",
+          "Pacote de liaison de classe"
+        ],
+        [
+          "Relatório CFD (~80 pp)",
+          "Recomendações de forma do casco",
+          "Curvas de resistência e propulsão",
+          "Gráficos de esteira e pressão",
+          "Configuração do solver documentada"
+        ],
+        [
+          "Simulação de manobrabilidade",
+          "Operacionalidade % por ano",
+          "Dimensionamento de propulsores e leme",
+          "Envolventes de bacia portuária",
+          "Trajetórias no domínio temporal"
+        ],
+        [
+          "Relatório de análise de amarração",
+          "Estático & dinâmico",
+          "Envolventes de tensão nas linhas",
+          "Dimensionamento de ancoragem",
+          "Procedimento de instalação"
+        ],
+        [
+          "Pacote de projeto de conversão",
+          "Estudo de viabilidade de re-motorização",
+          "Livro de estabilidade atualizado",
+          "Ligação com classe e estado de bandeira",
+          "Suporte a concurso de estaleiro"
+        ],
+        [
+          "Supervisão de construção",
+          "Auditoria de especificações",
+          "Registos de inspeção e QA",
+          "Ensaios de aceitação",
+          "Relatório de entrega final"
+        ]
+      ],
+      "leadTimes": [
+        "2–4 sem",
+        "8–16 sem",
+        "6–10 sem",
+        "6–12 sem",
+        "4–8 sem",
+        "4–10 sem",
+        "duração do projeto"
+      ]
+    },
+    "about": {
+      "eyebrow": "Sobre o estúdio",
+      "title1": "Fundada",
+      "title2": "em Lisboa.",
+      "title3": "Calma,",
+      "title4": "mas opinionada.",
+      "lede": "A KDS Offshore foi fundada em 2016 por arquitetos navais do Instituto Superior Técnico, Universidade de Lisboa. Somos uma parceria (não uma cadeia de consultoria) e mantemo-nos deliberadamente pequenos para que os sócios sejam quem faz a engenharia pela qual paga.",
+      "story": [
+        {
+          "y": "2015",
+          "t": "Primeiro projeto, WavEC",
+          "d": "Projeto pré-incorporação na GRS Power Platform: rolamento paramétrico e estabilidade intacta de um conceito híbrido eólico+onda OWC, para implantação em Belmullet (Irlanda)."
+        },
+        {
+          "y": "2016",
+          "t": "KDS Offshore fundada",
+          "d": "Constituída em Lisboa por arquitetos navais do Instituto Superior Técnico, Universidade de Lisboa."
+        },
+        {
+          "y": "2021",
+          "t": "Barco de trabalho OneOcean",
+          "d": "Apoio CFD durante o projeto preliminar e construção do barco de trabalho da OneOcean. Cronograma de atividades de projeto de navio cumprido."
+        },
+        {
+          "y": "2022",
+          "t": "Conversão \"Libries\" para turismo científico",
+          "d": "Engenharia naval para a conversão do motor-veleiro \"Libries\" para a Blue Geo Lighthouse. Projeto concluído dentro dos prazos estabelecidos."
+        },
+        {
+          "y": "2023",
+          "t": "Belize I + Green Ports Madeira",
+          "d": "Remotorização e aumento de capacidade do catamarã \"Belize I\" para a Nautiber. Em paralelo, projeto OPS e retrofit da frota APRAM com a Future Proman."
+        },
+        {
+          "y": "2024",
+          "t": "Estudo de manobrabilidade \"Corvo\"",
+          "d": "Avaliação probabilística de manobrabilidade e operacionalidade do navio porta-contentores \"Corvo\" (610 TEU) dentro do porto de Vila do Porto, para a Mutualista / Grupo Bensaúde."
+        }
+      ],
+      "team": [
+        {
+          "name": "Sérgio Ribeiro e Silva",
+          "role": "CEO & Fundador · Arquitetura naval",
+          "bio": "Doutoramento, Instituto Superior Técnico, Lisboa. MSc Arquitetura Naval, University College London. MSc Engenharia Mecânica, IST. Autor do código de simulação Ship@Sea."
+        },
+        {
+          "name": "Equipa de arquitetura naval",
+          "role": "Projeto de casco & estabilidade",
+          "bio": "Livros de estabilidade, análise intacta e em avaria, FEA estrutural e ligação com sociedades classificadoras GL, BV e DNV."
+        },
+        {
+          "name": "Equipa de hidrodinâmica",
+          "role": "CFD & comportamento no mar",
+          "bio": "Especialistas em WAMIT, OpenFOAM e STAR-CCM+. Análises de resistência, propulsão, comportamento no mar, manobrabilidade e rolamento paramétrico."
+        },
+        {
+          "name": "Equipa de engenharia offshore",
+          "role": "Amarração & estruturas",
+          "bio": "Projeto de sistemas de amarração e análise de posicionamento dinâmico para renováveis, aquacultura e plataformas offshore."
+        },
+        {
+          "name": "Equipa de descarbonização",
+          "role": "OPS, combustíveis alt. & retrofits",
+          "bio": "Análise de pegada de carbono, projeto OPS / cold-ironing e planos de renovação de frota."
+        },
+        {
+          "name": "Colaboradores",
+          "role": "Académicos & industriais",
+          "bio": "Colaborações ativas com WavEC Offshore Renewables, IH Cantabria, IST e parceiros de sociedades classificadoras em I&D e projetos."
+        }
+      ],
+      "principles": [
+        {
+          "n": "01",
+          "t": "Sem trabalho que não possamos defender",
+          "d": "Se o briefing está errado, dizemos. Se o orçamento é insuficiente, dizemos. Se um concorrente está melhor posicionado, dizemos. A reputação que estamos a construir vale mais do que qualquer honorário."
+        },
+        {
+          "n": "02",
+          "t": "Os sócios fazem a engenharia",
+          "d": "Contratam-nos a nós, trabalham connosco. Os engenheiros júnior apoiam, mas o modelo, o relatório e a recomendação vêm de um sócio nomeado."
+        },
+        {
+          "n": "03",
+          "t": "Escrever tudo",
+          "d": "Cada hipótese, cada entrada, cada resultado é documentado. Seis meses depois, quando o operador tem uma nova pergunta, podemos responder porque o modelo ainda está vivo."
+        },
+        {
+          "n": "04",
+          "t": "Torná-lo menos poluente",
+          "d": "Onde há uma escolha entre um casco mais rápido e um casco mais limpo, apresentamos ambos. Acreditamos que o setor marítimo vai descarbonizar."
+        }
+      ]
+    },
+    "cases": {
+      "eyebrow": "Trabalhos selecionados · 2015–2025",
+      "title1": "Uma década",
+      "title2": "no mar.",
+      "lede": "Não publicamos o arquivo completo, a maioria dos projetos é confidencial. Abaixo encontra uma seleção que os nossos clientes concordaram em tornar pública. Referências disponíveis a pedido.",
+      "filters": [
+        "Todos",
+        "Arquitetura naval",
+        "Manobrabilidade & CFD",
+        "Descarbonização",
+        "Amarração & offshore",
+        "I&D"
+      ],
+      "items": [
+        {
+          "tag": "Manoeuvrability · Container ship",
+          "t": "\"Corvo\" autonomous manoeuvring assessment, Vila do Porto",
+          "client": "Mutualista, Grupo Bensaúde",
+          "year": "2024",
+          "loc": "Sta. Maria, Açores · PT",
+          "stat": "610 TEU · 9,000 DWT",
+          "span": "wide",
+          "detail": "Probabilistic study of how often per year the container ship \"Corvo\" (IMO 9381275) can manoeuvre autonomously inside the harbour basin of Vila do Porto without tug assistance. MatLab-based numerical model coupling hull, rudder with flap, and bow thrusters.",
+          "category": "Manoeuvrability & CFD"
+        },
+        {
+          "tag": "Offshore renewables",
+          "t": "GRS Power Platform, parametric rolling assessment",
+          "client": "WavEC Offshore Renewables",
+          "year": "2015",
+          "loc": "Belmullet · IE",
+          "stat": "6 OWCs · hybrid wind+wave",
+          "span": "tall",
+          "detail": "Pre-deployment de-risking of a bottom-fixed hybrid wind and wave energy concept (six Oscillating Water Columns). Diffraction-radiation in WAMIT and non-linear time-domain simulation in Ship@Sea.",
+          "category": "Mooring & offshore"
+        },
+        {
+          "tag": "Decarbonisation",
+          "t": "Green Ports Madeira / APRAM OPS design",
+          "client": "Future Proman",
+          "year": "2023",
+          "loc": "Funchal · PT",
+          "stat": "OPS + fleet retrofit",
+          "span": "wide",
+          "detail": "Engineering solutions for decarbonisation of the maritime transport sector: shore-side power (cold-ironing) design and retrofitting of the APRAM port-authority fleet.",
+          "category": "Decarbonisation"
+        },
+        {
+          "tag": "Retrofit · Catamaran",
+          "t": "\"Belize I\" remotorisation & capacity uplift",
+          "client": "Nautiber",
+          "year": "2023",
+          "loc": "Algarve · PT",
+          "stat": "Delivered on schedule",
+          "span": "square",
+          "detail": "Naval engineering project for remotorisation and increased passenger capacity of the \"Belize I\" catamaran. Technical lead: Eng. Sérgio Ribeiro e Silva.",
+          "category": "Naval architecture"
+        },
+        {
+          "tag": "Conversion · Motor-sailer",
+          "t": "\"Libries\" scientific-tourism conversion",
+          "client": "Blue Geo Lighthouse",
+          "year": "2022",
+          "loc": "PT",
+          "stat": "On-time, on-spec",
+          "span": "square",
+          "detail": "Conversion of the motor-sailer \"Libries\" for scientific tourism operations. Full naval engineering package delivered under technical supervision.",
+          "category": "Naval architecture"
+        },
+        {
+          "tag": "CFD · Working boat",
+          "t": "OneOcean preliminary CFD package",
+          "client": "OneOcean",
+          "year": "2021",
+          "loc": "PT",
+          "stat": "Schedule met",
+          "span": "square",
+          "detail": "CFD support during preliminary design and construction of OneOcean's working boat. Numerical tools provided by KDS allowed the client to comply with the ship-design programme on schedule.",
+          "category": "Manoeuvrability & CFD"
+        },
+        {
+          "tag": "CFD · Pilot boat",
+          "t": "SeaPower pilot boat hydrodynamic optimisation",
+          "client": "SeaPower",
+          "year": "2022",
+          "loc": "PT",
+          "stat": "Roll-stab + trim",
+          "span": "square",
+          "detail": "Roll-stabilisation and trim-optimisation programme for SeaPower's pilot boat. CFD-driven hydrodynamic refinement intended to promote energy efficiency and decarbonisation in port operations.",
+          "category": "Manoeuvrability & CFD"
+        }
+      ]
+    },
+    "contact": {
+      "eyebrow": "Iniciar um projeto",
+      "title1": "Conte-nos",
+      "title2": "sobre a",
+      "title3": "embarcação.",
+      "lede": "Uma chamada de 30 minutos com um dos nossos sócios. Sem apresentação, sem comercial. Dois engenheiros, o seu problema, uma resposta honesta sobre se somos o parceiro certo.",
+      "form": {
+        "name": "O seu nome",
+        "company": "Empresa",
+        "role": "A sua função",
+        "email": "Email",
+        "phone": "Telefone (opcional)",
+        "type": "Tipo de projeto",
+        "types": [
+          "Arquitetura naval / novo projeto",
+          "Otimização hidrodinâmica (CFD)",
+          "Retrofit / conversão",
+          "Sistema de amarração",
+          "Consultoria de descarbonização",
+          "I&D / académico",
+          "Outro"
+        ],
+        "budget": "Orçamento indicativo",
+        "budgets": [
+          "< €25k",
+          "€25–100k",
+          "€100–250k",
+          "€250k+",
+          "Ainda não decidido"
+        ],
+        "message": "Resumidamente, qual é o projeto?",
+        "nda": "Precisarei de um NDA antes de partilhar detalhes",
+        "submit": "Enviar para os sócios"
+      },
+      "promise": [
+        {
+          "t": "Resposta em 24h",
+          "d": "Um sócio nomeado responderá num dia útil. Se o projeto for urgente, ligue-nos diretamente."
+        },
+        {
+          "t": "Chamada de 30 min gratuita",
+          "d": "Sem custo, sem compromisso. Diremos honestamente se a KDS é o parceiro certo."
+        },
+        {
+          "t": "NDA a pedido",
+          "d": "NDAs mútuos são assinados antes da primeira chamada. Prática standard para nós."
+        }
+      ]
+    },
+    "journal": {
+      "eyebrow": "Diário",
+      "title1": "Notas do",
+      "title2": "estúdio.",
+      "lede": "Notas de campo, ensaios de metodologia e a opinião ocasional. Escrevemos raramente e tentamos que valha a pena.",
+      "featured": {
+        "slug": "corvo-without-tugs",
+        "tag": "Nota de caso",
+        "t": "Manobrar o \"Corvo\" sem rebocadores: uma resposta probabilística",
+        "d": "Notas do estudo de Vila do Porto. Como combinámos modelos de manobrabilidade em MatLab com um ano de dados metoceanicos para estimar, com intervalos de confiança, com que frequência o \"Corvo\" pode atracar autonomamente.",
+        "author": "Sérgio Ribeiro e Silva",
+        "date": "Jul 2024",
+        "datePublished": "2024-07-15",
+        "dateModified": "2024-07-15",
+        "read": "9 min de leitura",
+        "published": true
+      },
+      "posts": [
+        {
+          "slug": "parametric-rolling-belmullet",
+          "tag": "Renováveis offshore",
+          "t": "Rolamento paramétrico em plataformas OWC híbridas: lições de Belmullet",
+          "date": "Fev 2015",
+          "datePublished": "2015-02-15",
+          "dateModified": "2015-02-15",
+          "read": "12 min",
+          "author": "Sérgio Ribeiro e Silva",
+          "published": false
+        },
+        {
+          "slug": "ops-small-island-ports",
+          "tag": "Descarbonização",
+          "t": "Green Ports Madeira: o que custa realmente o OPS em portos de ilhas pequenas",
+          "date": "2023",
+          "datePublished": "2023-09-01",
+          "dateModified": "2023-09-01",
+          "read": "9 min",
+          "author": "Equipa KDS",
+          "published": false
+        },
+        {
+          "slug": "belize-i-gearbox",
+          "tag": "Retrofit",
+          "t": "Remotorizar o Belize I: porque é que a caixa de velocidades geralmente vence",
+          "date": "2023",
+          "datePublished": "2023-11-10",
+          "dateModified": "2023-11-10",
+          "read": "7 min",
+          "author": "Equipa KDS",
+          "published": false
+        },
+        {
+          "slug": "libries-week-aboard",
+          "tag": "Nota de campo",
+          "t": "Uma semana a bordo do \"Libries\" antes da conversão",
+          "date": "2022",
+          "datePublished": "2022-06-20",
+          "dateModified": "2022-06-20",
+          "read": "4 min",
+          "author": "Equipa KDS",
+          "published": false
+        },
+        {
+          "slug": "stability-book-90-days",
+          "tag": "Metodologia",
+          "t": "Escrever um livro de estabilidade que sobrevive aos primeiros 90 dias no mar",
+          "date": "Em curso",
+          "datePublished": "2026-01-15",
+          "dateModified": "2026-04-01",
+          "read": "10 min",
+          "author": "Sérgio Ribeiro e Silva",
+          "published": false
+        },
+        {
+          "slug": "rudder-flap-vs-bow-thruster",
+          "tag": "Manobrabilidade",
+          "t": "Porque o leme com flap é mais importante do que o propulsor de proa",
+          "date": "2024",
+          "datePublished": "2024-09-12",
+          "dateModified": "2024-09-12",
+          "read": "8 min",
+          "author": "Equipa KDS",
+          "published": false
+        },
+        {
+          "slug": "soos-voyage-optimisation",
+          "tag": "Descarbonização",
+          "t": "Otimização de viagem em tempo real para conformidade CII: notas do programa SOOS",
+          "date": "Ago 2024",
+          "datePublished": "2024-08-30",
+          "dateModified": "2024-08-30",
+          "read": "14 min",
+          "author": "Sérgio Ribeiro e Silva",
+          "published": true
+        },
+        {
+          "slug": "ugen-western-coast",
+          "tag": "Energia das ondas",
+          "t": "UGEN ao longo da costa portuguesa: LCOE do Porto a Sines",
+          "date": "Set 2025",
+          "datePublished": "2025-09-10",
+          "dateModified": "2025-09-10",
+          "read": "11 min",
+          "author": "Sérgio Ribeiro e Silva",
+          "published": false
+        }
+      ]
+    }
   }
 }

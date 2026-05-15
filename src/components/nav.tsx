@@ -4,9 +4,9 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Moon, Sun } from 'lucide-react';
 import { KDSMark } from './kds-mark';
+import { useLocale, useMessages } from 'next-intl';
 import { useSite } from '@/contexts/site-context';
-import { en } from '@/content/en';
-import { pt } from '@/content/pt';
+import type enMessages from '@/messages/en.json';
 
 const NAV_LINKS = [
   { id: 'home', href: '/' },
@@ -18,15 +18,17 @@ const NAV_LINKS = [
 ] as const;
 
 type NavId = (typeof NAV_LINKS)[number]['id'];
+type NavMessages = typeof enMessages.nav;
 
-function getLabel(id: NavId, nav: typeof en.nav) {
-  return nav[id as keyof typeof nav] ?? id;
+function getLabel(id: NavId, nav: NavMessages) {
+  return nav[id as keyof NavMessages] ?? id;
 }
 
 export function Nav() {
-  const { theme, lang, toggleTheme, toggleLang } = useSite();
+  const { theme, toggleTheme, toggleLang } = useSite();
+  const lang = useLocale();
   const pathname = usePathname();
-  const t = lang === 'pt' ? pt : en;
+  const t = useMessages();
 
   function isActive(href: string) {
     if (href === '/') return pathname === '/';
