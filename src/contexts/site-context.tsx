@@ -1,6 +1,9 @@
 'use client';
 
-import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import { createContext, useContext, useEffect, useState, ReactNode, useTransition } from 'react';
+import { useLocale } from 'next-intl';
+import { usePathname, useRouter } from '@/i18n/navigation';
+import type { Locale } from '@/i18n/routing';
 
 type Theme = 'dark' | 'light';
 type Lang = 'en' | 'pt';
@@ -14,21 +17,23 @@ interface SiteContextValue {
 
 const SiteContext = createContext<SiteContextValue>({
   theme: 'dark',
-  lang: 'en',
+  lang: 'pt',
   toggleTheme: () => {},
   toggleLang: () => {},
 });
 
 export function SiteProvider({ children }: { children: ReactNode }) {
+  const locale = useLocale() as Locale;
+  const router = useRouter();
+  const pathname = usePathname();
+  const [, startTransition] = useTransition();
+
   const [theme, setTheme] = useState<Theme>('dark');
-  const [lang, setLang] = useState<Lang>('en');
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     const savedTheme = (localStorage.getItem('kds-theme') as Theme) || 'dark';
-    const savedLang = (localStorage.getItem('kds-lang') as Lang) || 'en';
     setTheme(savedTheme);
-    setLang(savedLang);
     setMounted(true);
   }, []);
 
@@ -38,17 +43,17 @@ export function SiteProvider({ children }: { children: ReactNode }) {
     localStorage.setItem('kds-theme', theme);
   }, [theme, mounted]);
 
-  useEffect(() => {
-    if (!mounted) return;
-    document.documentElement.lang = lang === 'pt' ? 'pt-PT' : 'en-GB';
-    localStorage.setItem('kds-lang', lang);
-  }, [lang, mounted]);
-
   const toggleTheme = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'));
-  const toggleLang = () => setLang((l) => (l === 'en' ? 'pt' : 'en'));
+
+  const toggleLang = () => {
+    const nextLocale: Locale = locale === 'pt' ? 'en' : 'pt';
+    startTransition(() => {
+      router.replace(pathname, { locale: nextLocale });
+    });
+  };
 
   return (
-    <SiteContext.Provider value={{ theme, lang, toggleTheme, toggleLang }}>
+    <SiteContext.Provider value={{ theme, lang: locale, toggleTheme, toggleLang }}>
       {children}
     </SiteContext.Provider>
   );
