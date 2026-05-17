@@ -100,6 +100,7 @@ export default function AboutView() {
   return (
     <>
       <BreadcrumbJsonLd
+        locale={lang}
         crumbs={[
           { name: 'Home', path: '/' },
           { name: 'About', path: '/about/' },

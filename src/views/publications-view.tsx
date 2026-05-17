@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { useLocale } from 'next-intl';
 import Link from 'next/link';
 import { TEAM } from '@/content/team-detail';
 import { BreadcrumbJsonLd } from '@/components/breadcrumb-jsonld';
@@ -127,9 +128,11 @@ const COLLECTION_JSONLD = {
 };
 
 export default function PublicationsView() {
+  const lang = useLocale();
   return (
     <>
       <BreadcrumbJsonLd
+        locale={lang}
         crumbs={[
           { name: 'Home', path: '/' },
           { name: 'Publications', path: '/publications/' },

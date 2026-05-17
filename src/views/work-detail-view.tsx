@@ -131,6 +131,7 @@ export default function WorkCaseView({ slug, locale }: { slug: string; locale: '
   return (
     <>
       <BreadcrumbJsonLd
+        locale={locale}
         crumbs={[
           { name: 'Home', path: '/' },
           { name: 'Work', path: '/work/' },

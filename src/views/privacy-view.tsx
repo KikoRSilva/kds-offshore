@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { useLocale } from 'next-intl';
 import Link from 'next/link';
 import { BreadcrumbJsonLd } from '@/components/breadcrumb-jsonld';
 
@@ -45,9 +46,11 @@ const H3: React.CSSProperties = {
 };
 
 export default function PrivacyView() {
+  const lang = useLocale();
   return (
     <>
       <BreadcrumbJsonLd
+        locale={lang}
         crumbs={[
           { name: 'Home', path: '/' },
           { name: 'Privacy policy', path: '/privacy/' },

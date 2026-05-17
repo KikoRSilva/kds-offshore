@@ -133,6 +133,7 @@ export default function ServiceDetailView({ slug, locale }: { slug: string; loca
   return (
     <>
       <BreadcrumbJsonLd
+        locale={locale}
         crumbs={[
           { name: 'Home', path: '/' },
           { name: 'Services', path: '/services/' },

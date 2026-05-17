@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { useLocale } from 'next-intl';
 import Link from 'next/link';
 import { BreadcrumbJsonLd } from '@/components/breadcrumb-jsonld';
 
@@ -65,9 +66,11 @@ const TD: React.CSSProperties = {
 };
 
 export default function CookiesView() {
+  const lang = useLocale();
   return (
     <>
       <BreadcrumbJsonLd
+        locale={lang}
         crumbs={[
           { name: 'Home', path: '/' },
           { name: 'Cookie policy', path: '/cookies/' },

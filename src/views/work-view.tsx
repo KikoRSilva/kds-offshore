@@ -75,6 +75,7 @@ export default function WorkView() {
   return (
     <>
       <BreadcrumbJsonLd
+        locale={lang}
         crumbs={[
           { name: 'Home', path: '/' },
           { name: 'Work', path: '/work/' },

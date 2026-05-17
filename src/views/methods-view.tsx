@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { useLocale } from 'next-intl';
 import Link from 'next/link';
 import { BreadcrumbJsonLd } from '@/components/breadcrumb-jsonld';
 
@@ -59,6 +60,7 @@ const H3: React.CSSProperties = {
 };
 
 export default function MethodsView() {
+  const lang = useLocale();
   const articleJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
@@ -86,6 +88,7 @@ export default function MethodsView() {
   return (
     <>
       <BreadcrumbJsonLd
+        locale={lang}
         crumbs={[
           { name: 'Home', path: '/' },
           { name: 'Methods', path: '/methods/' },

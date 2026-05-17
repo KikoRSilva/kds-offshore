@@ -152,6 +152,7 @@ export default function ContactView() {
   return (
     <>
       <BreadcrumbJsonLd
+        locale={lang}
         crumbs={[
           { name: 'Home', path: '/' },
           { name: 'Contact', path: '/contact/' },

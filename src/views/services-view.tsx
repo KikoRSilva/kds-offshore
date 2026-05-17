@@ -43,6 +43,7 @@ export default function ServicesView() {
   return (
     <>
       <BreadcrumbJsonLd
+        locale={lang}
         crumbs={[
           { name: 'Home', path: '/' },
           { name: 'Services', path: '/services/' },

@@ -148,6 +148,7 @@ export default function JournalArticleView({ slug, locale }: { slug: string; loc
   return (
     <>
       <BreadcrumbJsonLd
+        locale={locale}
         crumbs={[
           { name: 'Home', path: '/' },
           { name: 'Journal', path: '/journal/' },

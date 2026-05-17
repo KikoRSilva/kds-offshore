@@ -56,6 +56,7 @@ export default function JournalView() {
   return (
     <>
       <BreadcrumbJsonLd
+        locale={lang}
         crumbs={[
           { name: 'Home', path: '/' },
           { name: 'Journal', path: '/journal/' },

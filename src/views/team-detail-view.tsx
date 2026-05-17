@@ -144,6 +144,7 @@ export default function TeamMemberView({ slug, locale }: { slug: string; locale:
   return (
     <>
       <BreadcrumbJsonLd
+        locale={locale}
         crumbs={[
           { name: 'Home', path: '/' },
           { name: 'About', path: '/about/' },

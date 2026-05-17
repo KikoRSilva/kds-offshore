@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { useLocale } from 'next-intl';
 import Link from 'next/link';
 import { BreadcrumbJsonLd } from '@/components/breadcrumb-jsonld';
 
@@ -57,9 +58,11 @@ const DT: React.CSSProperties = {
 };
 
 export default function LegalView() {
+  const lang = useLocale();
   return (
     <>
       <BreadcrumbJsonLd
+        locale={lang}
         crumbs={[
           { name: 'Home', path: '/' },
           { name: 'Legal notice', path: '/legal/' },

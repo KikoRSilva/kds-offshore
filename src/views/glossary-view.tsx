@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { useLocale } from 'next-intl';
 import Link from 'next/link';
 import { BreadcrumbJsonLd } from '@/components/breadcrumb-jsonld';
 
@@ -199,6 +200,7 @@ const SECTION_LABEL: React.CSSProperties = {
 };
 
 export default function GlossaryView() {
+  const lang = useLocale();
   const definedTermSetJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'DefinedTermSet',
@@ -225,6 +227,7 @@ export default function GlossaryView() {
   return (
     <>
       <BreadcrumbJsonLd
+        locale={lang}
         crumbs={[
           { name: 'Home', path: '/' },
           { name: 'Glossary', path: '/glossary/' },
