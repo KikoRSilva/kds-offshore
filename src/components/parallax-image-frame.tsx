@@ -1,7 +1,8 @@
 'use client';
 
 import { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useTransform } from 'framer-motion';
+import { useLenisScrollProgress } from '@/lib/use-lenis-scroll-progress';
 
 interface ParallaxImageFrameProps {
   aspect: string;
@@ -19,10 +20,9 @@ export function ParallaxImageFrame({
   children,
 }: ParallaxImageFrameProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start end', 'end start'],
-  });
+  // Scroll progress driven by Lenis (not native scroll) so the parallax
+  // motion stays perfectly in sync with the smooth-scroll frame.
+  const scrollYProgress = useLenisScrollProgress(ref);
   const y = useTransform(
     scrollYProgress,
     [0, 1],

@@ -3,6 +3,33 @@
 @tailwind utilities;
 
 /* ====================================================
+   Lenis smooth-scroll baseline
+   ----------------------------------------------------
+   Required styles when Lenis runs on the document root
+   (see src/components/smooth-scroll-provider.tsx).
+   ==================================================== */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: clip;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* ====================================================
    KDS Offshore — Deep Current design system
    ==================================================== */
 

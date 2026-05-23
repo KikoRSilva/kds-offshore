@@ -5,6 +5,7 @@ import { fontVariables } from '@/lib/fonts';
 import { buildOrgJsonLd } from '@/lib/org-jsonld';
 import { LOCALE_BCP47, LOCALE_OG } from '@/i18n/routing';
 import { SiteProvider } from '@/contexts/site-context';
+import { SmoothScrollProvider } from '@/components/smooth-scroll-provider';
 import { Nav } from '@/components/nav';
 import { Footer } from '@/components/footer';
 import '../globals.css';
@@ -103,9 +104,11 @@ export default async function DefaultLayout({ children }: { children: React.Reac
       <body>
         <NextIntlClientProvider locale={LOCALE} messages={messages}>
           <SiteProvider>
-            <Nav />
-            <main>{children}</main>
-            <Footer />
+            <SmoothScrollProvider>
+              <Nav />
+              <main>{children}</main>
+              <Footer />
+            </SmoothScrollProvider>
           </SiteProvider>
         </NextIntlClientProvider>
       </body>

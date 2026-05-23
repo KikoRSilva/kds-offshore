@@ -2,7 +2,8 @@
 
 import { useRef, useState } from 'react';
 import Image from 'next/image';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useTransform } from 'framer-motion';
+import { useLenisScrollProgress } from '@/lib/use-lenis-scroll-progress';
 import {
   buildSrcSet,
   getManifestEntry,
@@ -145,10 +146,9 @@ interface ParallaxWrapperProps {
 
 function ParallaxWrapper({ className, style, strength, overlay, children }: ParallaxWrapperProps) {
   const wrapperRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: wrapperRef,
-    offset: ['start end', 'end start'],
-  });
+  // Lenis-driven scroll progress keeps the parallax frame-locked to the
+  // smooth-scroll loop instead of the browser's native scroll listener.
+  const scrollYProgress = useLenisScrollProgress(wrapperRef);
   const y = useTransform(
     scrollYProgress,
     [0, 1],
