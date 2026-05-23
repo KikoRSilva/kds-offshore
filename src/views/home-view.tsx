@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { Reveal } from '@/components/reveal';
 import { KDSImage } from '@/components/kds-image';
 import { CountUp } from '@/components/count-up';
+import { HeroScrollHint } from '@/components/hero-scroll-hint';
 import { useLocale, useMessages } from 'next-intl';
 
 const IMG = {
@@ -167,6 +168,8 @@ export default function HomeView() {
         <div style={{ position: 'absolute', right: '14%', top: '38%', zIndex: 1 }} aria-hidden>
           <div className="ping-dot" />
         </div>
+
+        <HeroScrollHint />
       </section>
 
       {/* FEATURED ENGAGEMENT */}
