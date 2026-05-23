@@ -15,6 +15,8 @@ export const SERVICES_PT: ServiceDetail[] = [
     tagline: 'Superfícies estanques, prontas para classe.',
     description:
       'Geometria CAD pronta para produção, para análises estruturais, hidrodinâmicas e visualização. Compatível com sociedades classificadoras.',
+    tldr:
+      'A modelação geométrica 3D é a produção de superfícies CAD paramétricas e estanques que alimentam, a partir de uma fonte única, todas as análises a jusante — FEA estrutural, CFD, amarração e revisão por sociedade classificadora. A KDS Offshore constrói modelos em Rhino + Grasshopper conformes com a STANAG 4684 e entrega exportações nativas, STEP, IGES e secções.',
     overview: [
       'Cada projeto que executamos parte de uma fonte única de verdade: a geometria. Construímos modelos paramétricos de superfícies estanques que FEA, CFD, amarração e revisões de classe podem ler sem necessidade de remalhar.',
       'Os nossos modelos seguem os princípios de Simulation-Based Design and Virtual Prototyping (SBDVP), incluindo as convenções HLA definidas pela STANAG 4684 ("On Virtual Ships"), de modo a que a mesma geometria possa alimentar um cálculo de estabilidade em Maxsurf, uma simulação CFD em STAR-CCM+ ou OpenFOAM, e uma submissão de classe à DNV, BV, RINA ou Lloyd\'s Register.',
@@ -27,6 +29,37 @@ export const SERVICES_PT: ServiceDetail[] = [
       'Ficheiros prontos para sociedades classificadoras',
       'Renders de visualização',
       'Topologia e parâmetros documentados',
+    ],
+    outcomes: [
+      { metric: '100%', label: 'estanque na entrega', context: 'verificação manifold automatizada em cada entrega' },
+      { metric: '0', label: 'retrabalho geométrico após revisão de classe', context: 'lancha-piloto SeaPower 12 m, barco de trabalho OneOcean' },
+      { metric: '2–4 sem.', label: 'prazo típico para casco de 15–30 m', context: 'do plano de linhas à entrega' },
+      { metric: 'STANAG 4684', label: 'conforme por defeito', context: 'convenções HLA em todos os modelos paramétricos' },
+    ],
+    whenToUse: [
+      'Casco novo, conceito inovador ou casota invulgar onde nenhuma geometria existente é fiável.',
+      'Múltiplas utilizações a jusante previstas: CFD + FEA + estabilidade + visualização — um modelo serve todas.',
+      'Uma submissão de classe está no caminho crítico e a geometria tem de passar a revisão DNV / BV / RINA / LR sem retrabalho.',
+      'Espera-se iterar (mover a casota, alterar apêndice, redistribuir tanques) ao longo dos próximos 12 meses.',
+    ],
+    whenNotToUse: [
+      'Já existe um IGES sólido, já passou por classe, e não está prevista mais variação paramétrica.',
+      'Um plano 2D é suficiente (desenho único para licenciamento), sem análise a jusante associada.',
+    ],
+    regulatoryContext: [
+      { name: 'STANAG 4684', note: 'Norma NATO para virtual ships; convenções HLA adotadas em todo o trabalho.' },
+      { name: 'Convenções geométricas DNV', note: 'Estanque, manifold, secções de controlo identificadas.' },
+      { name: 'Bureau Veritas Marine NR467', note: 'Requisitos de definição de forma de casco para submissões em aço.' },
+      { name: 'RINA — Rules for the Classification of Ships', note: 'Entradas geométricas para verificações de escantilhão e estabilidade.' },
+      { name: "Lloyd's Register — Rules for the Classification of Ships", note: 'Topologia paramétrica compatível e secções identificadas.' },
+    ],
+    vesselTypes: [
+      'Lanchas-piloto, embarcações rápidas, RIBs',
+      'Barcos de trabalho e embarcações de apoio',
+      'Plataformas offshore, semissubmersíveis, topsides de FPSO',
+      'Conversores de energia das ondas, subestruturas eólicas flutuantes',
+      'Embarcações de patrulha e navais',
+      'Iates e embarcações turísticas',
     ],
     methodology: [
       {
@@ -83,6 +116,8 @@ export const SERVICES_PT: ServiceDetail[] = [
     tagline: 'De pequenas embarcações a grandes instalações offshore.',
     description:
       'Estabilidade, análise estrutural e análise intacta/em avaria segundo normas internacionais.',
+    tldr:
+      'A arquitetura naval e engenharia offshore é a disciplina clássica de transformar um conceito de embarcação num pacote construível e certificável — livro de estabilidade, FEA estrutural, análises intacta e em avaria, desenhos GA e ligação com sociedade classificadora. A KDS Offshore entrega-o liderado por sócio, com honorário fixo e assinado por engenheiro titulado pela Ordem dos Engenheiros.',
     overview: [
       'O trabalho clássico de arquitetura naval — livros de estabilidade, FEA estrutural, análises intacta e em avaria, desenhos GA e de perfil — feito pelos sócios, assinado pelos sócios, defendido pelos sócios perante a sociedade classificadora.',
       'Trabalhamos em navios de carga, navios de passageiros, plataformas offshore e instalações de energias renováveis. A disciplina não muda com o navio; a norma sim, e calibramos o pacote ao pavilhão e à classe.',
@@ -95,6 +130,37 @@ export const SERVICES_PT: ServiceDetail[] = [
       'Pacote de ligação com sociedade classificadora',
       'Curvas hidrostáticas e de avaria',
       'Cálculos de arqueação e bordo livre',
+    ],
+    outcomes: [
+      { metric: '5', label: 'sociedades classificadoras em ligação ativa', context: 'DNV, Lloyd\'s Register, Bureau Veritas, RINA, GL' },
+      { metric: '50+', label: 'livros de estabilidade entregues', context: 'em carga, passageiros, offshore e renováveis (2016–2026)' },
+      { metric: '90 dias', label: 'apoio pós-entrega incluído', context: 'padrão em cada projeto' },
+      { metric: '8–16 sem.', label: 'prazo típico para pacote completo', context: 'GA, estabilidade, FEA, ligação com classe' },
+    ],
+    whenToUse: [
+      'Nova construção, aumento de capacidade ou conversão que exija novo livro de estabilidade e submissão a classe.',
+      'Reconstrução da estabilidade em avaria após modificação estrutural ou alteração de compartimentação.',
+      'Avaliação probabilística de estabilidade em avaria segundo SOLAS Capítulo II-1 para navios novos ou modificados.',
+      'Assinatura de engenharia do lado do armador necessária (engenheiro titulado pela Ordem dos Engenheiros).',
+    ],
+    whenNotToUse: [
+      'Trabalho puro de supervisão de doca, sem âmbito de projeto — use Supervisão de Novas Construções.',
+      'Estudo CFD isolado sem âmbito estrutural ou de estabilidade — use Otimização Hidrodinâmica.',
+    ],
+    regulatoryContext: [
+      { name: 'SOLAS Capítulo II-1', note: 'Subdivisão, estabilidade intacta e em avaria, integridade estanque.' },
+      { name: 'MARPOL', note: 'Requisitos de projeto para prevenção da poluição (óleo, substâncias nocivas, esgotos, lixo, ar).' },
+      { name: 'IACS Common Structural Rules', note: 'Escantilhões estruturais para tankers e bulkers em classe IACS.' },
+      { name: 'DNV-OS-C101', note: 'Projeto de estruturas offshore de aço (geral).' },
+      { name: 'Convenção Internacional de Linhas de Carga 1966 / Protocolo 1988', note: 'Bordo livre e reserva de flutuabilidade.' },
+      { name: 'Decreto-Lei 96/2017 (Portugal)', note: 'Transposição portuguesa de segurança marítima; ligação à DGRM para embarcações de pavilhão PT.' },
+    ],
+    vesselTypes: [
+      'Carga: contentor, granel, multi-uso',
+      'Passageiros: ferries, cruzeiros, RoPax',
+      'Offshore: FPSO, plataformas, embarcações de apoio',
+      'Renováveis: subestruturas eólicas flutuantes, conversores de energia das ondas',
+      'Especializadas: rebocadores, dragas, lanchas-piloto, barcos de trabalho',
     ],
     methodology: [
       {
@@ -118,7 +184,9 @@ export const SERVICES_PT: ServiceDetail[] = [
       'Maxsurf · estabilidade',
       'Ansys Aqwa · comportamento no mar',
       'AUTOHYDRO',
-      'SESAM · análise estrutural',
+      'NASTRAN · FEA estrutural, ruído e vibrações',
+      'SESAM · GeniE · modelação estrutural',
+      'SESAM · HydroD · cargas hidrodinâmicas',
       'STAR-CCM+ · validação CFD',
       'DNV · ligação de classe',
       "Lloyd's Register",
@@ -154,6 +222,8 @@ export const SERVICES_PT: ServiceDetail[] = [
     tagline: 'Refinamento de casco e propulsor por CFD.',
     description:
       'Reduzir consumo de combustível e emissões em condições reais de operação, não em ensaios de tanque idealizados.',
+    tldr:
+      'A otimização hidrodinâmica é o refinamento por CFD de casco, apêndices e propulsor para reduzir resistência, consumo e emissões em todo o perfil operacional real — não a uma única velocidade de projeto. A KDS Offshore usa STAR-CCM+, OpenFOAM e WAMIT, valida contra dados de tanque ou de provas de mar, e publica os resíduos em todos os relatórios.',
     overview: [
       'O desempenho hidrodinâmico é o que a maioria dos operadores sente como uma fatura de combustível. Usamos teoria de fluxo potencial para varreduras rápidas e CFD com Reynolds médio para os casos que importam, validados contra campanhas de ensaios em modelo, quando existem.',
       'Cargas de onda, corrente e vento em estruturas offshore são avaliadas pela formulação de Morison e por métodos de painéis tridimensionais. O resultado é um conjunto numérico de coeficientes de carga de vento e corrente que o projetista pode defender.',
@@ -166,6 +236,51 @@ export const SERVICES_PT: ServiceDetail[] = [
       'Gráficos de esteira e pressão',
       'Coeficientes de carga de vento e corrente',
       'Configuração do solver documentada (reproduzível)',
+    ],
+    outcomes: [
+      { metric: '−18%', label: 'consumo de combustível em cruzeiro', context: 'lancha-piloto SeaPower 12 m, 2022 (validada por CFD)' },
+      { metric: '8–9%', label: 'combustível poupado em caso atlântico sintético', context: 'programa SOOS, publicado no IMDC 2024 e ICCAS 2024' },
+      { metric: '3–5%', label: 'resíduo típico contra provas de mar', context: 'malha validada na previsão de resistência' },
+      { metric: '~80 pp', label: 'relatório CFD por estudo', context: 'pronto para sociedade classificadora, com configuração de solver documentada' },
+    ],
+    whenToUse: [
+      'Estudo paramétrico com 10+ variantes de casco para triagem rápida (CFD bate o tanque por ordens de magnitude).',
+      'Briefing de poupança de combustível em retrofit — o operador quer saber quanto custa 1° de trim ou 0,5 nó de velocidade.',
+      'Projeto de propulsor onde a interação com a esteira importa e os dados de tanque estão incompletos.',
+      'Submissão a classe que precisa de coeficientes de carga de vento e corrente defensáveis perante um avaliador externo.',
+    ],
+    whenNotToUse: [
+      'Um único casco validado com dados de tanque já abundantes — voltar a correr CFD acrescenta pouco.',
+      'Previsão de cavitação a velocidade total de propulsor sem campanha dedicada em túnel de cavitação.',
+    ],
+    regulatoryContext: [
+      { name: 'EEDI / EEXI (IMO MEPC.328(76))', note: 'Os dados hidrodinâmicos por CFD alimentam os índices de eficiência de projeto e de navio existente.' },
+      { name: 'CII (Indicador IMO de Intensidade de Carbono)', note: 'Consumo operacional modelado por CFD informa a previsão e a melhoria do rating CII.' },
+      { name: 'FuelEU Maritime', note: 'Aconselhamento de trim e velocidade validado por CFD reduz a intensidade GEE well-to-wake para conformidade.' },
+      { name: 'Manual de qualidade da ITTC', note: 'Protocolos V&V seguidos em cada relatório CFD; resíduos publicados, não escondidos.' },
+    ],
+    vesselTypes: [
+      'Lanchas-piloto e embarcações portuárias',
+      'Barcos de trabalho, embarcações de apoio, OSVs',
+      'Porta-contentores, graneleiros, tankers (trabalho operacional de trim e velocidade)',
+      'Cruzeiros e navios de passageiros',
+      'Estruturas offshore (cargas de vento e corrente)',
+      'Embarcações navais e de patrulha',
+    ],
+    publications: [
+      {
+        label:
+          'Ribeiro e Silva, S., Varela, J. M. (2022). Ship Gyroscopic Roll Stabilisation. 41ª International Conference on Ocean, Offshore and Arctic Engineering (OMAE 2022), ASME, Hamburgo. Paper OMAE2022-7953.',
+      },
+      {
+        label:
+          'Ribeiro e Silva, S., Bento Moreira, M. (2024). An optimisation-based approach to reduce fuel consumption and emissions from shipping navigation. IMDC 2024, Amsterdão.',
+        url: 'https://doi.org/10.59490/imdc.2024.832',
+      },
+      {
+        label:
+          'Ribeiro e Silva, S., Bento Moreira, M. (2024). An integrated real-time Ship Operation Optimisation System (SOOS). ICCAS 2024, RINA, Génova.',
+      },
     ],
     methodology: [
       {
@@ -189,10 +304,12 @@ export const SERVICES_PT: ServiceDetail[] = [
       'STAR-CCM+',
       'OpenFOAM',
       'WAMIT (fluxo potencial / método de painéis)',
+      'MITCHELL1 · resistência de formação de ondas (teoria do navio fino)',
+      'DAWSON0 · resistência de formação de ondas (superfície livre linear)',
       'Ansys Aqwa',
       'AUTOHYDRO',
       'Maxsurf',
-      'Ship@Sea (proprietário KDS)',
+      'Ship@Sea (proprietário KDS, FORTRAN)',
     ],
     cases: [
       {
@@ -227,6 +344,8 @@ export const SERVICES_PT: ServiceDetail[] = [
     tagline: 'Simulação no domínio temporal. Respostas probabilísticas.',
     description:
       'Prever o comportamento da embarcação e avaliar envelopes de manobra autónoma dentro de portos.',
+    tldr:
+      'A previsão de manobrabilidade usa simulação no domínio temporal para antecipar como uma embarcação responde em condições reais — círculos de evolução, zigzags, janelas de atracação, envelopes de manobra autónoma. A KDS Offshore corre estudos probabilísticos de operacionalidade (milhares de atracações amostradas a partir de um ano de dados meteoceânicos) que respondem a quantas vezes por ano um navio pode manobrar sem rebocador.',
     overview: [
       'Um estudo de manobra tem de responder a uma pergunta sobre a qual o operador possa atuar: quantas vezes por ano o meu navio pode atracar sem assistência de rebocador? Que margem tenho para ventos de través? Onde é que um segundo propulsor de popa muda a resposta?',
       'Respondemos a essas perguntas com um modelo no domínio temporal em MatLab/Simulink que acopla casco, leme (com flap, quando aplicável) e propulsores de proa/popa, alimentado por um ano de dados meteoceânicos e por um núcleo de comportamento no mar baseado em método de painéis 3D para as forças de onda.',
@@ -239,6 +358,50 @@ export const SERVICES_PT: ServiceDetail[] = [
       'Envelopes de bacia portuária',
       'Trajetórias no domínio temporal com intervalos de confiança',
       'Conjunto de coeficientes hidrodinâmicos e aerodinâmicos',
+    ],
+    outcomes: [
+      { metric: '610 TEU', label: 'porta-contentores analisado', context: 'Corvo e Silver Mary, Vila do Porto (Açores), 2024' },
+      { metric: 'Probabilística', label: 'resposta de operacionalidade por ano', context: 'milhares de atracações amostradas com intervalos de confiança' },
+      { metric: 'MSC.137(76)', label: 'critérios IMO de aceitação validados', context: 'evolução, zigzag, espiral, paragem brusca' },
+      { metric: '6 GdL', label: 'acoplamento no domínio temporal', context: 'casco, leme com flap, propulsores de proa / popa' },
+    ],
+    whenToUse: [
+      'Um porto onde a assistência de rebocador é pouco fiável, cara ou indisponível — e o operador quer uma janela de atracação sem rebocador.',
+      'Uma embarcação autónoma ou não tripulada que precisa de um envelope operacional defensável antes da implantação.',
+      'Um retrofit de propulsor onde a pergunta é "quanto é que um segundo propulsor de proa nos compra?".',
+      'Validação das manobras IMO MSC.137(76) para um casco novo ou modificado.',
+    ],
+    whenNotToUse: [
+      'Otimização de viagem em alto-mar (use o programa SOOS / otimização de viagem).',
+      'Uma pergunta pura de resistência / propulsão sem componente de manobra (use Otimização Hidrodinâmica).',
+    ],
+    regulatoryContext: [
+      { name: 'IMO MSC.137(76)', note: 'Critérios de aceitação das manobras-padrão (círculo de evolução, zigzag, espiral, paragem brusca).' },
+      { name: 'IMO MSC-MEPC.2/Circ.12 (navios autónomos)', note: 'Evidência de operacionalidade exigida pelo quadro de testes e aprovação MASS.' },
+      { name: 'PIANC Harbour Approach Channels (Report 121)', note: 'Referências de margens de manobra e desenho de bacia em estudos portuários.' },
+      { name: 'OCIMF Mooring Equipment Guidelines (MEG4)', note: 'Convenções de carga de vento e corrente usadas no conjunto de coeficientes.' },
+    ],
+    vesselTypes: [
+      'Porta-contentores e feeders (Corvo, Silver Mary)',
+      'Tankers, graneleiros, carga geral multi-uso',
+      'Cruzeiros e navios de passageiros (manobra portuária)',
+      'RoRo e RoPax',
+      'Rebocadores, lanchas-piloto, embarcações portuárias',
+      'Embarcações autónomas / não tripuladas (MASS)',
+    ],
+    publications: [
+      {
+        label:
+          'Ribeiro e Silva, S. (2005). Parametrically excited roll in regular and irregular head seas. International Shipbuilding Progress, Vol. 52.',
+      },
+      {
+        label:
+          'Ribeiro e Silva, S. et al. (2013). Prediction of parametric rolling in waves with time-domain non-linear strip theory. Ocean Engineering, Vol. 72.',
+      },
+      {
+        label:
+          'Ribeiro e Silva, S., Varela, J. M. (2022). Ship Gyroscopic Roll Stabilisation. 41ª International Conference on Ocean, Offshore and Arctic Engineering (OMAE 2022), ASME, Hamburgo. Paper OMAE2022-7953. BEM com correções de velocidade + ST para avaliação do índice de operacionalidade em pequenas embarcações de patrulha.',
+      },
     ],
     methodology: [
       {
@@ -260,6 +423,7 @@ export const SERVICES_PT: ServiceDetail[] = [
     ],
     tools: [
       'MatLab / Simulink (interno)',
+      'KDS DemoShip · manobra no domínio temporal em MatLab/Simulink',
       'STAR-CCM+ (determinação de coeficientes)',
       'WAMIT (método de painéis 3D, difração de ondas)',
       'Ship@Sea',
@@ -302,6 +466,8 @@ export const SERVICES_PT: ServiceDetail[] = [
     tagline: 'De cargas ambientais ao dimensionamento de âncoras.',
     description:
       'Sistemas de catenária, taut-leg e híbridos para renováveis flutuantes, aquacultura e plataformas offshore.',
+    tldr:
+      'O projeto de sistemas de amarração é a disciplina que transforma um conjunto de dados meteoceânicos numa lista de materiais em aço — sistemas spread, taut-leg, single-point ou de apoio a posicionamento dinâmico para renováveis flutuantes, aquacultura, FPSOs e plataformas offshore. A KDS Offshore tria configurações em ARIANE-3D, corre análise dinâmica em OrcaFlex ou MOSES e certifica fadiga segundo DNV-OS-E301 ou API RP 2SK.',
     overview: [
       'A amarração é a disciplina que transforma um conjunto de dados meteoceânicos numa lista de materiais em aço. Projetamos sistemas spread, single-point e de apoio a posicionamento dinâmico para FPSOs, eólica flutuante, conversores de energia das ondas, aquacultura e plataformas offshore — permanentes ou temporários.',
       'Triagem quase-estática com ARIANE-3D, depois análise dinâmica em OrcaFlex ou MOSES, e finalmente avaliação de fadiga segundo a regra DNV / API aplicável. O resultado é um envelope de tensão nas linhas, uma tabela de dimensionamento de âncoras e um procedimento de instalação que o operador pode entregar ao empreiteiro.',
@@ -314,6 +480,56 @@ export const SERVICES_PT: ServiceDetail[] = [
       'Avaliação de vida à fadiga',
       'Procedimento de instalação',
       'Manual de operação e inspeção',
+    ],
+    outcomes: [
+      { metric: '6 OWCs', label: 'analisados numa única plataforma híbrida', context: 'GRS Power Platform, WavEC Offshore Renewables, Belmullet (Irlanda), 2015' },
+      { metric: 'ULS + ALS', label: 'ambientes de projeto por estudo', context: 'condições operacionais, sobrevivência e acidentais modeladas' },
+      { metric: '25 anos', label: 'vida típica de projeto à fadiga', context: 'rainflow + S-N segundo DNV-RP-C203, com margem reportada' },
+      { metric: '4–8 sem.', label: 'prazo para um estudo de implantação única', context: 'triagem + dinâmica + fadiga + procedimento de instalação' },
+    ],
+    whenToUse: [
+      'Eólica flutuante, energia das ondas ou solar — problema acoplado de controlador / amarração onde a incerteza está nos dados meteoceânicos.',
+      'FPSO ou instalação offshore permanente com várias décadas de vida e linhas críticas à fadiga.',
+      'Aquacultura ou amarrações temporárias que precisam de procedimento de instalação defensável para um empreiteiro novo.',
+      'Reanálise de amarração existente após dano, substituição de linha ou reavaliação ambiental.',
+    ],
+    whenNotToUse: [
+      'Transferências ship-to-ship / amarração em tandem (use consultoria de operações marítimas).',
+      'Projeto puro de âncora sem acoplamento meteoceânico (use empresa geotécnica especializada).',
+    ],
+    regulatoryContext: [
+      { name: 'DNV-OS-E301', note: 'Amarração de posicionamento — regra de projeto para condições operacionais, sobrevivência e ALS.' },
+      { name: 'API RP 2SK', note: 'Projeto e análise de sistemas de manutenção de posição para estruturas flutuantes.' },
+      { name: 'DNV-RP-C203', note: 'Projeto à fadiga de estruturas offshore de aço — curvas S-N e metodologia rainflow.' },
+      { name: 'DNV-OS-J103 (eólica flutuante)', note: 'Projeto de estruturas de turbinas eólicas flutuantes — amarração e resposta global.' },
+      { name: 'IEC 61400-3', note: 'Requisitos de projeto de turbinas eólicas para offshore (acopla com cargas de amarração).' },
+    ],
+    vesselTypes: [
+      'Subestruturas eólicas flutuantes (semi-sub, spar, TLP)',
+      'Conversores de energia das ondas (point absorbers, OWCs, atenuadores)',
+      'Solares flutuantes',
+      'FPSOs e FSOs',
+      'Aquacultura offshore (jaulas de piscicultura)',
+      'Amarrações temporárias (construção, comissionamento, desmantelamento)',
+    ],
+    publications: [
+      {
+        label:
+          'Ribeiro e Silva, S. et al. (2011). Numerical modelling and assessment of the UGEN floating wave energy converter. International Journal of Marine Engineering, Vol. 153.',
+      },
+      {
+        label:
+          'Ribeiro e Silva, S. et al. (2016). Hydrodynamic optimization of the UGEN wave energy converter. International Journal of Marine Energy, Vol. 15.',
+      },
+      {
+        label:
+          'Ribeiro e Silva, S. et al. (2021). Model testing of floating wave energy converter with internal U-shaped oscillating water column. Energy Conversion and Management, Vol. 240.',
+      },
+      {
+        label:
+          'Lourenço, D., Ribeiro e Silva, S., Pinto, L. (2025). Wave Energy Conversion Efficiency of the UGEN along the Western Portuguese Coast. EWTEC 2025, Funchal.',
+        url: 'https://doi.org/10.36688/ewtec-2025-1032',
+      },
     ],
     methodology: [
       {
@@ -337,6 +553,8 @@ export const SERVICES_PT: ServiceDetail[] = [
       'OrcaFlex',
       'MOSES',
       'ARIANE-3D',
+      'KDS Mooring (proprietário)',
+      'SESAM · DeepC · resposta global',
       'WAMIT',
       'Ansys Aqwa',
       'Ship@Sea',
@@ -374,9 +592,11 @@ export const SERVICES_PT: ServiceDetail[] = [
     tagline: 'Remotorização, reconversão, aumento de capacidade.',
     description:
       'De pequenas modificações a conversões completas, em conformidade com as regulamentações em vigor.',
+    tldr:
+      'A engenharia de conversão de navios é o reprojeto de um casco existente para um novo papel — remotorização, aumento de capacidade, retrofit de propulsão híbrida, reconversão científica ou comercial. A KDS Offshore trata da reedição da estabilidade, dos reforços estruturais, da ligação com classe e estado de bandeira (DNV, BV, RINA, LR, DGRM) e do apoio ao concurso para o estaleiro. Viabilidade com honorário fixo primeiro; projeto só quando o caso de engenharia fecha.',
     overview: [
       'Uma conversão é um problema diferente de uma nova construção: a geometria está dada, a estrutura tem um histórico, e o orçamento tem de competir com a substituição. Fazemos conversões quando o caso de engenharia fecha — não porque queremos o projeto, mas porque o operador precisa.',
-      'Trabalhos típicos: remotorização (a caixa de velocidades geralmente vence), aumento de capacidade, retrofit de propulsão híbrida, modernização de acomodação, conversão para investigação científica. Tratamos da reedição da estabilidade, dos reforços estruturais, da ligação com classe e estado de bandeira, e do apoio ao concurso para o estaleiro.',
+      'Os trabalhos típicos cobrem toda a gama que já entregámos ou orçamentámos: conversão de tanker → FPSO; retrofit de propulsão híbrida dual-fuel LNG–Diesel–Elétrico; remotorização (a caixa de velocidades geralmente vence); aumento de capacidade de passageiros ou carga; instalação de blocos de acomodação adicionais; retrofit OPS / fornecimento de energia em terra; conversão de casco para stand-by vessel; e conversão para investigação científica. Tratamos da reedição da estabilidade, dos reforços estruturais, da ligação com classe e estado de bandeira, e do apoio ao concurso para o estaleiro.',
       'Os nossos trabalhos de referência são a remotorização do Belize I para a Nautiber (2023, entregue dentro do prazo) e a conversão do motor-veleiro Libries para a Blue Geo Lighthouse (2022, no prazo, no âmbito).',
     ],
     whatWeDeliver: [
@@ -386,6 +606,37 @@ export const SERVICES_PT: ServiceDetail[] = [
       'Projeto de reforços estruturais',
       'Ligação com classe e estado de bandeira',
       'Apoio ao concurso de estaleiro',
+    ],
+    outcomes: [
+      { metric: 'No prazo', label: 'Belize I entregue', context: 'Nautiber, remotorização e aumento de capacidade do catamarã, 2023' },
+      { metric: 'No prazo, no âmbito', label: 'conversão científica do Libries', context: 'Blue Geo Lighthouse, motor-veleiro, 2022' },
+      { metric: 'Honorário fixo', label: 'viabilidade antes de o projeto avançar', context: 'a maioria dos projetos avança ou pára na viabilidade' },
+      { metric: '4–10 sem.', label: 'prazo típico do pacote de projeto', context: 'depois da decisão de viabilidade' },
+    ],
+    whenToUse: [
+      'Remotorização, retrofit de propulsão híbrida ou modernização de acomodação onde o casco está sólido e o papel está a mudar.',
+      'Aumento de capacidade de passageiros ou carga que exija reforço estrutural e reedição de estabilidade.',
+      'Conversão para investigação científica ou turismo de uma embarcação comercial existente.',
+      'Preparação de concurso de estaleiro — o operador precisa de uma especificação pronta para estaleiro antes da consulta.',
+    ],
+    whenNotToUse: [
+      'Quando o novo papel pede um casco que o navio existente não consegue dar dentro de limites estruturais ou de estabilidade — dizemos isso na viabilidade, não depois do aço estar a ser cortado.',
+      'Quando o operador quer um projeto completamente novo sem reutilizar o casco existente — use Arquitetura Naval.',
+    ],
+    regulatoryContext: [
+      { name: 'SOLAS Capítulo II-1 (estabilidade em avaria)', note: 'Reedição dos casos de avaria após qualquer alteração de subdivisão ou compartimentação.' },
+      { name: 'MARPOL Anexo VI (NOx / SOx)', note: 'Conformidade de emissões para a planta propulsora remotorizada.' },
+      { name: 'IACS Common Structural Rules', note: 'Onde o reforço intersecta estrutura abrangida pelas CSR (tankers, bulkers).' },
+      { name: 'EU MRV / FuelEU Maritime', note: 'Linha de base operacional de consumo antes e depois do retrofit.' },
+      { name: 'Decreto-Lei 96/2017 + DGRM (Portugal)', note: 'Ligação direta à autoridade portuguesa de bandeira para conversões com pavilhão PT.' },
+    ],
+    vesselTypes: [
+      'Catamarãs (passageiros, turismo, trabalho) — Belize I',
+      'Motor-veleiros e iates — Libries',
+      'Barcos de trabalho e embarcações de apoio',
+      'Rebocadores e embarcações portuárias',
+      'Pequenos ferries e RoPax',
+      'Conversões especiais (científica, expedição, hospital)',
     ],
     methodology: [
       {
@@ -442,6 +693,8 @@ export const SERVICES_PT: ServiceDetail[] = [
     tagline: 'Fiscalização independente do lado do armador.',
     description:
       'Controlo de qualidade, conformidade técnica e ensaios de aceitação até à entrega.',
+    tldr:
+      'A supervisão de novas construções é o papel independente de engenheiro do armador que protege a especificação do operador durante a construção — auditorias de materiais, revisões de fase, registos de inspeção, provas de mar e aceitação final. A KDS Offshore senta-se do lado do armador, sem ligação comercial ao estaleiro, com autorização escrita para parar a obra, e entrega um relatório final que o operador pode entregar à seguradora.',
     overview: [
       'A supervisão independente é o trabalho que um operador paga para que o estaleiro não possa redefinir silenciosamente a especificação. Ficamos do lado do armador, sem qualquer relação comercial com o estaleiro, e levamos uma autorização escrita para parar a obra quando algo está errado.',
       'O nosso âmbito cobre auditorias de aprovisionamento de materiais, revisões de fase antes de cada etapa de construção, registos de inspeção contra os desenhos aprovados, provas de mar e ensaios de aceitação. Trabalhamos internacionalmente, e deslocamo-nos.',
@@ -454,6 +707,37 @@ export const SERVICES_PT: ServiceDetail[] = [
       'Relatórios de não conformidade',
       'Protocolo e resultados de ensaios de aceitação',
       'Relatório final de entrega',
+    ],
+    outcomes: [
+      { metric: 'Independente', label: 'sem ligação comercial ao estaleiro', context: 'honorários pagos exclusivamente pelo armador; autoridade escrita de paragem' },
+      { metric: 'Dia 1', label: 'plano de inspeção com gates nomeados', context: 'antes de o aço ser cortado; fixado no kick-off, não negociado a meio' },
+      { metric: '24 h', label: 'relógio padrão de resolução de NCR', context: 'documentado; a maioria das disputas resolve-se antes de escalar' },
+      { metric: 'Para a seguradora', label: 'relatório final de entrega', context: 'aceitação + lista de pendentes, formatado para P&I do casco' },
+    ],
+    whenToUse: [
+      'Nova construção onde o armador precisa de uma testemunha técnica independente — primeira da classe, projeto inovador ou subcontratação multi-estaleiro.',
+      'Fase de construção sob pressão de calendário, onde o armador não consegue ter pessoal residente mas precisa de disciplina ao nível dos gates.',
+      'Estaleiro estrangeiro onde diferenças de fuso horário e idioma exigem presença in-situ liderada por sócio nos hold-points.',
+      'Estrutura offshore de elevado valor em que seguradora e classe vão ambas auditar o pacote de entrega após o handover.',
+    ],
+    whenNotToUse: [
+      'Um contrato chave-na-mão onde o armador não mantém responsabilidade técnica e o estaleiro carrega todo o risco.',
+      'Uma modificação ou retrofit dentro de um único período de estaleiro com supervisão de classe existente (use Engenharia de Conversão de Navios).',
+    ],
+    regulatoryContext: [
+      { name: 'IACS Common Structural Rules', note: 'Pontos de inspeção e critérios de aceitação para estrutura do casco.' },
+      { name: 'SOLAS / MARPOL / Linhas de Carga', note: 'Pontos de vistoria estatutária testemunhados em conjunto com o organismo reconhecido.' },
+      { name: 'IMO Sea Trial Resolution MSC.137(76)', note: 'Critérios de aceitação para as manobras-padrão testemunhadas em provas de mar.' },
+      { name: 'ISO 9001 (QMS do estaleiro)', note: 'Quadro de gestão de qualidade contra o qual o processo de NCR do estaleiro é auditado.' },
+      { name: 'Delegação do estado de bandeira (DGRM / equivalentes)', note: 'Itens estatutários delegados pela administração de bandeira ao RO e testemunhados pelo engenheiro do armador.' },
+    ],
+    vesselTypes: [
+      'Navios de carga (montagem de blocos até à entrega)',
+      'Navios de passageiros e cruzeiros',
+      'Estruturas offshore (jackets, semi-sub, topsides de FPSO)',
+      'Embarcações de patrulha e navais',
+      'Barcos de trabalho e lanchas-piloto',
+      'Instalações de energias renováveis (fase de construção)',
     ],
     methodology: [
       {
@@ -507,6 +791,8 @@ export const SERVICES_PT: ServiceDetail[] = [
     tagline: 'Caminhos do baseline de consumo até zero líquido.',
     description:
       'Caminhos de redução de GEE para navios e ativos offshore. Combustíveis alternativos, eficiência energética e conformidade FuelEU Maritime / IMO 2050.',
+    tldr:
+      'A descarbonização marítima é o trabalho técnico de levar uma embarcação ou frota de uma linha de base de consumo medida até um caminho defensável de zero líquido — bateria, híbrido, LNG, metanol, amoníaco, biocombustível ou retrofit de eficiência — que satisfaça o FuelEU Maritime, o EU ETS Maritime e as obrigações IMO 2050. A KDS Offshore fundamenta cada recomendação em hidrodinâmica quantificada por CFD e em modelação de GEE well-to-wake.',
     overview: [
       'A descarbonização marítima já não é uma abstração estratégica. O FuelEU Maritime, a extensão do EU ETS ao transporte marítimo, as metas IMO 2050, e os Princípios de Poseidon impõem todos obrigações concretas e datadas aos operadores. A pergunta não é se descarbonizar — é qual o caminho, em que prazo, com que custo de capital.',
       'Trabalhamos o lado técnico: linhas de base de emissões, viabilidade de combustíveis alternativos (bateria, híbrido, LNG, metanol, amoníaco), retrofits de eficiência energética, e otimização operacional (trim, velocidade, rotas). Cada recomendação está fundamentada em hidrodinâmica quantificada por CFD e em modelação de GEE de ciclo de vida, e não em narrativa ESG genérica.',
@@ -520,6 +806,49 @@ export const SERVICES_PT: ServiceDetail[] = [
       'Especificação de retrofit de eficiência energética',
       'Avaliação de conformidade FuelEU Maritime / IMO 2050 / EU ETS',
       'Modelo de GEE de ciclo de vida e envelope CAPEX/OPEX',
+    ],
+    outcomes: [
+      { metric: '100%', label: 'propulsão elétrica (SEAPOWER 1500)', context: 'lancha-piloto de 15 m, 664 kWh lítio-ião, dimensionada por CFD pré-construção (2025)' },
+      { metric: '8–9%', label: 'combustível poupado em caso atlântico', context: 'programa SOOS, publicado no IMDC 2024 + ICCAS 2024' },
+      { metric: 'OPS', label: 'projeto de energia em terra para autoridade portuária da Madeira', context: 'Green Ports Madeira / APRAM via Future Proman, 2023' },
+      { metric: '6 caminhos', label: 'de combustível comparados por estudo de frota', context: 'bateria, híbrido, LNG, metanol, amoníaco, biocombustível — cada um pontuado em CAPEX, OPEX, GEE, TRL' },
+    ],
+    whenToUse: [
+      'Lacuna de conformidade FuelEU Maritime, EU ETS Maritime ou CII que precisa de resposta técnica — não de um relatório ESG vistoso.',
+      'Decisão de renovação ou remotorização de frota onde bateria, híbrido, metanol e biocombustível são todos candidatos.',
+      'Exigência de uma autoridade portuária ou afretador para energia em terra, combustível alternativo ou reporte medido well-to-wake.',
+      'Pedido de financiador ou RO para anexo técnico defensável em finança verde ou divulgação dos Princípios de Poseidon.',
+    ],
+    whenNotToUse: [
+      'Um briefing puramente de marketing ESG sem linha de base operacional (somos engenheiros, não consultores de comunicação).',
+      'Um ciclo de operação em que o operador ainda não mediu ou estimou consumo de combustível — comece com uma semana de registo a bordo primeiro.',
+    ],
+    regulatoryContext: [
+      { name: 'FuelEU Maritime (Regulamento (UE) 2023/1805)', note: 'Limites anuais de intensidade GEE na energia usada a bordo de navios que negoceiam na UE a partir de 2025.', url: 'https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32023R1805' },
+      { name: 'EU ETS Maritime (extensão 2024)', note: 'Licenças de CO₂ para navios ≥5.000 GT que escalam em portos da UE; ramp-up 2024–2027.' },
+      { name: 'Estratégia GEE IMO 2023 (MEPC.377(80))', note: 'Próximo de zero líquido até 2050; 20–30% até 2030; 70–80% até 2040 (well-to-wake).' },
+      { name: 'CII IMO (Resolução MEPC.336(76))', note: 'Rating anual de intensidade de carbono A–E; plano corretivo para D / E.' },
+      { name: 'Princípios de Poseidon', note: 'Divulgação de alinhamento climático liderada por bancos; anexo técnico exigido.' },
+      { name: 'EU MRV (Regulamento (UE) 2015/757)', note: 'Monitorização, reporte e verificação de emissões de CO₂ em navios que negoceiam na UE.' },
+    ],
+    vesselTypes: [
+      'Lanchas-piloto, embarcações portuárias, frotas de autoridade portuária — SEAPOWER 1500, APRAM',
+      'Ferries e passageiros de cabotagem',
+      'Porta-contentores e feeders',
+      'Rebocadores e embarcações de apoio offshore',
+      'Cruzeiros (eficiência operacional e retrofit OPS)',
+      'Barcos de trabalho e apoio à aquacultura',
+    ],
+    publications: [
+      {
+        label:
+          'Ribeiro e Silva, S., Bento Moreira, M. (2024). An optimisation-based approach to reduce fuel consumption and emissions from shipping navigation. IMDC 2024, Amsterdão.',
+        url: 'https://doi.org/10.59490/imdc.2024.832',
+      },
+      {
+        label:
+          'Ribeiro e Silva, S., Bento Moreira, M. (2024). An integrated real-time Ship Operation Optimisation System (SOOS) to reduce fuel consumption and emissions from shipping navigation and port calls. ICCAS 2024, RINA, Génova.',
+      },
     ],
     methodology: [
       {
@@ -579,6 +908,8 @@ export const SERVICES_PT: ServiceDetail[] = [
     tagline: 'Gémeos baseados em física, do projeto à operação de frota.',
     description:
       'Desenvolvimento de gémeos digitais, monitorização de desempenho data-driven e estratégia de digitalização para frotas e operações offshore.',
+    tldr:
+      'Um gémeo digital marítimo é um modelo preditivo baseado em física — acoplando hidrodinâmica derivada de CFD com fluxos de sensores a bordo — que responde a perguntas operacionais "e se" (trim, velocidade, rota, retrofit) sem ensaios a bordo. A KDS Offshore constrói gémeos segundo as convenções ISO/IEC 23247, calibrados contra medições, com resíduos documentados. Referências: SEAPOWER 1500 e o sistema SOOS (IMDC 2024 / ICCAS 2024).',
     overview: [
       'A maioria dos "gémeos digitais" marítimos são dashboards sobre fluxos SCADA. Úteis, mas não conseguem responder à pergunta que o operador realmente tem: "e se mudarmos o trim em um grau, ou a velocidade em meio nó?" Responder a isso exige um modelo baseado em física — e essa é a camada que construímos.',
       'Acoplamos modelos hidrodinâmicos derivados de CFD com fluxos de sensores a bordo para produzir um gémeo que vive ao lado dos dados, não no lugar deles. O mesmo modelo de física que dimensionou o navio durante o projeto continua na operação como preditor calibrado de resistência, consumo de combustível e sensibilidade ao trim. As convenções de gémeo digital ISO/IEC 23247 orientam a arquitetura.',
@@ -592,6 +923,48 @@ export const SERVICES_PT: ServiceDetail[] = [
       'Quadro de benchmarking de frota',
       'Ferramentas de apoio à decisão para o operador (conselheiro de trim, comparação de rotas)',
       'Metodologia suportada por investigação publicada',
+    ],
+    outcomes: [
+      { metric: 'Pré-construção', label: 'gémeo entregue antes do aço cortado', context: 'SEAPOWER 1500 — lancha-piloto 100% elétrica de 15 m, 2025' },
+      { metric: '8–9%', label: 'combustível poupado em viagem (caso atlântico sintético)', context: 'SOOS, publicações IMDC 2024 / ICCAS 2024' },
+      { metric: 'Mínimo viável', label: 'conjunto de sensores: GPS, IMU, caudal, RPM, ambiente', context: 'mais simples do que a norma do mercado — menos modos de falha' },
+      { metric: 'ISO/IEC 23247', label: 'norma de arquitetura de gémeo digital', context: 'orienta a estratificação modelo / dados / atores' },
+    ],
+    whenToUse: [
+      'Nova construção onde o CFD da fase de projeto pode passar para o gémeo operacional desde o primeiro dia.',
+      'Navio existente que precisa de conselheiro de trim, curva velocidade-consumo ou estimador de impacto de retrofit — a baseline CFD fecha o ciclo que os sensores não conseguem.',
+      'Operador de frota que precisa de um único quadro de benchmarking ao longo de embarcações de idades distintas.',
+      'Projeto-piloto antes de um rollout de frota plurianual — entregamos um gémeo a funcionar em semanas, não meses.',
+    ],
+    whenNotToUse: [
+      'Trabalho puro de engenharia de dados (apenas recolher e visualizar fluxos SCADA) — use um fornecedor DAQ.',
+      'Modelo puramente ML / regressão sem âncora física — preciso dentro do envelope de treino, perigoso fora dele.',
+    ],
+    regulatoryContext: [
+      { name: 'ISO/IEC 23247 (Digital Twin Framework for Manufacturing / Marine)', note: 'Convenções de arquitetura modelo / dados / atores para gémeos de produção.' },
+      { name: 'CII IMO (Indicador de Intensidade de Carbono)', note: 'Eficiência operacional derivada do gémeo alimenta a previsão e melhoria do CII.' },
+      { name: 'EU MRV / FuelEU Maritime', note: 'Previsões de consumo derivadas do gémeo suportam reporte MRV e previsão de conformidade FuelEU.' },
+      { name: 'IMO MSC.428(98) (gestão de risco cibernético)', note: 'A integração do gémeo com sistemas de bordo tem de satisfazer o quadro de gestão de segurança contra risco cibernético.' },
+      { name: 'NIST SP 800-160 (engenharia de sistemas digitais)', note: 'Referência para a arquitetura ao nível de sistema do gémeo e para a sua confiabilidade.' },
+    ],
+    vesselTypes: [
+      'Lanchas-piloto e embarcações portuárias (SEAPOWER 1500)',
+      'Ferries e passageiros de cabotagem',
+      'Porta-contentores e graneleiros (otimização de viagem)',
+      'Cruzeiros (aconselhamento de trim e velocidade)',
+      'Barcos de trabalho e embarcações de apoio offshore',
+      'Frotas que precisam de benchmarking entre embarcações',
+    ],
+    publications: [
+      {
+        label:
+          'Ribeiro e Silva, S., Bento Moreira, M. (2024). An integrated real-time Ship Operation Optimisation System (SOOS). ICCAS 2024, RINA, Génova.',
+      },
+      {
+        label:
+          'Ribeiro e Silva, S., Bento Moreira, M. (2024). An optimisation-based approach to reduce fuel consumption and emissions from shipping navigation. IMDC 2024, Amsterdão.',
+        url: 'https://doi.org/10.59490/imdc.2024.832',
+      },
     ],
     methodology: [
       {

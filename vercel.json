@@ -1,0 +1,25 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/services/offshore-and-maritime-consultancy",
+      "destination": "/services/maritime-decarbonisation/",
+      "permanent": true
+    },
+    {
+      "source": "/services/offshore-and-maritime-consultancy/",
+      "destination": "/services/maritime-decarbonisation/",
+      "permanent": true
+    },
+    {
+      "source": "/en/services/offshore-and-maritime-consultancy",
+      "destination": "/en/services/maritime-decarbonisation/",
+      "permanent": true
+    },
+    {
+      "source": "/en/services/offshore-and-maritime-consultancy/",
+      "destination": "/en/services/maritime-decarbonisation/",
+      "permanent": true
+    }
+  ]
+}

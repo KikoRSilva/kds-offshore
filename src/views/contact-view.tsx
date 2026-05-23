@@ -240,8 +240,8 @@ export default function ContactView() {
                     style={{ fontSize: 16, color: 'var(--ink-dim)', maxWidth: 480, margin: '0 auto', lineHeight: 1.6 }}
                   >
                     {lang === 'pt'
-                      ? 'Um sócio nomeado responderá num dia útil. Se o projeto for urgente, ligue-nos para +351 213 854 212.'
-                      : 'A named principal will reply within one working day. If your project is time-critical, ring us on +351 213 854 212.'
+                      ? 'Um sócio nomeado responderá num dia útil. Se o projeto for urgente, ligue-nos para +351 929 111 655.'
+                      : 'A named principal will reply within one working day. If your project is time-critical, ring us on +351 929 111 655.'
                     }
                   </p>
                 </div>

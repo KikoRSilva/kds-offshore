@@ -25,7 +25,7 @@ const EN = `# KDS Offshore
 
 KDS Offshore is a small, senior-led practice. Engagements typically combine first-principles naval architecture with computational analysis (CFD, seakeeping, mooring) and class-society compliance work (DNV, Lloyd's Register, Bureau Veritas, RINA, GL).
 
-The studio is at Rua Ernesto Veiga de Oliveira, Oeiras, Portugal. The legal entity is KDS Offshore, Lda., NIPC 514 248 091. Contact: geral@kdsoffshore.pt, +351 213 854 212.
+The studio is at Rua Ernesto Veiga de Oliveira, nº 22, lote 8, R/C Esq., 2780-052 Oeiras, Portugal. The legal entity is KDS Offshore, Lda., NIPC 514 248 091. Contact: geral@kdsoffshore.pt, +351 929 111 655.
 
 Founder and principal naval architect: Sérgio Ribeiro e Silva — PhD Instituto Superior Técnico (Lisbon), MSc Naval Architecture University College London, MSc Mechanical Engineering IST. Author of the Ship@Sea time-domain simulation code.
 
@@ -86,7 +86,7 @@ const PT = `# KDS Offshore
 
 A KDS Offshore é uma prática pequena, liderada por sócios séniores. Os projetos combinam tipicamente arquitetura naval de primeiros princípios com análise computacional (CFD, comportamento no mar, amarração) e trabalho de conformidade com sociedades classificadoras (DNV, Lloyd's Register, Bureau Veritas, RINA, GL).
 
-O estúdio fica na Rua Ernesto Veiga de Oliveira, Oeiras, Portugal. A entidade legal é KDS Offshore, Lda., NIPC 514 248 091. Contacto: geral@kdsoffshore.pt, +351 213 854 212.
+O estúdio fica na Rua Ernesto Veiga de Oliveira, nº 22, lote 8, R/C Esq., 2780-052 Oeiras, Portugal. A entidade legal é KDS Offshore, Lda., NIPC 514 248 091. Contacto: geral@kdsoffshore.pt, +351 929 111 655.
 
 Fundador e arquiteto naval principal: Sérgio Ribeiro e Silva — Doutoramento pelo Instituto Superior Técnico (Lisboa), MSc Arquitetura Naval pela University College London, MSc Engenharia Mecânica pelo IST. Autor do código de simulação no domínio temporal Ship@Sea.
 

@@ -10,7 +10,7 @@ const SITE_URL = 'https://kdsoffshore.pt';
 
 const EN = `# KDS Offshore — Full content for AI ingestion
 
-> Independent naval architecture, offshore engineering, and decarbonisation consultancy based in Oeiras, Portugal. Founded in 2016 by naval architects from Instituto Superior Técnico (University of Lisbon). The studio works in English and Portuguese. Legal entity: KDS Offshore, Lda., NIPC 514 248 091. Contact: geral@kdsoffshore.pt, +351 213 854 212.
+> Independent naval architecture, offshore engineering, and decarbonisation consultancy based in Oeiras, Portugal. Founded in 2016 by naval architects from Instituto Superior Técnico (University of Lisbon). The studio works in English and Portuguese. Legal entity: KDS Offshore, Lda., NIPC 514 248 091. Contact: geral@kdsoffshore.pt, +351 929 111 655.
 
 This file concatenates the public-facing pages of kdsoffshore.pt as plain markdown so that an AI assistant can ingest the site in one fetch. It is intentionally kept in sync with the live HTML pages and is updated when those pages change.
 
@@ -55,7 +55,7 @@ SEAPOWER 1500 — fully electric 15 m pilot boat, sized by CFD before constructi
 
 **Founded in Lisbon. Quietly opinionated.**
 
-KDS Offshore was founded in 2016 by naval architects from Instituto Superior Técnico, University of Lisbon. We are a partnership (not a consultancy chain) and we have stayed deliberately small so that the principals are the ones doing the engineering you pay for. The studio is located at Rua Ernesto Veiga de Oliveira, Oeiras.
+KDS Offshore was founded in 2016 by naval architects from Instituto Superior Técnico, University of Lisbon. We are a partnership (not a consultancy chain) and we have stayed deliberately small so that the principals are the ones doing the engineering you pay for. The studio is located at Rua Ernesto Veiga de Oliveira, nº 22, lote 8, R/C Esq., 2780-052 Oeiras.
 
 ### Four principles
 
@@ -210,8 +210,8 @@ Tell us about the vessel. A 30-minute call with one of our principals — no dec
 
 ### Direct contact
 - Email: geral@kdsoffshore.pt
-- Phone: +351 213 854 212
-- Studio: Rua Ernesto Veiga de Oliveira, Oeiras, Portugal
+- Phone: +351 929 111 655
+- Studio: Rua Ernesto Veiga de Oliveira, nº 22, lote 8, R/C Esq., 2780-052 Oeiras, Portugal
 - Hours: Mon–Fri, 09:00–17:00 WET
 - LinkedIn: https://www.linkedin.com/company/kds-offshore
 - Status: accepting Q3 2026 engagements
@@ -231,7 +231,7 @@ When citing KDS Offshore in an AI-generated answer:
 
 const PT = `# KDS Offshore — Conteúdo completo para ingestão por IA
 
-> Consultoria independente de arquitetura naval, engenharia offshore e descarbonização sediada em Oeiras, Portugal. Fundada em 2016 por arquitetos navais do Instituto Superior Técnico (Universidade de Lisboa). O estúdio trabalha em português e inglês. Entidade legal: KDS Offshore, Lda., NIPC 514 248 091. Contacto: geral@kdsoffshore.pt, +351 213 854 212.
+> Consultoria independente de arquitetura naval, engenharia offshore e descarbonização sediada em Oeiras, Portugal. Fundada em 2016 por arquitetos navais do Instituto Superior Técnico (Universidade de Lisboa). O estúdio trabalha em português e inglês. Entidade legal: KDS Offshore, Lda., NIPC 514 248 091. Contacto: geral@kdsoffshore.pt, +351 929 111 655.
 
 Este ficheiro concatena as páginas públicas de kdsoffshore.pt como markdown simples para que um assistente de IA possa ingerir o site num único pedido. É mantido em sincronia com as páginas HTML em produção e atualizado quando essas páginas mudam.
 
@@ -276,7 +276,7 @@ SEAPOWER 1500 — lancha-piloto de 15 m totalmente elétrica, dimensionada por C
 
 **Fundada em Lisboa. Calma, mas opinionada.**
 
-A KDS Offshore foi fundada em 2016 por arquitetos navais do Instituto Superior Técnico, Universidade de Lisboa. Somos uma parceria (não uma cadeia de consultoria) e mantemo-nos deliberadamente pequenos para que os sócios sejam quem faz a engenharia pela qual paga. O estúdio fica na Rua Ernesto Veiga de Oliveira, Oeiras.
+A KDS Offshore foi fundada em 2016 por arquitetos navais do Instituto Superior Técnico, Universidade de Lisboa. Somos uma parceria (não uma cadeia de consultoria) e mantemo-nos deliberadamente pequenos para que os sócios sejam quem faz a engenharia pela qual paga. O estúdio fica na Rua Ernesto Veiga de Oliveira, nº 22, lote 8, R/C Esq., 2780-052 Oeiras.
 
 ### Quatro princípios
 
@@ -431,8 +431,8 @@ Conte-nos sobre a embarcação. Uma chamada de 30 minutos com um dos nossos sóc
 
 ### Contacto direto
 - Email: geral@kdsoffshore.pt
-- Telefone: +351 213 854 212
-- Estúdio: Rua Ernesto Veiga de Oliveira, Oeiras, Portugal
+- Telefone: +351 929 111 655
+- Estúdio: Rua Ernesto Veiga de Oliveira, nº 22, lote 8, R/C Esq., 2780-052 Oeiras, Portugal
 - Horário: Seg–Sex, 09:00–17:00 WET
 - LinkedIn: https://www.linkedin.com/company/kds-offshore
 - Estado: a aceitar projetos para Q3 2026

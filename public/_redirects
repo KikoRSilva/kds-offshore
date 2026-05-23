@@ -1,0 +1,12 @@
+# Netlify / Cloudflare Pages redirect rules.
+# Mirror of vercel.json — whichever host serves the static export will pick
+# up the right config. Update both files together.
+#
+# Legacy slug from the previous live site: "offshore-and-maritime-consultancy"
+# was split into two narrower services on rebuild. Redirect the old URL to the
+# nearest equivalent so prior inbound links and search-engine equity persist.
+
+/services/offshore-and-maritime-consultancy        /services/maritime-decarbonisation/        301
+/services/offshore-and-maritime-consultancy/       /services/maritime-decarbonisation/        301
+/en/services/offshore-and-maritime-consultancy     /en/services/maritime-decarbonisation/     301
+/en/services/offshore-and-maritime-consultancy/    /en/services/maritime-decarbonisation/     301

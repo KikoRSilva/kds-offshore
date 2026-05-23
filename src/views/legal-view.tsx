@@ -124,7 +124,7 @@ export default function LegalView() {
               <dd style={{ margin: 0 }}>KDS Offshore, Lda.</dd>
 
               <dt style={DT}>Registered office</dt>
-              <dd style={{ margin: 0 }}>Rua Ernesto Veiga de Oliveira, Oeiras, Portugal</dd>
+              <dd style={{ margin: 0 }}>Rua Ernesto Veiga de Oliveira, nº 22, lote 8, R/C Esq., 2780-052 Oeiras, Portugal</dd>
 
               <dt style={DT}>Email</dt>
               <dd style={{ margin: 0 }}>
@@ -135,8 +135,8 @@ export default function LegalView() {
 
               <dt style={DT}>Telephone</dt>
               <dd style={{ margin: 0 }}>
-                <a href="tel:+351213854212" style={{ color: 'var(--accent)' }}>
-                  +351 213 854 212
+                <a href="tel:+351929111655" style={{ color: 'var(--accent)' }}>
+                  +351 929 111 655
                 </a>
               </dd>
 

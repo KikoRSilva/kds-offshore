@@ -1,4 +1,128 @@
 {
+  "/images/kds/Imagem1.png": {
+    "naturalWidth": 1435,
+    "naturalHeight": 1096,
+    "variants": [
+      {
+        "url": "/images/_optimized/kds/Imagem1.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/kds/Imagem1.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/kds/Imagem1.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/kds/Imagem1.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/kds/Imagem1.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/kds/Imagem1.960.webp",
+        "format": "webp",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/kds/Imagem1.1280.avif",
+        "format": "avif",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/kds/Imagem1.1280.webp",
+        "format": "webp",
+        "width": 1280
+      }
+    ]
+  },
+  "/images/kds/PilotBoat_1500HDPE_01.png": {
+    "naturalWidth": 903,
+    "naturalHeight": 537,
+    "variants": [
+      {
+        "url": "/images/_optimized/kds/PilotBoat_1500HDPE_01.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/kds/PilotBoat_1500HDPE_01.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/kds/PilotBoat_1500HDPE_01.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/kds/PilotBoat_1500HDPE_01.640.webp",
+        "format": "webp",
+        "width": 640
+      }
+    ]
+  },
+  "/images/kds/PilotBoat_1500HDPE_02.png": {
+    "naturalWidth": 798,
+    "naturalHeight": 606,
+    "variants": [
+      {
+        "url": "/images/_optimized/kds/PilotBoat_1500HDPE_02.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/kds/PilotBoat_1500HDPE_02.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/kds/PilotBoat_1500HDPE_02.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/kds/PilotBoat_1500HDPE_02.640.webp",
+        "format": "webp",
+        "width": 640
+      }
+    ]
+  },
+  "/images/kds/PilotBoat_1500HDPE_03.png": {
+    "naturalWidth": 824,
+    "naturalHeight": 572,
+    "variants": [
+      {
+        "url": "/images/_optimized/kds/PilotBoat_1500HDPE_03.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/kds/PilotBoat_1500HDPE_03.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/kds/PilotBoat_1500HDPE_03.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/kds/PilotBoat_1500HDPE_03.640.webp",
+        "format": "webp",
+        "width": 640
+      }
+    ]
+  },
   "/images/kds/portrait-sergio.webp": {
     "naturalWidth": 1199,
     "naturalHeight": 1221,

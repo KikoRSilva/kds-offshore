@@ -75,7 +75,8 @@ export function buildOrgJsonLd(locale: Locale) {
         vatID: 'PT514248091',
         address: {
           '@type': 'PostalAddress',
-          streetAddress: 'Rua Ernesto Veiga de Oliveira',
+          streetAddress: 'Rua Ernesto Veiga de Oliveira, nº 22, lote 8, R/C Esq.',
+          postalCode: '2780-052',
           addressLocality: 'Oeiras',
           addressRegion: 'Lisboa',
           addressCountry: 'PT',
@@ -92,7 +93,7 @@ export function buildOrgJsonLd(locale: Locale) {
           { '@type': 'Country', name: 'United Kingdom' },
           { '@type': 'Place', name: 'Atlantic façade' },
         ],
-        telephone: '+351-21-385-4212',
+        telephone: '+351-929-111-655',
         email: 'geral@kdsoffshore.pt',
         openingHoursSpecification: [
           {
@@ -106,7 +107,7 @@ export function buildOrgJsonLd(locale: Locale) {
           {
             '@type': 'ContactPoint',
             contactType: 'customer service',
-            telephone: '+351-21-385-4212',
+            telephone: '+351-929-111-655',
             email: 'geral@kdsoffshore.pt',
             areaServed: ['PT', 'ES', 'IE', 'GB'],
             availableLanguage: ['en', 'pt'],

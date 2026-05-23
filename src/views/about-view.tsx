@@ -71,7 +71,8 @@ const FOUNDER_PERSON_JSONLD = {
     '@type': 'Place',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Rua Ernesto Veiga de Oliveira',
+      streetAddress: 'Rua Ernesto Veiga de Oliveira, nº 22, lote 8, R/C Esq.',
+      postalCode: '2780-052',
       addressLocality: 'Oeiras',
       addressCountry: 'PT',
     },
@@ -143,7 +144,7 @@ export default function AboutView() {
               }}
             >
               <span>fig. 01, {lang === 'pt' ? 'O estúdio, a olhar para sul' : 'The studio, looking south'}</span>
-              <span>Rua Ernesto Veiga de Oliveira</span>
+              <span>Rua Ernesto Veiga de Oliveira, nº 22 · Oeiras</span>
             </div>
           </Reveal>
         </div>
@@ -300,13 +301,17 @@ export default function AboutView() {
               }}
             >
               <h2 className="kds-display" style={{ fontSize: 'clamp(48px, 5vw, 88px)', margin: 0, fontWeight: 300 }}>
-                {lang === 'pt' ? 'Os ' : 'The '}<span style={{ fontStyle: 'italic', color: 'var(--accent)' }}>{lang === 'pt' ? 'seis' : 'six'}</span>{lang === 'pt' ? ' de nós.' : ' of us.'}
+                {lang === 'pt' ? 'Uma equipa de ' : 'A team of '}
+                <span style={{ fontStyle: 'italic', color: 'var(--accent)' }}>
+                  {lang === 'pt' ? 'quatro a oito' : 'four to eight'}
+                </span>
+                {lang === 'pt' ? '.' : '.'}
               </h2>
               <span
                 className="kds-mono"
                 style={{ fontSize: 11, color: 'var(--ink-faint)', letterSpacing: '0.22em', textTransform: 'uppercase' }}
               >
-                {lang === 'pt' ? 'Engenheiros · 06' : 'Engineers · 06'}
+                {lang === 'pt' ? '4 sócios · até 4 colaboradores' : '4 principals · up to 4 collaborators'}
               </span>
             </div>
           </Reveal>
@@ -409,6 +414,34 @@ export default function AboutView() {
               >
                 {lang === 'pt' ? 'Sócio fundador · Arquitetura naval' : 'Founding partner · Naval architecture'}
               </div>
+            </div>
+            {/* Studio epigraph — the line that runs across every internal
+                document and every public deck since 2016. Kept as a quiet
+                colophon at the bottom of /about, not a marketing tagline. */}
+            <div
+              style={{
+                marginTop: 80,
+                paddingTop: 32,
+                borderTop: '1px solid var(--line)',
+                textAlign: 'center',
+              }}
+            >
+              <p
+                className="kds-display"
+                style={{
+                  fontSize: 'clamp(18px, 1.6vw, 22px)',
+                  color: 'var(--ink-dim)',
+                  fontStyle: 'italic',
+                  fontWeight: 300,
+                  margin: 0,
+                  lineHeight: 1.5,
+                  letterSpacing: '0.01em',
+                }}
+              >
+                {lang === 'pt'
+                  ? 'Combinar experiência, inovação e tecnologia para corresponder às exigências mais rigorosas dos nossos clientes.'
+                  : 'Combining experience, innovation, and technology to meet customer exacting requirements.'}
+              </p>
             </div>
           </Reveal>
         </div>

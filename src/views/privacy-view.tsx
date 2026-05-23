@@ -111,7 +111,7 @@ export default function PrivacyView() {
               <a href="mailto:geral@kdsoffshore.pt" style={{ color: 'var(--accent)' }}>
                 geral@kdsoffshore.pt
               </a>{' '}
-              or +351 213 854 212. Given the size of the studio and the limited scope of personal
+              or +351 929 111 655. Given the size of the studio and the limited scope of personal
               data we process, we have not formally appointed a Data Protection Officer; data
               protection enquiries should be addressed to the email above.
             </p>
