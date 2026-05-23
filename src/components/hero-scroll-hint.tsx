@@ -1,35 +1,47 @@
 'use client';
 
-import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
-import { useLenis } from 'lenis/react';
+import {
+  AnimatePresence,
+  motion,
+  useMotionValueEvent,
+  useReducedMotion,
+} from 'framer-motion';
 import { useState } from 'react';
 import { useLocale } from 'next-intl';
+import { useLenisScrollProgress } from '@/lib/use-lenis-scroll-progress';
 
-// Distance (px) the user has to scroll before we fade the hint out.
-// Small enough that it disappears the moment they commit to descending,
-// large enough that the page doesn't dismiss it on a single trackpad twitch.
-const FADE_AFTER_PX = 80;
+interface HeroScrollHintProps {
+  // Ref to the hero section. The hint dismisses when this element has
+  // travelled a small fraction through the viewport.
+  targetRef: React.RefObject<HTMLElement | null>;
+}
+
+// Fraction of the hero's travel through the viewport at which the hint
+// dismisses. ~0.04 maps to roughly the first 60–90 px of scroll on a
+// typical hero, independent of viewport size.
+const DISMISS_AT_PROGRESS = 0.04;
 
 /**
  * Hero scroll indicator — a single vertical line with an accent dot dropping
- * along it in a loop, sitting at the bottom of the hero section. Disappears
- * the first time the user scrolls past `FADE_AFTER_PX` and does not return
- * (the tension is broken once and only once).
+ * along it in a loop, sitting at the bottom of the hero. Creates a small
+ * amount of visual tension before the user interacts.
  *
- * Listens to the Lenis scroll loop so the dismiss reacts on the same frame
- * the rest of the scroll-driven UI runs on.
+ * Disappears the first time the hero's `useLenisScrollProgress` crosses
+ * `DISMISS_AT_PROGRESS` and does not return on scroll-up — the tension is
+ * broken once and only once.
  *
- * Respects `prefers-reduced-motion`: the drop animation falls back to a
- * static dot.
+ * `useLenisScrollProgress` keeps the dismiss synchronised with the Lenis
+ * RAF, matching the rest of the site's scroll-driven UI.
  */
-export function HeroScrollHint() {
+export function HeroScrollHint({ targetRef }: HeroScrollHintProps) {
   const [visible, setVisible] = useState(true);
   const reduce = useReducedMotion();
   const locale = useLocale();
   const label = locale === 'pt' ? 'Descer' : 'Scroll';
 
-  useLenis(({ scroll }) => {
-    if (visible && scroll > FADE_AFTER_PX) setVisible(false);
+  const progress = useLenisScrollProgress(targetRef);
+  useMotionValueEvent(progress, 'change', (latest) => {
+    if (visible && latest > DISMISS_AT_PROGRESS) setVisible(false);
   });
 
   return (

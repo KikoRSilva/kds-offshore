@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Reveal } from '@/components/reveal';
 import { KDSImage } from '@/components/kds-image';
@@ -19,11 +19,16 @@ export default function HomeView() {
   const t = useMessages();
   const [testimonialIdx, setTestimonialIdx] = useState(0);
   const testimonial = t.proof.testimonials[testimonialIdx];
+  // Ref shared with <HeroScrollHint /> so the hint fades based on the
+  // hero's own scroll progress through the viewport, not an absolute pixel
+  // threshold. Keeps the fade trigger consistent across viewport heights.
+  const heroRef = useRef<HTMLElement>(null);
 
   return (
     <>
       {/* HERO */}
       <section
+        ref={heroRef}
         className="sonar-bg"
         style={{ position: 'relative', padding: '72px 48px 56px', overflow: 'hidden' }}
       >
@@ -169,7 +174,7 @@ export default function HomeView() {
           <div className="ping-dot" />
         </div>
 
-        <HeroScrollHint />
+        <HeroScrollHint targetRef={heroRef} />
       </section>
 
       {/* FEATURED ENGAGEMENT */}
