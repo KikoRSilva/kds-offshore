@@ -241,7 +241,7 @@ export const SERVICES_EN: ServiceDetail[] = [
       'A parametric study with 10+ hull variants to screen quickly (CFD beats tank time by orders of magnitude).',
       'A retrofit fuel-saving brief — the operator wants to know what 1° of trim or 0.5 kn of speed actually costs.',
       'A propulsor design where wake interaction matters and tank data is incomplete.',
-      'A class-society submission needing wind/current load coefficients defensible against an external reviewer.',
+      'Wind, wave and current load coefficients of any type of seagoing vessel to be used on a weather routing software tool can be submitted by KDS Offshore to a class-society for external review and due accreditation process.',
     ],
     whenNotToUse: [
       'A single validated hull with extensive tank data already in hand — re-running CFD adds little.',

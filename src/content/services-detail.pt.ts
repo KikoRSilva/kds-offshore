@@ -247,7 +247,7 @@ export const SERVICES_PT: ServiceDetail[] = [
       'Estudo paramétrico com 10+ variantes de casco para triagem rápida (CFD bate o tanque por ordens de magnitude).',
       'Briefing de poupança de combustível em retrofit — o operador quer saber quanto custa 1° de trim ou 0,5 nó de velocidade.',
       'Projeto de propulsor onde a interação com a esteira importa e os dados de tanque estão incompletos.',
-      'Submissão a classe que precisa de coeficientes de carga de vento e corrente defensáveis perante um avaliador externo.',
+      'Coeficientes de carga de vento, onda e corrente de qualquer tipo de embarcação de mar, para uso em software de weather routing, podem ser submetidos pela KDS Offshore a uma sociedade classificadora para revisão externa e respetivo processo de acreditação.',
     ],
     whenNotToUse: [
       'Um único casco validado com dados de tanque já abundantes — voltar a correr CFD acrescenta pouco.',
