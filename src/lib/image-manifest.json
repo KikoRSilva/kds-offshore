@@ -1568,5 +1568,101 @@
         "width": 1280
       }
     ]
+  },
+  "/images/team/filipe-inok.png": {
+    "naturalWidth": 223,
+    "naturalHeight": 241,
+    "variants": [
+      {
+        "url": "/images/_optimized/team/filipe-inok.223.avif",
+        "format": "avif",
+        "width": 223
+      },
+      {
+        "url": "/images/_optimized/team/filipe-inok.223.webp",
+        "format": "webp",
+        "width": 223
+      }
+    ]
+  },
+  "/images/team/francisco-ribeiro-e-silva.jpg": {
+    "naturalWidth": 186,
+    "naturalHeight": 238,
+    "variants": [
+      {
+        "url": "/images/_optimized/team/francisco-ribeiro-e-silva.186.avif",
+        "format": "avif",
+        "width": 186
+      },
+      {
+        "url": "/images/_optimized/team/francisco-ribeiro-e-silva.186.webp",
+        "format": "webp",
+        "width": 186
+      }
+    ]
+  },
+  "/images/team/jose-dias.jpg": {
+    "naturalWidth": 82,
+    "naturalHeight": 106,
+    "variants": [
+      {
+        "url": "/images/_optimized/team/jose-dias.82.avif",
+        "format": "avif",
+        "width": 82
+      },
+      {
+        "url": "/images/_optimized/team/jose-dias.82.webp",
+        "format": "webp",
+        "width": 82
+      }
+    ]
+  },
+  "/images/team/jose-gordo.png": {
+    "naturalWidth": 183,
+    "naturalHeight": 235,
+    "variants": [
+      {
+        "url": "/images/_optimized/team/jose-gordo.183.avif",
+        "format": "avif",
+        "width": 183
+      },
+      {
+        "url": "/images/_optimized/team/jose-gordo.183.webp",
+        "format": "webp",
+        "width": 183
+      }
+    ]
+  },
+  "/images/team/lucia-moreira.jpg": {
+    "naturalWidth": 195,
+    "naturalHeight": 244,
+    "variants": [
+      {
+        "url": "/images/_optimized/team/lucia-moreira.195.avif",
+        "format": "avif",
+        "width": 195
+      },
+      {
+        "url": "/images/_optimized/team/lucia-moreira.195.webp",
+        "format": "webp",
+        "width": 195
+      }
+    ]
+  },
+  "/images/team/valente-abreu.jpg": {
+    "naturalWidth": 195,
+    "naturalHeight": 238,
+    "variants": [
+      {
+        "url": "/images/_optimized/team/valente-abreu.195.avif",
+        "format": "avif",
+        "width": 195
+      },
+      {
+        "url": "/images/_optimized/team/valente-abreu.195.webp",
+        "format": "webp",
+        "width": 195
+      }
+    ]
   }
 }
