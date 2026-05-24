@@ -1,4 +1,116 @@
 {
+  "/images/journal/corvo-aerial-cargo-waterway.jpg": {
+    "naturalWidth": 2400,
+    "naturalHeight": 1599,
+    "variants": [
+      {
+        "url": "/images/_optimized/journal/corvo-aerial-cargo-waterway.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/journal/corvo-aerial-cargo-waterway.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/journal/corvo-aerial-cargo-waterway.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/journal/corvo-aerial-cargo-waterway.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/journal/corvo-aerial-cargo-waterway.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/journal/corvo-aerial-cargo-waterway.960.webp",
+        "format": "webp",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/journal/corvo-aerial-cargo-waterway.1280.avif",
+        "format": "avif",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/journal/corvo-aerial-cargo-waterway.1280.webp",
+        "format": "webp",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/journal/corvo-aerial-cargo-waterway.1920.avif",
+        "format": "avif",
+        "width": 1920
+      },
+      {
+        "url": "/images/_optimized/journal/corvo-aerial-cargo-waterway.1920.webp",
+        "format": "webp",
+        "width": 1920
+      }
+    ]
+  },
+  "/images/journal/soos-aerial-container-ocean.jpg": {
+    "naturalWidth": 2400,
+    "naturalHeight": 1729,
+    "variants": [
+      {
+        "url": "/images/_optimized/journal/soos-aerial-container-ocean.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/journal/soos-aerial-container-ocean.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/journal/soos-aerial-container-ocean.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/journal/soos-aerial-container-ocean.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/journal/soos-aerial-container-ocean.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/journal/soos-aerial-container-ocean.960.webp",
+        "format": "webp",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/journal/soos-aerial-container-ocean.1280.avif",
+        "format": "avif",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/journal/soos-aerial-container-ocean.1280.webp",
+        "format": "webp",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/journal/soos-aerial-container-ocean.1920.avif",
+        "format": "avif",
+        "width": 1920
+      },
+      {
+        "url": "/images/_optimized/journal/soos-aerial-container-ocean.1920.webp",
+        "format": "webp",
+        "width": 1920
+      }
+    ]
+  },
   "/images/kds/Imagem1.png": {
     "naturalWidth": 1435,
     "naturalHeight": 1096,

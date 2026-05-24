@@ -9,14 +9,14 @@ import { BreadcrumbJsonLd } from '@/components/breadcrumb-jsonld';
 import { useLocale, useMessages } from 'next-intl';
 import { subscribeNewsletter } from '@/lib/supabase';
 
-const POST_IMGS = [
-  '/images/stock/port-cranes.jpg',
-  '/images/stock/harbor-night.jpg',
-  '/images/stock/sea-wave.jpg', // substituted (original 404)
-  '/images/stock/ocean-horizon.jpg',
-  '/images/stock/engineer-laptop.jpg',
-  '/images/stock/maritime-equipment.jpg',
-];
+// Per-post card images. Keyed by post slug so the right image always
+// follows the right post (regardless of array index after filtering).
+// Falls back to a stock image if the slug has no dedicated image yet.
+const POST_IMG_BY_SLUG: Record<string, string> = {
+  'corvo-without-tugs': '/images/journal/corvo-aerial-cargo-waterway.jpg',
+  'soos-voyage-optimisation': '/images/journal/soos-aerial-container-ocean.jpg',
+};
+const POST_IMG_FALLBACK = '/images/stock/ocean-horizon.jpg';
 
 export default function JournalView() {
   const lang = useLocale();
@@ -98,7 +98,7 @@ export default function JournalView() {
               }}
             >
               <KDSImage
-                src="/images/kds/services-manoeuvrability.webp"
+                src="/images/journal/corvo-aerial-cargo-waterway.jpg"
                 aspect="16/10"
                 alt={p.featured.t}
                 parallax
@@ -202,7 +202,7 @@ export default function JournalView() {
                 >
                   <div>
                     <KDSImage
-                      src={POST_IMGS[i % POST_IMGS.length]}
+                      src={POST_IMG_BY_SLUG[post.slug] ?? POST_IMG_FALLBACK}
                       aspect="16/10"
                       alt={post.t}
                     />

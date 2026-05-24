@@ -58,8 +58,8 @@ export const ARTICLES: JournalArticle[] = [
     dateModified: '2024-07-15',
     readMinutes: 9,
     hero: {
-      src: '/images/kds/services-manoeuvrability.webp',
-      alt: 'CFD pressure-field visualisation of a container ship hull during a manoeuvring simulation',
+      src: '/images/journal/corvo-aerial-cargo-waterway.jpg',
+      alt: 'Top-down aerial of a feeder container ship navigating a confined waterway — the kind of manoeuvring environment the Corvo study addresses inside the harbour basin of Vila do Porto',
     },
     abstract:
       'In 2024, Mutualista / Grupo Bensaúde commissioned KDS Offshore to assess the operability of the 610 TEU container ship Corvo (IMO 9381275) inside the harbour basin of Vila do Porto, Açores. The question was simple to state and hard to answer: how many days per year can the vessel berth without tug assistance? The answer is probabilistic — and it depends on a stern-thruster decision the operator was about to make.',
@@ -260,8 +260,8 @@ export const ARTICLES: JournalArticle[] = [
     dateModified: '2024-08-30',
     readMinutes: 14,
     hero: {
-      src: '/images/stock/cargo-vessel.jpg',
-      alt: 'A geared containership on the open Atlantic, the operating environment SOOS is designed for',
+      src: '/images/journal/soos-aerial-container-ocean.jpg',
+      alt: 'Aerial view of a geared container ship in open ocean — the operating environment SOOS is designed to optimise voyage fuel burn for',
     },
     abstract:
       'In June 2024, with M. Bento Moreira at CENTEC / IST, we presented the first methods paper of an integrated Ship Operation Optimisation System (SOOS) at the 15th International Marine Design Conference in Amsterdam. SOOS is a real-time decision-support stack — a CFD-derived calm-water power curve, semi-empirical wind loads, Salvesen-1978 added-resistance in waves, trim-via-centre-of-gravity, and a Vectorized Simulated Annealing weather-routing layer. On a 712 TEU geared containership in synthetic Atlantic conditions, SOOS cut voyage fuel by 8 to 9% versus the great-circle direct route, and held that saving even when an obstacle — an island, a marine corridor — was inserted into the search space. These notes describe what SOOS is, why we built it the way we did, and what we are not yet claiming.',
