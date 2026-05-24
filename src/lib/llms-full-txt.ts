@@ -274,7 +274,7 @@ SEAPOWER 1500 — lancha-piloto de 15 m totalmente elétrica, dimensionada por C
 
 ## /about  Sobre
 
-**Fundada em Lisboa. Calma, mas opinionada.**
+**Fundada em Lisboa. Calma, mas sólida.**
 
 A KDS Offshore foi fundada em 2016 por arquitetos navais do Instituto Superior Técnico, Universidade de Lisboa. Somos uma parceria (não uma cadeia de consultoria) e mantemo-nos deliberadamente pequenos para que os sócios sejam quem faz a engenharia pela qual paga. O estúdio fica na Rua Ernesto Veiga de Oliveira, nº 22, lote 8, R/C Esq., 2780-052 Oeiras.
 
