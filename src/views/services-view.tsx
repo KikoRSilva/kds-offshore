@@ -25,14 +25,21 @@ const SERVICES_ITEMLIST_JSONLD = {
   })),
 };
 
+// Topic-specific image per service, in the same order as `t.services.items`.
+// All entries are real stock photos from Unsplash (free for commercial use,
+// no attribution required) — kept stylistically consistent so the index
+// reads as a single editorial spread, not a mix of photos and renders.
+// When a new service is added, append the matching image here too.
 const IMG_MAP = [
-  '/images/kds/services-3d-modelling.webp',
-  '/images/kds/studio-engineering-team.webp',
-  '/images/stock/vessel-ocean.jpg',
-  '/images/kds/services-manoeuvrability.webp',
-  '/images/kds/services-mooring.webp',
-  '/images/kds/services-conversion.webp',
-  '/images/kds/services-supervision.webp',
+  '/images/services/3d-modelling-architect-draft.jpg',       // 01 · 3D modelling (architect with pencil + ruler — Daniel McCullough)
+  '/images/services/naval-architecture-shipyard.jpg',        // 02 · Naval architecture (vessel + cranes, Admiralty shipyard — Viktor Solomonik)
+  '/images/services/hydrodynamic-cargo-ocean.jpg',           // 03 · Hydrodynamic optimisation (cargo + Table Mountain — Hennie Stander)
+  '/images/services/manoeuvrability-tug-container.jpg',      // 04 · Manoeuvrability (tug pulling container ship — Mika Baumeister)
+  '/images/services/mooring-ship-deck-ropes.jpg',            // 05 · Mooring (ship deck with ropes & mooring equipment — Frederick Wallace)
+  '/images/services/conversion-red-ship-drydock.jpg',        // 06 · Conversion (red ship in drydock for repairs)
+  '/images/services/supervision-welding-vigor-marine.jpg',   // 07 · Supervision (welding at Vigor Marine, Portland — Pete Wright)
+  '/images/services/decarbonisation-offshore-wind.jpg',      // 08 · Decarbonisation (Burbo Bank offshore wind farm — James Whately)
+  '/images/services/digitalisation-bridge-control.jpg',      // 09 · Digitalisation (ship bridge control room with screens — Rohan Dixit)
 ];
 
 export default function ServicesView() {

@@ -559,6 +559,510 @@
       }
     ]
   },
+  "/images/services/3d-modelling-architect-draft.jpg": {
+    "naturalWidth": 2400,
+    "naturalHeight": 1350,
+    "variants": [
+      {
+        "url": "/images/_optimized/services/3d-modelling-architect-draft.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/services/3d-modelling-architect-draft.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/services/3d-modelling-architect-draft.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/services/3d-modelling-architect-draft.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/services/3d-modelling-architect-draft.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/services/3d-modelling-architect-draft.960.webp",
+        "format": "webp",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/services/3d-modelling-architect-draft.1280.avif",
+        "format": "avif",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/services/3d-modelling-architect-draft.1280.webp",
+        "format": "webp",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/services/3d-modelling-architect-draft.1920.avif",
+        "format": "avif",
+        "width": 1920
+      },
+      {
+        "url": "/images/_optimized/services/3d-modelling-architect-draft.1920.webp",
+        "format": "webp",
+        "width": 1920
+      }
+    ]
+  },
+  "/images/services/conversion-red-ship-drydock.jpg": {
+    "naturalWidth": 2400,
+    "naturalHeight": 3189,
+    "variants": [
+      {
+        "url": "/images/_optimized/services/conversion-red-ship-drydock.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/services/conversion-red-ship-drydock.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/services/conversion-red-ship-drydock.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/services/conversion-red-ship-drydock.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/services/conversion-red-ship-drydock.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/services/conversion-red-ship-drydock.960.webp",
+        "format": "webp",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/services/conversion-red-ship-drydock.1280.avif",
+        "format": "avif",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/services/conversion-red-ship-drydock.1280.webp",
+        "format": "webp",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/services/conversion-red-ship-drydock.1920.avif",
+        "format": "avif",
+        "width": 1920
+      },
+      {
+        "url": "/images/_optimized/services/conversion-red-ship-drydock.1920.webp",
+        "format": "webp",
+        "width": 1920
+      }
+    ]
+  },
+  "/images/services/decarbonisation-offshore-wind.jpg": {
+    "naturalWidth": 2400,
+    "naturalHeight": 1598,
+    "variants": [
+      {
+        "url": "/images/_optimized/services/decarbonisation-offshore-wind.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/services/decarbonisation-offshore-wind.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/services/decarbonisation-offshore-wind.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/services/decarbonisation-offshore-wind.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/services/decarbonisation-offshore-wind.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/services/decarbonisation-offshore-wind.960.webp",
+        "format": "webp",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/services/decarbonisation-offshore-wind.1280.avif",
+        "format": "avif",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/services/decarbonisation-offshore-wind.1280.webp",
+        "format": "webp",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/services/decarbonisation-offshore-wind.1920.avif",
+        "format": "avif",
+        "width": 1920
+      },
+      {
+        "url": "/images/_optimized/services/decarbonisation-offshore-wind.1920.webp",
+        "format": "webp",
+        "width": 1920
+      }
+    ]
+  },
+  "/images/services/digitalisation-bridge-control.jpg": {
+    "naturalWidth": 2400,
+    "naturalHeight": 1800,
+    "variants": [
+      {
+        "url": "/images/_optimized/services/digitalisation-bridge-control.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/services/digitalisation-bridge-control.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/services/digitalisation-bridge-control.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/services/digitalisation-bridge-control.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/services/digitalisation-bridge-control.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/services/digitalisation-bridge-control.960.webp",
+        "format": "webp",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/services/digitalisation-bridge-control.1280.avif",
+        "format": "avif",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/services/digitalisation-bridge-control.1280.webp",
+        "format": "webp",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/services/digitalisation-bridge-control.1920.avif",
+        "format": "avif",
+        "width": 1920
+      },
+      {
+        "url": "/images/_optimized/services/digitalisation-bridge-control.1920.webp",
+        "format": "webp",
+        "width": 1920
+      }
+    ]
+  },
+  "/images/services/hydrodynamic-cargo-ocean.jpg": {
+    "naturalWidth": 2400,
+    "naturalHeight": 1600,
+    "variants": [
+      {
+        "url": "/images/_optimized/services/hydrodynamic-cargo-ocean.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/services/hydrodynamic-cargo-ocean.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/services/hydrodynamic-cargo-ocean.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/services/hydrodynamic-cargo-ocean.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/services/hydrodynamic-cargo-ocean.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/services/hydrodynamic-cargo-ocean.960.webp",
+        "format": "webp",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/services/hydrodynamic-cargo-ocean.1280.avif",
+        "format": "avif",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/services/hydrodynamic-cargo-ocean.1280.webp",
+        "format": "webp",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/services/hydrodynamic-cargo-ocean.1920.avif",
+        "format": "avif",
+        "width": 1920
+      },
+      {
+        "url": "/images/_optimized/services/hydrodynamic-cargo-ocean.1920.webp",
+        "format": "webp",
+        "width": 1920
+      }
+    ]
+  },
+  "/images/services/manoeuvrability-tug-container.jpg": {
+    "naturalWidth": 2400,
+    "naturalHeight": 1536,
+    "variants": [
+      {
+        "url": "/images/_optimized/services/manoeuvrability-tug-container.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/services/manoeuvrability-tug-container.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/services/manoeuvrability-tug-container.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/services/manoeuvrability-tug-container.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/services/manoeuvrability-tug-container.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/services/manoeuvrability-tug-container.960.webp",
+        "format": "webp",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/services/manoeuvrability-tug-container.1280.avif",
+        "format": "avif",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/services/manoeuvrability-tug-container.1280.webp",
+        "format": "webp",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/services/manoeuvrability-tug-container.1920.avif",
+        "format": "avif",
+        "width": 1920
+      },
+      {
+        "url": "/images/_optimized/services/manoeuvrability-tug-container.1920.webp",
+        "format": "webp",
+        "width": 1920
+      }
+    ]
+  },
+  "/images/services/mooring-ship-deck-ropes.jpg": {
+    "naturalWidth": 2400,
+    "naturalHeight": 1600,
+    "variants": [
+      {
+        "url": "/images/_optimized/services/mooring-ship-deck-ropes.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/services/mooring-ship-deck-ropes.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/services/mooring-ship-deck-ropes.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/services/mooring-ship-deck-ropes.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/services/mooring-ship-deck-ropes.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/services/mooring-ship-deck-ropes.960.webp",
+        "format": "webp",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/services/mooring-ship-deck-ropes.1280.avif",
+        "format": "avif",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/services/mooring-ship-deck-ropes.1280.webp",
+        "format": "webp",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/services/mooring-ship-deck-ropes.1920.avif",
+        "format": "avif",
+        "width": 1920
+      },
+      {
+        "url": "/images/_optimized/services/mooring-ship-deck-ropes.1920.webp",
+        "format": "webp",
+        "width": 1920
+      }
+    ]
+  },
+  "/images/services/naval-architecture-shipyard.jpg": {
+    "naturalWidth": 2400,
+    "naturalHeight": 1600,
+    "variants": [
+      {
+        "url": "/images/_optimized/services/naval-architecture-shipyard.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/services/naval-architecture-shipyard.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/services/naval-architecture-shipyard.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/services/naval-architecture-shipyard.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/services/naval-architecture-shipyard.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/services/naval-architecture-shipyard.960.webp",
+        "format": "webp",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/services/naval-architecture-shipyard.1280.avif",
+        "format": "avif",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/services/naval-architecture-shipyard.1280.webp",
+        "format": "webp",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/services/naval-architecture-shipyard.1920.avif",
+        "format": "avif",
+        "width": 1920
+      },
+      {
+        "url": "/images/_optimized/services/naval-architecture-shipyard.1920.webp",
+        "format": "webp",
+        "width": 1920
+      }
+    ]
+  },
+  "/images/services/supervision-welding-vigor-marine.jpg": {
+    "naturalWidth": 2400,
+    "naturalHeight": 1350,
+    "variants": [
+      {
+        "url": "/images/_optimized/services/supervision-welding-vigor-marine.320.avif",
+        "format": "avif",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/services/supervision-welding-vigor-marine.320.webp",
+        "format": "webp",
+        "width": 320
+      },
+      {
+        "url": "/images/_optimized/services/supervision-welding-vigor-marine.640.avif",
+        "format": "avif",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/services/supervision-welding-vigor-marine.640.webp",
+        "format": "webp",
+        "width": 640
+      },
+      {
+        "url": "/images/_optimized/services/supervision-welding-vigor-marine.960.avif",
+        "format": "avif",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/services/supervision-welding-vigor-marine.960.webp",
+        "format": "webp",
+        "width": 960
+      },
+      {
+        "url": "/images/_optimized/services/supervision-welding-vigor-marine.1280.avif",
+        "format": "avif",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/services/supervision-welding-vigor-marine.1280.webp",
+        "format": "webp",
+        "width": 1280
+      },
+      {
+        "url": "/images/_optimized/services/supervision-welding-vigor-marine.1920.avif",
+        "format": "avif",
+        "width": 1920
+      },
+      {
+        "url": "/images/_optimized/services/supervision-welding-vigor-marine.1920.webp",
+        "format": "webp",
+        "width": 1920
+      }
+    ]
+  },
   "/images/stock/cargo-vessel.jpg": {
     "naturalWidth": 1600,
     "naturalHeight": 1067,
