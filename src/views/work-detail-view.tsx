@@ -78,27 +78,6 @@ const H2: React.CSSProperties = {
   lineHeight: 1.05,
 };
 
-const PENDING_NOTE: React.CSSProperties = {
-  fontFamily: 'var(--font-jetbrains), monospace',
-  fontSize: 12,
-  letterSpacing: '0.18em',
-  textTransform: 'uppercase',
-  color: 'var(--ink-faint)',
-  border: '1px dashed var(--line-2)',
-  borderRadius: 4,
-  padding: '16px 20px',
-  maxWidth: 760,
-  background: 'var(--bg-2)',
-};
-
-function PendingStub({ note }: { note: string }) {
-  return (
-    <div className="kds-mono" style={PENDING_NOTE} role="note">
-      ✦ Pending — {note}
-    </div>
-  );
-}
-
 function buildJsonLd(c: CaseDetail) {
   return {
     '@context': 'https://schema.org',
@@ -268,74 +247,70 @@ export default function WorkCaseView({ slug, locale }: { slug: string; locale: '
           </div>
         </section>
 
-        {/* The brief */}
-        <section style={{ padding: '60px 48px 0' }}>
-          <div style={{ maxWidth: 900, margin: '0 auto' }}>
-            <div className="kds-mono" style={SECTION_LABEL}>
-              01 · The brief
-            </div>
-            <h2 className="kds-display" style={H2}>
-              What the client asked.
-            </h2>
-            {c.brief ? (
-              <p className="kds-sans" style={PROSE}>
-                {c.brief}
-              </p>
-            ) : (
-              <PendingStub note="brief copy to be supplied by KDS." />
-            )}
-          </div>
-        </section>
+        {/* Editorial sections — each one only renders when real content is
+            available. Cases that are still index-only show hero + at-a-glance
+            + references + CTA, never a "Pending" placeholder that Google
+            could index as if it were intended content. */}
 
-        {/* Constraints */}
-        {(c.constraints || !c.brief) && (
+        {c.brief && (
           <section style={{ padding: '60px 48px 0' }}>
             <div style={{ maxWidth: 900, margin: '0 auto' }}>
               <div className="kds-mono" style={SECTION_LABEL}>
-                02 · Constraints
+                The brief
               </div>
               <h2 className="kds-display" style={H2}>
-                What shaped the work.
+                What the client asked.
               </h2>
-              {c.constraints && c.constraints.length > 0 ? (
-                <ul
-                  className="kds-sans"
-                  style={{
-                    ...PROSE,
-                    listStyle: 'none',
-                    padding: 0,
-                    margin: 0,
-                  }}
-                >
-                  {c.constraints.map((line, i) => (
-                    <li
-                      key={i}
-                      style={{
-                        padding: '14px 0',
-                        borderTop: '1px solid var(--line)',
-                      }}
-                    >
-                      {line}
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <PendingStub note="constraints (vessel / site / regulatory) to be added." />
-              )}
+              <p className="kds-sans" style={PROSE}>
+                {c.brief}
+              </p>
             </div>
           </section>
         )}
 
-        {/* Approach */}
-        <section style={{ padding: '60px 48px 0' }}>
-          <div style={{ maxWidth: 900, margin: '0 auto' }}>
-            <div className="kds-mono" style={SECTION_LABEL}>
-              03 · Approach
+        {c.constraints && c.constraints.length > 0 && (
+          <section style={{ padding: '60px 48px 0' }}>
+            <div style={{ maxWidth: 900, margin: '0 auto' }}>
+              <div className="kds-mono" style={SECTION_LABEL}>
+                Constraints
+              </div>
+              <h2 className="kds-display" style={H2}>
+                What shaped the work.
+              </h2>
+              <ul
+                className="kds-sans"
+                style={{
+                  ...PROSE,
+                  listStyle: 'none',
+                  padding: 0,
+                  margin: 0,
+                }}
+              >
+                {c.constraints.map((line, i) => (
+                  <li
+                    key={i}
+                    style={{
+                      padding: '14px 0',
+                      borderTop: '1px solid var(--line)',
+                    }}
+                  >
+                    {line}
+                  </li>
+                ))}
+              </ul>
             </div>
-            <h2 className="kds-display" style={H2}>
-              How we tackled it.
-            </h2>
-            {c.approach && c.approach.length > 0 ? (
+          </section>
+        )}
+
+        {c.approach && c.approach.length > 0 && (
+          <section style={{ padding: '60px 48px 0' }}>
+            <div style={{ maxWidth: 900, margin: '0 auto' }}>
+              <div className="kds-mono" style={SECTION_LABEL}>
+                Approach
+              </div>
+              <h2 className="kds-display" style={H2}>
+                How we tackled it.
+              </h2>
               <ol
                 className="kds-sans"
                 style={{
@@ -350,22 +325,19 @@ export default function WorkCaseView({ slug, locale }: { slug: string; locale: '
                   </li>
                 ))}
               </ol>
-            ) : (
-              <PendingStub note="approach / methodology steps to be added." />
-            )}
-          </div>
-        </section>
-
-        {/* Deliverables */}
-        <section style={{ padding: '60px 48px 0' }}>
-          <div style={{ maxWidth: 900, margin: '0 auto' }}>
-            <div className="kds-mono" style={SECTION_LABEL}>
-              04 · What we delivered
             </div>
-            <h2 className="kds-display" style={H2}>
-              The package.
-            </h2>
-            {c.deliverables && c.deliverables.length > 0 ? (
+          </section>
+        )}
+
+        {c.deliverables && c.deliverables.length > 0 && (
+          <section style={{ padding: '60px 48px 0' }}>
+            <div style={{ maxWidth: 900, margin: '0 auto' }}>
+              <div className="kds-mono" style={SECTION_LABEL}>
+                What we delivered
+              </div>
+              <h2 className="kds-display" style={H2}>
+                The package.
+              </h2>
               <ul
                 className="kds-sans"
                 style={{
@@ -387,22 +359,19 @@ export default function WorkCaseView({ slug, locale }: { slug: string; locale: '
                   </li>
                 ))}
               </ul>
-            ) : (
-              <PendingStub note="deliverables list to be added." />
-            )}
-          </div>
-        </section>
-
-        {/* Outcomes */}
-        <section style={{ padding: '60px 48px 0' }}>
-          <div style={{ maxWidth: 900, margin: '0 auto' }}>
-            <div className="kds-mono" style={SECTION_LABEL}>
-              05 · Outcome
             </div>
-            <h2 className="kds-display" style={H2}>
-              What it produced.
-            </h2>
-            {c.outcomes && c.outcomes.length > 0 ? (
+          </section>
+        )}
+
+        {c.outcomes && c.outcomes.length > 0 && (
+          <section style={{ padding: '60px 48px 0' }}>
+            <div style={{ maxWidth: 900, margin: '0 auto' }}>
+              <div className="kds-mono" style={SECTION_LABEL}>
+                Outcome
+              </div>
+              <h2 className="kds-display" style={H2}>
+                What it produced.
+              </h2>
               <div style={{ display: 'grid', gap: 24, maxWidth: 760 }}>
                 {c.outcomes.map((o, i) => (
                   <div
@@ -443,29 +412,22 @@ export default function WorkCaseView({ slug, locale }: { slug: string; locale: '
                   </div>
                 ))}
               </div>
-            ) : (
-              <PendingStub note="outcome metrics / headline numbers to be added." />
-            )}
-          </div>
-        </section>
+            </div>
+          </section>
+        )}
 
-        {/* Lessons */}
-        {(c.lessons || !c.outcomes) && (
+        {c.lessons && (
           <section style={{ padding: '60px 48px 0' }}>
             <div style={{ maxWidth: 900, margin: '0 auto' }}>
               <div className="kds-mono" style={SECTION_LABEL}>
-                06 · Lessons
+                Lessons
               </div>
               <h2 className="kds-display" style={H2}>
                 What we took away.
               </h2>
-              {c.lessons ? (
-                <p className="kds-sans" style={PROSE}>
-                  {c.lessons}
-                </p>
-              ) : (
-                <PendingStub note="lessons / commentary to be added." />
-              )}
+              <p className="kds-sans" style={PROSE}>
+                {c.lessons}
+              </p>
             </div>
           </section>
         )}

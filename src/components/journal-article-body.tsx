@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import type { JournalArticle, ArticleI18n, ArticleSection, Reference } from '@/content/journal-detail';
+import { ARTICLES_BY_SLUG } from '@/content/journal-detail';
 import { useLocale } from 'next-intl';
 import { ParallaxImageFrame } from '@/components/parallax-image-frame';
 
@@ -114,8 +115,13 @@ export function JournalArticleBody({ article, author }: JournalArticleBodyProps)
     writtenBy: lang === 'pt' ? 'Escrito por' : 'Written by',
     readProfile: lang === 'pt' ? 'Ler perfil completo →' : 'Read full profile →',
     relatedNotes: lang === 'pt' ? 'Notas relacionadas' : 'Related notes',
-    comingSoon: lang === 'pt' ? 'Em breve' : 'Coming soon',
   };
+
+  // Only suggest related articles that actually exist (i.e. are published
+  // and reachable via /journal/{slug}/). Anything referenced but not yet
+  // published is silently dropped so Google never sees "Coming soon" labels
+  // pointing nowhere.
+  const publishedRelated = (view.related ?? []).filter((r) => ARTICLES_BY_SLUG[r.slug]);
 
   return (
     <article>
@@ -510,15 +516,16 @@ export function JournalArticleBody({ article, author }: JournalArticleBodyProps)
         </section>
       )}
 
-      {/* RELATED */}
-      {view.related && view.related.length > 0 && (
+      {/* RELATED — only renders when at least one related article is
+          actually published. */}
+      {publishedRelated.length > 0 && (
         <section style={{ padding: '40px 48px 80px' }}>
           <div style={{ maxWidth: 900, margin: '0 auto' }}>
             <div className="kds-mono" style={{ ...SECTION_LABEL, marginBottom: 24 }}>
               {labels.relatedNotes}
             </div>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-              {view.related.map((r) => (
+              {publishedRelated.map((r) => (
                 <li
                   key={r.slug}
                   style={{
@@ -526,24 +533,13 @@ export function JournalArticleBody({ article, author }: JournalArticleBodyProps)
                     borderTop: '1px solid var(--line)',
                   }}
                 >
-                  <span
+                  <Link
+                    href={`/journal/${r.slug}/`}
                     className="kds-display"
-                    style={{ fontSize: 19, color: 'var(--ink-dim)' }}
+                    style={{ fontSize: 19, color: 'var(--ink)' }}
                   >
                     {r.title}
-                  </span>
-                  <span
-                    className="kds-mono"
-                    style={{
-                      fontSize: 10,
-                      color: 'var(--ink-faint)',
-                      letterSpacing: '0.18em',
-                      textTransform: 'uppercase',
-                      marginLeft: 16,
-                    }}
-                  >
-                    {labels.comingSoon}
-                  </span>
+                  </Link>
                 </li>
               ))}
             </ul>

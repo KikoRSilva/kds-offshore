@@ -21,6 +21,10 @@ const POST_IMGS = [
 export default function JournalView() {
   const lang = useLocale();
   const p = useMessages().pages.journal;
+  // Only published posts reach the DOM and the indexable HTML. Unpublished
+  // entries are kept in messages JSON so they can be flipped on later, but
+  // we never expose "Coming soon" placeholders to search crawlers.
+  const visiblePosts = p.posts.filter((post: { published?: boolean }) => post.published);
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -169,7 +173,7 @@ export default function JournalView() {
                 className="kds-mono"
                 style={{ fontSize: 11, color: 'var(--ink-faint)', letterSpacing: '0.22em', textTransform: 'uppercase' }}
               >
-                06 / 24 {lang === 'pt' ? 'arquivo' : 'archive'}
+                {String(visiblePosts.length).padStart(2, '0')} {lang === 'pt' ? 'publicados' : 'published'}
               </span>
             </div>
           </Reveal>
@@ -181,12 +185,11 @@ export default function JournalView() {
               borderTop: '1px solid var(--line)',
             }}
           >
-            {p.posts.map((post, i) => (
-              <Reveal key={i} delay={i * 0.07}>
+            {visiblePosts.map((post, i) => (
+              <Reveal key={post.slug} delay={i * 0.07}>
                 <Link
-                  href={post.published ? `/journal/${post.slug}/` : '#'}
-                  aria-disabled={!post.published}
-                  className={post.published ? 'kds-card' : ''}
+                  href={`/journal/${post.slug}/`}
+                  className="kds-card"
                   style={{
                     display: 'flex',
                     flexDirection: 'column',
@@ -195,13 +198,11 @@ export default function JournalView() {
                     borderRight: (i + 1) % 3 !== 0 ? '1px solid var(--line)' : 'none',
                     borderBottom: '1px solid var(--line)',
                     minHeight: 320,
-                    opacity: post.published ? 1 : 0.65,
-                    cursor: post.published ? 'pointer' : 'default',
                   }}
                 >
                   <div>
                     <KDSImage
-                      src={POST_IMGS[i]}
+                      src={POST_IMGS[i % POST_IMGS.length]}
                       aspect="16/10"
                       alt={post.t}
                     />
@@ -211,9 +212,6 @@ export default function JournalView() {
                         style={{ fontSize: 10, color: 'var(--accent)', letterSpacing: '0.22em', textTransform: 'uppercase', marginBottom: 16 }}
                       >
                         {post.tag}
-                        {!post.published && (
-                          <span style={{ marginLeft: 12, color: 'var(--ink-faint)' }}>· Coming soon</span>
-                        )}
                       </div>
                       <h4
                         className="kds-display"
