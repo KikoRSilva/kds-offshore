@@ -422,7 +422,7 @@ Enviamos uma breve carta quatro vezes por ano — ensaios de metodologia, notas 
 
 **Iniciar um projeto.**
 
-Conte-nos sobre a embarcação. Uma chamada de 30 minutos com um dos nossos sócios — sem apresentação, sem comercial. Dois engenheiros, o seu problema, uma resposta honesta sobre se somos o parceiro certo.
+Conte-nos sobre o seu projeto. Uma chamada de 30 minutos com um dos nossos sócios — sem apresentação, sem comercial. Dois engenheiros, o seu problema, uma resposta honesta sobre se somos o parceiro certo.
 
 ### Três promessas
 1. **Resposta em 24 h** — um sócio nomeado responderá num dia útil.

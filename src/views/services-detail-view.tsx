@@ -154,7 +154,7 @@ const ui = (locale: Locale) =>
         sectionPublications: 'Investigação',
         publicationsTitle: 'Publicações de referência',
         ctaLabel: 'Solicitar este serviço',
-        ctaTitle: 'Conte-nos sobre a embarcação.',
+        ctaTitle: 'Conte-nos sobre o seu projeto.',
         ctaBody:
           'Uma chamada de 30 minutos com um sócio. Sem apresentação, sem comercial. Dois engenheiros, o vosso problema, e uma resposta honesta sobre se a KDS é a empresa certa.',
         ctaButton: 'Iniciar conversa',

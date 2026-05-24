@@ -167,7 +167,7 @@
   },
   "cta": {
     "label": "Colaborações",
-    "title": "Conte-nos sobre a embarcação.",
+    "title": "Conte-nos sobre o seu projeto.",
     "sub": "Trinta minutos com um dos nossos sócios. Sem apresentação. Sem comercial. Apenas dois engenheiros e o seu problema.",
     "btn": "Iniciar conversa",
     "mail": "geral@kdsoffshore.pt",
@@ -478,8 +478,8 @@
     "contact": {
       "eyebrow": "Iniciar um projeto",
       "title1": "Conte-nos",
-      "title2": "sobre a",
-      "title3": "embarcação.",
+      "title2": "sobre o",
+      "title3": "seu projeto.",
       "lede": "Uma chamada de 30 minutos com um dos nossos sócios. Sem apresentação, sem comercial. Dois engenheiros, o seu problema, uma resposta honesta sobre se somos o parceiro certo.",
       "form": {
         "name": "O seu nome",
