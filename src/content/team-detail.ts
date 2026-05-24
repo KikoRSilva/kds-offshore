@@ -1,7 +1,8 @@
 // Detailed profiles for /team/[slug]/ pages.
-// Anonymous team-card members (Naval architecture team, Hydrodynamics team, etc.)
-// are intentionally NOT given individual /team/ pages until real names and bios
-// are provided by the user. Adding placeholder profiles would degrade E-E-A-T.
+// The named team-card members on /about (Filipe Inok, Lúcia Moreira, José Gordo,
+// José Dias, José Abreu Valente, Francisco Ribeiro e Silva) are intentionally NOT
+// given individual /team/ pages until full bios, credentials and publications are
+// supplied. Adding placeholder profiles would degrade E-E-A-T.
 
 export interface Publication {
   title: string;

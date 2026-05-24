@@ -85,13 +85,15 @@ const FOUNDER_PERSON_JSONLD = {
   url: `${SITE_URL}/team/sergio-ribeiro-e-silva/`,
 };
 
+// Portrait per team member, same order as pages.about.team.
 const PORTRAITS = [
-  '/images/kds/portrait-sergio.webp',
-  '/images/kds/studio-engineering-team.webp',
-  '/images/stock/vessel-ocean.jpg',
-  '/images/stock/port-cranes.jpg',
-  '/images/kds/studio-rd-lab.webp',
-  '/images/stock/team-collab.jpg',
+  '/images/kds/portrait-sergio.webp', // Sérgio Ribeiro e Silva
+  '/images/team/filipe-inok.png', // Filipe Inok
+  '/images/team/lucia-moreira.jpg', // Lúcia Moreira
+  '/images/team/jose-gordo.png', // José Gordo
+  '/images/team/jose-dias.jpg', // José Dias
+  '/images/team/valente-abreu.jpg', // José Abreu Valente
+  '/images/team/francisco-ribeiro-e-silva.jpg', // Francisco Ribeiro e Silva
 ];
 
 export default function AboutView() {

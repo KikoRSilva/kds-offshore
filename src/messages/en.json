@@ -334,29 +334,34 @@
           "bio": "PhD, Instituto Superior Técnico, Lisbon. MSc Naval Architecture, University College London. MSc Mechanical Engineering, IST. Author of the Ship@Sea time-domain simulation code."
         },
         {
-          "name": "Naval architecture team",
-          "role": "Hull design & stability",
-          "bio": "Stability books, intact and damage analysis, structural FEA, and class-society liaison across GL, BV and DNV."
+          "name": "Filipe Inok",
+          "role": "Hydrodynamics, CFD & electrotechnics",
+          "bio": "Computational fluid dynamics and hydrodynamic analysis, with an electrotechnical engineering background spanning vessel power and electrical systems."
         },
         {
-          "name": "Hydrodynamics team",
-          "role": "CFD & seakeeping",
-          "bio": "WAMIT, OpenFOAM and STAR-CCM+ practitioners. Resistance, propulsion, seakeeping, manoeuvrability and parametric rolling analyses."
+          "name": "Lúcia Moreira",
+          "role": "Hydrodynamics & manoeuvrability",
+          "bio": "Hydrodynamics and ship-manoeuvrability analyses — seakeeping, course-keeping and probabilistic manoeuvrability studies."
         },
         {
-          "name": "Offshore engineering team",
-          "role": "Mooring & structures",
-          "bio": "Mooring system design and dynamic positioning analysis for renewables, aquaculture and offshore platforms."
+          "name": "José Gordo",
+          "role": "Structural projects",
+          "bio": "Structural design and analysis — scantlings, finite-element assessment, and class-society structural approval."
         },
         {
-          "name": "Decarbonisation team",
-          "role": "OPS, alt-fuels & retrofits",
-          "bio": "Carbon-footprint baselining, OPS / cold-ironing design, and fleet renewal pathways."
+          "name": "José Dias",
+          "role": "Project management",
+          "bio": "Planning, coordination and delivery across the studio's engineering assignments, from kick-off to handover."
         },
         {
-          "name": "Collaborators",
-          "role": "Academic & industrial",
-          "bio": "Active collaborations with WavEC Offshore Renewables, IH Cantabria, IST, and class-society partners on R&D and project work."
+          "name": "José Abreu Valente",
+          "role": "Head of basic design",
+          "bio": "Leads basic design — concept and feasibility studies, general arrangements, and early-stage naval architecture."
+        },
+        {
+          "name": "Francisco Ribeiro e Silva",
+          "role": "IT management & software development",
+          "bio": "IT management and software development — internal tooling, simulation infrastructure, and the studio's digital systems."
         }
       ],
       "principles": [

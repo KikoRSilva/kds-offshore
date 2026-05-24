@@ -334,29 +334,34 @@
           "bio": "Doutoramento, Instituto Superior Técnico, Lisboa. MSc Arquitetura Naval, University College London. MSc Engenharia Mecânica, IST. Autor do código de simulação Ship@Sea."
         },
         {
-          "name": "Equipa de arquitetura naval",
-          "role": "Projeto de casco & estabilidade",
-          "bio": "Livros de estabilidade, análise intacta e em avaria, FEA estrutural e ligação com sociedades classificadoras GL, BV e DNV."
+          "name": "Filipe Inok",
+          "role": "Hidrodinâmica, CFD & eletrotecnia",
+          "bio": "Dinâmica de fluidos computacional (CFD) e análise hidrodinâmica, com formação em engenharia eletrotécnica nos sistemas elétricos e de potência a bordo."
         },
         {
-          "name": "Equipa de hidrodinâmica",
-          "role": "CFD & comportamento no mar",
-          "bio": "Especialistas em WAMIT, OpenFOAM e STAR-CCM+. Análises de resistência, propulsão, comportamento no mar, manobrabilidade e rolamento paramétrico."
+          "name": "Lúcia Moreira",
+          "role": "Hidrodinâmica & manobrabilidade",
+          "bio": "Análises de hidrodinâmica e manobrabilidade de navios — comportamento no mar, manutenção de rumo e estudos probabilísticos de manobrabilidade."
         },
         {
-          "name": "Equipa de engenharia offshore",
-          "role": "Amarração & estruturas",
-          "bio": "Projeto de sistemas de amarração e análise de posicionamento dinâmico para renováveis, aquacultura e plataformas offshore."
+          "name": "José Gordo",
+          "role": "Projetos estruturais",
+          "bio": "Projeto e análise estrutural — escantilhões, análise por elementos finitos e aprovação estrutural junto de sociedades classificadoras."
         },
         {
-          "name": "Equipa de descarbonização",
-          "role": "OPS, combustíveis alt. & retrofits",
-          "bio": "Análise de pegada de carbono, projeto OPS / cold-ironing e planos de renovação de frota."
+          "name": "José Dias",
+          "role": "Gestão de projeto",
+          "bio": "Planeamento, coordenação e entrega dos trabalhos de engenharia do estúdio, do arranque à conclusão."
         },
         {
-          "name": "Colaboradores",
-          "role": "Académicos & industriais",
-          "bio": "Colaborações ativas com WavEC Offshore Renewables, IH Cantabria, IST e parceiros de sociedades classificadoras em I&D e projetos."
+          "name": "José Abreu Valente",
+          "role": "Responsável por projeto base",
+          "bio": "Lidera o projeto base — estudos de conceito e viabilidade, arranjos gerais e arquitetura naval em fase inicial."
+        },
+        {
+          "name": "Francisco Ribeiro e Silva",
+          "role": "Gestão de TI & desenvolvimento de software",
+          "bio": "Gestão de TI e desenvolvimento de software — ferramentas internas, infraestrutura de simulação e sistemas digitais do estúdio."
         }
       ],
       "principles": [
