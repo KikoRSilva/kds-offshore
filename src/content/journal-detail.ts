@@ -241,7 +241,7 @@ export const ARTICLES: JournalArticle[] = [
           },
         ],
         related: [
-          { slug: 'parametric-rolling-belmullet', title: 'Rolamento paramétrico em plataformas OWC híbridas: lições de Belmullet' },
+          { slug: 'parametric-rolling-belmullet', title: 'Balanço paramétrico em plataformas OWC híbridas: lições de Belmullet' },
           { slug: 'rudder-flap-vs-bow-thruster', title: 'Porque o leme com flap importa mais do que o propulsor de proa' },
         ],
       },

@@ -147,7 +147,7 @@ export default function HomeView() {
                 {[
                   { v: 56, s: '+', l: lang === 'pt' ? 'projetos' : 'projects' },
                   { v: 3, s: '', l: lang === 'pt' ? 'ativos' : 'active' },
-                  { v: 10, s: '', l: lang === 'pt' ? 'anos no estúdio' : 'years in studio' },
+                  { v: 10, s: '', l: lang === 'pt' ? 'anos de atividade' : 'years in studio' },
                 ].map((stat) => (
                   <div key={stat.l} style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
                     <CountUp
@@ -195,7 +195,7 @@ export default function HomeView() {
                 style={{ fontSize: 'clamp(40px, 4vw, 72px)', margin: 0, fontWeight: 300 }}
               >
                 {lang === 'pt' ? (
-                  <>Lancha-piloto <span style={{ fontStyle: 'italic', color: 'var(--accent)' }}>100% elétrica</span> de 15m, dimensionada por CFD.</>
+                  <>Barco de pilotos <span style={{ fontStyle: 'italic', color: 'var(--accent)' }}>100% elétrico</span> de 15 m, curva de potência por CFD.</>
                 ) : (
                   <>Fully <span style={{ fontStyle: 'italic', color: 'var(--accent)' }}>electric</span> 15m pilot boat, sized by CFD.</>
                 )}
@@ -220,8 +220,8 @@ export default function HomeView() {
                   src={IMG.cfd}
                   alt={
                     lang === 'pt'
-                      ? 'Visualização CFD (Simerics MP) do campo de pressão dinâmica em torno do casco da lancha-piloto SEAPOWER 1500 a 20 nós'
-                      : 'CFD (Simerics MP) dynamic-pressure field visualisation around the SEAPOWER 1500 pilot boat hull at 20 knots'
+                      ? 'Visualização CFD (Free surface) do campo de pressão dinâmica em torno do casco do barco de pilotos SEAPOWER 1500 a 20 nós'
+                      : 'CFD (Free surface) dynamic-pressure field visualisation around the SEAPOWER 1500 pilot boat hull at 20 knots'
                   }
                   style={{
                     width: '100%',
@@ -255,7 +255,7 @@ export default function HomeView() {
                   aria-hidden="true"
                 >
                   <div style={{ fontSize: 10, letterSpacing: '0.2em', textTransform: 'uppercase' }}>
-                    Simerics MP · pressure field
+                    Free surface · pressure field
                   </div>
                   <div
                     style={{
@@ -276,7 +276,7 @@ export default function HomeView() {
                   aspect="5/3"
                   alt={
                     lang === 'pt'
-                      ? 'Render 3D da lancha-piloto SEAPOWER 1500 — 15 m, 100% elétrica, casco em HDPE'
+                      ? 'Render 3D do barco de pilotos SEAPOWER 1500 — 15 m, 100% elétrico, casco em HDPE'
                       : '3D render of the SEAPOWER 1500 pilot boat — 15 m, fully electric, HDPE hull'
                   }
                   parallax
@@ -600,10 +600,10 @@ export default function HomeView() {
       >
         <div className="marquee-track" aria-hidden>
           {[
-            'WavEC', 'Vera Navis', 'TecnoVeritas', 'Concept', 'SVA', 'Blue Oasis', 'Euroshide',
+            'WavEC', 'Vera Navis', 'TecnoVeritas', 'Concept', 'SVA', 'Blue Oasis',
             'HPMS', 'idD', 'IH Cantabria', 'Marine', 'Ace', 'Nautiber', 'SeaPower', 'OneOcean',
             'Future Proman', 'Blue Geo Lighthouse', 'APRAM',
-            'WavEC', 'Vera Navis', 'TecnoVeritas', 'Concept', 'SVA', 'Blue Oasis', 'Euroshide',
+            'WavEC', 'Vera Navis', 'TecnoVeritas', 'Concept', 'SVA', 'Blue Oasis',
             'HPMS', 'idD', 'IH Cantabria', 'Marine', 'Ace', 'Nautiber', 'SeaPower', 'OneOcean',
             'Future Proman', 'Blue Geo Lighthouse', 'APRAM',
           ].map((p, i) => (

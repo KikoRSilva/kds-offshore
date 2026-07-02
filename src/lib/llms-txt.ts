@@ -82,11 +82,11 @@ ${LANGUAGE_BLOCK_EN}
 
 const PT = `# KDS Offshore
 
-> Consultoria independente de arquitetura naval, engenharia offshore e descarbonização sediada em Oeiras, Portugal. Fundada em 2016 por arquitetos navais do Instituto Superior Técnico (Universidade de Lisboa). A KDS Offshore projeta navios, estruturas marítimas e sistemas de energia — cobrindo hidrodinâmica, CFD, previsão de manobrabilidade, projeto de sistemas de amarração, conversão de navios e supervisão de novas construções. O estúdio trabalha em português e inglês.
+> Consultoria independente de arquitetura naval, engenharia offshore e descarbonização sediada em Oeiras, Portugal. Fundada em 2016 por arquitetos navais do Instituto Superior Técnico (Universidade de Lisboa). A KDS Offshore projeta navios, estruturas marítimas e sistemas de energia — cobrindo hidrodinâmica, CFD, previsão de manobrabilidade, projeto de sistemas de amarração, conversão de navios e supervisão de novas construções. O gabinete de engenharia trabalha em português e inglês.
 
 A KDS Offshore é uma prática pequena, liderada por sócios séniores. Os projetos combinam tipicamente arquitetura naval de primeiros princípios com análise computacional (CFD, comportamento no mar, amarração) e trabalho de conformidade com sociedades classificadoras (DNV, Lloyd's Register, Bureau Veritas, RINA, GL).
 
-O estúdio fica na Rua Ernesto Veiga de Oliveira, nº 22, lote 8, R/C Esq., 2780-052 Oeiras, Portugal. A entidade legal é KDS Offshore, Lda., NIPC 514 248 091. Contacto: geral@kdsoffshore.pt, +351 929 111 655.
+O gabinete de engenharia fica na Rua Ernesto Veiga de Oliveira, nº 22, lote 8, R/C Esq., 2780-052 Oeiras, Portugal. A entidade legal é KDS Offshore, Lda., NIPC 514 248 091. Contacto: geral@kdsoffshore.pt, +351 929 111 655.
 
 Fundador e arquiteto naval principal: Sérgio Ribeiro e Silva — Doutoramento pelo Instituto Superior Técnico (Lisboa), MSc Arquitetura Naval pela University College London, MSc Engenharia Mecânica pelo IST. Autor do código de simulação no domínio temporal Ship@Sea.
 
@@ -97,9 +97,9 @@ ${LANGUAGE_BLOCK_PT}
 ## Páginas principais
 
 - [Início](${SITE_URL}/): Visão geral da prática, posicionamento e projeto em destaque.
-- [Sobre](${SITE_URL}/about/): Fundador Sérgio Ribeiro e Silva (Doutorado IST, MSc UCL), quatro princípios operacionais, cronograma do estúdio de dez anos (2015–2026).
+- [Sobre](${SITE_URL}/about/): Fundador Sérgio Ribeiro e Silva (Doutorado IST, MSc UCL), quatro princípios operacionais, cronograma do gabinete de engenharia de dez anos (2015–2026).
 - [Serviços](${SITE_URL}/services/): Sete capacidades, metodologia, ferramentas, prazos.
-- [Projetos selecionados](${SITE_URL}/work/): Casos de estudo curados, incluindo os estudos probabilísticos de manobrabilidade do Corvo e do Silver Mary, a avaliação de rolamento paramétrico da GRS Power Platform, o retrofit OPS Green Ports Madeira / APRAM, e a remotorização do Belize I.
+- [Projetos selecionados](${SITE_URL}/work/): Casos de estudo curados, incluindo os estudos probabilísticos de manobrabilidade do Corvo e do Silver Mary, a avaliação de balanço paramétrico da GRS Power Platform, o retrofit OPS Green Ports Madeira / APRAM, e a remotorização do Belize I.
 - [Diário](${SITE_URL}/journal/): Notas de campo, ensaios de metodologia e comentário técnico.
 - [Contacto](${SITE_URL}/contact/): Como iniciar um projeto — chamada de 30 minutos com um dos sócios.
 
@@ -117,12 +117,12 @@ ${LANGUAGE_BLOCK_PT}
 
 ## Perfis da equipa
 
-- [Sérgio Ribeiro e Silva](${SITE_URL}/team/sergio-ribeiro-e-silva/): Fundador, CEO, arquiteto naval principal. Doutorado IST, MSc UCL. Professor Auxiliar com agregação de Hidrodinâmica no IST. Autor do código de simulação Ship@Sea. Google Scholar: 402 citações, h-index 10. Áreas: rolamento paramétrico, comportamento no mar no domínio temporal, conversores de energia das ondas, amarração.
+- [Sérgio Ribeiro e Silva](${SITE_URL}/team/sergio-ribeiro-e-silva/): Fundador, CEO, engenheiro e arquiteto naval principal. Doutorado IST, MSc UCL. Professor Auxiliar com agregação de Hidrodinâmica no IST. Autor do código de simulação Ship@Sea. Google Scholar: 402 citações, h-index 10. Áreas: balanço paramétrico, comportamento no mar no domínio temporal, conversores de energia das ondas, amarração.
 
 ## Referência
 
 - [Métodos](${SITE_URL}/methods/): Como executamos trabalho de CFD, FEA, amarração e comportamento no mar — normas de malhagem, protocolos de validação, ligação com sociedades classificadoras, regras de documentação.
-- [Glossário](${SITE_URL}/glossary/): Definições em português claro de rolamento paramétrico, OPS / cold ironing, previsão de manobrabilidade, CII, CFD, WAMIT, RAO, FEA, EU ETS Maritime, entre outros — escritas como a KDS usa cada termo.
+- [Glossário](${SITE_URL}/glossary/): Definições em português claro de balanço paramétrico, OPS / cold ironing, previsão de manobrabilidade, CII, CFD, WAMIT, RAO, FEA, EU ETS Maritime, entre outros — escritas como a KDS usa cada termo.
 
 ## Artigos
 

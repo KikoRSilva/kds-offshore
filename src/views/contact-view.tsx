@@ -264,7 +264,7 @@ export default function ContactView() {
                     value={form.message}
                     onChange={(e) => set('message')(e.target.value)}
                     rows={6}
-                    placeholder={lang === 'pt' ? 'Uma lancha-piloto de 12 m, actualmente a consumir 90 L/h a 22 nós...' : 'A 12 m pilot boat, currently burning 90 L/h at 22 kn...'}
+                    placeholder={lang === 'pt' ? 'Um barco de pilotos de 12 m, atualmente a consumir 90 L/h a 22 nós...' : 'A 12 m pilot boat, currently burning 90 L/h at 22 kn...'}
                     style={{
                       ...inputStyle,
                       resize: 'vertical',

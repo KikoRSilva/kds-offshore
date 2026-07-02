@@ -161,7 +161,7 @@ const ui = (locale: Locale) =>
         readBrief: 'Ler briefing →',
         deepDiveMethods: 'Os nossos métodos →',
         otherCapabilities: 'Outras capacidades',
-        otherDisciplinesPrefix: 'outras disciplinas, um estúdio',
+        otherDisciplinesPrefix: 'outras disciplinas, um gabinete de engenharia',
       }
     : {
         breadcrumbHome: 'Home',

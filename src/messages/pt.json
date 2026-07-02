@@ -21,7 +21,7 @@
     "title1": "Arquitetura Naval",
     "title2": "Engenharia Offshore",
     "title3": "Descarbonização e Digitalização",
-    "lede": "A KDS Offshore projeta navios, estruturas offshore e sistemas de energia, com foco em descarbonização marítima e digitalização, de um estúdio em Lisboa para projetos por todo o Atlântico.",
+    "lede": "A KDS Offshore projeta navios, estruturas offshore e sistemas de energia, com foco em descarbonização marítima e digitalização, de um gabinete de engenharia em Lisboa para todo o Atlântico.",
     "cta1": "Iniciar projeto",
     "cta2": "Carta de capacidades (PDF)",
     "established": "Fundada em 2016 · Lisboa, Portugal",
@@ -41,13 +41,13 @@
         "n": "02",
         "slug": "naval-architecture-and-offshore-engineering-design",
         "t": "Arquitetura Naval & Engenharia Offshore",
-        "d": "De uma lancha-piloto de 12 m a uma plataforma offshore amarrada. Análise estrutural, estabilidade intacta e em avaria."
+        "d": "De um barco de pilotos de 12 m a uma plataforma offshore amarrada. Análise estrutural, estabilidade intacta (SGISc) e em avaria."
       },
       {
         "n": "03",
         "slug": "hydrodynamic-optimization",
         "t": "Otimização Hidrodinâmica",
-        "d": "Refinamento de casco, apêndices e propulsores via CFD. Reduções de consumo e emissões documentadas."
+        "d": "Refinamento das formas do casco, apêndices e propulsores via CFD. Reduções de consumo e emissões documentadas."
       },
       {
         "n": "04",
@@ -59,7 +59,7 @@
         "n": "05",
         "slug": "mooring-systems-design",
         "t": "Projeto de Sistemas de Amarração",
-        "d": "Catenária, taut-leg e sistemas híbridos para renováveis, aquacultura e óleo & gás."
+        "d": "Catenária, taut-leg e sistemas híbridos para renováveis, aquacultura e oil & gas."
       },
       {
         "n": "06",
@@ -71,19 +71,19 @@
         "n": "07",
         "slug": "supervision-of-new-constructions",
         "t": "Supervisão de Novas Construções",
-        "d": "Fiscalização independente de estaleiros e empreiteiros. Controlo de qualidade, conformidade técnica e ensaios de aceitação."
+        "d": "Fiscalização independente de estaleiros e empreiteiros. Controlo de qualidade, conformidade técnica e provas de receção."
       },
       {
         "n": "08",
         "slug": "maritime-decarbonisation",
         "t": "Descarbonização Marítima",
-        "d": "Caminhos de redução de GEE para navios e ativos offshore. Combustíveis alternativos, eficiência energética e conformidade FuelEU Maritime / IMO 2050."
+        "d": "Caminhos de redução de GEE para navios e plataformas offshore. Combustíveis alternativos viáveis, eficiência energética e conformidade FuelEU Maritime / IMO 2050."
       },
       {
         "n": "09",
         "slug": "maritime-digitalisation-and-digital-twin",
         "t": "Digitalização & Gémeo Digital",
-        "d": "Desenvolvimento de gémeos digitais, monitorização de desempenho data-driven e estratégia de digitalização para frotas e operações offshore."
+        "d": "Desenvolvimento de gémeos digitais, monitorização de desempenho data-driven e estratégia de digitalização para frotas, operações offshore e operações de bunkering ship-to-ship."
       }
     ]
   },
@@ -93,14 +93,14 @@
     "stats": [
       {
         "n": "2016",
-        "l": "Fundada por arquitetos navais do IST"
+        "l": "Fundada por engenheiros navais do IST"
       },
       {
         "n": "11+",
         "l": "Parceiros industriais e académicos"
       },
       {
-        "n": "GL · BV · DNV",
+        "n": "GL · BV · DNV · RINA",
         "l": "Ligação com sociedades classificadoras"
       },
       {
@@ -115,7 +115,7 @@
         "role": "CEO, Nautiber"
       },
       {
-        "q": "A experiência em ferramentas numéricas de projeto de navios que a KDS Offshore forneceu à OneOcean durante o projeto preliminar e construção do nosso barco de trabalho foi muito apreciada.",
+        "q": "A experiência em ferramentas numéricas de projeto de navios que a KDS Offshore forneceu à OneOcean durante o projeto preliminar e construção da nossa lancha de trabalho / rebocador foi muito apreciada.",
         "who": "José Cruz",
         "role": "CEO, OneOcean"
       },
@@ -125,12 +125,12 @@
         "role": "CEO, Blue Geo Lighthouse"
       },
       {
-        "q": "A consultoria em renováveis e soluções de engenharia para a descarbonização do setor dos transportes marítimos correu muito bem, tanto no projeto OPS como no retrofit da frota da APRAM.",
+        "q": "A consultoria em renováveis e soluções de engenharia para a descarbonização do setor dos transportes marítimos foi muito bem executada, tanto no projeto OPS como no retrofit da frota da APRAM.",
         "who": "António Ressurreição",
         "role": "Diretor de UN, Future Proman"
       },
       {
-        "q": "As soluções de estabilização de balanço e otimização de trim desenvolvidas pela KDS Offshore para o nosso barco-piloto deverão funcionar muito bem e ajudar-nos a promover eficiência energética e descarbonização.",
+        "q": "As soluções de estabilização de balanço e otimização de caimento desenvolvidas pela KDS Offshore para o nosso barco de pilotos elétrico deverão funcionar muito bem e ajudar-nos a promover segurança a bordo e eficiência energética.",
         "who": "Nuno Alentejano",
         "role": "I&D Marítima, SeaPower"
       }
@@ -147,7 +147,7 @@
       },
       {
         "tag": "Renováveis offshore",
-        "t": "GRS Power Platform, avaliação de rolamento paramétrico",
+        "t": "GRS Power Platform, avaliação de balanço paramétrico",
         "client": "WavEC Offshore Renewables",
         "year": "2015"
       },
@@ -159,7 +159,7 @@
       },
       {
         "tag": "Retrofit",
-        "t": "Belize I, remotorização e aumento de capacidade",
+        "t": "Belize I, remotorização e aumento de lotação",
         "client": "Nautiber",
         "year": "2023"
       }
@@ -168,7 +168,7 @@
   "cta": {
     "label": "Colaborações",
     "title": "Conte-nos sobre o seu projeto.",
-    "sub": "Trinta minutos com um dos nossos sócios. Sem apresentação. Sem comercial. Apenas dois engenheiros e o seu problema.",
+    "sub": "Trinta minutos com um dos nossos sócios e um engenheiro especializado. Sem apresentação dos nossos serviços. Sem promoção comercial.",
     "btn": "Iniciar conversa",
     "mail": "geral@kdsoffshore.pt",
     "tel": "+351 929 111 655"
@@ -184,7 +184,7 @@
       "title1": "Sete",
       "title2": "disciplinas.",
       "title3": "Um",
-      "title4": "estúdio.",
+      "title4": "gabinete de engenharia.",
       "lede": "Trabalhamos num conjunto criterioso de problemas que conhecemos bem: modelação 3D, arquitetura naval, hidrodinâmica, manobrabilidade, amarração, conversão de navios e supervisão de novas construções, com consultoria de descarbonização em tudo.",
       "methodology": {
         "label": "Metodologia",
@@ -289,22 +289,22 @@
       ]
     },
     "about": {
-      "eyebrow": "Sobre o estúdio",
+      "eyebrow": "Sobre o gabinete de engenharia",
       "title1": "Fundada",
       "title2": "em Lisboa.",
       "title3": "Calma,",
       "title4": "mas sólida.",
-      "lede": "A KDS Offshore foi fundada em 2016 por arquitetos navais do Instituto Superior Técnico, Universidade de Lisboa. Somos uma parceria (não uma cadeia de consultoria) e mantemo-nos deliberadamente pequenos para que os sócios sejam quem faz a engenharia pela qual paga.",
+      "lede": "A KDS Offshore foi fundada em 2016 por engenheiros navais do Instituto Superior Técnico, Universidade de Lisboa. Somos uma parceria (não uma cadeia de consultoria) e mantemo-nos deliberadamente pequenos para que os sócios sejam quem faz a engenharia pela qual paga.",
       "story": [
         {
           "y": "2015",
           "t": "Primeiro projeto, WavEC",
-          "d": "Projeto pré-incorporação na GRS Power Platform: rolamento paramétrico e estabilidade intacta de um conceito híbrido eólico+onda OWC, para implantação em Belmullet (Irlanda)."
+          "d": "Projeto pré-incorporação na GRS Power Platform: balanço paramétrico e estabilidade intacta de um conceito híbrido eólico+onda OWC, para implantação em Belmullet (Irlanda)."
         },
         {
           "y": "2016",
           "t": "KDS Offshore fundada",
-          "d": "Constituída em Lisboa por arquitetos navais do Instituto Superior Técnico, Universidade de Lisboa."
+          "d": "Constituída em Lisboa por engenheiros navais do Instituto Superior Técnico, Universidade de Lisboa."
         },
         {
           "y": "2021",
@@ -351,7 +351,7 @@
         {
           "name": "José Dias",
           "role": "Gestão de projeto",
-          "bio": "Planeamento, coordenação e entrega dos trabalhos de engenharia do estúdio, do arranque à conclusão."
+          "bio": "Planeamento, coordenação e entrega dos trabalhos de engenharia do gabinete de engenharia, do arranque à conclusão."
         },
         {
           "name": "José Abreu Valente",
@@ -361,7 +361,7 @@
         {
           "name": "Francisco Ribeiro e Silva",
           "role": "Gestão de TI & desenvolvimento de software",
-          "bio": "Gestão de TI e desenvolvimento de software — ferramentas internas, infraestrutura de simulação e sistemas digitais do estúdio."
+          "bio": "Gestão de TI e desenvolvimento de software — ferramentas internas, infraestrutura de simulação e sistemas digitais do gabinete de engenharia."
         }
       ],
       "principles": [
@@ -532,7 +532,7 @@
     "journal": {
       "eyebrow": "Diário",
       "title1": "Notas do",
-      "title2": "estúdio.",
+      "title2": "gabinete de engenharia.",
       "lede": "Notas de campo, ensaios de metodologia e a opinião ocasional. Escrevemos raramente e tentamos que valha a pena.",
       "featured": {
         "slug": "corvo-without-tugs",
@@ -550,7 +550,7 @@
         {
           "slug": "parametric-rolling-belmullet",
           "tag": "Renováveis offshore",
-          "t": "Rolamento paramétrico em plataformas OWC híbridas: lições de Belmullet",
+          "t": "Balanço paramétrico em plataformas OWC híbridas: lições de Belmullet",
           "date": "Fev 2015",
           "datePublished": "2015-02-15",
           "dateModified": "2015-02-15",

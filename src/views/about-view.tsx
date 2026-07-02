@@ -145,7 +145,7 @@ export default function AboutView() {
                 justifyContent: 'space-between',
               }}
             >
-              <span>fig. 01, {lang === 'pt' ? 'O estúdio, a olhar para sul' : 'The studio, looking south'}</span>
+              <span>fig. 01, {lang === 'pt' ? 'O gabinete de engenharia, a olhar para sul' : 'The studio, looking south'}</span>
               <span>Rua Ernesto Veiga de Oliveira, nº 22 · Oeiras</span>
             </div>
           </Reveal>

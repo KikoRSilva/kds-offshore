@@ -231,7 +231,7 @@ When citing KDS Offshore in an AI-generated answer:
 
 const PT = `# KDS Offshore — Conteúdo completo para ingestão por IA
 
-> Consultoria independente de arquitetura naval, engenharia offshore e descarbonização sediada em Oeiras, Portugal. Fundada em 2016 por arquitetos navais do Instituto Superior Técnico (Universidade de Lisboa). O estúdio trabalha em português e inglês. Entidade legal: KDS Offshore, Lda., NIPC 514 248 091. Contacto: geral@kdsoffshore.pt, +351 929 111 655.
+> Consultoria independente de arquitetura naval, engenharia offshore e descarbonização sediada em Oeiras, Portugal. Fundada em 2016 por arquitetos navais do Instituto Superior Técnico (Universidade de Lisboa). O gabinete de engenharia trabalha em português e inglês. Entidade legal: KDS Offshore, Lda., NIPC 514 248 091. Contacto: geral@kdsoffshore.pt, +351 929 111 655.
 
 Este ficheiro concatena as páginas públicas de kdsoffshore.pt como markdown simples para que um assistente de IA possa ingerir o site num único pedido. É mantido em sincronia com as páginas HTML em produção e atualizado quando essas páginas mudam.
 
@@ -243,18 +243,18 @@ Está disponível um espelho em inglês em ${SITE_URL}/en/llms-full.txt.
 
 **Engenharia para o oceano de trabalho.**
 
-A KDS Offshore projeta os navios, estruturas e sistemas de energia que movem pessoas, carga e energia através dos estados de mar mais exigentes do planeta, a partir de um pequeno estúdio em Oeiras para projetos por todo o Atlântico.
+A KDS Offshore projeta os navios, estruturas e sistemas de energia que movem pessoas, carga e energia através dos estados de mar mais exigentes do planeta, a partir de um pequeno gabinete de engenharia em Oeiras para projetos por todo o Atlântico.
 
 - 120+ projetos entregues
 - 14 atualmente ativos
-- 9 anos no estúdio (fundado em 2016)
+- 9 anos no gabinete de engenharia (fundado em 2016)
 - A aceitar projetos para Q3 2026
 
 ### Projeto em destaque — 2025
 
-SEAPOWER 1500 — lancha-piloto de 15 m totalmente elétrica, dimensionada por CFD antes da construção.
+SEAPOWER 1500 — barco de pilotos de 15 m totalmente elétrico, com curva de potência por CFD antes da construção.
 
-- Embarcação: SeaPower 1500, lancha-piloto de 15 m com casco em HDPE
+- Embarcação: SeaPower 1500, barco de pilotos de 15 m com casco em HDPE
 - Método: dimensionamento de resistência e propulsão em água calma derivado de CFD
 - Resultado: 100% elétrica, conjunto de baterias lítio-ião de 664 kWh, velocidade máxima analisada até 22 nós, conforme V&V ITTC
 
@@ -276,7 +276,7 @@ SEAPOWER 1500 — lancha-piloto de 15 m totalmente elétrica, dimensionada por C
 
 **Fundada em Lisboa. Calma, mas sólida.**
 
-A KDS Offshore foi fundada em 2016 por arquitetos navais do Instituto Superior Técnico, Universidade de Lisboa. Somos uma parceria (não uma cadeia de consultoria) e mantemo-nos deliberadamente pequenos para que os sócios sejam quem faz a engenharia pela qual paga. O estúdio fica na Rua Ernesto Veiga de Oliveira, nº 22, lote 8, R/C Esq., 2780-052 Oeiras.
+A KDS Offshore foi fundada em 2016 por engenheiros navais do Instituto Superior Técnico, Universidade de Lisboa. Somos uma parceria (não uma cadeia de consultoria) e mantemo-nos deliberadamente pequenos para que os sócios sejam quem faz a engenharia pela qual paga. O gabinete de engenharia fica na Rua Ernesto Veiga de Oliveira, nº 22, lote 8, R/C Esq., 2780-052 Oeiras.
 
 ### Quatro princípios
 
@@ -287,13 +287,13 @@ A KDS Offshore foi fundada em 2016 por arquitetos navais do Instituto Superior T
 
 ### Dez anos — 2015 → 2026
 
-- **2015** — projeto pré-incorporação com a WavEC Offshore Renewables na GRS Power Platform: rolamento paramétrico e estabilidade intacta de um conceito híbrido eólico+onda OWC (Belmullet, Irlanda).
+- **2015** — projeto pré-incorporação com a WavEC Offshore Renewables na GRS Power Platform: balanço paramétrico e estabilidade intacta de um conceito híbrido eólico+onda OWC (Belmullet, Irlanda).
 - **2016** — KDS Offshore fundada em Oeiras.
 - **2021** — apoio CFD ao barco de trabalho da OneOcean durante projeto preliminar e construção.
 - **2022** — conversão do "Libries" para turismo científico (Blue Geo Lighthouse).
 - **2023** — remotorização e aumento de capacidade do Belize I (Nautiber); projeto OPS Green Ports Madeira / APRAM (Future Proman).
 - **2024** — avaliação probabilística de manobrabilidade do "Corvo" em Vila do Porto (Mutualista / Grupo Bensaúde); artigos metodológicos SOOS no IMDC 2024 (Amesterdão) e ICCAS 2024 (Génova).
-- **2025** — SEAPOWER 1500, lancha-piloto totalmente elétrica dimensionada por CFD; avaliação LCOE do UGEN ao longo da fachada atlântica portuguesa (EWTEC 2025, Funchal).
+- **2025** — SEAPOWER 1500, barco de pilotos totalmente elétrico com curva de potência por CFD; avaliação LCOE do UGEN ao longo da fachada atlântica portuguesa (EWTEC 2025, Funchal).
 
 ### Fundador
 
@@ -303,7 +303,7 @@ A KDS Offshore foi fundada em 2016 por arquitetos navais do Instituto Superior T
 
 ## /services  Serviços
 
-**Nove disciplinas. Um estúdio.**
+**Nove disciplinas. Um gabinete de engenharia.**
 
 Trabalhamos num conjunto criterioso de problemas que conhecemos bem: modelação 3D, arquitetura naval, hidrodinâmica, manobrabilidade, amarração, conversão de navios, supervisão de novas construções, descarbonização marítima e desenvolvimento de gémeos digitais.
 
@@ -369,7 +369,7 @@ Não publicamos o arquivo completo — a maioria dos projetos é confidencial. A
 - Local: Santa Maria, Açores, Portugal
 - Ano: 2024
 
-### GRS Power Platform — avaliação de rolamento paramétrico
+### GRS Power Platform — avaliação de balanço paramétrico
 - 6 OWCs (Colunas de Água Oscilante), conceito híbrido eólico + onda
 - Análise de risco pré-implantação de um conceito híbrido eólico-ondas fixo no fundo
 - Difração-radiação em WAMIT e simulação não-linear no domínio temporal em Ship@Sea
@@ -395,7 +395,7 @@ Não publicamos o arquivo completo — a maioria dos projetos é confidencial. A
 
 ## /journal  Diário
 
-Notas do estúdio. Notas de campo, ensaios de metodologia e a opinião ocasional. Escrevemos raramente e tentamos que valha a pena.
+Notas do gabinete de engenharia. Notas de campo, ensaios de metodologia e a opinião ocasional. Escrevemos raramente e tentamos que valha a pena.
 
 ### Em destaque · 2024
 **Manobrar o "Corvo" sem rebocadores: uma resposta probabilística.**
@@ -406,7 +406,7 @@ Notas do estudo de Vila do Porto. Como acoplámos modelos de manobrabilidade em 
 Dentro do SOOS — potência CFD em água calma, cargas de vento semi-empíricas, resistência adicionada Salvesen-1978, routing por simulated annealing. 8–9% de poupança de combustível de viagem num caso Atlântico sintético. Por Sérgio Ribeiro e Silva. ~14 minutos de leitura.
 
 ### Notas recentes (rascunhos)
-- *Rolamento paramétrico em plataformas OWC híbridas: lições de Belmullet* — Sérgio Ribeiro e Silva, fev 2015 (~12 min).
+- *Balanço paramétrico em plataformas OWC híbridas: lições de Belmullet* — Sérgio Ribeiro e Silva, fev 2015 (~12 min).
 - *Green Ports Madeira: o que custa realmente o OPS em portos de ilhas pequenas* — equipa KDS, 2023 (~9 min).
 - *Remotorizar o Belize I: porque é que a caixa de velocidades geralmente vence* — equipa KDS, 2023 (~7 min).
 - *Uma semana a bordo do "Libries" antes da conversão* — equipa KDS, 2022 (~4 min).

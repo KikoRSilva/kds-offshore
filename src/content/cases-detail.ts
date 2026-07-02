@@ -147,7 +147,7 @@ export const CASES: CaseDetail[] = [
       pt: {
         tag: 'Renováveis offshore',
         category: 'Amarração & offshore',
-        title: 'GRS Power Platform — avaliação de rolamento paramétrico',
+        title: 'GRS Power Platform — avaliação de balanço paramétrico',
         description:
           'Análise de risco pré-implantação de um conceito híbrido eólico-ondas fixo no fundo (seis Colunas de Água Oscilante). Difração-radiação em WAMIT e simulação não-linear no domínio temporal em Ship@Sea.',
         heroAlt:
@@ -286,13 +286,13 @@ export const CASES: CaseDetail[] = [
       'Maritime engineering detail — placeholder image for the SeaPower pilot boat engagement.',
     i18n: {
       pt: {
-        tag: 'CFD · Lancha-piloto',
+        tag: 'CFD · Barco de pilotos',
         category: 'Manobrabilidade & CFD',
-        title: 'SeaPower — otimização hidrodinâmica de lancha-piloto',
+        title: 'SeaPower — otimização hidrodinâmica de barco de pilotos',
         description:
-          'Programa de estabilização de balanço e otimização de trim para a lancha-piloto da SeaPower. Refinamento hidrodinâmico por CFD destinado a promover eficiência energética e descarbonização em operações portuárias.',
+          'Programa de estabilização de balanço e otimização de trim para o barco de pilotos da SeaPower. Refinamento hidrodinâmico por CFD destinado a promover eficiência energética e descarbonização em operações portuárias.',
         heroAlt:
-          'Pormenor de engenharia marítima — imagem ilustrativa para o projeto da lancha-piloto SeaPower.',
+          'Pormenor de engenharia marítima — imagem ilustrativa para o projeto do barco de pilotos SeaPower.',
       },
     },
   },

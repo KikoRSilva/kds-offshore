@@ -215,15 +215,15 @@ export const TEAM: TeamMember[] = [
     photoAlt: 'Sérgio Ribeiro e Silva — founder of KDS Offshore',
     i18n: {
       pt: {
-        jobTitle: 'CEO & Fundador · Arquiteto Naval Principal',
+        jobTitle: 'CEO & Fundador · Engenheiro e Arquiteto Naval Principal',
         shortBio:
-          'Fundador da KDS Offshore. Arquiteto naval, hidrodinamicista e autor do código de simulação no domínio temporal Ship@Sea. Professor Auxiliar com agregação de Hidrodinâmica no Instituto Superior Técnico, Universidade de Lisboa.',
+          'Fundador da KDS Offshore. Engenheiro e Arquiteto Naval, hidrodinamicista e autor do código de simulação no domínio temporal Ship@Sea. Professor Auxiliar com agregação de Hidrodinâmica no Instituto Superior Técnico, Universidade de Lisboa.',
         longBio: [
           'Sérgio Ribeiro e Silva fundou a KDS Offshore em 2016, na sequência de duas décadas de trabalho prático na Marinha Portuguesa e de uma carreira académica ininterrupta no Instituto Superior Técnico (IST), Universidade de Lisboa, onde é Professor Auxiliar com agregação de Hidrodinâmica no Centro de Engenharia e Arquitetura Naval.',
-          'A sua investigação centra-se no estudo analítico, numérico e experimental da hidrodinâmica de estruturas flutuantes — com particular profundidade em rolamento paramétrico, comportamento no mar no domínio temporal, e dinâmica de conversores de energia das ondas. É o autor do código de simulação no domínio temporal Ship@Sea, uma plataforma não-linear de seis graus de liberdade que evoluiu continuamente a partir do seu trabalho de doutoramento e que sustenta os trabalhos de comportamento no mar e manobrabilidade mais exigentes da KDS Offshore.',
+          'A sua investigação centra-se no estudo analítico, numérico e experimental da hidrodinâmica de estruturas flutuantes — com particular profundidade em balanço paramétrico, comportamento no mar no domínio temporal, e dinâmica de conversores de energia das ondas. É o autor do código de simulação no domínio temporal Ship@Sea, uma plataforma não-linear de seis graus de liberdade que evoluiu continuamente a partir do seu trabalho de doutoramento e que sustenta os trabalhos de comportamento no mar e manobrabilidade mais exigentes da KDS Offshore.',
           'Passou 21 anos na Marinha Portuguesa antes de transitar inteiramente para a vida académica e a consultoria. Fora de Portugal, a sua investigação e ensino de pós-doutoramento na Newcastle University (Reino Unido) moldaram o rigor experimental que caracteriza a metodologia da KDS — todas as afirmações numéricas são confrontadas com um ensaio em modelo ou prova de mar, sempre que estejam disponíveis.',
-          'Na KDS Offshore lidera pessoalmente os projetos mais exigentes — desde a avaliação de rolamento paramétrico da GRS Power Platform para a WavEC em Belmullet (2015) até aos estudos probabilísticos de manobrabilidade do Corvo e do Silver Mary em Vila do Porto (2024). O padrão dos seus trabalhos é consistente: um problema difícil de hidrodinâmica, um modelo numérico que admite a não-linearidade em vez de a linearizar, e um resultado sobre o qual o operador pode atuar.',
-          'O trabalho recente estendeu a prática do estúdio à descarbonização marítima. Em 2024, em coautoria com M. Bento Moreira do CENTEC, IST, publicou dois artigos complementares sobre um Ship Operation Optimisation System (SOOS) integrado e em tempo real, que combina planeamento de viagem, weather routing e medidas com tanque anti-rolling para colocar navios de caso de estudo em conformidade com o Carbon Intensity Indicator (CII) da IMO: um artigo metodológico no IMDC 2024 em Amesterdão e um artigo de sistemas mais completo no ICCAS / RINA, mais tarde no mesmo ano. Em paralelo, continua a liderar o programa do conversor de energia das ondas flutuante UGEN; a edição mais recente — uma avaliação do Custo Nivelado de Energia do dispositivo ao longo da fachada atlântica portuguesa (Porto, Nazaré, Sines), em coautoria com Lourenço e Pinto — foi apresentada no EWTEC 2025 no Funchal.',
+          'Na KDS Offshore lidera pessoalmente os projetos mais exigentes — desde a avaliação de balanço paramétrico da GRS Power Platform para a WavEC em Belmullet (2015) até aos estudos probabilísticos de manobrabilidade do Corvo e do Silver Mary em Vila do Porto (2024). O padrão dos seus trabalhos é consistente: um problema difícil de hidrodinâmica, um modelo numérico que admite a não-linearidade em vez de a linearizar, e um resultado sobre o qual o operador pode atuar.',
+          'O trabalho recente estendeu a prática do gabinete de engenharia à descarbonização marítima. Em 2024, em coautoria com M. Bento Moreira do CENTEC, IST, publicou dois artigos complementares sobre um Ship Operation Optimisation System (SOOS) integrado e em tempo real, que combina planeamento de viagem, weather routing e medidas com tanque anti-rolling para colocar navios de caso de estudo em conformidade com o Carbon Intensity Indicator (CII) da IMO: um artigo metodológico no IMDC 2024 em Amesterdão e um artigo de sistemas mais completo no ICCAS / RINA, mais tarde no mesmo ano. Em paralelo, continua a liderar o programa do conversor de energia das ondas flutuante UGEN; a edição mais recente — uma avaliação do Custo Nivelado de Energia do dispositivo ao longo da fachada atlântica portuguesa (Porto, Nazaré, Sines), em coautoria com Lourenço e Pinto — foi apresentada no EWTEC 2025 no Funchal.',
         ],
         credentials: [
           'Doutoramento em Arquitetura Naval e Engenharia Marítima — Instituto Superior Técnico, Universidade de Lisboa',
@@ -236,7 +236,7 @@ export const TEAM: TeamMember[] = [
           'Arquitetura naval',
           'Engenharia offshore',
           'Hidrodinâmica de estruturas flutuantes',
-          'Rolamento paramétrico',
+          'Balanço paramétrico',
           'Simulação de comportamento no mar no domínio temporal',
           'Previsão de manobrabilidade',
           'Conversores de energia das ondas',
@@ -260,7 +260,7 @@ export const TEAM: TeamMember[] = [
           {
             name: 'KDS Offshore, Lda.',
             url: 'https://kdsoffshore.pt/',
-            role: 'Fundador, CEO, Arquiteto Naval Principal',
+            role: 'Fundador, CEO, Engenheiro e Arquiteto Naval Principal',
           },
         ],
         photoAlt: 'Sérgio Ribeiro e Silva — fundador da KDS Offshore',

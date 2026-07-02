@@ -32,7 +32,7 @@ export const SERVICES_PT: ServiceDetail[] = [
     ],
     outcomes: [
       { metric: '100%', label: 'estanque na entrega', context: 'verificação manifold automatizada em cada entrega' },
-      { metric: '0', label: 'retrabalho geométrico após revisão de classe', context: 'lancha-piloto SeaPower 12 m, barco de trabalho OneOcean' },
+      { metric: '0', label: 'retrabalho geométrico após revisão de classe', context: 'barco de pilotos SeaPower 12 m, barco de trabalho OneOcean' },
       { metric: '2–4 sem.', label: 'prazo típico para casco de 15–30 m', context: 'do plano de linhas à entrega' },
       { metric: 'STANAG 4684', label: 'conforme por defeito', context: 'convenções HLA em todos os modelos paramétricos' },
     ],
@@ -89,7 +89,7 @@ export const SERVICES_PT: ServiceDetail[] = [
     ],
     cases: [
       { title: 'Barco de trabalho OneOcean', client: 'OneOcean', year: '2021' },
-      { title: 'Lancha-piloto SeaPower 12 m', client: 'SeaPower', year: '2022' },
+      { title: 'Barco de pilotos SeaPower 12 m', client: 'SeaPower', year: '2022' },
     ],
     faq: [
       {
@@ -238,7 +238,7 @@ export const SERVICES_PT: ServiceDetail[] = [
       'Configuração do solver documentada (reproduzível)',
     ],
     outcomes: [
-      { metric: '−18%', label: 'consumo de combustível em cruzeiro', context: 'lancha-piloto SeaPower 12 m, 2022 (validada por CFD)' },
+      { metric: '−18%', label: 'consumo de combustível em cruzeiro', context: 'barco de pilotos SeaPower 12 m, 2022 (validado por CFD)' },
       { metric: '8–9%', label: 'combustível poupado em caso atlântico sintético', context: 'programa SOOS, publicado no IMDC 2024 e ICCAS 2024' },
       { metric: '3–5%', label: 'resíduo típico contra provas de mar', context: 'malha validada na previsão de resistência' },
       { metric: '~80 pp', label: 'relatório CFD por estudo', context: 'pronto para sociedade classificadora, com configuração de solver documentada' },
@@ -313,7 +313,7 @@ export const SERVICES_PT: ServiceDetail[] = [
     ],
     cases: [
       {
-        title: 'Lancha-piloto SeaPower 12 m — −18% de consumo em cruzeiro',
+        title: 'Barco de pilotos SeaPower 12 m — −18% de consumo em cruzeiro',
         client: 'SeaPower',
         year: '2022',
       },
@@ -471,7 +471,7 @@ export const SERVICES_PT: ServiceDetail[] = [
     overview: [
       'A amarração é a disciplina que transforma um conjunto de dados meteoceânicos numa lista de materiais em aço. Projetamos sistemas spread, single-point e de apoio a posicionamento dinâmico para FPSOs, eólica flutuante, conversores de energia das ondas, aquacultura e plataformas offshore — permanentes ou temporários.',
       'Triagem quase-estática com ARIANE-3D, depois análise dinâmica em OrcaFlex ou MOSES, e finalmente avaliação de fadiga segundo a regra DNV / API aplicável. O resultado é um envelope de tensão nas linhas, uma tabela de dimensionamento de âncoras e um procedimento de instalação que o operador pode entregar ao empreiteiro.',
-      'Trabalhamos esta disciplina desde a avaliação de rolamento paramétrico da GRS Power Platform com a WavEC em Belmullet, em 2015. As lições difíceis ficaram registadas no log de hipóteses de cada projeto que executamos.',
+      'Trabalhamos esta disciplina desde a avaliação de balanço paramétrico da GRS Power Platform com a WavEC em Belmullet, em 2015. As lições difíceis ficaram registadas no log de hipóteses de cada projeto que executamos.',
     ],
     whatWeDeliver: [
       'Relatório de análise de amarração (quase-estático & dinâmico)',
@@ -562,7 +562,7 @@ export const SERVICES_PT: ServiceDetail[] = [
     ],
     cases: [
       {
-        title: 'GRS Power Platform — avaliação de rolamento paramétrico',
+        title: 'GRS Power Platform — avaliação de balanço paramétrico',
         client: 'WavEC Offshore Renewables',
         year: '2015',
       },
@@ -796,7 +796,7 @@ export const SERVICES_PT: ServiceDetail[] = [
     overview: [
       'A descarbonização marítima já não é uma abstração estratégica. O FuelEU Maritime (Regulamento (UE) 2023/1805), a extensão do EU ETS ao transporte marítimo, a Estratégia GEE IMO 2023 (MEPC.377(80)) — próximo de zero líquido até cerca de 2050, com 20–30% de redução absoluta até 2030 e 70–80% até 2040 em base well-to-wake — e os Princípios de Poseidon impõem obrigações concretas e datadas a armadores, operadores, autoridades portuárias e financiadores. A pergunta para o operador já não é se descarbonizar. É qual o caminho que fecha em engenharia, prazo e CAPEX, e como é que esse caminho é defendido perante o organismo reconhecido, a administração de bandeira e o banco financiador.',
       'A KDS Offshore trabalha o lado técnico de ponta a ponta: linhas de base operacionais de emissões well-to-wake segundo a metodologia IMO DCS / CII; viabilidade de combustíveis alternativos em bateria, híbrido, LNG, metanol, amoníaco e biocombustível de segunda geração; dimensionamento de eletrificação e powertrain híbrido; retrofits de eficiência energética (casco, hélice, apêndices, calor residual); projeto de fornecimento de energia em terra (OPS / cold-ironing); e otimização operacional — trim, velocidade, weather routing — através do nosso Ship Operation Optimisation System (SOOS) publicado. Cada recomendação está fundamentada em hidrodinâmica quantificada por CFD, metodologia revista por pares e modelação GEE de ciclo de vida. Nenhuma narrativa ESG genérica.',
-      'O trabalho de referência inclui o SEAPOWER 1500 — uma lancha-piloto de 15 m, totalmente elétrica, com banco de baterias lítio-ião de 664 kWh, dimensionada por CFD pré-construção em 2025 — o estudo OPS de fornecimento de energia em terra para a autoridade portuária da Madeira APRAM, entregue em parceria com a Future Proman no programa Green Ports Madeira (2023), e a remotorização e aumento de capacidade do catamarã "Belize I" para a Nautiber (2023), entregue dentro do prazo. Cada projeto começa com uma linha de base operacional medida e termina com um caminho documentado que o operador pode defender perante reguladores e financiadores.',
+      'O trabalho de referência inclui o SEAPOWER 1500 — um barco de pilotos de 15 m, totalmente elétrico, com banco de baterias lítio-ião de 664 kWh e curva de potência por CFD pré-construção em 2025 — o estudo OPS de fornecimento de energia em terra para a autoridade portuária da Madeira APRAM, entregue em parceria com a Future Proman no programa Green Ports Madeira (2023), e a remotorização e aumento de capacidade do catamarã "Belize I" para a Nautiber (2023), entregue dentro do prazo. Cada projeto começa com uma linha de base operacional medida e termina com um caminho documentado que o operador pode defender perante reguladores e financiadores.',
       'A espinha dorsal metodológica é publicada, não opacidade proprietária. Em 2024 o sócio Sérgio Ribeiro e Silva e Miguel Bento Moreira (IST/CENTEC) apresentaram o programa de otimização SOOS na 15.ª International Marine Design Conference (IMDC 2024, Amesterdão, paper 832) e novamente no ICCAS 2024 (RINA, Génova). Num porta-contentores geared de 712 TEU em condições atlânticas sintéticas — vento oeste a 23 nós, corrente west-going a 2,14 nós, vaga oeste regular de 1,25 m / 10 s, perna de 215 km — o SOOS convergiu em menos de 100 epochs de Vectorized Simulated Annealing e reduziu o consumo de combustível de viagem em 8–9% face à rota direta da grande circunferência, mantendo a poupança mesmo com um obstáculo (ilha, corredor marítimo) inserido no espaço de procura. Combinado com 25+ anos de investigação hidrodinâmica do sócio no IST e 364+ citações no Google Scholar, o histórico técnico é auditável, não promocional.',
       'A regra da KDS: física primeiro, otimização depois, narrativa por último. CAPEX, OPEX, GEE, maturidade tecnológica e disponibilidade de reabastecimento são pontuados lado a lado para os caminhos candidatos — o operador recebe uma matriz comparativa e uma recomendação escrita, não um discurso de venda. Quando um caminho não fecha nos números, dizemos isso na viabilidade, não depois do aço estar a ser cortado.',
     ],
@@ -814,7 +814,7 @@ export const SERVICES_PT: ServiceDetail[] = [
       'Anexos técnicos para divulgação Princípios de Poseidon / Sea Cargo Charter',
     ],
     outcomes: [
-      { metric: '100%', label: 'propulsão elétrica entregue', context: 'SEAPOWER 1500 — lancha-piloto de 15 m, 664 kWh lítio-ião, dimensionada por CFD pré-construção (SeaPower, 2025)' },
+      { metric: '100%', label: 'propulsão elétrica entregue', context: 'SEAPOWER 1500 — barco de pilotos de 15 m, 664 kWh lítio-ião, curva de potência por CFD pré-construção (SeaPower, 2025)' },
       { metric: '8–9%', label: 'combustível poupado em caso atlântico', context: 'porta-contentores geared de 712 TEU, programa SOOS — revisão por pares IMDC 2024 + ICCAS 2024' },
       { metric: '<100 epochs', label: 'convergência do otimizador', context: 'Vectorized Simulated Annealing dentro do stack SOOS — resposta em tempo real apta para operação' },
       { metric: 'OPS', label: 'projeto de energia em terra para autoridade portuária da Madeira', context: 'Green Ports Madeira / APRAM via Future Proman (2023)' },
@@ -922,7 +922,7 @@ export const SERVICES_PT: ServiceDetail[] = [
       'ISO 19030 — monitorização de desempenho em serviço',
     ],
     cases: [
-      { title: 'SEAPOWER 1500 — lancha-piloto 100% elétrica de 15 m (dimensionada por CFD pré-construção)', client: 'SeaPower', year: '2025' },
+      { title: 'SEAPOWER 1500 — barco de pilotos 100% elétrico de 15 m (curva de potência por CFD pré-construção)', client: 'SeaPower', year: '2025' },
       { title: 'Green Ports Madeira — projeto OPS / energia em terra para frota da APRAM', client: 'APRAM via Future Proman', year: '2023' },
       { title: '"Belize I" — remotorização e aumento de capacidade do catamarã', client: 'Nautiber', year: '2023' },
       { title: 'SOOS — otimização de viagem em tempo real (porta-contentores 712 TEU, 8–9% de poupança)', client: 'KDS R&D · IST/CENTEC', year: '2024' },
@@ -969,8 +969,8 @@ export const SERVICES_PT: ServiceDetail[] = [
     overview: [
       'A maioria dos "gémeos digitais" marítimos hoje vendidos são dashboards sobre fluxos SCADA. Úteis para consciência situacional, mas não conseguem responder à pergunta que o operador realmente tem: "e se mudarmos o trim em um grau? E se baixarmos meio nó? E se desviarmos desta frente? E se fizermos retrofit a este hélice?" Responder a isso exige um modelo baseado em física — e essa é a camada que a KDS Offshore constrói.',
       'Acoplamos modelos hidrodinâmicos derivados de CFD a fluxos de sensores a bordo para produzir um gémeo que vive ao lado dos dados, não no lugar deles. O mesmo modelo de física que dimensionou a embarcação durante o projeto continua na operação como preditor calibrado de resistência, consumo de combustível, sensibilidade ao trim e trajetória CII. A arquitetura segue ISO/IEC 23247 (Digital Twin Framework) para a estratificação modelo / dados / atores, e ISO 19030 (monitorização de desempenho e consumo de combustível em navio) para o ciclo de calibração em serviço. Resíduos documentados e bandas de incerteza substituem confiança caixa-preta.',
-      'O sócio Sérgio Ribeiro e Silva (Doutorado IST, MSc UCL, 364+ citações Google Scholar, h-index 10) constrói simuladores de seakeeping e manobra baseados em física desde o seu doutoramento no IST em 2005 sobre rolamento paramétrico. O código interno Ship@Sea no domínio temporal é o descendente operacional dessa linha de trabalho, e carrega o mesmo pedigree de validação (rolamento paramétrico: Ribeiro e Silva 2005, Ocean Engineering 2013). O gémeo que recebe não é o primeiro produto de uma Series-A. É uma codebase hidrodinâmica de 20 anos ligada aos vossos sensores.',
-      'O trabalho de referência inclui o SEAPOWER 1500 — uma lancha-piloto de 15 m totalmente elétrica cujo gémeo digital foi construído antes do aço ser cortado (2025) — e o Ship Operation Optimisation System (SOOS) em tempo real que reduz consumo de combustível e emissões em navegação e em escalas portuárias. O SOOS combina uma curva de potência em água calma derivada de CFD, cargas de vento semi-empíricas, o modelo Salvesen-1978 de resistência adicionada em ondas, trim através do centro de gravidade, e um otimizador de weather routing por Vectorized Simulated Annealing. Num porta-contentores geared de 712 TEU em condições atlânticas sintéticas, o SOOS amostrou uma população de 200 rotas candidatas, convergiu em menos de 100 epochs (limite 750), e reduziu o consumo de combustível de viagem em 8–9% face à rota direta da grande circunferência, mantendo a poupança mesmo com um obstáculo (ilha, corredor marítimo) inserido no espaço de procura. Publicado no IMDC 2024 (Amesterdão, paper 832) e ICCAS 2024 (RINA, Génova). O otimizador não tem hiperparâmetros que a ponte tenha de ajustar.',
+      'O sócio Sérgio Ribeiro e Silva (Doutorado IST, MSc UCL, 364+ citações Google Scholar, h-index 10) constrói simuladores de seakeeping e manobra baseados em física desde o seu doutoramento no IST em 2005 sobre balanço paramétrico. O código interno Ship@Sea no domínio temporal é o descendente operacional dessa linha de trabalho, e carrega o mesmo pedigree de validação (balanço paramétrico: Ribeiro e Silva 2005, Ocean Engineering 2013). O gémeo que recebe não é o primeiro produto de uma Series-A. É uma codebase hidrodinâmica de 20 anos ligada aos vossos sensores.',
+      'O trabalho de referência inclui o SEAPOWER 1500 — um barco de pilotos de 15 m totalmente elétrico cujo gémeo digital foi construído antes do aço ser cortado (2025) — e o Ship Operation Optimisation System (SOOS) em tempo real que reduz consumo de combustível e emissões em navegação e em escalas portuárias. O SOOS combina uma curva de potência em água calma derivada de CFD, cargas de vento semi-empíricas, o modelo Salvesen-1978 de resistência adicionada em ondas, trim através do centro de gravidade, e um otimizador de weather routing por Vectorized Simulated Annealing. Num porta-contentores geared de 712 TEU em condições atlânticas sintéticas, o SOOS amostrou uma população de 200 rotas candidatas, convergiu em menos de 100 epochs (limite 750), e reduziu o consumo de combustível de viagem em 8–9% face à rota direta da grande circunferência, mantendo a poupança mesmo com um obstáculo (ilha, corredor marítimo) inserido no espaço de procura. Publicado no IMDC 2024 (Amesterdão, paper 832) e ICCAS 2024 (RINA, Génova). O otimizador não tem hiperparâmetros que a ponte tenha de ajustar.',
       'A metodologia é publicada, não opacidade proprietária. Os dois papers subjacentes documentam o algoritmo de otimização, o modelo hidrodinâmico, o contexto regulatório (objetivo de conformidade CII) e o caso de validação. Os operadores recebem um gémeo que podem auditar, as sociedades classificadoras recebem um modelo que podem rever, e os financiadores recebem um quadro que podem defender numa divulgação Princípios de Poseidon. Caixas pretas não sobrevivem a uma conversa EEXI / CII.',
     ],
     whatWeDeliver: [
@@ -987,7 +987,7 @@ export const SERVICES_PT: ServiceDetail[] = [
       'Metodologia revista por pares por trás de cada afirmação',
     ],
     outcomes: [
-      { metric: 'Pré-construção', label: 'gémeo entregue antes do aço cortado', context: 'SEAPOWER 1500 — lancha-piloto 100% elétrica de 15 m, SeaPower (2025)' },
+      { metric: 'Pré-construção', label: 'gémeo entregue antes do aço cortado', context: 'SEAPOWER 1500 — barco de pilotos 100% elétrico de 15 m, SeaPower (2025)' },
       { metric: '8–9%', label: 'combustível poupado em viagem (caso atlântico sintético)', context: 'porta-contentores geared de 712 TEU, programa SOOS, IMDC 2024 (paper 832) + ICCAS 2024' },
       { metric: '<100 epochs', label: 'convergência do otimizador', context: 'Vectorized Simulated Annealing sobre 200 rotas candidatas; limite era 750 epochs' },
       { metric: '0', label: 'hiperparâmetros que a ponte tem de ajustar', context: 'apoio à decisão em tempo real apto para operação — por design' },
@@ -1079,7 +1079,7 @@ export const SERVICES_PT: ServiceDetail[] = [
       },
     ],
     tools: [
-      'Simerics MP — baseline CFD (referência da lancha-piloto elétrica)',
+      'Simerics MP — baseline CFD (referência do barco de pilotos elétrico)',
       'OpenFOAM / STAR-CCM+ — CFD (resistência e propulsão de produção)',
       'WAMIT — difração / radiação, geração de RAOs para o núcleo de seakeeping',
       'Ship@Sea (proprietário KDS, FORTRAN) — seakeeping não-linear no domínio temporal',
