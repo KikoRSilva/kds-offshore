@@ -1,8 +1,8 @@
 'use client';
 
-import { createContext, useContext, useEffect, useState, ReactNode, useTransition } from 'react';
+import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import { useLocale } from 'next-intl';
-import { usePathname, useRouter } from '@/i18n/navigation';
+import { usePathname, getPathname } from '@/i18n/navigation';
 import type { Locale } from '@/i18n/routing';
 
 type Theme = 'dark' | 'light';
@@ -24,9 +24,7 @@ const SiteContext = createContext<SiteContextValue>({
 
 export function SiteProvider({ children }: { children: ReactNode }) {
   const locale = useLocale() as Locale;
-  const router = useRouter();
   const pathname = usePathname();
-  const [, startTransition] = useTransition();
 
   const [theme, setTheme] = useState<Theme>('dark');
   const [mounted, setMounted] = useState(false);
@@ -47,9 +45,18 @@ export function SiteProvider({ children }: { children: ReactNode }) {
 
   const toggleLang = () => {
     const nextLocale: Locale = locale === 'pt' ? 'en' : 'pt';
-    startTransition(() => {
-      router.replace(pathname, { locale: nextLocale });
-    });
+    // Build the target path via getPathname (no forcePrefix). The router's
+    // replace(path, { locale }) forces a locale prefix even for the default
+    // locale, producing /pt/… URLs — but with localePrefix: 'as-needed' the
+    // default locale (pt) is served at the root by app/(default) and is
+    // excluded from the static export, so /pt/… would 404. getPathname honours
+    // 'as-needed': '/en' for en, '/' for pt.
+    const href = getPathname({ href: pathname, locale: nextLocale });
+    // Match the site's `trailingSlash: true` output (e.g. /en → /en/) so the
+    // static host serves the right file. Switching locale crosses two separate
+    // root layouts — a full document load regardless — so navigate hard.
+    const target = href.endsWith('/') ? href : `${href}/`;
+    window.location.replace(target);
   };
 
   return (
