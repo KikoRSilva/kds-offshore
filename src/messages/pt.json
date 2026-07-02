@@ -217,10 +217,8 @@
         "items": [
           "STAR-CCM+ · CFD",
           "OpenFOAM · CFD",
-          "Maxsurf · estabilidade",
           "Ship@Sea · estabilidade",
           "Ansys Aqwa · comportamento no mar",
-          "Orcaflex · amarração",
           "KDS Mooring · amarração",
           "Rhino + Grasshopper · modelação geométrica",
           "DNV · ligação de classe",

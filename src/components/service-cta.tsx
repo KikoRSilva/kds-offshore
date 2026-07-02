@@ -47,7 +47,7 @@ export function ServiceCTA() {
           ) : (
             <>
               {"Let's talk about "}
-              <span style={{ fontStyle: 'italic', color: 'var(--accent)' }}>your vessel.</span>
+              <span style={{ fontStyle: 'italic', color: 'var(--accent)' }}>your project.</span>
             </>
           )}
         </h2>
