@@ -41,7 +41,7 @@ export function ServiceCTA() {
             <>
               Vamos falar sobre{' '}
               <span style={{ fontStyle: 'italic', color: 'var(--accent)' }}>
-                a sua embarcação.
+                o seu projeto.
               </span>
             </>
           ) : (

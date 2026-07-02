@@ -292,7 +292,7 @@ export default function ServicesView() {
               style={{ fontSize: 'clamp(36px, 4vw, 64px)', margin: 0, fontWeight: 300, lineHeight: 1.1 }}
             >
               {lang === 'pt'
-                ? <>Cotamos honorários fixos para âmbitos fixos. Sem tarifas horárias, sem surpresas. <span style={{ fontStyle: 'italic', color: 'var(--accent)' }}>Se o briefing muda, a proposta também muda, por escrito.</span></>
+                ? <>Cotamos honorários fixos para âmbitos fixos. Sem tarifas horárias, sem surpresas. <span style={{ fontStyle: 'italic', color: 'var(--accent)' }}>Se o âmbito se altera, a proposta também se altera, tudo por escrito.</span></>
                 : <>We quote fixed fees against fixed scopes. No hourly rates, no surprises. <span style={{ fontStyle: 'italic', color: 'var(--accent)' }}>If the brief changes, the proposal does too, in writing.</span></>
               }
             </h2>

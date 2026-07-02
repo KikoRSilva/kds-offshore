@@ -184,8 +184,8 @@
       "title1": "Sete",
       "title2": "disciplinas.",
       "title3": "Um",
-      "title4": "gabinete de engenharia.",
-      "lede": "Trabalhamos num conjunto criterioso de problemas que conhecemos bem: modelação 3D, arquitetura naval, hidrodinâmica, manobrabilidade, amarração, conversão de navios e supervisão de novas construções, com consultoria de descarbonização em tudo.",
+      "title4": "gabinete.",
+      "lede": "Trabalhamos num conjunto criterioso de problemas que conhecemos bem: modelação 3D, arquitetura naval, hidrodinâmica, manobrabilidade, amarração, conversão de navios e supervisão de novas construções, e ainda consultoria de descarbonização do setor do transporte marítimo.",
       "methodology": {
         "label": "Metodologia",
         "title": "Como trabalhamos.",
@@ -193,17 +193,17 @@
           {
             "n": "01",
             "t": "Descoberta & definição de âmbito",
-            "d": "Uma chamada de 30 minutos para compreender o navio, o operador e o desafio que originou o projeto. Dizemos logo se somos o parceiro certo."
+            "d": "Uma chamada de 30 minutos para compreender o projeto, o operador e o desafio que originou o contacto. Informamos de imediato se somos o parceiro adequado."
           },
           {
             "n": "02",
             "t": "Proposta técnica",
-            "d": "Uma proposta de honorários fixos e âmbito fixo com os principais responsáveis nomeados, entregáveis, percurso de classificação e riscos. Sem ambiguidade. Em cinco dias úteis."
+            "d": "Uma proposta de honorários fixos e âmbito fixo com os principais responsáveis nomeados, entregáveis, percurso de classificação e riscos associados. Sem ambiguidades. Resposta em cinco dias úteis."
           },
           {
             "n": "03",
             "t": "Engenharia",
-            "d": "Sessões de trabalho semanais com o operador. Análises CFD, FEA estrutural, livros de estabilidade e ligação com sociedades classificadoras entregues segundo um Gantt publicado."
+            "d": "Sessões de acompanhamento de trabalho semanais com o operador. Análises CFD, FEA estrutural, cadernos de estabilidade e ligações com as principais sociedades classificadoras, entregues segundo um Gantt chart publicado."
           },
           {
             "n": "04",
@@ -218,9 +218,11 @@
           "STAR-CCM+ · CFD",
           "OpenFOAM · CFD",
           "Maxsurf · estabilidade",
+          "Ship@Sea · estabilidade",
           "Ansys Aqwa · comportamento no mar",
           "Orcaflex · amarração",
-          "Rhino + Grasshopper",
+          "KDS Mooring · amarração",
+          "Rhino + Grasshopper · modelação geométrica",
           "DNV · ligação de classe",
           "Lloyd's Register · classe",
           "Bureau Veritas · classe",
@@ -229,36 +231,37 @@
       },
       "deliverables": [
         [
-          "CAD de grau de produção",
-          "Modelo de superfície estanque",
-          "Exportação de frames e secções",
-          "Ficheiros para classificadora",
+          "CAD para produção",
+          "Modelo de superfície fechado",
+          "Exportação de plano geométrico",
+          "Desenhos para aprovação pela classificadora",
           "Renders de visualização"
         ],
         [
-          "Livro de estabilidade",
-          "Relatório FEA estrutural",
-          "Análise de estabilidade em avaria",
-          "Desenhos GA e perfil",
-          "Pacote de liaison de classe"
+          "Caderno de estabilidade",
+          "Relatório de análise estrutural FEA",
+          "Simulação de estabilidade em avaria",
+          "Desenhos de Arranjo Geral e de pormenor",
+          "Aprovação pela sociedade classificadora"
         ],
         [
           "Relatório CFD (~80 pp)",
-          "Recomendações de forma do casco",
-          "Curvas de resistência e propulsão",
-          "Gráficos de esteira e pressão",
-          "Configuração do solver documentada"
+          "Otimizações de forma de casco",
+          "Curvas de resistência e projeto do sistema propulsor",
+          "Cálculo do fator de esteira e superfície livre",
+          "Configuração do solver documentada",
+          "Projeto dos robaletes com CFD"
         ],
         [
           "Simulação de manobrabilidade",
-          "Operacionalidade % por ano",
-          "Dimensionamento de propulsores e leme",
-          "Envolventes de bacia portuária",
+          "Cálculo da taxa de operacionalidade (% anual)",
+          "Dimensionamento de propulsores e lemes",
+          "Envolventes meteoceânicos da bacia portuária",
           "Trajetórias no domínio temporal"
         ],
         [
           "Relatório de análise de amarração",
-          "Estático & dinâmico",
+          "Estático & dinâmico, single body e multi body",
           "Envolventes de tensão nas linhas",
           "Dimensionamento de ancoragem",
           "Procedimento de instalação"
@@ -266,16 +269,30 @@
         [
           "Pacote de projeto de conversão",
           "Estudo de viabilidade de re-motorização",
-          "Livro de estabilidade atualizado",
+          "Caderno de estabilidade atualizado",
           "Ligação com classe e estado de bandeira",
-          "Suporte a concurso de estaleiro"
+          "Suporte a concurso de adjudicação de estaleiro"
         ],
         [
           "Supervisão de construção",
-          "Auditoria de especificações",
+          "Auditoria de especificações técnicas",
           "Registos de inspeção e QA",
-          "Ensaios de aceitação",
-          "Relatório de entrega final"
+          "Provas de receção",
+          "Relatório de entrega final",
+          "Plataformas offshore e infraestruturas portuárias"
+        ],
+        [
+          "Cálculo do mix energético renovável ótimo em portos",
+          "Sistema de otimização da operação do navio (SOOS)",
+          "On-shore Power Supply (OPS)",
+          "Combustíveis alternativos (estudos de viabilidade)"
+        ],
+        [
+          "Desenvolvimento de Gémeos Digitais para sistemas de propulsão elétrica",
+          "LNG ship-to-ship Digital Bunkering",
+          "Mapeamento de rotas com base em previsões meteorológicas just-in-time",
+          "Desenvolvimento de software aplicado",
+          "Operações offshore e infraestruturas portuárias"
         ]
       ],
       "leadTimes": [
@@ -285,7 +302,9 @@
         "6–12 sem",
         "4–8 sem",
         "4–10 sem",
-        "duração do projeto"
+        "duração do projeto",
+        "4–12 sem",
+        "6–16 sem"
       ]
     },
     "about": {
