@@ -10,7 +10,7 @@ const SITE_URL = 'https://kdsoffshore.pt';
 
 const EN = `# KDS Offshore — Full content for AI ingestion
 
-> Independent naval architecture, offshore engineering, and decarbonisation consultancy based in Oeiras, Portugal. Founded in 2016 by naval architects from Instituto Superior Técnico (University of Lisbon). The studio works in English and Portuguese. Legal entity: KDS Offshore, Lda., NIPC 514 248 091. Contact: geral@kdsoffshore.pt, +351 929 111 655.
+> Independent naval architecture, offshore engineering, and decarbonisation consultancy based in Oeiras, Portugal. Founded in 2016 by naval architects from Instituto Superior Técnico (University of Lisbon). The office works in English and Portuguese. Legal entity: KDS Offshore, Lda., NIPC 514 248 091. Contact: geral@kdsoffshore.pt, +351 929 111 655.
 
 This file concatenates the public-facing pages of kdsoffshore.pt as plain markdown so that an AI assistant can ingest the site in one fetch. It is intentionally kept in sync with the live HTML pages and is updated when those pages change.
 
@@ -22,11 +22,11 @@ A Portuguese-language mirror is available at ${SITE_URL}/llms-full.txt.
 
 **Engineering the working ocean.**
 
-KDS Offshore designs the vessels, structures, and energy systems that move people, cargo, and power through the most demanding sea states on earth, from a small studio in Oeiras to projects across the Atlantic.
+KDS Offshore designs the vessels, structures, and energy systems that move people, cargo, and power through the most demanding sea states on earth, from a small office in Oeiras to projects across the Atlantic.
 
 - 120+ projects delivered
 - 14 currently active
-- 9 years in the studio (founded 2016)
+- 9 years in the office (founded 2016)
 - Currently accepting Q3 2026 engagements
 
 ### Featured engagement — 2025
@@ -55,7 +55,7 @@ SEAPOWER 1500 — fully electric 15 m pilot boat, sized by CFD before constructi
 
 **Founded in Lisbon. Quietly opinionated.**
 
-KDS Offshore was founded in 2016 by naval architects from Instituto Superior Técnico, University of Lisbon. We are a partnership (not a consultancy chain) and we have stayed deliberately small so that the principals are the ones doing the engineering you pay for. The studio is located at Rua Ernesto Veiga de Oliveira, nº 22, lote 8, R/C Esq., 2780-052 Oeiras.
+KDS Offshore was founded in 2016 by naval architects from Instituto Superior Técnico, University of Lisbon. We are a partnership (not a consultancy chain) and we have stayed deliberately small so that the principals are the ones doing the engineering you pay for. The office is located at Rua Ernesto Veiga de Oliveira, nº 22, lote 8, R/C Esq., 2780-052 Oeiras.
 
 ### Four principles
 
@@ -82,7 +82,7 @@ KDS Offshore was founded in 2016 by naval architects from Instituto Superior Té
 
 ## /en/services  Services
 
-**Nine disciplines. One studio.**
+**Nine disciplines. One office.**
 
 We work on a curated set of problems we know well: 3D modelling, naval architecture, hydrodynamics, manoeuvrability, mooring, vessel conversion, supervision of new constructions, maritime decarbonisation, and digital-twin development.
 
@@ -174,7 +174,7 @@ We do not publish the full archive — most engagements are confidential. Below 
 
 ## /en/journal  Journal
 
-Notes from the studio. Field notes, methodology essays, and the occasional opinion. We write infrequently and try to make it count.
+Notes from the office. Field notes, methodology essays, and the occasional opinion. We write infrequently and try to make it count.
 
 ### Featured · 2024
 **Manoeuvring the "Corvo" without tugs: a probabilistic answer.**
@@ -211,7 +211,7 @@ Tell us about the vessel. A 30-minute call with one of our principals — no dec
 ### Direct contact
 - Email: geral@kdsoffshore.pt
 - Phone: +351 929 111 655
-- Studio: Rua Ernesto Veiga de Oliveira, nº 22, lote 8, R/C Esq., 2780-052 Oeiras, Portugal
+- Office: Rua Ernesto Veiga de Oliveira, nº 22, lote 8, R/C Esq., 2780-052 Oeiras, Portugal
 - Hours: Mon–Fri, 09:00–17:00 WET
 - LinkedIn: https://www.linkedin.com/company/kds-offshore
 - Status: accepting Q3 2026 engagements

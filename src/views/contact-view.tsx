@@ -361,7 +361,7 @@ export default function ContactView() {
                   className="kds-mono"
                   style={{ fontSize: 11, color: 'var(--ink-faint)', letterSpacing: '0.22em', textTransform: 'uppercase', marginBottom: 16 }}
                 >
-                  {lang === 'pt' ? 'Estúdio' : 'Studio'}
+                  {lang === 'pt' ? 'Gabinete' : 'Office'}
                 </div>
                 <p
                   className="kds-sans"
@@ -403,7 +403,7 @@ export default function ContactView() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/images/stock/engineering-detail.jpg"
-                  alt="KDS Offshore studio, Lisbon, Portugal"
+                  alt="KDS Offshore office, Lisbon, Portugal"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                 />

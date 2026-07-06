@@ -21,11 +21,11 @@ const LANGUAGE_BLOCK_EN = `## Available languages
 
 const EN = `# KDS Offshore
 
-> Independent naval architecture, offshore engineering, and decarbonisation consultancy based in Oeiras, Portugal. Founded in 2016 by naval architects from Instituto Superior Técnico (University of Lisbon). KDS Offshore designs vessels, marine structures, and energy systems — covering hydrodynamics, CFD, ship manoeuvrability prediction, mooring system design, vessel conversion, and supervision of new constructions. The studio works in English and Portuguese.
+> Independent naval architecture, offshore engineering, and decarbonisation consultancy based in Oeiras, Portugal. Founded in 2016 by naval architects from Instituto Superior Técnico (University of Lisbon). KDS Offshore designs vessels, marine structures, and energy systems — covering hydrodynamics, CFD, ship manoeuvrability prediction, mooring system design, vessel conversion, and supervision of new constructions. The office works in English and Portuguese.
 
 KDS Offshore is a small, senior-led practice. Engagements typically combine first-principles naval architecture with computational analysis (CFD, seakeeping, mooring) and class-society compliance work (DNV, Lloyd's Register, Bureau Veritas, RINA, GL).
 
-The studio is at Rua Ernesto Veiga de Oliveira, nº 22, lote 8, R/C Esq., 2780-052 Oeiras, Portugal. The legal entity is KDS Offshore, Lda., NIPC 514 248 091. Contact: geral@kdsoffshore.pt, +351 929 111 655.
+The office is at Rua Ernesto Veiga de Oliveira, nº 22, lote 8, R/C Esq., 2780-052 Oeiras, Portugal. The legal entity is KDS Offshore, Lda., NIPC 514 248 091. Contact: geral@kdsoffshore.pt, +351 929 111 655.
 
 Founder and principal naval architect: Sérgio Ribeiro e Silva — PhD Instituto Superior Técnico (Lisbon), MSc Naval Architecture University College London, MSc Mechanical Engineering IST. Author of the Ship@Sea time-domain simulation code.
 
@@ -36,7 +36,7 @@ ${LANGUAGE_BLOCK_EN}
 ## Core pages
 
 - [Home](${SITE_URL}/en/): Practice overview, positioning, and featured engagement.
-- [About](${SITE_URL}/en/about/): Founder Sérgio Ribeiro e Silva (PhD IST, MSc UCL), four operating principles, ten-year studio timeline (2015–2026).
+- [About](${SITE_URL}/en/about/): Founder Sérgio Ribeiro e Silva (PhD IST, MSc UCL), four operating principles, ten-year office timeline (2015–2026).
 - [Services](${SITE_URL}/en/services/): Seven capabilities, methodology, tool stack, lead times.
 - [Selected work](${SITE_URL}/en/work/): Curated case studies including the Corvo and Silver Mary probabilistic manoeuvrability studies, the GRS Power Platform parametric rolling assessment, the Green Ports Madeira / APRAM OPS retrofit, and the Belize I remotorisation.
 - [Journal](${SITE_URL}/en/journal/): Field notes, methodology essays, and technical commentary.

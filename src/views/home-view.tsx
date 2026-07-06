@@ -147,7 +147,7 @@ export default function HomeView() {
                 {[
                   { v: 56, s: '+', l: lang === 'pt' ? 'projetos' : 'projects' },
                   { v: 3, s: '', l: lang === 'pt' ? 'ativos' : 'active' },
-                  { v: 10, s: '', l: lang === 'pt' ? 'anos de atividade' : 'years in studio' },
+                  { v: 10, s: '', l: lang === 'pt' ? 'anos de atividade' : 'years active' },
                 ].map((stat) => (
                   <div key={stat.l} style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
                     <CountUp

@@ -111,7 +111,7 @@ export default function PrivacyView() {
               <a href="mailto:geral@kdsoffshore.pt" style={{ color: 'var(--accent)' }}>
                 geral@kdsoffshore.pt
               </a>{' '}
-              or +351 929 111 655. Given the size of the studio and the limited scope of personal
+              or +351 929 111 655. Given the size of the office and the limited scope of personal
               data we process, we have not formally appointed a Data Protection Officer; data
               protection enquiries should be addressed to the email above.
             </p>
@@ -182,7 +182,7 @@ export default function PrivacyView() {
                 the limited intrusion on you).
               </li>
               <li>
-                <strong>Sending occasional studio updates if you have specifically subscribed</strong> —
+                <strong>Sending occasional office updates if you have specifically subscribed</strong> —
                 Article 6(1)(a) GDPR (consent), which you can withdraw at any time.
               </li>
             </ul>

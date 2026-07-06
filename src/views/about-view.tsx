@@ -129,7 +129,7 @@ export default function AboutView() {
             <KDSImage
               src="/images/kds/studio-eco-office.webp"
               aspect="21/9"
-              alt="KDS Offshore studio"
+              alt="KDS Offshore office"
               parallax
               style={{ borderRadius: 4 }}
             />
@@ -145,7 +145,7 @@ export default function AboutView() {
                 justifyContent: 'space-between',
               }}
             >
-              <span>fig. 01, {lang === 'pt' ? 'O gabinete de engenharia, a olhar para sul' : 'The studio, looking south'}</span>
+              <span>fig. 01, {lang === 'pt' ? 'O gabinete de engenharia, a olhar para sul' : 'The office, looking south'}</span>
               <span>Rua Ernesto Veiga de Oliveira, nº 22 · Oeiras</span>
             </div>
           </Reveal>

@@ -206,7 +206,7 @@ const ui = (locale: Locale) =>
         readBrief: 'Read brief →',
         deepDiveMethods: 'See our methods →',
         otherCapabilities: 'Other capabilities',
-        otherDisciplinesPrefix: 'other disciplines, one studio',
+        otherDisciplinesPrefix: 'other disciplines, one office',
       };
 
 const ordinalWord = (n: number, locale: Locale) => {

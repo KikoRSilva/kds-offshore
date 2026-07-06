@@ -8,7 +8,7 @@ const SITE_URL = 'https://kdsoffshore.pt';
 export const metadata: Metadata = {
   title: 'Glossary',
   description:
-    'Plain-English definitions of the naval architecture, hydrodynamics, manoeuvrability, mooring, and decarbonisation terms KDS Offshore uses across the studio.',
+    'Plain-English definitions of the naval architecture, hydrodynamics, manoeuvrability, mooring, and decarbonisation terms KDS Offshore uses across the office.',
   alternates: { canonical: '/glossary/' },
   openGraph: {
     title: 'Glossary — KDS Offshore',
@@ -269,7 +269,7 @@ export default function GlossaryView() {
             }}
           >
             Plain-English definitions of the naval architecture, hydrodynamics, manoeuvrability,
-            mooring, and decarbonisation terms we use across the studio. Every entry is written the
+            mooring, and decarbonisation terms we use across the office. Every entry is written the
             way we use the term — not the dictionary version.
           </p>
 

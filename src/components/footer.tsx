@@ -95,7 +95,7 @@ export function Footer() {
           </p>
         </div>
 
-        <FootCol title="Studio">
+        <FootCol title={lang === 'pt' ? 'Gabinete' : 'Office'}>
           <FootItem>{t.foot.addr}</FootItem>
           <FootItem>{t.foot.city}</FootItem>
           <FootItem>{t.foot.hours}</FootItem>

@@ -21,7 +21,7 @@
     "title1": "Naval Architecture",
     "title2": "Offshore Engineering",
     "title3": "Decarbonisation & Digitalisation",
-    "lede": "KDS Offshore designs vessels, offshore structures, and energy systems, with a focus on maritime decarbonisation and digitalisation, from a studio in Lisbon to projects across the Atlantic.",
+    "lede": "KDS Offshore designs vessels, offshore structures, and energy systems, with a focus on maritime decarbonisation and digitalisation, from an office in Lisbon to projects across the Atlantic.",
     "cta1": "Start a project",
     "cta2": "Capability statement (PDF)",
     "established": "Est. 2016 · Lisbon, Portugal",
@@ -184,7 +184,7 @@
       "title1": "Seven",
       "title2": "disciplines.",
       "title3": "One",
-      "title4": "studio.",
+      "title4": "office.",
       "lede": "We work on a curated set of problems we know well: 3D modelling, naval architecture, hydrodynamics, manoeuvrability, mooring, vessel conversion, and the supervision of new constructions, with decarbonisation consultancy threaded through all of it.",
       "methodology": {
         "label": "Methodology",
@@ -229,36 +229,37 @@
       },
       "deliverables": [
         [
-          "Production-grade CAD",
-          "Watertight surface model",
-          "Frames & sections export",
-          "Class-society-ready files",
+          "Production CAD",
+          "Closed surface model",
+          "Geometric plan export",
+          "Drawings for class-society approval",
           "Visualisation renders"
         ],
         [
           "Stability book",
-          "Structural FEA report",
-          "Damage stability analysis",
-          "GA & profile drawings",
-          "Class liaison package"
+          "Structural FEA analysis report",
+          "Damage stability simulation",
+          "General Arrangement & detail drawings",
+          "Class-society approval"
         ],
         [
           "CFD report (~80 pp)",
-          "Hull form recommendations",
-          "Resistance & propulsion curves",
-          "Wake & pressure plots",
-          "Documented solver setup"
+          "Hull-form optimisations",
+          "Resistance curves & propulsion system design",
+          "Wake fraction & free-surface calculation",
+          "Documented solver setup",
+          "Bilge-keel design via CFD"
         ],
         [
           "Manoeuvrability simulation",
-          "Operability % per year",
+          "Operability rate calculation (% per year)",
           "Thruster & rudder sizing",
-          "Port-basin envelopes",
+          "Metocean port-basin envelopes",
           "Time-domain trajectories"
         ],
         [
           "Mooring analysis report",
-          "Quasi-static & dynamic",
+          "Static & dynamic, single-body & multi-body",
           "Line tension envelopes",
           "Anchor sizing",
           "Installation procedure"
@@ -268,14 +269,28 @@
           "Re-engining feasibility",
           "Updated stability book",
           "Class & flag-state liaison",
-          "Yard tender support"
+          "Yard award tender support"
         ],
         [
           "Construction supervision",
-          "Specification audit",
+          "Technical specification audit",
           "Inspection & QA logs",
-          "Acceptance testing",
-          "Final delivery report"
+          "Acceptance trials",
+          "Final delivery report",
+          "Offshore platforms & port infrastructure"
+        ],
+        [
+          "Optimal renewable energy mix calculation for ports",
+          "Ship Operation Optimisation System (SOOS)",
+          "On-shore Power Supply (OPS)",
+          "Alternative fuels (feasibility studies)"
+        ],
+        [
+          "Digital Twin development for electric propulsion systems",
+          "LNG ship-to-ship Digital Bunkering",
+          "Route mapping from just-in-time weather forecasts",
+          "Applied software development",
+          "Offshore operations & port infrastructure"
         ]
       ],
       "leadTimes": [
@@ -285,11 +300,13 @@
         "6–12 wks",
         "4–8 wks",
         "4–10 wks",
-        "project span"
+        "project span",
+        "4–12 wks",
+        "6–16 wks"
       ]
     },
     "about": {
-      "eyebrow": "About the studio",
+      "eyebrow": "About the office",
       "title1": "Founded",
       "title2": "in Lisbon.",
       "title3": "Quietly",
@@ -351,7 +368,7 @@
         {
           "name": "José Dias",
           "role": "Project management",
-          "bio": "Planning, coordination and delivery across the studio's engineering assignments, from kick-off to handover."
+          "bio": "Planning, coordination and delivery across the office's engineering assignments, from kick-off to handover."
         },
         {
           "name": "José Abreu Valente",
@@ -361,7 +378,7 @@
         {
           "name": "Francisco Ribeiro e Silva",
           "role": "IT management & software development",
-          "bio": "IT management and software development — internal tooling, simulation infrastructure, and the studio's digital systems."
+          "bio": "IT management and software development — internal tooling, simulation infrastructure, and the office's digital systems."
         }
       ],
       "principles": [
@@ -532,7 +549,7 @@
     "journal": {
       "eyebrow": "Journal",
       "title1": "Notes from",
-      "title2": "the studio.",
+      "title2": "the office.",
       "lede": "Field notes, methodology essays, and the occasional opinion. We write infrequently and try to make it count.",
       "featured": {
         "slug": "corvo-without-tugs",
