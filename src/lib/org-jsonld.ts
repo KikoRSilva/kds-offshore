@@ -46,7 +46,7 @@ export function buildOrgJsonLd(locale: Locale) {
           '@type': 'Person',
           '@id': `${SITE_URL}/about/#sergio-ribeiro-e-silva`,
           name: 'Sérgio Ribeiro e Silva',
-          jobTitle: 'Principal Naval Architect',
+          jobTitle: 'Principal Naval Engineer and Architect',
           alumniOf: [
             {
               '@type': 'CollegeOrUniversity',

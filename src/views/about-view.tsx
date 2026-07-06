@@ -18,9 +18,9 @@ const FOUNDER_PERSON_JSONLD = {
   familyName: 'Ribeiro e Silva',
   honorificPrefix: 'Dr.',
   honorificSuffix: 'PhD',
-  jobTitle: 'CEO & Founder · Principal Naval Architect',
+  jobTitle: 'CEO & Founder · Principal Naval Engineer and Architect',
   description:
-    'Founder of KDS Offshore. Naval architect, hydrodynamicist, and author of the Ship@Sea time-domain simulation code.',
+    'Founder of KDS Offshore. Naval engineer and architect, hydrodynamicist, and author of the Ship@Sea time-domain simulation code.',
   alumniOf: [
     {
       '@type': 'CollegeOrUniversity',

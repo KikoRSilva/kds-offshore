@@ -246,7 +246,7 @@ export default function ServiceDetailView({ slug, locale }: { slug: string; loca
       '@id': `${SITE_URL}/en/about/#sergio-ribeiro-e-silva`,
       name: 'Sérgio Ribeiro e Silva',
       honorificSuffix: 'PhD',
-      jobTitle: 'Founder & Principal Naval Architect',
+      jobTitle: 'Founder & Principal Naval Engineer and Architect',
     },
     areaServed: [
       { '@type': 'Country', name: 'Portugal' },

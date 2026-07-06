@@ -58,9 +58,9 @@ export const TEAM: TeamMember[] = [
     familyName: 'Ribeiro e Silva',
     honorificPrefix: 'Dr.',
     honorificSuffix: 'PhD',
-    jobTitle: 'CEO & Founder · Principal Naval Architect',
+    jobTitle: 'CEO & Founder · Principal Naval Engineer and Architect',
     shortBio:
-      'Founder of KDS Offshore. Naval architect, hydrodynamicist, and author of the Ship@Sea time-domain simulation code. Tenured Assistant Professor of Hydrodynamics at Instituto Superior Técnico, University of Lisbon.',
+      'Founder of KDS Offshore. Naval engineer and architect, hydrodynamicist, and author of the Ship@Sea time-domain simulation code. Tenured Assistant Professor of Hydrodynamics at Instituto Superior Técnico, University of Lisbon.',
     longBio: [
       'Sérgio Ribeiro e Silva founded KDS Offshore in 2016, on the back of two decades of practitioner work in the Portuguese Navy and a continuing academic career at Instituto Superior Técnico (IST), University of Lisbon, where he is tenured Assistant Professor of Hydrodynamics in the Centre of Naval Architecture and Engineering.',
       'His research focuses on the analytical, numerical, and experimental study of the hydrodynamics of floating structures — with particular depth in parametric rolling, time-domain seakeeping, and the dynamics of wave-energy converters. He is the author of the Ship@Sea time-domain simulation code, a six-degree-of-freedom non-linear platform that has evolved continuously from his doctoral work and that underpins KDS Offshore\'s most demanding seakeeping and manoeuvrability assignments.',
@@ -107,7 +107,7 @@ export const TEAM: TeamMember[] = [
       {
         name: 'KDS Offshore, Lda.',
         url: 'https://kdsoffshore.pt/',
-        role: 'Founder, CEO, Principal Naval Architect',
+        role: 'Founder, CEO, Principal Naval Engineer and Architect',
       },
     ],
     // Selected, peer-reviewed publications. Full list and citation counts on Google Scholar.
